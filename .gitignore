@@ -1,0 +1,8 @@
+@"
+data/snapshots/*.parquet
+data/snapshots/*.json
+data/cache/
+__pycache__/
+*.pyc
+.venv/
+"@ | Out-File -Encoding utf8 .gitignore

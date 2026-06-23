@@ -1,0 +1,17 @@
+# Core
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+requests>=2.31
+
+# Data ingestion
+pybaseball>=2.2          # Statcast / FanGraphs / Baseball-Reference
+MLB-StatsAPI>=1.6        # official statsapi.mlb.com wrapper
+pyarrow>=14.0            # parquet snapshots
+
+# Modeling / calibration (Stage 4+)
+scikit-learn>=1.4        # isotonic/Platt calibration, RF
+xgboost>=2.0             # gradient-boosted ensemble layer
+
+# Optional
+matplotlib>=3.8          # reliability diagrams
