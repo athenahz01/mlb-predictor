@@ -61,9 +61,13 @@ The floor every future model must beat at p<0.05.
   trial: runs the sim on completed games (real lineups+starters from boxscores),
   compares to walk-forward Elo + Pythagenpat, and paired-bootstraps the sim's
   log-loss vs each baseline -> PASS/HOLD verdict. Caches sim predictions to resume.
+- `backtest/props_backtest.py` ✅ — puts the NON-WINNER markets on trial:
+  totals (over/under), NRFI, and starter strikeouts. Checks calibration
+  (bias + reliability/ECE) of the sim's probabilities against real outcomes,
+  so each market is only published once it proves trustworthy.
 - **TODO**: stack the ensemble with the sim's win-prob once enough games are
-  backtested/logged; wire a shipped model into the card; add beta calibration
-  for thin prop markets.
+  backtested/logged; validate per-batter props (hits/HR) once more data exists;
+  add beta calibration for thin prop markets.
 
 ## Stage 5 — Ledger + Kalshi benchmark + reports  ◑ PARTIAL
 - `ledger/ledger.py` ✅ — log model-first, attach de-vigged market, resolve, report
