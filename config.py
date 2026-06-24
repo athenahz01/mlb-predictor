@@ -48,13 +48,38 @@ assert abs(sum(LEAGUE_PA_RATES.values()) - 1.0) < 1e-9, "league rates must sum t
 # `hr` multiplies HR rate, `hit` multiplies non-HR hit (1B/2B/3B) rate.
 # ---------------------------------------------------------------------------
 PARK_FACTORS = {
+    # approximate multipliers vs league-average (hr = home-run factor, hit = base-hit factor).
+    # Refine later with measured Statcast/FanGraphs park factors; these are reasonable priors.
     "COL": {"hr": 1.18, "hit": 1.10},   # Coors - altitude outlier
-    "CIN": {"hr": 1.27, "hit": 1.03},   # Great American
-    "NYY": {"hr": 1.12, "hit": 1.00},
+    "CIN": {"hr": 1.27, "hit": 1.03},   # Great American - HR bandbox
+    "NYY": {"hr": 1.12, "hit": 1.00},   # short porch
+    "PHI": {"hr": 1.10, "hit": 1.02},   # Citizens Bank
+    "MIL": {"hr": 1.08, "hit": 1.00},   # American Family
+    "CWS": {"hr": 1.07, "hit": 0.99},   # Rate Field
+    "LAD": {"hr": 1.06, "hit": 0.98},   # Dodger Stadium
+    "TEX": {"hr": 1.05, "hit": 1.02},   # Globe Life
+    "HOU": {"hr": 1.04, "hit": 1.01},   # Daikin Park
+    "ARI": {"hr": 1.04, "hit": 1.03},   # Chase Field
+    "ATL": {"hr": 1.02, "hit": 1.00},   # Truist
+    "CHC": {"hr": 1.02, "hit": 1.01},   # Wrigley - wind dependent
+    "BAL": {"hr": 1.02, "hit": 1.00},   # Camden (post wall move)
+    "TOR": {"hr": 1.02, "hit": 1.00},   # Rogers Centre
+    "WSH": {"hr": 1.01, "hit": 1.00},   # Nationals Park
+    "LAA": {"hr": 1.00, "hit": 0.99},   # Angel Stadium
+    "ATH": {"hr": 1.00, "hit": 1.00},   # Sutter Health Park (new, neutral prior)
+    "MIN": {"hr": 0.99, "hit": 1.00},   # Target Field
     "BOS": {"hr": 0.97, "hit": 1.07},   # Fenway - hits up, HR ~neutral
+    "TB":  {"hr": 0.97, "hit": 0.97},   # Tropicana
+    "CLE": {"hr": 0.96, "hit": 0.98},   # Progressive
+    "NYM": {"hr": 0.95, "hit": 0.98},   # Citi Field
+    "STL": {"hr": 0.94, "hit": 1.00},   # Busch
+    "DET": {"hr": 0.94, "hit": 0.99},   # Comerica
+    "SEA": {"hr": 0.93, "hit": 0.95},   # T-Mobile - suppresses
     "SD":  {"hr": 0.92, "hit": 0.97},   # Petco - suppresses
-    "SEA": {"hr": 0.93, "hit": 0.95},
-    "MIA": {"hr": 0.86, "hit": 0.96},
+    "KC":  {"hr": 0.92, "hit": 1.02},   # Kauffman - big OF, doubles/triples
+    "PIT": {"hr": 0.92, "hit": 1.00},   # PNC
+    "SF":  {"hr": 0.90, "hit": 0.97},   # Oracle - marine layer
+    "MIA": {"hr": 0.86, "hit": 0.96},   # loanDepot - biggest suppressor
     "_DEFAULT": {"hr": 1.00, "hit": 1.00},
 }
 

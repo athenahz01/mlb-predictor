@@ -90,6 +90,57 @@ def load_rate_tables(season: int):
     return {"bat": bat, "pit": pit, "bhand": bhand, "phand": phand}
 
 
+def _blend_tables(cur: pd.DataFrame, prior: pd.DataFrame,
+                  prior_weight: int) -> pd.DataFrame:
+    """
+    Blend current-season rates with prior-season rates per player, weighting the
+    prior as `prior_weight` pseudo-PAs. Early in the season (little current data)
+    the estimate leans on last year; as current PA accrues it takes over. Players
+    in only one season keep that season's rates. Combined PA is carried so the
+    downstream league-shrink still regresses thin samples correctly.
+    """
+    cols = EVENTS
+    out = {}
+    idx = cur.index.union(prior.index)
+    for pid in idx:
+        in_cur = pid in cur.index
+        in_prior = pid in prior.index
+        if in_cur and in_prior:
+            rc = cur.loc[pid]; pc = int(rc.get("PA", 0))
+            rp = prior.loc[pid]
+            w = min(int(rp.get("PA", 0)), prior_weight)
+            denom = pc + w if (pc + w) > 0 else 1
+            row = {e: (pc * float(rc[e]) + w * float(rp[e])) / denom for e in cols}
+            row["PA"] = pc + w
+        elif in_cur:
+            r = cur.loc[pid]; row = {e: float(r[e]) for e in cols}
+            row["PA"] = int(r.get("PA", 0))
+        else:
+            r = prior.loc[pid]; row = {e: float(r[e]) for e in cols}
+            row["PA"] = int(r.get("PA", 0))
+        out[pid] = row
+    df = pd.DataFrame.from_dict(out, orient="index")
+    df.index.name = cur.index.name
+    return df
+
+
+def load_blended_rate_tables(cur_season: int, prior_season: int,
+                             prior_weight: int = 200):
+    """
+    LIVE prediction tables: current-season rates blended onto last season.
+    Use this for predicting TODAY's games (current-season-to-date is real past
+    data, so no leakage). Do NOT use for historical backtests -- that leaks
+    future games into past predictions; use load_rate_tables(prior) there.
+    """
+    cur = load_rate_tables(cur_season)
+    prior = load_rate_tables(prior_season)
+    bat = _blend_tables(cur["bat"], prior["bat"], prior_weight)
+    pit = _blend_tables(cur["pit"], prior["pit"], prior_weight)
+    bhand = {**prior["bhand"], **cur["bhand"]}   # prefer current-season handedness
+    phand = {**prior["phand"], **cur["phand"]}
+    return {"bat": bat, "pit": pit, "bhand": bhand, "phand": phand}
+
+
 # --------------------------------------------------------------------------
 # Build player objects from ids
 # --------------------------------------------------------------------------
