@@ -6,7 +6,7 @@
 <title>MODEL vs MARKET · MLB Calibration Ledger</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
 <style>
   * { box-sizing: border-box; }
   html, body { margin: 0; padding: 0; }
@@ -17,9 +17,9 @@
   }
   #root { min-height: 100vh; }
   .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
-  /* keep focus rings visible for a11y */
-  button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
-  ::selection { background: rgba(191,13,62,0.25); }
+  .disp { font-family: "Archivo", "IBM Plex Sans", sans-serif; }
+  button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+  ::selection { background: rgba(191,13,62,0.22); }
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
   }
@@ -31,2412 +31,7 @@
 <body>
 <div id="root"></div>
 
-<script type="application/json" id="embedded-ledger">[
-  {
-    "date": "2026-05-30",
-    "away": "MIN",
-    "away_name": "Twins",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 45,
-    "market_home_win_pct": 57,
-    "edge": 12,
-    "logged_at": "2026-05-30T14:36:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 8,
-    "winner": "CLE",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-05-30",
-    "away": "PHI",
-    "away_name": "Phillies",
-    "home": "DET",
-    "home_name": "Tigers",
-    "model_home_win_pct": 54,
-    "market_home_win_pct": 62,
-    "edge": 8,
-    "logged_at": "2026-05-30T13:26:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 6,
-    "winner": "DET",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-30",
-    "away": "MIL",
-    "away_name": "Brewers",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 69,
-    "market_home_win_pct": 58,
-    "edge": 11,
-    "logged_at": "2026-05-30T13:29:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 1,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-30",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "BAL",
-    "home_name": "Orioles",
-    "model_home_win_pct": 74,
-    "market_home_win_pct": 65,
-    "edge": 9,
-    "logged_at": "2026-05-30T15:26:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 9,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-30",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "TEX",
-    "home_name": "Rangers",
-    "model_home_win_pct": 65,
-    "market_home_win_pct": 54,
-    "edge": 11,
-    "logged_at": "2026-05-30T17:55:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 3,
-    "winner": "TEX",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-31",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 76,
-    "market_home_win_pct": 66,
-    "edge": 10,
-    "logged_at": "2026-05-31T19:11:00",
-    "status": "final",
-    "away_score": 2,
-    "home_score": 9,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-31",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 41,
-    "edge": 5,
-    "logged_at": "2026-05-31T16:10:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 9,
-    "winner": "ARI",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-05-31",
-    "away": "CIN",
-    "away_name": "Reds",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 48,
-    "market_home_win_pct": 60,
-    "edge": 12,
-    "logged_at": "2026-05-31T14:26:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 10,
-    "winner": "CWS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-05-31",
-    "away": "LAA",
-    "away_name": "Angels",
-    "home": "OAK",
-    "home_name": "Athletics",
-    "model_home_win_pct": 44,
-    "market_home_win_pct": 33,
-    "edge": 11,
-    "logged_at": "2026-05-31T19:16:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 4,
-    "winner": "LAA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-31",
-    "away": "PHI",
-    "away_name": "Phillies",
-    "home": "TOR",
-    "home_name": "Blue Jays",
-    "model_home_win_pct": 41,
-    "market_home_win_pct": 52,
-    "edge": 11,
-    "logged_at": "2026-05-31T14:08:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 8,
-    "winner": "PHI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-05-31",
-    "away": "BOS",
-    "away_name": "Red Sox",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 67,
-    "market_home_win_pct": 69,
-    "edge": 2,
-    "logged_at": "2026-05-31T16:58:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 9,
-    "winner": "BOS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-01",
-    "away": "WSH",
-    "away_name": "Nationals",
-    "home": "CIN",
-    "home_name": "Reds",
-    "model_home_win_pct": 54,
-    "market_home_win_pct": 60,
-    "edge": 6,
-    "logged_at": "2026-06-01T21:23:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 3,
-    "winner": "CIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-01",
-    "away": "SF",
-    "away_name": "Giants",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 68,
-    "market_home_win_pct": 79,
-    "edge": 11,
-    "logged_at": "2026-06-01T18:05:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 2,
-    "winner": "SF",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-01",
-    "away": "BAL",
-    "away_name": "Orioles",
-    "home": "COL",
-    "home_name": "Rockies",
-    "model_home_win_pct": 32,
-    "market_home_win_pct": 43,
-    "edge": 11,
-    "logged_at": "2026-06-01T22:00:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 6,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-01",
-    "away": "LAD",
-    "away_name": "Dodgers",
-    "home": "MIA",
-    "home_name": "Marlins",
-    "model_home_win_pct": 29,
-    "market_home_win_pct": 26,
-    "edge": 3,
-    "logged_at": "2026-06-01T14:40:00",
-    "status": "final",
-    "away_score": 10,
-    "home_score": 9,
-    "winner": "LAD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-01",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 58,
-    "market_home_win_pct": 51,
-    "edge": 7,
-    "logged_at": "2026-06-01T22:29:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 9,
-    "winner": "ATL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-02",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "WSH",
-    "home_name": "Nationals",
-    "model_home_win_pct": 58,
-    "market_home_win_pct": 56,
-    "edge": 2,
-    "logged_at": "2026-06-02T17:12:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 5,
-    "winner": "MIA",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-02",
-    "away": "TB",
-    "away_name": "Rays",
-    "home": "NYM",
-    "home_name": "Mets",
-    "model_home_win_pct": 74,
-    "market_home_win_pct": 83,
-    "edge": 9,
-    "logged_at": "2026-06-02T16:37:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 3,
-    "winner": "TB",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-02",
-    "away": "BAL",
-    "away_name": "Orioles",
-    "home": "MIN",
-    "home_name": "Twins",
-    "model_home_win_pct": 63,
-    "market_home_win_pct": 55,
-    "edge": 8,
-    "logged_at": "2026-06-02T14:17:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 5,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-02",
-    "away": "SEA",
-    "away_name": "Mariners",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 52,
-    "market_home_win_pct": 41,
-    "edge": 11,
-    "logged_at": "2026-06-02T21:31:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 8,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-02",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "OAK",
-    "home_name": "Athletics",
-    "model_home_win_pct": 35,
-    "market_home_win_pct": 41,
-    "edge": 6,
-    "logged_at": "2026-06-02T14:53:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 9,
-    "winner": "DET",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-02",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "MIL",
-    "home_name": "Brewers",
-    "model_home_win_pct": 44,
-    "market_home_win_pct": 54,
-    "edge": 10,
-    "logged_at": "2026-06-02T17:41:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 11,
-    "winner": "MIL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-03",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 75,
-    "market_home_win_pct": 62,
-    "edge": 13,
-    "logged_at": "2026-06-03T21:32:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 11,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-03",
-    "away": "ARI",
-    "away_name": "Diamondbacks",
-    "home": "PHI",
-    "home_name": "Phillies",
-    "model_home_win_pct": 67,
-    "market_home_win_pct": 74,
-    "edge": 7,
-    "logged_at": "2026-06-03T19:59:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 3,
-    "winner": "PHI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-03",
-    "away": "CHC",
-    "away_name": "Cubs",
-    "home": "LAA",
-    "home_name": "Angels",
-    "model_home_win_pct": 51,
-    "market_home_win_pct": 48,
-    "edge": 3,
-    "logged_at": "2026-06-03T19:35:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 3,
-    "winner": "LAA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-03",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "CIN",
-    "home_name": "Reds",
-    "model_home_win_pct": 56,
-    "market_home_win_pct": 67,
-    "edge": 11,
-    "logged_at": "2026-06-03T18:41:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 5,
-    "winner": "MIA",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-03",
-    "away": "TEX",
-    "away_name": "Rangers",
-    "home": "COL",
-    "home_name": "Rockies",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 35,
-    "edge": 11,
-    "logged_at": "2026-06-03T16:57:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 1,
-    "winner": "TEX",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-03",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "WSH",
-    "home_name": "Nationals",
-    "model_home_win_pct": 37,
-    "market_home_win_pct": 25,
-    "edge": 12,
-    "logged_at": "2026-06-03T13:22:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 5,
-    "winner": "WSH",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-03",
-    "away": "ATL",
-    "away_name": "Braves",
-    "home": "BOS",
-    "home_name": "Red Sox",
-    "model_home_win_pct": 39,
-    "market_home_win_pct": 26,
-    "edge": 13,
-    "logged_at": "2026-06-03T20:58:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 6,
-    "winner": "BOS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-04",
-    "away": "ARI",
-    "away_name": "Diamondbacks",
-    "home": "CIN",
-    "home_name": "Reds",
-    "model_home_win_pct": 48,
-    "market_home_win_pct": 61,
-    "edge": 13,
-    "logged_at": "2026-06-04T15:34:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 9,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-04",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "BAL",
-    "home_name": "Orioles",
-    "model_home_win_pct": 72,
-    "market_home_win_pct": 74,
-    "edge": 2,
-    "logged_at": "2026-06-04T21:00:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 8,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-04",
-    "away": "LAD",
-    "away_name": "Dodgers",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 53,
-    "market_home_win_pct": 40,
-    "edge": 13,
-    "logged_at": "2026-06-04T22:07:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 8,
-    "winner": "LAD",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-04",
-    "away": "CWS",
-    "away_name": "White Sox",
-    "home": "NYM",
-    "home_name": "Mets",
-    "model_home_win_pct": 76,
-    "market_home_win_pct": 81,
-    "edge": 5,
-    "logged_at": "2026-06-04T19:58:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 8,
-    "winner": "NYM",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-04",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 47,
-    "market_home_win_pct": 59,
-    "edge": 12,
-    "logged_at": "2026-06-04T18:27:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 8,
-    "winner": "CHC",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-04",
-    "away": "MIL",
-    "away_name": "Brewers",
-    "home": "PHI",
-    "home_name": "Phillies",
-    "model_home_win_pct": 80,
-    "market_home_win_pct": 92,
-    "edge": 12,
-    "logged_at": "2026-06-04T16:26:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 8,
-    "winner": "MIL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-05",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 69,
-    "market_home_win_pct": 72,
-    "edge": 3,
-    "logged_at": "2026-06-05T21:13:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 8,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-05",
-    "away": "COL",
-    "away_name": "Rockies",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 72,
-    "market_home_win_pct": 75,
-    "edge": 3,
-    "logged_at": "2026-06-05T15:20:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 3,
-    "winner": "COL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-05",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "SEA",
-    "home_name": "Mariners",
-    "model_home_win_pct": 53,
-    "market_home_win_pct": 64,
-    "edge": 11,
-    "logged_at": "2026-06-05T15:56:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 3,
-    "winner": "SEA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-05",
-    "away": "TOR",
-    "away_name": "Blue Jays",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 67,
-    "market_home_win_pct": 73,
-    "edge": 6,
-    "logged_at": "2026-06-05T21:50:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 8,
-    "winner": "ATL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-05",
-    "away": "CIN",
-    "away_name": "Reds",
-    "home": "TB",
-    "home_name": "Rays",
-    "model_home_win_pct": 52,
-    "market_home_win_pct": 44,
-    "edge": 8,
-    "logged_at": "2026-06-05T16:36:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 0,
-    "winner": "CIN",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-05",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "SF",
-    "home_name": "Giants",
-    "model_home_win_pct": 36,
-    "market_home_win_pct": 48,
-    "edge": 12,
-    "logged_at": "2026-06-05T18:32:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 1,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-05",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "HOU",
-    "home_name": "Astros",
-    "model_home_win_pct": 63,
-    "market_home_win_pct": 72,
-    "edge": 9,
-    "logged_at": "2026-06-05T13:48:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 7,
-    "winner": "DET",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-06",
-    "away": "NYM",
-    "away_name": "Mets",
-    "home": "OAK",
-    "home_name": "Athletics",
-    "model_home_win_pct": 37,
-    "market_home_win_pct": 24,
-    "edge": 13,
-    "logged_at": "2026-06-06T18:25:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 9,
-    "winner": "OAK",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-06",
-    "away": "MIN",
-    "away_name": "Twins",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 59,
-    "market_home_win_pct": 62,
-    "edge": 3,
-    "logged_at": "2026-06-06T19:36:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 6,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-06",
-    "away": "MIL",
-    "away_name": "Brewers",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 69,
-    "market_home_win_pct": 69,
-    "edge": 0,
-    "logged_at": "2026-06-06T15:52:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 4,
-    "winner": "MIL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-06",
-    "away": "CIN",
-    "away_name": "Reds",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 50,
-    "market_home_win_pct": 40,
-    "edge": 10,
-    "logged_at": "2026-06-06T19:48:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 8,
-    "winner": "CWS",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-06",
-    "away": "BOS",
-    "away_name": "Red Sox",
-    "home": "SF",
-    "home_name": "Giants",
-    "model_home_win_pct": 39,
-    "market_home_win_pct": 31,
-    "edge": 8,
-    "logged_at": "2026-06-06T20:06:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 5,
-    "winner": "SF",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-07",
-    "away": "ARI",
-    "away_name": "Diamondbacks",
-    "home": "TOR",
-    "home_name": "Blue Jays",
-    "model_home_win_pct": 54,
-    "market_home_win_pct": 61,
-    "edge": 7,
-    "logged_at": "2026-06-07T17:16:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 0,
-    "winner": "ARI",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-07",
-    "away": "KC",
-    "away_name": "Royals",
-    "home": "PHI",
-    "home_name": "Phillies",
-    "model_home_win_pct": 68,
-    "market_home_win_pct": 64,
-    "edge": 4,
-    "logged_at": "2026-06-07T14:40:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 11,
-    "winner": "PHI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-07",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 78,
-    "market_home_win_pct": 82,
-    "edge": 4,
-    "logged_at": "2026-06-07T19:30:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 7,
-    "winner": "ATL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-07",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "COL",
-    "home_name": "Rockies",
-    "model_home_win_pct": 37,
-    "market_home_win_pct": 47,
-    "edge": 10,
-    "logged_at": "2026-06-07T20:26:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 9,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-07",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "DET",
-    "home_name": "Tigers",
-    "model_home_win_pct": 68,
-    "market_home_win_pct": 65,
-    "edge": 3,
-    "logged_at": "2026-06-07T20:41:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 8,
-    "winner": "DET",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-07",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "CIN",
-    "home_name": "Reds",
-    "model_home_win_pct": 31,
-    "market_home_win_pct": 43,
-    "edge": 12,
-    "logged_at": "2026-06-07T16:37:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 4,
-    "winner": "HOU",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-07",
-    "away": "LAA",
-    "away_name": "Angels",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 39,
-    "market_home_win_pct": 29,
-    "edge": 10,
-    "logged_at": "2026-06-07T19:03:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 6,
-    "winner": "LAA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-08",
-    "away": "NYY",
-    "away_name": "Yankees",
-    "home": "SF",
-    "home_name": "Giants",
-    "model_home_win_pct": 27,
-    "market_home_win_pct": 17,
-    "edge": 10,
-    "logged_at": "2026-06-08T22:43:00",
-    "status": "final",
-    "away_score": 12,
-    "home_score": 9,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-08",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "BAL",
-    "home_name": "Orioles",
-    "model_home_win_pct": 52,
-    "market_home_win_pct": 60,
-    "edge": 8,
-    "logged_at": "2026-06-08T15:15:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 2,
-    "winner": "HOU",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-08",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 69,
-    "market_home_win_pct": 69,
-    "edge": 0,
-    "logged_at": "2026-06-08T17:17:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 11,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-08",
-    "away": "LAD",
-    "away_name": "Dodgers",
-    "home": "MIL",
-    "home_name": "Brewers",
-    "model_home_win_pct": 26,
-    "market_home_win_pct": 32,
-    "edge": 6,
-    "logged_at": "2026-06-08T16:12:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 3,
-    "winner": "LAD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-08",
-    "away": "COL",
-    "away_name": "Rockies",
-    "home": "SEA",
-    "home_name": "Mariners",
-    "model_home_win_pct": 77,
-    "market_home_win_pct": 77,
-    "edge": 0,
-    "logged_at": "2026-06-08T13:00:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 3,
-    "winner": "SEA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-09",
-    "away": "COL",
-    "away_name": "Rockies",
-    "home": "WSH",
-    "home_name": "Nationals",
-    "model_home_win_pct": 60,
-    "market_home_win_pct": 53,
-    "edge": 7,
-    "logged_at": "2026-06-09T22:20:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 5,
-    "winner": "COL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-09",
-    "away": "LAD",
-    "away_name": "Dodgers",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 33,
-    "market_home_win_pct": 40,
-    "edge": 7,
-    "logged_at": "2026-06-09T18:37:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 2,
-    "winner": "LAD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-09",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 75,
-    "market_home_win_pct": 86,
-    "edge": 11,
-    "logged_at": "2026-06-09T22:31:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 9,
-    "winner": "ATL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-09",
-    "away": "BOS",
-    "away_name": "Red Sox",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 66,
-    "market_home_win_pct": 65,
-    "edge": 1,
-    "logged_at": "2026-06-09T17:13:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 0,
-    "winner": "BOS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-09",
-    "away": "NYM",
-    "away_name": "Mets",
-    "home": "TOR",
-    "home_name": "Blue Jays",
-    "model_home_win_pct": 51,
-    "market_home_win_pct": 54,
-    "edge": 3,
-    "logged_at": "2026-06-09T15:14:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 7,
-    "winner": "NYM",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-09",
-    "away": "BAL",
-    "away_name": "Orioles",
-    "home": "STL",
-    "home_name": "Cardinals",
-    "model_home_win_pct": 35,
-    "market_home_win_pct": 41,
-    "edge": 6,
-    "logged_at": "2026-06-09T20:36:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 1,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-09",
-    "away": "CWS",
-    "away_name": "White Sox",
-    "home": "SD",
-    "home_name": "Padres",
-    "model_home_win_pct": 78,
-    "market_home_win_pct": 89,
-    "edge": 11,
-    "logged_at": "2026-06-09T17:29:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 10,
-    "winner": "SD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-10",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 51,
-    "market_home_win_pct": 64,
-    "edge": 13,
-    "logged_at": "2026-06-10T21:19:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 6,
-    "winner": "HOU",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-10",
-    "away": "LAA",
-    "away_name": "Angels",
-    "home": "SF",
-    "home_name": "Giants",
-    "model_home_win_pct": 52,
-    "market_home_win_pct": 40,
-    "edge": 12,
-    "logged_at": "2026-06-10T13:40:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 6,
-    "winner": "SF",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-10",
-    "away": "MIN",
-    "away_name": "Twins",
-    "home": "TOR",
-    "home_name": "Blue Jays",
-    "model_home_win_pct": 40,
-    "market_home_win_pct": 29,
-    "edge": 11,
-    "logged_at": "2026-06-10T16:31:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 6,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-10",
-    "away": "BAL",
-    "away_name": "Orioles",
-    "home": "KC",
-    "home_name": "Royals",
-    "model_home_win_pct": 41,
-    "market_home_win_pct": 42,
-    "edge": 1,
-    "logged_at": "2026-06-10T18:43:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 6,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-10",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 42,
-    "market_home_win_pct": 42,
-    "edge": 0,
-    "logged_at": "2026-06-10T13:26:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 1,
-    "winner": "SD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-10",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "TEX",
-    "home_name": "Rangers",
-    "model_home_win_pct": 63,
-    "market_home_win_pct": 77,
-    "edge": 14,
-    "logged_at": "2026-06-10T20:34:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 7,
-    "winner": "TEX",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-11",
-    "away": "PHI",
-    "away_name": "Phillies",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 47,
-    "market_home_win_pct": 54,
-    "edge": 7,
-    "logged_at": "2026-06-11T18:06:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 7,
-    "winner": "ARI",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-11",
-    "away": "MIN",
-    "away_name": "Twins",
-    "home": "KC",
-    "home_name": "Royals",
-    "model_home_win_pct": 32,
-    "market_home_win_pct": 28,
-    "edge": 4,
-    "logged_at": "2026-06-11T21:14:00",
-    "status": "final",
-    "away_score": 12,
-    "home_score": 9,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-11",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "TOR",
-    "home_name": "Blue Jays",
-    "model_home_win_pct": 45,
-    "market_home_win_pct": 56,
-    "edge": 11,
-    "logged_at": "2026-06-11T20:54:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 11,
-    "winner": "TOR",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-11",
-    "away": "BOS",
-    "away_name": "Red Sox",
-    "home": "LAD",
-    "home_name": "Dodgers",
-    "model_home_win_pct": 70,
-    "market_home_win_pct": 81,
-    "edge": 11,
-    "logged_at": "2026-06-11T14:30:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 5,
-    "winner": "BOS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-11",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 66,
-    "market_home_win_pct": 63,
-    "edge": 3,
-    "logged_at": "2026-06-11T21:49:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 9,
-    "winner": "CHC",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-11",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 28,
-    "market_home_win_pct": 42,
-    "edge": 14,
-    "logged_at": "2026-06-11T18:28:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 3,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-12",
-    "away": "STL",
-    "away_name": "Cardinals",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 73,
-    "market_home_win_pct": 75,
-    "edge": 2,
-    "logged_at": "2026-06-12T19:12:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 4,
-    "winner": "STL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-12",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "LAD",
-    "home_name": "Dodgers",
-    "model_home_win_pct": 69,
-    "market_home_win_pct": 58,
-    "edge": 11,
-    "logged_at": "2026-06-12T19:33:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 3,
-    "winner": "SD",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-12",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 50,
-    "market_home_win_pct": 63,
-    "edge": 13,
-    "logged_at": "2026-06-12T14:35:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 5,
-    "winner": "OAK",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-12",
-    "away": "TB",
-    "away_name": "Rays",
-    "home": "SEA",
-    "home_name": "Mariners",
-    "model_home_win_pct": 70,
-    "market_home_win_pct": 69,
-    "edge": 1,
-    "logged_at": "2026-06-12T15:06:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 5,
-    "winner": "SEA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-12",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 44,
-    "market_home_win_pct": 49,
-    "edge": 5,
-    "logged_at": "2026-06-12T13:55:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 1,
-    "winner": "HOU",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-13",
-    "away": "LAA",
-    "away_name": "Angels",
-    "home": "SD",
-    "home_name": "Padres",
-    "model_home_win_pct": 71,
-    "market_home_win_pct": 66,
-    "edge": 5,
-    "logged_at": "2026-06-13T22:06:00",
-    "status": "final",
-    "away_score": 2,
-    "home_score": 1,
-    "winner": "LAA",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-13",
-    "away": "TOR",
-    "away_name": "Blue Jays",
-    "home": "MIL",
-    "home_name": "Brewers",
-    "model_home_win_pct": 39,
-    "market_home_win_pct": 43,
-    "edge": 4,
-    "logged_at": "2026-06-13T20:37:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 7,
-    "winner": "MIL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-13",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "DET",
-    "home_name": "Tigers",
-    "model_home_win_pct": 58,
-    "market_home_win_pct": 47,
-    "edge": 11,
-    "logged_at": "2026-06-13T14:21:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 8,
-    "winner": "DET",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-13",
-    "away": "NYY",
-    "away_name": "Yankees",
-    "home": "BOS",
-    "home_name": "Red Sox",
-    "model_home_win_pct": 43,
-    "market_home_win_pct": 41,
-    "edge": 2,
-    "logged_at": "2026-06-13T19:30:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 3,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-13",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 62,
-    "market_home_win_pct": 60,
-    "edge": 2,
-    "logged_at": "2026-06-13T18:50:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 12,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-13",
-    "away": "CIN",
-    "away_name": "Reds",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 67,
-    "market_home_win_pct": 71,
-    "edge": 4,
-    "logged_at": "2026-06-13T16:21:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 6,
-    "winner": "CHC",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-13",
-    "away": "SEA",
-    "away_name": "Mariners",
-    "home": "WSH",
-    "home_name": "Nationals",
-    "model_home_win_pct": 39,
-    "market_home_win_pct": 37,
-    "edge": 2,
-    "logged_at": "2026-06-13T18:50:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 3,
-    "winner": "SEA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-14",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "TB",
-    "home_name": "Rays",
-    "model_home_win_pct": 31,
-    "market_home_win_pct": 43,
-    "edge": 12,
-    "logged_at": "2026-06-14T15:15:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 7,
-    "winner": "DET",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-14",
-    "away": "BOS",
-    "away_name": "Red Sox",
-    "home": "OAK",
-    "home_name": "Athletics",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 47,
-    "edge": 1,
-    "logged_at": "2026-06-14T18:38:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 8,
-    "winner": "BOS",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-14",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 27,
-    "market_home_win_pct": 39,
-    "edge": 12,
-    "logged_at": "2026-06-14T22:23:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 5,
-    "winner": "CWS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-14",
-    "away": "COL",
-    "away_name": "Rockies",
-    "home": "NYM",
-    "home_name": "Mets",
-    "model_home_win_pct": 77,
-    "market_home_win_pct": 68,
-    "edge": 9,
-    "logged_at": "2026-06-14T19:11:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 8,
-    "winner": "NYM",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-14",
-    "away": "WSH",
-    "away_name": "Nationals",
-    "home": "STL",
-    "home_name": "Cardinals",
-    "model_home_win_pct": 59,
-    "market_home_win_pct": 71,
-    "edge": 12,
-    "logged_at": "2026-06-14T19:39:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 2,
-    "winner": "WSH",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-14",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "KC",
-    "home_name": "Royals",
-    "model_home_win_pct": 42,
-    "market_home_win_pct": 51,
-    "edge": 9,
-    "logged_at": "2026-06-14T13:09:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 8,
-    "winner": "KC",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-15",
-    "away": "MIN",
-    "away_name": "Twins",
-    "home": "LAA",
-    "home_name": "Angels",
-    "model_home_win_pct": 37,
-    "market_home_win_pct": 47,
-    "edge": 10,
-    "logged_at": "2026-06-15T14:57:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 6,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-15",
-    "away": "BOS",
-    "away_name": "Red Sox",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 74,
-    "market_home_win_pct": 69,
-    "edge": 5,
-    "logged_at": "2026-06-15T18:58:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 6,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-15",
-    "away": "TOR",
-    "away_name": "Blue Jays",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 34,
-    "market_home_win_pct": 40,
-    "edge": 6,
-    "logged_at": "2026-06-15T18:48:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 6,
-    "winner": "TOR",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-15",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "WSH",
-    "home_name": "Nationals",
-    "model_home_win_pct": 37,
-    "market_home_win_pct": 48,
-    "edge": 11,
-    "logged_at": "2026-06-15T16:32:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 3,
-    "winner": "HOU",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-15",
-    "away": "CHC",
-    "away_name": "Cubs",
-    "home": "COL",
-    "home_name": "Rockies",
-    "model_home_win_pct": 43,
-    "market_home_win_pct": 56,
-    "edge": 13,
-    "logged_at": "2026-06-15T16:34:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 1,
-    "winner": "CHC",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-15",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "TB",
-    "home_name": "Rays",
-    "model_home_win_pct": 32,
-    "market_home_win_pct": 29,
-    "edge": 3,
-    "logged_at": "2026-06-15T19:36:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 8,
-    "winner": "TB",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-15",
-    "away": "SF",
-    "away_name": "Giants",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 82,
-    "market_home_win_pct": 74,
-    "edge": 8,
-    "logged_at": "2026-06-15T14:06:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 9,
-    "winner": "ATL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-16",
-    "away": "MIN",
-    "away_name": "Twins",
-    "home": "STL",
-    "home_name": "Cardinals",
-    "model_home_win_pct": 29,
-    "market_home_win_pct": 37,
-    "edge": 8,
-    "logged_at": "2026-06-16T13:12:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 3,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-16",
-    "away": "CHC",
-    "away_name": "Cubs",
-    "home": "BOS",
-    "home_name": "Red Sox",
-    "model_home_win_pct": 51,
-    "market_home_win_pct": 61,
-    "edge": 10,
-    "logged_at": "2026-06-16T21:12:00",
-    "status": "final",
-    "away_score": 2,
-    "home_score": 0,
-    "winner": "CHC",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-16",
-    "away": "NYM",
-    "away_name": "Mets",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 64,
-    "market_home_win_pct": 57,
-    "edge": 7,
-    "logged_at": "2026-06-16T17:46:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 0,
-    "winner": "NYM",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-16",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 66,
-    "market_home_win_pct": 79,
-    "edge": 13,
-    "logged_at": "2026-06-16T18:44:00",
-    "status": "final",
-    "away_score": 2,
-    "home_score": 6,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-16",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 58,
-    "market_home_win_pct": 66,
-    "edge": 8,
-    "logged_at": "2026-06-16T14:45:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 5,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-16",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "SD",
-    "home_name": "Padres",
-    "model_home_win_pct": 70,
-    "market_home_win_pct": 64,
-    "edge": 6,
-    "logged_at": "2026-06-16T18:51:00",
-    "status": "final",
-    "away_score": 10,
-    "home_score": 8,
-    "winner": "PIT",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-16",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 28,
-    "market_home_win_pct": 39,
-    "edge": 11,
-    "logged_at": "2026-06-16T15:42:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 3,
-    "winner": "HOU",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-17",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "COL",
-    "home_name": "Rockies",
-    "model_home_win_pct": 34,
-    "market_home_win_pct": 46,
-    "edge": 12,
-    "logged_at": "2026-06-17T13:11:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 0,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-17",
-    "away": "CHC",
-    "away_name": "Cubs",
-    "home": "PHI",
-    "home_name": "Phillies",
-    "model_home_win_pct": 60,
-    "market_home_win_pct": 68,
-    "edge": 8,
-    "logged_at": "2026-06-17T13:33:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 5,
-    "winner": "CHC",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-17",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "BAL",
-    "home_name": "Orioles",
-    "model_home_win_pct": 69,
-    "market_home_win_pct": 78,
-    "edge": 9,
-    "logged_at": "2026-06-17T22:49:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 9,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-17",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "SEA",
-    "home_name": "Mariners",
-    "model_home_win_pct": 71,
-    "market_home_win_pct": 60,
-    "edge": 11,
-    "logged_at": "2026-06-17T16:16:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 10,
-    "winner": "SEA",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-17",
-    "away": "SF",
-    "away_name": "Giants",
-    "home": "MIN",
-    "home_name": "Twins",
-    "model_home_win_pct": 78,
-    "market_home_win_pct": 70,
-    "edge": 8,
-    "logged_at": "2026-06-17T13:12:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 7,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-18",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "SD",
-    "home_name": "Padres",
-    "model_home_win_pct": 77,
-    "market_home_win_pct": 84,
-    "edge": 7,
-    "logged_at": "2026-06-18T21:10:00",
-    "status": "final",
-    "away_score": 10,
-    "home_score": 9,
-    "winner": "OAK",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-18",
-    "away": "ATL",
-    "away_name": "Braves",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 53,
-    "market_home_win_pct": 46,
-    "edge": 7,
-    "logged_at": "2026-06-18T13:20:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 9,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-18",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 42,
-    "edge": 4,
-    "logged_at": "2026-06-18T22:08:00",
-    "status": "final",
-    "away_score": 2,
-    "home_score": 4,
-    "winner": "CWS",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-18",
-    "away": "HOU",
-    "away_name": "Astros",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 39,
-    "market_home_win_pct": 38,
-    "edge": 1,
-    "logged_at": "2026-06-18T19:56:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 0,
-    "winner": "HOU",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-18",
-    "away": "WSH",
-    "away_name": "Nationals",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 62,
-    "market_home_win_pct": 51,
-    "edge": 11,
-    "logged_at": "2026-06-18T14:02:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 7,
-    "winner": "ARI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-18",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "MIL",
-    "home_name": "Brewers",
-    "model_home_win_pct": 50,
-    "market_home_win_pct": 56,
-    "edge": 6,
-    "logged_at": "2026-06-18T17:07:00",
-    "status": "final",
-    "away_score": 11,
-    "home_score": 9,
-    "winner": "PIT",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-19",
-    "away": "NYM",
-    "away_name": "Mets",
-    "home": "TEX",
-    "home_name": "Rangers",
-    "model_home_win_pct": 47,
-    "market_home_win_pct": 40,
-    "edge": 7,
-    "logged_at": "2026-06-19T16:25:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 2,
-    "winner": "NYM",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-19",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "LAD",
-    "home_name": "Dodgers",
-    "model_home_win_pct": 62,
-    "market_home_win_pct": 61,
-    "edge": 1,
-    "logged_at": "2026-06-19T15:55:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 10,
-    "winner": "LAD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-19",
-    "away": "MIA",
-    "away_name": "Marlins",
-    "home": "BAL",
-    "home_name": "Orioles",
-    "model_home_win_pct": 73,
-    "market_home_win_pct": 74,
-    "edge": 1,
-    "logged_at": "2026-06-19T17:39:00",
-    "status": "final",
-    "away_score": 4,
-    "home_score": 6,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-19",
-    "away": "TOR",
-    "away_name": "Blue Jays",
-    "home": "KC",
-    "home_name": "Royals",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 37,
-    "edge": 9,
-    "logged_at": "2026-06-19T16:17:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 12,
-    "winner": "KC",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-19",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "HOU",
-    "home_name": "Astros",
-    "model_home_win_pct": 54,
-    "market_home_win_pct": 42,
-    "edge": 12,
-    "logged_at": "2026-06-19T14:01:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 5,
-    "winner": "DET",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-19",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "CIN",
-    "home_name": "Reds",
-    "model_home_win_pct": 63,
-    "market_home_win_pct": 72,
-    "edge": 9,
-    "logged_at": "2026-06-19T17:49:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 6,
-    "winner": "CIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-20",
-    "away": "TOR",
-    "away_name": "Blue Jays",
-    "home": "MIN",
-    "home_name": "Twins",
-    "model_home_win_pct": 70,
-    "market_home_win_pct": 69,
-    "edge": 1,
-    "logged_at": "2026-06-20T16:06:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 8,
-    "winner": "MIN",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-20",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "ATL",
-    "home_name": "Braves",
-    "model_home_win_pct": 73,
-    "market_home_win_pct": 69,
-    "edge": 4,
-    "logged_at": "2026-06-20T20:36:00",
-    "status": "final",
-    "away_score": 0,
-    "home_score": 3,
-    "winner": "ATL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-20",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "LAA",
-    "home_name": "Angels",
-    "model_home_win_pct": 34,
-    "market_home_win_pct": 41,
-    "edge": 7,
-    "logged_at": "2026-06-20T21:44:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 1,
-    "winner": "DET",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-20",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 72,
-    "market_home_win_pct": 61,
-    "edge": 11,
-    "logged_at": "2026-06-20T17:05:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 5,
-    "winner": "OAK",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-20",
-    "away": "MIL",
-    "away_name": "Brewers",
-    "home": "TB",
-    "home_name": "Rays",
-    "model_home_win_pct": 57,
-    "market_home_win_pct": 46,
-    "edge": 11,
-    "logged_at": "2026-06-20T18:18:00",
-    "status": "final",
-    "away_score": 6,
-    "home_score": 7,
-    "winner": "TB",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-20",
-    "away": "CIN",
-    "away_name": "Reds",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 64,
-    "market_home_win_pct": 58,
-    "edge": 6,
-    "logged_at": "2026-06-20T20:49:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 6,
-    "winner": "CHC",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-21",
-    "away": "CWS",
-    "away_name": "White Sox",
-    "home": "KC",
-    "home_name": "Royals",
-    "model_home_win_pct": 62,
-    "market_home_win_pct": 49,
-    "edge": 13,
-    "logged_at": "2026-06-21T17:52:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 11,
-    "winner": "KC",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-21",
-    "away": "PIT",
-    "away_name": "Pirates",
-    "home": "SD",
-    "home_name": "Padres",
-    "model_home_win_pct": 70,
-    "market_home_win_pct": 61,
-    "edge": 9,
-    "logged_at": "2026-06-21T18:01:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 9,
-    "winner": "SD",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-21",
-    "away": "CLE",
-    "away_name": "Guardians",
-    "home": "MIN",
-    "home_name": "Twins",
-    "model_home_win_pct": 62,
-    "market_home_win_pct": 74,
-    "edge": 12,
-    "logged_at": "2026-06-21T21:26:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 0,
-    "winner": "CLE",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-21",
-    "away": "BAL",
-    "away_name": "Orioles",
-    "home": "HOU",
-    "home_name": "Astros",
-    "model_home_win_pct": 57,
-    "market_home_win_pct": 45,
-    "edge": 12,
-    "logged_at": "2026-06-21T19:02:00",
-    "status": "final",
-    "away_score": 7,
-    "home_score": 9,
-    "winner": "HOU",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-21",
-    "away": "LAD",
-    "away_name": "Dodgers",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 40,
-    "market_home_win_pct": 45,
-    "edge": 5,
-    "logged_at": "2026-06-21T20:01:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 7,
-    "winner": "CHC",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-21",
-    "away": "MIL",
-    "away_name": "Brewers",
-    "home": "NYY",
-    "home_name": "Yankees",
-    "model_home_win_pct": 76,
-    "market_home_win_pct": 67,
-    "edge": 9,
-    "logged_at": "2026-06-21T13:59:00",
-    "status": "final",
-    "away_score": 3,
-    "home_score": 6,
-    "winner": "NYY",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-22",
-    "away": "NYM",
-    "away_name": "Mets",
-    "home": "LAA",
-    "home_name": "Angels",
-    "model_home_win_pct": 40,
-    "market_home_win_pct": 34,
-    "edge": 6,
-    "logged_at": "2026-06-22T16:23:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 8,
-    "winner": "NYM",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-22",
-    "away": "ARI",
-    "away_name": "Diamondbacks",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 61,
-    "market_home_win_pct": 52,
-    "edge": 9,
-    "logged_at": "2026-06-22T14:52:00",
-    "status": "final",
-    "away_score": 1,
-    "home_score": 2,
-    "winner": "CLE",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-22",
-    "away": "WSH",
-    "away_name": "Nationals",
-    "home": "MIL",
-    "home_name": "Brewers",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 52,
-    "edge": 6,
-    "logged_at": "2026-06-22T20:02:00",
-    "status": "final",
-    "away_score": 8,
-    "home_score": 11,
-    "winner": "MIL",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-22",
-    "away": "PHI",
-    "away_name": "Phillies",
-    "home": "STL",
-    "home_name": "Cardinals",
-    "model_home_win_pct": 33,
-    "market_home_win_pct": 43,
-    "edge": 10,
-    "logged_at": "2026-06-22T17:25:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 0,
-    "winner": "PHI",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-22",
-    "away": "BAL",
-    "away_name": "Orioles",
-    "home": "OAK",
-    "home_name": "Athletics",
-    "model_home_win_pct": 32,
-    "market_home_win_pct": 40,
-    "edge": 8,
-    "logged_at": "2026-06-22T18:11:00",
-    "status": "final",
-    "away_score": 5,
-    "home_score": 4,
-    "winner": "BAL",
-    "pick_correct": true
-  },
-  {
-    "date": "2026-06-22",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "HOU",
-    "home_name": "Astros",
-    "model_home_win_pct": 57,
-    "market_home_win_pct": 64,
-    "edge": 7,
-    "logged_at": "2026-06-22T19:41:00",
-    "status": "final",
-    "away_score": 9,
-    "home_score": 2,
-    "winner": "SD",
-    "pick_correct": false
-  },
-  {
-    "date": "2026-06-23",
-    "away": "SD",
-    "away_name": "Padres",
-    "home": "CHC",
-    "home_name": "Cubs",
-    "model_home_win_pct": 43,
-    "market_home_win_pct": 50,
-    "edge": 7,
-    "logged_at": "2026-06-23T12:05:00",
-    "status": "upcoming"
-  },
-  {
-    "date": "2026-06-23",
-    "away": "OAK",
-    "away_name": "Athletics",
-    "home": "SF",
-    "home_name": "Giants",
-    "model_home_win_pct": 52,
-    "market_home_win_pct": 47,
-    "edge": 5,
-    "logged_at": "2026-06-23T12:40:00",
-    "status": "upcoming"
-  },
-  {
-    "date": "2026-06-23",
-    "away": "COL",
-    "away_name": "Rockies",
-    "home": "CWS",
-    "home_name": "White Sox",
-    "model_home_win_pct": 50,
-    "market_home_win_pct": 35,
-    "edge": 15,
-    "logged_at": "2026-06-23T18:10:00",
-    "status": "upcoming"
-  },
-  {
-    "date": "2026-06-23",
-    "away": "TOR",
-    "away_name": "Blue Jays",
-    "home": "CIN",
-    "home_name": "Reds",
-    "model_home_win_pct": 46,
-    "market_home_win_pct": 40,
-    "edge": 6,
-    "logged_at": "2026-06-23T15:10:00",
-    "status": "upcoming"
-  },
-  {
-    "date": "2026-06-23",
-    "away": "LAA",
-    "away_name": "Angels",
-    "home": "TEX",
-    "home_name": "Rangers",
-    "model_home_win_pct": 60,
-    "market_home_win_pct": 64,
-    "edge": 4,
-    "logged_at": "2026-06-23T13:45:00",
-    "status": "upcoming"
-  },
-  {
-    "date": "2026-06-23",
-    "away": "DET",
-    "away_name": "Tigers",
-    "home": "CLE",
-    "home_name": "Guardians",
-    "model_home_win_pct": 52,
-    "market_home_win_pct": 58,
-    "edge": 6,
-    "logged_at": "2026-06-23T15:10:00",
-    "status": "upcoming"
-  },
-  {
-    "date": "2026-06-23",
-    "away": "SEA",
-    "away_name": "Mariners",
-    "home": "ARI",
-    "home_name": "Diamondbacks",
-    "model_home_win_pct": 48,
-    "market_home_win_pct": 59,
-    "edge": 11,
-    "logged_at": "2026-06-23T15:40:00",
-    "status": "upcoming"
-  }
-]</script>
+<script type="application/json" id="embedded-ledger">[{"date":"2026-06-23","away":"NYY","away_name":"Yankees","home":"BOS","home_name":"Red Sox","model_home_win_pct":47,"market_home_win_pct":53,"edge":6,"logged_at":"2026-06-23T18:09:00+00:00","status":"final","away_score":3,"home_score":6,"winner":"BOS","pick_correct":false},{"date":"2026-06-23","away":"AZ","away_name":"Diamondbacks","home":"STL","home_name":"Cardinals","model_home_win_pct":60,"market_home_win_pct":48,"edge":12,"logged_at":"2026-06-23T19:41:00+00:00","status":"final","away_score":2,"home_score":5,"winner":"STL","pick_correct":true},{"date":"2026-06-23","away":"LAD","away_name":"Dodgers","home":"SF","home_name":"Giants","model_home_win_pct":58,"market_home_win_pct":46,"edge":12,"logged_at":"2026-06-23T13:04:00+00:00","status":"final","away_score":7,"home_score":4,"winner":"LAD","pick_correct":false},{"date":"2026-06-23","away":"CHC","away_name":"Cubs","home":"NYM","home_name":"Mets","model_home_win_pct":45,"market_home_win_pct":55,"edge":10,"logged_at":"2026-06-23T14:23:00+00:00","status":"final","away_score":1,"home_score":4,"winner":"NYM","pick_correct":false},{"date":"2026-06-23","away":"TEX","away_name":"Rangers","home":"TOR","home_name":"Blue Jays","model_home_win_pct":69,"market_home_win_pct":61,"edge":8,"logged_at":"2026-06-23T13:58:00+00:00","status":"final","away_score":8,"home_score":5,"winner":"TEX","pick_correct":false},{"date":"2026-06-24","away":"PHI","away_name":"Phillies","home":"WSH","home_name":"Nationals","model_home_win_pct":64,"market_home_win_pct":52,"edge":12,"logged_at":"2026-06-24T16:02:00+00:00","status":"final","away_score":2,"home_score":3,"winner":"WSH","pick_correct":true},{"date":"2026-06-24","away":"HOU","away_name":"Astros","home":"DET","home_name":"Tigers","model_home_win_pct":59,"market_home_win_pct":49,"edge":10,"logged_at":"2026-06-24T14:27:00+00:00","status":"final","away_score":6,"home_score":2,"winner":"HOU","pick_correct":false},{"date":"2026-06-24","away":"ATH","away_name":"Athletics","home":"SD","home_name":"Padres","model_home_win_pct":38,"market_home_win_pct":55,"edge":17,"logged_at":"2026-06-24T19:04:00+00:00","status":"final","away_score":1,"home_score":7,"winner":"SD","pick_correct":false},{"date":"2026-06-24","away":"ATL","away_name":"Braves","home":"MIA","home_name":"Marlins","model_home_win_pct":72,"market_home_win_pct":63,"edge":9,"logged_at":"2026-06-24T16:05:00+00:00","status":"final","away_score":9,"home_score":3,"winner":"ATL","pick_correct":false},{"date":"2026-06-24","away":"CLE","away_name":"Guardians","home":"MIN","home_name":"Twins","model_home_win_pct":51,"market_home_win_pct":44,"edge":7,"logged_at":"2026-06-24T19:03:00+00:00","status":"final","away_score":2,"home_score":5,"winner":"MIN","pick_correct":true},{"date":"2026-06-25","away":"AZ","away_name":"Diamondbacks","home":"STL","home_name":"Cardinals","model_home_win_pct":47,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T12:15:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"NYY","away_name":"Yankees","home":"BOS","home_name":"Red Sox","model_home_win_pct":50,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T11:45:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"CHC","away_name":"Cubs","home":"NYM","home_name":"Mets","model_home_win_pct":55,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T11:15:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"TEX","away_name":"Rangers","home":"TOR","home_name":"Blue Jays","model_home_win_pct":69,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T11:15:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"PHI","away_name":"Phillies","home":"WSH","home_name":"Nationals","model_home_win_pct":36,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T15:45:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"HOU","away_name":"Astros","home":"DET","home_name":"Tigers","model_home_win_pct":60,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T13:05:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"ATH","away_name":"Athletics","home":"SF","home_name":"Giants","model_home_win_pct":51,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T15:15:00+00:00","status":"upcoming"}]</script>
 
 <script type="text/babel" data-presets="react">
 const { useState, useEffect, useRef, useMemo, useCallback } = React;
@@ -2445,29 +40,29 @@ const { useState, useEffect, useRef, useMemo, useCallback } = React;
    §02  COLOR TOKENS — two skins, one role map
    ============================================================ */
 const THEMES = {
-  light: { // WHITE (default)
+  light: {
     name: "light",
-    bg: "#F4F6FA", panel: "#FFFFFF", headerBg: "rgba(244,246,250,0.82)",
+    bg: "#F4F6FA", panel: "#FFFFFF", header: "#FFFFFF", band: "#EEF1F7",
     line: "#D9DFEA", lineSoft: "#E8ECF3", track: "#E6EAF1", baseLine: "#BCC6D6",
     ink: "#041E42", body: "#35476B", dim: "#6E7E9C", faint: "#9DA9BE",
     model: "#041E42", modelSoft: "rgba(4,30,66,0.10)", market: "#BF0D3E",
-    nailed: "#041E42", missed: "#BF0D3E", upcoming: "#5E6F8E",
-    contraRow: "rgba(191,13,62,0.07)",
+    nailed: "#0E7C4B", missed: "#BF0D3E", upcoming: "#5E6F8E",
+    contraRow: "rgba(191,13,62,0.06)",
     pillActiveLabel: "#FFFFFF",
   },
-  dark: { // BLUE
+  dark: {
     name: "dark",
-    bg: "#041E42", panel: "#0A2A52", headerBg: "rgba(4,30,66,0.82)",
+    bg: "#041E42", panel: "#0A2A52", header: "#06224A", band: "#0E2E58",
     line: "#234A7A", lineSoft: "#16365F", track: "#0E2B50", baseLine: "#3E5E8E",
     ink: "#FFFFFF", body: "#C8D6EE", dim: "#8AA0C8", faint: "#5E78A6",
-    model: "#FFFFFF", modelSoft: "rgba(255,255,255,0.12)", market: "#BF0D3E",
-    nailed: "#FFFFFF", missed: "#FF536B", upcoming: "#9DB4D8",
-    contraRow: "rgba(191,13,62,0.12)",
+    model: "#FFFFFF", modelSoft: "rgba(255,255,255,0.12)", market: "#E0294F",
+    nailed: "#34D17F", missed: "#FF536B", upcoming: "#9DB4D8",
+    contraRow: "rgba(191,13,62,0.16)",
     pillActiveLabel: "#06140C",
   },
 };
 
-/* §07  MLB team color map (chips) */
+/* §07  MLB team color map (chip fallback) */
 const TEAM_COLORS = {
   ARI:"#A71930", ATL:"#CE1141", BAL:"#DF4601", BOS:"#BD3039", CHC:"#0E3386",
   CWS:"#27251F", CIN:"#C6011F", CLE:"#0C2340", COL:"#33006F", DET:"#0C2340",
@@ -2475,37 +70,45 @@ const TEAM_COLORS = {
   MIL:"#12284B", MIN:"#002B5C", NYM:"#FF5910", NYY:"#0C2340", OAK:"#003831",
   PHI:"#E81828", PIT:"#FDB827", SD:"#2F241D", SF:"#FD5A1E", SEA:"#0C2C56",
   STL:"#C41E3A", TB:"#092C5C", TEX:"#003278", TOR:"#134A8E", WSH:"#AB0003",
-  // current MLB StatsAPI abbreviation variants
   AZ:"#A71930", ATH:"#003831", CHW:"#27251F", KCR:"#004687", SDP:"#2F241D",
   SFG:"#FD5A1E", TBR:"#092C5C", WSN:"#AB0003",
 };
 const teamColor = (abbr) => TEAM_COLORS[abbr] || "#8893A3";
 
-/* §03  Type ramp */
+/* map our abbreviations to ESPN logo slugs */
+const LOGO_SLUG = {
+  AZ:"ari", ARI:"ari", ATH:"oak", OAK:"oak", CHW:"chw", CWS:"chw",
+  WSH:"wsh", WSN:"wsh", SD:"sd", SDP:"sd", SF:"sf", SFG:"sf",
+  TB:"tb", TBR:"tb", KC:"kc", KCR:"kc",
+};
+const logoUrl = (abbr) =>
+  `https://a.espncdn.com/i/teamlogos/mlb/500/${(LOGO_SLUG[abbr] || abbr || "").toLowerCase()}.png`;
+
+/* §03  Type ramp — Archivo display, Plex Mono data, Plex Sans prose */
 const T = {
-  hero:   { fontFamily:'"IBM Plex Mono", monospace', fontWeight:700, fontSize:"clamp(30px,5.5vw,40px)", lineHeight:0.9, fontVariantNumeric:"tabular-nums" },
+  display:{ fontFamily:'"Archivo", sans-serif', fontWeight:800, letterSpacing:"-0.02em", lineHeight:1.02 },
+  hero:   { fontFamily:'"IBM Plex Mono", monospace', fontWeight:700, fontSize:"clamp(30px,5.5vw,42px)", lineHeight:0.9, fontVariantNumeric:"tabular-nums" },
   stat:   { fontFamily:'"IBM Plex Mono", monospace', fontWeight:700, fontSize:"clamp(26px,3.5vw,34px)", lineHeight:1, fontVariantNumeric:"tabular-nums" },
-  heading:{ fontFamily:'"IBM Plex Sans", sans-serif', fontWeight:700, fontSize:"clamp(22px,3vw,30px)", lineHeight:1.1 },
   rowVal: { fontFamily:'"IBM Plex Mono", monospace', fontWeight:600, fontSize:"14.5px", fontVariantNumeric:"tabular-nums" },
   label:  { fontFamily:'"IBM Plex Mono", monospace', fontWeight:600, fontSize:"11px", letterSpacing:"0.04em", fontVariantNumeric:"tabular-nums" },
-  eyebrow:{ fontFamily:'"IBM Plex Mono", monospace', fontWeight:500, fontSize:"10px", letterSpacing:"0.16em", textTransform:"uppercase" },
-  body:   { fontFamily:'"IBM Plex Sans", sans-serif', fontWeight:400, fontSize:"14px", lineHeight:1.5 },
+  eyebrow:{ fontFamily:'"IBM Plex Mono", monospace', fontWeight:500, fontSize:"10px", letterSpacing:"0.18em", textTransform:"uppercase" },
+  body:   { fontFamily:'"IBM Plex Sans", sans-serif', fontWeight:400, fontSize:"14px", lineHeight:1.55 },
 };
 
 /* ============================================================
-   §07 / §08  Derived values — computed client-side, exactly per spec
+   §07 / §08  Derived values — computed client-side, per spec
    ============================================================ */
 const isFinal = (r) => r.status === "final";
-const outcome = (r) => (r.winner === r.home ? 1 : 0);              // home win = 1
+const outcome = (r) => (r.winner === r.home ? 1 : 0);
 const hasMarket = (r) => r.market_home_win_pct != null && !isNaN(r.market_home_win_pct);
 const edgeOf = (r) => {
   if (r.edge != null && !isNaN(r.edge)) return Math.round(Math.abs(r.edge));
-  if (!hasMarket(r) || r.model_home_win_pct == null) return null;   // no market -> no edge
+  if (!hasMarket(r) || r.model_home_win_pct == null) return null;
   return Math.round(Math.abs(r.model_home_win_pct - r.market_home_win_pct));
 };
 const isContrarian = (r, thr) => { const e = edgeOf(r); return e != null && e >= thr; };
 
-function brier(finals, key) { // key: model_home_win_pct | market_home_win_pct
+function brier(finals, key) {
   if (!finals.length) return null;
   const s = finals.reduce((acc, r) => {
     const p = r[key] / 100, a = outcome(r);
@@ -2513,45 +116,37 @@ function brier(finals, key) { // key: model_home_win_pct | market_home_win_pct
   }, 0);
   return s / finals.length;
 }
-
-function calibrationTrend(finals) { // cumulative Brier running mean, sorted by date
+function calibrationTrend(finals) {
   const sorted = [...finals].sort((a, b) =>
     (a.date + a.logged_at).localeCompare(b.date + b.logged_at));
-  let sm = 0, sk = 0;
-  const model = [], market = [];
+  let sm = 0, sk = 0; const model = [], market = [];
   sorted.forEach((r, i) => {
     const a = outcome(r);
     sm += (r.model_home_win_pct / 100 - a) ** 2;
     sk += (r.market_home_win_pct / 100 - a) ** 2;
-    model.push(sm / (i + 1));
-    market.push(sk / (i + 1));
+    model.push(sm / (i + 1)); market.push(sk / (i + 1));
   });
   return { model, market, n: sorted.length };
 }
-
 const fmt3 = (x) => (x == null ? "—" : x.toFixed(3));
 const prefersReduced = () =>
   window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* ============================================================
-   Status icons — stroked SVG, 2.4px round caps
-   ============================================================ */
+/* ---- status icons ---- */
 function Icon({ kind, color, size = 13 }) {
-  const common = { width:size, height:size, viewBox:"0 0 24 24", fill:"none",
+  const c = { width:size, height:size, viewBox:"0 0 24 24", fill:"none",
     stroke:color, strokeWidth:2.4, strokeLinecap:"round", strokeLinejoin:"round",
     style:{ display:"block", flex:"0 0 auto" } };
-  if (kind === "nailed") return <svg {...common}><path d="M4 12.5l5 5L20 6"/></svg>;
-  if (kind === "missed") return <svg {...common}><path d="M6 6l12 12M18 6L6 18"/></svg>;
-  return <svg {...common}><circle cx="12" cy="12" r="8"/><path d="M12 8v4.5l3 2"/></svg>; // clock
+  if (kind === "nailed") return <svg {...c}><path d="M4 12.5l5 5L20 6"/></svg>;
+  if (kind === "missed") return <svg {...c}><path d="M6 6l12 12M18 6L6 18"/></svg>;
+  return <svg {...c}><circle cx="12" cy="12" r="8"/><path d="M12 8v4.5l3 2"/></svg>;
 }
 function Bolt({ color, size = 12 }) {
   return (<svg width={size} height={size} viewBox="0 0 24 24" fill={color}
     style={{ display:"block", flex:"0 0 auto" }}><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>);
 }
 
-/* ============================================================
-   Probability bar — 7px track, r99, 50% baseline tick, scaleX grow
-   ============================================================ */
+/* ---- probability bar (7px track, r99, 50% tick, scaleX grow) ---- */
 function ProbBar({ pct, color, track, baseLine, delay = 0, animate }) {
   const safe = (pct == null || isNaN(+pct)) ? 0 : Math.max(0, Math.min(100, +pct));
   const [w, setW] = useState(animate ? 0 : safe);
@@ -2562,31 +157,36 @@ function ProbBar({ pct, color, track, baseLine, delay = 0, animate }) {
   }, [safe, animate]);
   return (
     <div style={{ position:"relative", height:7, borderRadius:99, background:track, overflow:"hidden" }}>
-      <div style={{
-        position:"absolute", left:0, top:0, bottom:0, width:`${w}%`, background:color, borderRadius:99,
+      <div style={{ position:"absolute", left:0, top:0, bottom:0, width:`${w}%`, background:color, borderRadius:99,
         transformOrigin:"left center",
-        transition: animate ? `width 0.6s cubic-bezier(.2,.8,.2,1) ${delay}s` : "none",
-      }} />
-      {/* 50% coin-flip reference tick */}
+        transition: animate ? `width 0.6s cubic-bezier(.2,.8,.2,1) ${delay}s` : "none" }} />
       <div style={{ position:"absolute", left:"50%", top:-1, bottom:-1, width:1, background:baseLine }} />
     </div>
   );
 }
 
-/* ============================================================
-   Team chip  — colored square (r2) + abbr
-   ============================================================ */
-function TeamChip({ abbr, color }) {
+/* ---- team logo with colored-brick fallback ---- */
+function TeamLogo({ abbr, size = 20 }) {
+  const [err, setErr] = useState(false);
+  if (err || !abbr) {
+    return <span style={{ width:size-2, height:size-2, borderRadius:3, background:teamColor(abbr),
+      flex:"0 0 auto", display:"inline-block" }} />;
+  }
+  return <img src={logoUrl(abbr)} alt="" width={size} height={size} loading="lazy"
+    onError={() => setErr(true)}
+    style={{ display:"block", flex:"0 0 auto", objectFit:"contain" }} />;
+}
+function TeamTag({ abbr, color, strong }) {
   return (
-    <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
-      <span style={{ width:9, height:9, borderRadius:2, background:teamColor(abbr), flex:"0 0 auto" }} />
-      <span className="mono" style={{ ...T.rowVal, color }}>{abbr}</span>
+    <span style={{ display:"inline-flex", alignItems:"center", gap:7 }}>
+      <TeamLogo abbr={abbr} />
+      <span className="mono" style={{ ...T.rowVal, fontWeight: strong ? 700 : 600, color }}>{abbr}</span>
     </span>
   );
 }
 
 /* ============================================================
-   Game row — flex-wrap, two prob rows, edge col, status col
+   Game row
    ============================================================ */
 function GameRow({ r, t, thr, animate, idx }) {
   const final = isFinal(r);
@@ -2598,7 +198,6 @@ function GameRow({ r, t, thr, animate, idx }) {
   const status = !final ? "upcoming" : (r.pick_correct ? "nailed" : "missed");
   const statusColor = t[status];
   const statusLabel = status === "nailed" ? "NAILED" : status === "missed" ? "MISSED" : "UPCOMING";
-  // parse the ISO timestamp (carries a UTC offset) and show it in the viewer's local zone
   const loggedTime = (() => {
     if (!r.logged_at) return "";
     const d = new Date(r.logged_at);
@@ -2608,39 +207,39 @@ function GameRow({ r, t, thr, animate, idx }) {
 
   return (
     <div style={{
-      display:"flex", flexWrap:"wrap", alignItems:"center", gap:"14px 20px",
-      padding:"15px 18px",
-      borderBottom:`1px solid ${t.lineSoft}`,
+      display:"flex", flexWrap:"wrap", alignItems:"center", gap:"12px 20px",
+      padding:"14px 20px", borderBottom:`1px solid ${t.lineSoft}`,
       background: contra ? t.contraRow : "transparent",
-    }}>
+      borderLeft: contra ? `2px solid ${t.market}` : "2px solid transparent" }}>
+
       {/* matchup */}
-      <div style={{ display:"flex", alignItems:"center", gap:8, minWidth:138, flex:"0 0 auto" }}>
-        <TeamChip abbr={r.away} color={t.body} />
+      <div style={{ display:"flex", alignItems:"center", gap:9, minWidth:152, flex:"0 0 auto" }}>
+        <TeamTag abbr={r.away} color={t.body} />
         <span className="mono" style={{ ...T.label, color:t.faint }}>@</span>
-        <TeamChip abbr={r.home} color={t.ink} />
-        {contra && <span style={{ marginLeft:2 }}><Bolt color={t.market} /></span>}
+        <TeamTag abbr={r.home} color={t.ink} strong />
+        {contra && <span style={{ marginLeft:1 }}><Bolt color={t.market} /></span>}
       </div>
 
       {/* probability bars */}
-      <div style={{ flex:"1 1 200px", minWidth:160, display:"flex", flexDirection:"column", gap:6 }}>
+      <div style={{ flex:"1 1 210px", minWidth:170, display:"flex", flexDirection:"column", gap:6 }}>
         <ProbBar pct={model} color={t.model} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)} />
         <ProbBar pct={mkt ? market : 0} color={t.market} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)+0.05} />
       </div>
 
       {/* percentages */}
-      <div style={{ display:"flex", flexDirection:"column", gap:6, textAlign:"right", flex:"0 0 auto", minWidth:50 }}>
+      <div style={{ display:"flex", flexDirection:"column", gap:6, textAlign:"right", flex:"0 0 auto", minWidth:52 }}>
         <span className="mono" style={{ ...T.rowVal, color:t.ink }}>{model == null ? "—" : Math.round(model) + "%"}</span>
         <span className="mono" style={{ ...T.rowVal, color: mkt ? t.market : t.faint, fontWeight: mkt ? 600 : 400 }}>{mkt ? Math.round(market) + "%" : "no mkt"}</span>
       </div>
 
       {/* edge */}
-      <div style={{ display:"flex", flexDirection:"column", gap:2, alignItems:"flex-start", flex:"0 0 auto", minWidth:38 }}>
-        <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>EDGE</span>
+      <div style={{ display:"flex", flexDirection:"column", gap:2, alignItems:"flex-start", flex:"0 0 auto", minWidth:40 }}>
+        <span className="mono" style={{ ...T.eyebrow, color:t.dim, letterSpacing:"0.1em" }}>EDGE</span>
         <span className="mono" style={{ ...T.stat, fontSize:"22px", color: contra ? t.market : (e == null ? t.faint : t.ink) }}>{e == null ? "—" : e}</span>
       </div>
 
       {/* status */}
-      <div style={{ display:"flex", flexDirection:"column", gap:3, alignItems:"flex-end", marginLeft:"auto", flex:"0 0 auto", minWidth:96 }}>
+      <div style={{ display:"flex", flexDirection:"column", gap:3, alignItems:"flex-end", marginLeft:"auto", flex:"0 0 auto", minWidth:104 }}>
         <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
           <Icon kind={status} color={statusColor} />
           <span className="mono" style={{ ...T.label, color:statusColor }}>{statusLabel}</span>
@@ -2653,65 +252,45 @@ function GameRow({ r, t, thr, animate, idx }) {
   );
 }
 
-/* ============================================================
-   Filter pill  — active fill = t.model, inactive transparent
-   ============================================================ */
+/* ---- filter pill / theme toggle / button shell ---- */
 function Pill({ label, count, active, t, onClick }) {
   return (
     <button onClick={onClick} className="mono"
-      style={{
-        ...T.label, cursor:"pointer", display:"inline-flex", alignItems:"center", gap:7,
-        minHeight:32, padding:"0 14px", borderRadius:7,
+      style={{ ...T.label, cursor:"pointer", display:"inline-flex", alignItems:"center", gap:7,
+        minHeight:34, padding:"0 14px", borderRadius:7,
         background: active ? t.model : "transparent",
         border: `1px solid ${active ? t.model : t.line}`,
         color: active ? t.pillActiveLabel : t.dim,
-        transition:"background .15s, color .15s, border-color .15s",
-      }}>
+        transition:"background .15s, color .15s, border-color .15s" }}>
       <span>{label}</span>
       {count != null && <span style={{ opacity:0.6, fontWeight:400 }}>{count}</span>}
     </button>
   );
 }
-
-/* Theme toggle — same pill shape */
-function ThemeToggle({ t, dark, onToggle }) {
+function GhostBtn({ children, t, onClick, label }) {
   return (
-    <button onClick={onToggle} className="mono" aria-label="Toggle theme"
+    <button onClick={onClick} className="mono" aria-label={label}
       style={{ ...T.label, cursor:"pointer", display:"inline-flex", alignItems:"center", gap:7,
-        minHeight:32, padding:"0 14px", borderRadius:7, background:"transparent",
-        border:`1px solid ${t.line}`, color:t.dim }}>
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:"block"}}>
-        {dark
-          ? <g><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></g>
-          : <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/>}
-      </svg>
-      <span>{dark ? "Light" : "Dark"}</span>
-    </button>
+        minHeight:34, padding:"0 13px", borderRadius:7, background:"transparent",
+        border:`1px solid ${t.line}`, color:t.dim }}>{children}</button>
   );
 }
 
-/* ============================================================
-   Scoreboard stat cells
-   ============================================================ */
-function StatCell({ t, children, span }) {
+/* ---- scoreboard cells ---- */
+function StatCell({ t, children, span, accent }) {
   return (
-    <div style={{
-      background:t.panel, border:`1px solid ${t.line}`, borderRadius:12,
-      padding:"clamp(18px,2.5vw,24px)",
-      gridColumn: span ? `span ${span}` : "auto",
+    <div style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:12,
+      padding:"clamp(18px,2.5vw,24px)", gridColumn: span ? `span ${span}` : "auto",
       display:"flex", flexDirection:"column",
-    }}>{children}</div>
+      borderTop: accent ? `2px solid ${accent}` : `1px solid ${t.line}` }}>{children}</div>
   );
 }
-
-/* Brier head-to-head hero */
 function BrierCell({ t, bModel, bMarket }) {
   const modelWins = bModel != null && bMarket != null && bModel <= bMarket;
   const diff = (bModel != null && bMarket != null) ? Math.abs(bModel - bMarket) : null;
   return (
-    <StatCell t={t} span={2}>
-      <span className="mono" style={{ ...T.eyebrow, color:t.dim, marginBottom:14 }}>Calibration · Brier</span>
+    <StatCell t={t} span={2} accent={t.market}>
+      <span className="mono" style={{ ...T.eyebrow, color:t.dim, marginBottom:14 }}>Calibration · Brier · lower wins</span>
       <div style={{ display:"flex", alignItems:"baseline", gap:18, flexWrap:"wrap" }}>
         <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
           <span className="mono" style={{ ...T.hero, color:t.model }}>{fmt3(bModel)}</span>
@@ -2725,13 +304,11 @@ function BrierCell({ t, bModel, bMarket }) {
       </div>
       <span className="mono" style={{ ...T.label, fontWeight:500, color:t.body, marginTop:16 }}>
         {diff == null ? "Awaiting finals" :
-          <>{modelWins ? "MODEL" : "MARKET"} ahead by {diff.toFixed(3)} · <span style={{color:t.dim}}>lower is better</span></>}
+          <>{modelWins ? "Model" : "Market"} ahead by {diff.toFixed(3)}</>}
       </span>
     </StatCell>
   );
 }
-
-/* Pick record */
 function RecordCell({ t, wins, losses }) {
   return (
     <StatCell t={t}>
@@ -2741,8 +318,6 @@ function RecordCell({ t, wins, losses }) {
     </StatCell>
   );
 }
-
-/* Accuracy + bar */
 function AccuracyCell({ t, acc, animate }) {
   return (
     <StatCell t={t}>
@@ -2754,8 +329,6 @@ function AccuracyCell({ t, acc, animate }) {
     </StatCell>
   );
 }
-
-/* Calibration trend — two cumulative-Brier lines + soft model area */
 function TrendCell({ t, trend, animate }) {
   const W = 520, H = 150, padL = 8, padR = 8, padT = 10, padB = 8;
   const ready = trend.n >= 2;
@@ -2771,7 +344,6 @@ function TrendCell({ t, trend, animate }) {
     : "";
   const [dash, setDash] = useState(animate ? 1 : 0);
   useEffect(() => { if (animate) { const id = requestAnimationFrame(()=>setDash(0)); return ()=>cancelAnimationFrame(id);} }, [animate]);
-
   return (
     <StatCell t={t} span={2}>
       <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:8, flexWrap:"wrap", gap:8 }}>
@@ -2800,33 +372,32 @@ function TrendCell({ t, trend, animate }) {
   );
 }
 
-/* Awaiting-finals panel — shown when no games have resolved yet,
-   so the calibration scoreboard has nothing meaningful to compute. */
+/* ---- awaiting-finals panel ---- */
 function AwaitingPanel({ t, rows }) {
   const upcoming = rows.filter((r) => !isFinal(r)).length;
   const withMkt = rows.filter((r) => r.market_home_win_pct != null).length;
   return (
-    <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:14,
-      padding:"clamp(22px,3.5vw,32px)", marginBottom:"clamp(22px,3vw,32px)" }}>
+    <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderTop:`2px solid ${t.market}`,
+      borderRadius:12, padding:"clamp(22px,3.5vw,34px)", marginBottom:"clamp(22px,3vw,32px)" }}>
       <span className="mono" style={{ ...T.eyebrow, color:t.market }}>Calibration · Brier</span>
-      <h2 style={{ ...T.heading, fontSize:"clamp(20px,2.6vw,26px)", color:t.ink, margin:"10px 0 0" }}>Awaiting first finals</h2>
-      <p style={{ ...T.body, color:t.body, maxWidth:580, margin:"10px 0 20px" }}>
-        Model-vs-market Brier, pick record, accuracy and the calibration trend appear here
-        once today&rsquo;s games resolve. Probabilities are logged before first pitch.
+      <h2 className="disp" style={{ ...T.display, fontWeight:700, fontSize:"clamp(22px,3vw,30px)", color:t.ink, margin:"12px 0 0" }}>Awaiting first finals</h2>
+      <p style={{ ...T.body, color:t.body, maxWidth:600, margin:"12px 0 22px" }}>
+        Model-versus-market Brier, pick record, accuracy and the calibration trend appear here
+        once today&rsquo;s games resolve. Every probability is logged before first pitch.
       </p>
-      <div style={{ display:"flex", gap:"clamp(24px,5vw,48px)", flexWrap:"wrap" }}>
+      <div style={{ display:"flex", gap:"clamp(28px,6vw,64px)", flexWrap:"wrap" }}>
         <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
-          <span className="mono" style={{ ...T.stat, fontSize:"clamp(26px,3.5vw,32px)", color:t.ink }}>{upcoming}</span>
+          <span className="mono" style={{ ...T.stat, fontSize:"clamp(28px,4vw,36px)", color:t.ink }}>{upcoming}</span>
           <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Games logged today</span>
         </div>
         <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
-          <span className="mono" style={{ ...T.stat, fontSize:"clamp(26px,3.5vw,32px)", color: withMkt ? t.ink : t.faint }}>{withMkt}</span>
+          <span className="mono" style={{ ...T.stat, fontSize:"clamp(28px,4vw,36px)", color: withMkt ? t.ink : t.faint }}>{withMkt}</span>
           <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>With market price</span>
         </div>
       </div>
       {withMkt === 0 && upcoming > 0 && (
-        <p style={{ ...T.label, fontWeight:400, color:t.faint, margin:"20px 0 0" }}>
-          Market prices not yet pulled — showing model probabilities only.
+        <p style={{ ...T.label, fontWeight:400, color:t.faint, margin:"22px 0 0" }}>
+          Market prices not pulled yet — showing model probabilities only.
         </p>
       )}
     </section>
@@ -2843,18 +414,16 @@ const FILTERS = [
 ];
 
 function App() {
-  const [dark, setDark] = useState(false);            // light (white) default
+  const [dark, setDark] = useState(false);
   const [rows, setRows] = useState(() => readEmbedded());
   const [filter, setFilter] = useState("all");
-  const [thr, setThr] = useState(10);                 // contrarianThreshold 5–25
+  const [thr, setThr] = useState(10);
   const [lastSync, setLastSync] = useState(null);
-  const [status, setStatus] = useState("embedded");   // live | embedded | error
+  const [status, setStatus] = useState("embedded");
   const firstRender = useRef(true);
   const animate = !prefersReduced();
-
   const t = dark ? THEMES.dark : THEMES.light;
 
-  /* poll ./ledger.json every 30s; fall back to embedded snapshot */
   const load = useCallback(async () => {
     try {
       const res = await fetch("./ledger.json", { cache: "no-store" });
@@ -2868,12 +437,7 @@ function App() {
     }
   }, []);
 
-  useEffect(() => {
-    load();
-    const id = setInterval(load, 30000);
-    return () => clearInterval(id);
-  }, [load]);
-
+  useEffect(() => { load(); const id = setInterval(load, 30000); return () => clearInterval(id); }, [load]);
   useEffect(() => { document.body.style.background = t.bg; }, [t]);
   useEffect(() => { firstRender.current = false; }, []);
 
@@ -2890,15 +454,12 @@ function App() {
     nailed: finals.filter((r) => r.pick_correct).length,
     upcoming: rows.filter((r) => !isFinal(r)).length,
   };
-
   const shown = rows.filter((r) => {
     if (filter === "all") return true;
     if (filter === "nailed") return isFinal(r) && r.pick_correct;
     if (filter === "upcoming") return !isFinal(r);
     return true;
   });
-
-  /* group by date, newest first; upcoming (today) on top */
   const groups = useMemo(() => {
     const m = new Map();
     shown.forEach((r) => { if (!m.has(r.date)) m.set(r.date, []); m.get(r.date).push(r); });
@@ -2908,63 +469,65 @@ function App() {
   const gutter = "clamp(16px,4vw,40px)";
 
   return (
-    <div style={{ background:t.bg, color:t.body, minHeight:"100vh", paddingBottom:40,
+    <div style={{ background:t.bg, color:t.body, minHeight:"100vh", paddingBottom:48,
       transition:"background .25s, color .25s" }}>
 
-      {/* ---- sticky header ---- */}
-      <header style={{ position:"sticky", top:0, zIndex:20,
-        background:t.headerBg, backdropFilter:"blur(12px)", WebkitBackdropFilter:"blur(12px)",
+      {/* crimson identity rule */}
+      <div style={{ height:3, background:t.market }} />
+
+      {/* header (solid — no bleed) */}
+      <header style={{ position:"sticky", top:0, zIndex:30, background:t.header,
         borderBottom:`1px solid ${t.line}` }}>
-        <div style={{ maxWidth:1080, margin:"0 auto", padding:`14px ${gutter}`,
+        <div style={{ maxWidth:1080, margin:"0 auto", padding:`13px ${gutter}`,
           display:"flex", alignItems:"center", justifyContent:"space-between", gap:16, flexWrap:"wrap" }}>
           <div style={{ display:"flex", alignItems:"center", gap:11 }}>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke={t.ink} strokeWidth="2" strokeLinejoin="round">
-              <rect x="12" y="2" width="14.14" height="14.14" transform="rotate(45 12 2)" rx="2"/>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={t.ink} strokeWidth="2.2" strokeLinejoin="round">
+              <rect x="12" y="2.5" width="13.4" height="13.4" transform="rotate(45 12 2.5)" rx="2"/>
             </svg>
-            <span className="mono" style={{ ...T.label, letterSpacing:"0.1em", color:t.ink, fontWeight:700 }}>
+            <span className="mono" style={{ ...T.label, letterSpacing:"0.12em", color:t.ink, fontWeight:700 }}>
               MODEL <span style={{ color:t.market }}>vs</span> MARKET
             </span>
           </div>
-          <div style={{ display:"flex", alignItems:"center", gap:14, flexWrap:"wrap" }}>
+          <div style={{ display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
             <span className="mono" style={{ ...T.eyebrow, color:t.dim, display:"inline-flex", alignItems:"center", gap:7 }}>
               <span style={{ width:6, height:6, borderRadius:99,
-                background: status==="live" ? "#2BBF6F" : t.faint,
-                boxShadow: status==="live" ? "0 0 0 3px rgba(43,191,111,0.18)" : "none" }} />
+                background: status==="live" ? "#2BBF6F" : t.faint }} />
               {status === "live" ? "LIVE" : "SNAPSHOT"}
               {lastSync && <span style={{ color:t.faint, marginLeft:2 }}>· {lastSync.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}</span>}
             </span>
-            <button onClick={load} className="mono" aria-label="Refresh"
-              style={{ ...T.label, cursor:"pointer", minHeight:32, padding:"0 12px", borderRadius:7,
-                background:"transparent", border:`1px solid ${t.line}`, color:t.dim,
-                display:"inline-flex", alignItems:"center", gap:7 }}>
+            <GhostBtn t={t} onClick={load} label="Refresh">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{display:"block"}}>
                 <path d="M20 11A8 8 0 1 0 18 17"/><path d="M20 5v6h-6"/>
-              </svg>
-              Refresh
-            </button>
-            <ThemeToggle t={t} dark={dark} onToggle={() => setDark((d) => !d)} />
+              </svg>Refresh
+            </GhostBtn>
+            <GhostBtn t={t} onClick={() => setDark((d) => !d)} label="Toggle theme">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:"block"}}>
+                {dark
+                  ? <g><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></g>
+                  : <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/>}
+              </svg>{dark ? "Light" : "Dark"}
+            </GhostBtn>
           </div>
         </div>
       </header>
 
-      <main style={{ maxWidth:1080, margin:"0 auto", padding:`clamp(24px,4vw,40px) ${gutter} 0` }}>
+      <main style={{ maxWidth:1080, margin:"0 auto", padding:`clamp(26px,4vw,42px) ${gutter} 0` }}>
 
-        {/* ---- title ---- */}
-        <div style={{ marginBottom:"clamp(20px,3vw,30px)" }}>
-          <span className="mono" style={{ ...T.eyebrow, color:t.market }}>MLB · Out-of-sample calibration</span>
-          <h1 style={{ ...T.heading, color:t.ink, margin:"10px 0 0" }}>Calibration ledger</h1>
-          <p style={{ ...T.body, color:t.body, maxWidth:560, margin:"10px 0 0" }}>
-            Model probabilities logged before first pitch, scored against the market in public.
-            The metric is accuracy of probability — not profit, and never a pick.
+        {/* masthead */}
+        <div style={{ marginBottom:"clamp(22px,3vw,32px)" }}>
+          <span className="mono" style={{ ...T.eyebrow, color:t.market }}>MLB · out-of-sample calibration</span>
+          <h1 className="disp" style={{ ...T.display, fontSize:"clamp(34px,6vw,60px)", color:t.ink, margin:"10px 0 0" }}>Calibration Ledger</h1>
+          <p style={{ ...T.body, color:t.body, maxWidth:580, margin:"12px 0 0" }}>
+            Every model probability is logged before first pitch, then scored against the market in public.
+            The metric is the accuracy of the probability — not profit, and never a pick.
           </p>
         </div>
 
-        {/* ---- scoreboard (or awaiting-finals state) ---- */}
+        {/* scoreboard or awaiting state */}
         {finals.length === 0 ? (
           <AwaitingPanel t={t} rows={rows} />
         ) : (
-          <section style={{
-            display:"grid", gap:"clamp(14px,2vw,20px)",
+          <section style={{ display:"grid", gap:"clamp(14px,2vw,18px)",
             gridTemplateColumns:"repeat(auto-fit, minmax(232px,1fr))",
             marginBottom:"clamp(22px,3vw,32px)" }}>
             <BrierCell t={t} bModel={bModel} bMarket={bMarket} />
@@ -2974,9 +537,9 @@ function App() {
           </section>
         )}
 
-        {/* ---- controls ---- */}
+        {/* controls */}
         <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:14,
-          flexWrap:"wrap", marginBottom:16 }}>
+          flexWrap:"wrap", marginBottom:14 }}>
           <div style={{ display:"flex", gap:9, flexWrap:"wrap" }}>
             {FILTERS.map((f) => (
               <Pill key={f.key} label={f.label} count={counts[f.key]} active={filter===f.key} t={t}
@@ -2990,18 +553,18 @@ function App() {
           </label>
         </div>
 
-        {/* ---- game rows, grouped by date ---- */}
-        <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:14, overflow:"hidden" }}>
+        {/* game rows, grouped by date */}
+        <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:12, overflow:"hidden" }}>
           {groups.length === 0 && (
-            <div style={{ padding:"40px 18px", textAlign:"center" }}>
+            <div style={{ padding:"40px 20px", textAlign:"center" }}>
               <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>No games match this filter.</span>
             </div>
           )}
           {groups.map(([date, gs]) => (
             <div key={date}>
               <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
-                padding:"11px 18px", background:t.headerBg, borderBottom:`1px solid ${t.lineSoft}`,
-                position:"sticky", top:60, zIndex:5, backdropFilter:"blur(8px)", WebkitBackdropFilter:"blur(8px)" }}>
+                padding:"10px 20px", background:t.band, borderBottom:`1px solid ${t.line}`,
+                borderTop:`1px solid ${t.line}` }}>
                 <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>{fmtDate(date)}</span>
                 <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>{gs.length} {gs.length===1?"game":"games"}</span>
               </div>
@@ -3013,7 +576,7 @@ function App() {
           ))}
         </section>
 
-        {/* ---- footer ---- */}
+        {/* footer */}
         <footer style={{ display:"flex", justifyContent:"space-between", gap:16, flexWrap:"wrap",
           marginTop:"clamp(24px,4vw,40px)", paddingTop:20, borderTop:`1px solid ${t.line}` }}>
           <span className="mono" style={{ ...T.eyebrow, color:t.faint }}>MODEL vs MARKET · Calibration Ledger</span>
