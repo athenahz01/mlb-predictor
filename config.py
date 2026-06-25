@@ -60,6 +60,7 @@ PARK_FACTORS = {
     "TEX": {"hr": 1.05, "hit": 1.02},   # Globe Life
     "HOU": {"hr": 1.04, "hit": 1.01},   # Daikin Park
     "ARI": {"hr": 1.04, "hit": 1.03},   # Chase Field
+    "AZ":  {"hr": 1.04, "hit": 1.03},   # Chase Field (API uses 'AZ')
     "ATL": {"hr": 1.02, "hit": 1.00},   # Truist
     "CHC": {"hr": 1.02, "hit": 1.01},   # Wrigley - wind dependent
     "BAL": {"hr": 1.02, "hit": 1.00},   # Camden (post wall move)

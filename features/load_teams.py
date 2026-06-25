@@ -254,15 +254,17 @@ def projected_lineup_from_roster(team_id: int, tables: dict,
         return []
 
 
-def build_game(spec: str, date: str, season: int):
+def build_game(spec: str, date: str, season: int, tables=None):
     """
     Full path: snapshot schedule -> find game -> resolve both lineups ->
     build Team objects + GameContext. Returns (home, away, ctx, info).
+    Pass `tables` (e.g. from load_blended_rate_tables) to override the rate source.
     """
     from sim.markov_game import GameContext
     games = load_schedule(date)
     g = find_game(games, spec)
-    tables = load_rate_tables(season)
+    if tables is None:
+        tables = load_rate_tables(season)
 
     info = {"game": f'{g["away"]}@{g["home"]}', "venue": g.get("venue"),
             "home_sp": g.get("home_probable"), "away_sp": g.get("away_probable")}
