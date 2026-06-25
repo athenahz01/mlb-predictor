@@ -2475,6 +2475,9 @@ const TEAM_COLORS = {
   MIL:"#12284B", MIN:"#002B5C", NYM:"#FF5910", NYY:"#0C2340", OAK:"#003831",
   PHI:"#E81828", PIT:"#FDB827", SD:"#2F241D", SF:"#FD5A1E", SEA:"#0C2C56",
   STL:"#C41E3A", TB:"#092C5C", TEX:"#003278", TOR:"#134A8E", WSH:"#AB0003",
+  // current MLB StatsAPI abbreviation variants
+  AZ:"#A71930", ATH:"#003831", CHW:"#27251F", KCR:"#004687", SDP:"#2F241D",
+  SFG:"#FD5A1E", TBR:"#092C5C", WSN:"#AB0003",
 };
 const teamColor = (abbr) => TEAM_COLORS[abbr] || "#8893A3";
 
@@ -2494,9 +2497,13 @@ const T = {
    ============================================================ */
 const isFinal = (r) => r.status === "final";
 const outcome = (r) => (r.winner === r.home ? 1 : 0);              // home win = 1
-const edgeOf = (r) => (r.edge != null ? r.edge
-  : Math.round(Math.abs(r.model_home_win_pct - r.market_home_win_pct)));
-const isContrarian = (r, thr) => edgeOf(r) >= thr;
+const hasMarket = (r) => r.market_home_win_pct != null && !isNaN(r.market_home_win_pct);
+const edgeOf = (r) => {
+  if (r.edge != null && !isNaN(r.edge)) return Math.round(Math.abs(r.edge));
+  if (!hasMarket(r) || r.model_home_win_pct == null) return null;   // no market -> no edge
+  return Math.round(Math.abs(r.model_home_win_pct - r.market_home_win_pct));
+};
+const isContrarian = (r, thr) => { const e = edgeOf(r); return e != null && e >= thr; };
 
 function brier(finals, key) { // key: model_home_win_pct | market_home_win_pct
   if (!finals.length) return null;
@@ -2546,16 +2553,17 @@ function Bolt({ color, size = 12 }) {
    Probability bar — 7px track, r99, 50% baseline tick, scaleX grow
    ============================================================ */
 function ProbBar({ pct, color, track, baseLine, delay = 0, animate }) {
-  const [w, setW] = useState(animate ? 0 : pct);
+  const safe = (pct == null || isNaN(+pct)) ? 0 : Math.max(0, Math.min(100, +pct));
+  const [w, setW] = useState(animate ? 0 : safe);
   useEffect(() => {
-    if (!animate) { setW(pct); return; }
-    const id = requestAnimationFrame(() => setW(pct));
+    if (!animate) { setW(safe); return; }
+    const id = requestAnimationFrame(() => setW(safe));
     return () => cancelAnimationFrame(id);
-  }, [pct, animate]);
+  }, [safe, animate]);
   return (
     <div style={{ position:"relative", height:7, borderRadius:99, background:track, overflow:"hidden" }}>
       <div style={{
-        position:"absolute", inset:0, width:`${w}%`, background:color, borderRadius:99,
+        position:"absolute", left:0, top:0, bottom:0, width:`${w}%`, background:color, borderRadius:99,
         transformOrigin:"left center",
         transition: animate ? `width 0.6s cubic-bezier(.2,.8,.2,1) ${delay}s` : "none",
       }} />
@@ -2585,15 +2593,17 @@ function GameRow({ r, t, thr, animate, idx }) {
   const contra = isContrarian(r, thr);
   const model = r.model_home_win_pct;
   const market = r.market_home_win_pct;
+  const mkt = hasMarket(r);
   const e = edgeOf(r);
   const status = !final ? "upcoming" : (r.pick_correct ? "nailed" : "missed");
   const statusColor = t[status];
   const statusLabel = status === "nailed" ? "NAILED" : status === "missed" ? "MISSED" : "UPCOMING";
+  // parse the ISO timestamp (carries a UTC offset) and show it in the viewer's local zone
   const loggedTime = (() => {
-    const m = (r.logged_at || "").match(/T(\d{2}):(\d{2})/);
-    if (!m) return "";
-    let h = +m[1]; const ap = h >= 12 ? "PM" : "AM"; h = h % 12 || 12;
-    return `${h}:${m[2]} ${ap}`;
+    if (!r.logged_at) return "";
+    const d = new Date(r.logged_at);
+    if (isNaN(d)) return "";
+    return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
   })();
 
   return (
@@ -2614,19 +2624,19 @@ function GameRow({ r, t, thr, animate, idx }) {
       {/* probability bars */}
       <div style={{ flex:"1 1 200px", minWidth:160, display:"flex", flexDirection:"column", gap:6 }}>
         <ProbBar pct={model} color={t.model} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)} />
-        <ProbBar pct={market} color={t.market} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)+0.05} />
+        <ProbBar pct={mkt ? market : 0} color={t.market} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)+0.05} />
       </div>
 
       {/* percentages */}
-      <div style={{ display:"flex", flexDirection:"column", gap:6, textAlign:"right", flex:"0 0 auto", minWidth:42 }}>
-        <span className="mono" style={{ ...T.rowVal, color:t.ink }}>{model}%</span>
-        <span className="mono" style={{ ...T.rowVal, color:t.market }}>{market}%</span>
+      <div style={{ display:"flex", flexDirection:"column", gap:6, textAlign:"right", flex:"0 0 auto", minWidth:50 }}>
+        <span className="mono" style={{ ...T.rowVal, color:t.ink }}>{model == null ? "—" : Math.round(model) + "%"}</span>
+        <span className="mono" style={{ ...T.rowVal, color: mkt ? t.market : t.faint, fontWeight: mkt ? 600 : 400 }}>{mkt ? Math.round(market) + "%" : "no mkt"}</span>
       </div>
 
       {/* edge */}
       <div style={{ display:"flex", flexDirection:"column", gap:2, alignItems:"flex-start", flex:"0 0 auto", minWidth:38 }}>
         <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>EDGE</span>
-        <span className="mono" style={{ ...T.stat, fontSize:"22px", color: contra ? t.market : t.ink }}>{e}</span>
+        <span className="mono" style={{ ...T.stat, fontSize:"22px", color: contra ? t.market : (e == null ? t.faint : t.ink) }}>{e == null ? "—" : e}</span>
       </div>
 
       {/* status */}
@@ -2790,6 +2800,39 @@ function TrendCell({ t, trend, animate }) {
   );
 }
 
+/* Awaiting-finals panel — shown when no games have resolved yet,
+   so the calibration scoreboard has nothing meaningful to compute. */
+function AwaitingPanel({ t, rows }) {
+  const upcoming = rows.filter((r) => !isFinal(r)).length;
+  const withMkt = rows.filter((r) => r.market_home_win_pct != null).length;
+  return (
+    <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:14,
+      padding:"clamp(22px,3.5vw,32px)", marginBottom:"clamp(22px,3vw,32px)" }}>
+      <span className="mono" style={{ ...T.eyebrow, color:t.market }}>Calibration · Brier</span>
+      <h2 style={{ ...T.heading, fontSize:"clamp(20px,2.6vw,26px)", color:t.ink, margin:"10px 0 0" }}>Awaiting first finals</h2>
+      <p style={{ ...T.body, color:t.body, maxWidth:580, margin:"10px 0 20px" }}>
+        Model-vs-market Brier, pick record, accuracy and the calibration trend appear here
+        once today&rsquo;s games resolve. Probabilities are logged before first pitch.
+      </p>
+      <div style={{ display:"flex", gap:"clamp(24px,5vw,48px)", flexWrap:"wrap" }}>
+        <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+          <span className="mono" style={{ ...T.stat, fontSize:"clamp(26px,3.5vw,32px)", color:t.ink }}>{upcoming}</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Games logged today</span>
+        </div>
+        <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+          <span className="mono" style={{ ...T.stat, fontSize:"clamp(26px,3.5vw,32px)", color: withMkt ? t.ink : t.faint }}>{withMkt}</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>With market price</span>
+        </div>
+      </div>
+      {withMkt === 0 && upcoming > 0 && (
+        <p style={{ ...T.label, fontWeight:400, color:t.faint, margin:"20px 0 0" }}>
+          Market prices not yet pulled — showing model probabilities only.
+        </p>
+      )}
+    </section>
+  );
+}
+
 /* ============================================================
    APP
    ============================================================ */
@@ -2916,16 +2959,20 @@ function App() {
           </p>
         </div>
 
-        {/* ---- scoreboard ---- */}
-        <section style={{
-          display:"grid", gap:"clamp(14px,2vw,20px)",
-          gridTemplateColumns:"repeat(auto-fit, minmax(232px,1fr))",
-          marginBottom:"clamp(22px,3vw,32px)" }}>
-          <BrierCell t={t} bModel={bModel} bMarket={bMarket} />
-          <RecordCell t={t} wins={wins} losses={losses} />
-          <AccuracyCell t={t} acc={acc} animate={animate} />
-          <TrendCell t={t} trend={trend} animate={animate} />
-        </section>
+        {/* ---- scoreboard (or awaiting-finals state) ---- */}
+        {finals.length === 0 ? (
+          <AwaitingPanel t={t} rows={rows} />
+        ) : (
+          <section style={{
+            display:"grid", gap:"clamp(14px,2vw,20px)",
+            gridTemplateColumns:"repeat(auto-fit, minmax(232px,1fr))",
+            marginBottom:"clamp(22px,3vw,32px)" }}>
+            <BrierCell t={t} bModel={bModel} bMarket={bMarket} />
+            <RecordCell t={t} wins={wins} losses={losses} />
+            <AccuracyCell t={t} acc={acc} animate={animate} />
+            <TrendCell t={t} trend={trend} animate={animate} />
+          </section>
+        )}
 
         {/* ---- controls ---- */}
         <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:14,
@@ -2936,6 +2983,67 @@ function App() {
                 onClick={() => setFilter(f.key)} />
             ))}
           </div>
+          <label style={{ display:"inline-flex", alignItems:"center", gap:10 }}>
+            <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Contrarian ≥ {thr}</span>
+            <input type="range" min="5" max="25" value={thr} onChange={(e)=>setThr(+e.target.value)}
+              style={{ accentColor:t.market, width:108 }} />
+          </label>
+        </div>
+
+        {/* ---- game rows, grouped by date ---- */}
+        <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:14, overflow:"hidden" }}>
+          {groups.length === 0 && (
+            <div style={{ padding:"40px 18px", textAlign:"center" }}>
+              <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>No games match this filter.</span>
+            </div>
+          )}
+          {groups.map(([date, gs]) => (
+            <div key={date}>
+              <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
+                padding:"11px 18px", background:t.headerBg, borderBottom:`1px solid ${t.lineSoft}`,
+                position:"sticky", top:60, zIndex:5, backdropFilter:"blur(8px)", WebkitBackdropFilter:"blur(8px)" }}>
+                <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>{fmtDate(date)}</span>
+                <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>{gs.length} {gs.length===1?"game":"games"}</span>
+              </div>
+              {gs.map((r, i) => (
+                <GameRow key={r.away+r.home+r.date+i} r={r} t={t} thr={thr}
+                  animate={animate && firstRender.current} idx={i} />
+              ))}
+            </div>
+          ))}
+        </section>
+
+        {/* ---- footer ---- */}
+        <footer style={{ display:"flex", justifyContent:"space-between", gap:16, flexWrap:"wrap",
+          marginTop:"clamp(24px,4vw,40px)", paddingTop:20, borderTop:`1px solid ${t.line}` }}>
+          <span className="mono" style={{ ...T.eyebrow, color:t.faint }}>MODEL vs MARKET · Calibration Ledger</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.faint }}>Not betting advice — calibration tracking only</span>
+        </footer>
+      </main>
+    </div>
+  );
+}
+
+/* helpers */
+function readEmbedded() {
+  try { return JSON.parse(document.getElementById("embedded-ledger").textContent); }
+  catch (e) { return []; }
+}
+function fmtDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  const dt = new Date(y, m - 1, d);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const diff = Math.round((dt - today) / 86400000);
+  const wd = dt.toLocaleDateString([], { weekday:"short" });
+  const md = dt.toLocaleDateString([], { month:"short", day:"numeric" });
+  const tag = diff === 0 ? "TODAY" : diff === -1 ? "YESTERDAY" : "";
+  return `${tag ? tag + " · " : ""}${wd} ${md}`.toUpperCase();
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
           <label style={{ display:"inline-flex", alignItems:"center", gap:10 }}>
             <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Contrarian ≥ {thr}</span>
             <input type="range" min="5" max="25" value={thr} onChange={(e)=>setThr(+e.target.value)}
