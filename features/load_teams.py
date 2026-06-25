@@ -235,9 +235,9 @@ def projected_lineup_from_roster(team_id: int, tables: dict,
     rate table, ordered by PA (a crude proxy, NOT a real batting order).
     """
     try:
-        import statsapi
-        roster = statsapi.get("team_roster",
-                              {"teamId": team_id, "rosterType": "active"})
+        import requests
+        url = f"{config.STATSAPI_BASE}/teams/{team_id}/roster"
+        roster = requests.get(url, params={"rosterType": "active"}, timeout=20).json()
         ids = {}
         for p in roster.get("roster", []):
             pid = p["person"]["id"]; nm = p["person"]["fullName"]
