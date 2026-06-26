@@ -23,7 +23,11 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:20:05.992966+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 3,
+    "winner": "BOS",
+    "pick_correct": false
   },
   {
     "date": "2026-06-25",
@@ -36,7 +40,11 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:20:02.868221+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 3,
+    "away_score": 4,
+    "winner": "CHC",
+    "pick_correct": false
   },
   {
     "date": "2026-06-25",
@@ -49,7 +57,11 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:59.712028+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 5,
+    "away_score": 6,
+    "winner": "TEX",
+    "pick_correct": false
   },
   {
     "date": "2026-06-25",
@@ -62,7 +74,11 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:56.331185+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 5,
+    "away_score": 10,
+    "winner": "PHI",
+    "pick_correct": true
   },
   {
     "date": "2026-06-25",
@@ -75,7 +91,11 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:51.223813+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 1,
+    "away_score": 2,
+    "winner": "HOU",
+    "pick_correct": false
   },
   {
     "date": "2026-06-25",
@@ -88,6 +108,10 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:45.806874+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 9,
+    "winner": "ATH",
+    "pick_correct": false
   }
 ]
