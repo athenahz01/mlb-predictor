@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MODEL vs MARKET · MLB Calibration Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  #root { min-height: 100vh; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  .disp { font-family: "Archivo", "IBM Plex Sans", sans-serif; }
+  button:focus-visible, a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+  ::selection { background: rgba(191,13,62,0.22); }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+</style>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="application/json" id="embedded-ledger">[{"date":"2026-06-23","away":"NYY","away_name":"Yankees","home":"BOS","home_name":"Red Sox","model_home_win_pct":47,"market_home_win_pct":53,"edge":6,"logged_at":"2026-06-23T18:09:00+00:00","status":"final","away_score":3,"home_score":6,"winner":"BOS","pick_correct":false},{"date":"2026-06-23","away":"AZ","away_name":"Diamondbacks","home":"STL","home_name":"Cardinals","model_home_win_pct":60,"market_home_win_pct":48,"edge":12,"logged_at":"2026-06-23T19:41:00+00:00","status":"final","away_score":2,"home_score":5,"winner":"STL","pick_correct":true},{"date":"2026-06-23","away":"LAD","away_name":"Dodgers","home":"SF","home_name":"Giants","model_home_win_pct":58,"market_home_win_pct":46,"edge":12,"logged_at":"2026-06-23T13:04:00+00:00","status":"final","away_score":7,"home_score":4,"winner":"LAD","pick_correct":false},{"date":"2026-06-23","away":"CHC","away_name":"Cubs","home":"NYM","home_name":"Mets","model_home_win_pct":45,"market_home_win_pct":55,"edge":10,"logged_at":"2026-06-23T14:23:00+00:00","status":"final","away_score":1,"home_score":4,"winner":"NYM","pick_correct":false},{"date":"2026-06-23","away":"TEX","away_name":"Rangers","home":"TOR","home_name":"Blue Jays","model_home_win_pct":69,"market_home_win_pct":61,"edge":8,"logged_at":"2026-06-23T13:58:00+00:00","status":"final","away_score":8,"home_score":5,"winner":"TEX","pick_correct":false},{"date":"2026-06-24","away":"PHI","away_name":"Phillies","home":"WSH","home_name":"Nationals","model_home_win_pct":64,"market_home_win_pct":52,"edge":12,"logged_at":"2026-06-24T16:02:00+00:00","status":"final","away_score":2,"home_score":3,"winner":"WSH","pick_correct":true},{"date":"2026-06-24","away":"HOU","away_name":"Astros","home":"DET","home_name":"Tigers","model_home_win_pct":59,"market_home_win_pct":49,"edge":10,"logged_at":"2026-06-24T14:27:00+00:00","status":"final","away_score":6,"home_score":2,"winner":"HOU","pick_correct":false},{"date":"2026-06-24","away":"ATH","away_name":"Athletics","home":"SD","home_name":"Padres","model_home_win_pct":38,"market_home_win_pct":55,"edge":17,"logged_at":"2026-06-24T19:04:00+00:00","status":"final","away_score":1,"home_score":7,"winner":"SD","pick_correct":false},{"date":"2026-06-24","away":"ATL","away_name":"Braves","home":"MIA","home_name":"Marlins","model_home_win_pct":72,"market_home_win_pct":63,"edge":9,"logged_at":"2026-06-24T16:05:00+00:00","status":"final","away_score":9,"home_score":3,"winner":"ATL","pick_correct":false},{"date":"2026-06-24","away":"CLE","away_name":"Guardians","home":"MIN","home_name":"Twins","model_home_win_pct":51,"market_home_win_pct":44,"edge":7,"logged_at":"2026-06-24T19:03:00+00:00","status":"final","away_score":2,"home_score":5,"winner":"MIN","pick_correct":true},{"date":"2026-06-25","away":"AZ","away_name":"Diamondbacks","home":"STL","home_name":"Cardinals","model_home_win_pct":47,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T12:15:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"NYY","away_name":"Yankees","home":"BOS","home_name":"Red Sox","model_home_win_pct":50,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T11:45:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"CHC","away_name":"Cubs","home":"NYM","home_name":"Mets","model_home_win_pct":55,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T11:15:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"TEX","away_name":"Rangers","home":"TOR","home_name":"Blue Jays","model_home_win_pct":69,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T11:15:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"PHI","away_name":"Phillies","home":"WSH","home_name":"Nationals","model_home_win_pct":36,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T15:45:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"HOU","away_name":"Astros","home":"DET","home_name":"Tigers","model_home_win_pct":60,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T13:05:00+00:00","status":"upcoming"},{"date":"2026-06-25","away":"ATH","away_name":"Athletics","home":"SF","home_name":"Giants","model_home_win_pct":51,"market_home_win_pct":null,"edge":null,"logged_at":"2026-06-25T15:15:00+00:00","status":"upcoming"}]</script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect, useRef, useMemo, useCallback } = React;
+
+/* ============================================================
+   §02  COLOR TOKENS — two skins, one role map
+   ============================================================ */
+const THEMES = {
+  light: {
+    name: "light",
+    bg: "#F4F6FA", panel: "#FFFFFF", header: "#FFFFFF", band: "#EEF1F7",
+    line: "#D9DFEA", lineSoft: "#E8ECF3", track: "#E6EAF1", baseLine: "#BCC6D6",
+    ink: "#041E42", body: "#35476B", dim: "#6E7E9C", faint: "#9DA9BE",
+    model: "#041E42", modelSoft: "rgba(4,30,66,0.10)", market: "#BF0D3E",
+    nailed: "#0E7C4B", missed: "#BF0D3E", upcoming: "#5E6F8E",
+    contraRow: "rgba(191,13,62,0.06)",
+    pillActiveLabel: "#FFFFFF",
+  },
+  dark: {
+    name: "dark",
+    bg: "#041E42", panel: "#0A2A52", header: "#06224A", band: "#0E2E58",
+    line: "#234A7A", lineSoft: "#16365F", track: "#0E2B50", baseLine: "#3E5E8E",
+    ink: "#FFFFFF", body: "#C8D6EE", dim: "#8AA0C8", faint: "#5E78A6",
+    model: "#FFFFFF", modelSoft: "rgba(255,255,255,0.12)", market: "#E0294F",
+    nailed: "#34D17F", missed: "#FF536B", upcoming: "#9DB4D8",
+    contraRow: "rgba(191,13,62,0.16)",
+    pillActiveLabel: "#06140C",
+  },
+};
+
+/* §07  MLB team color map (chip fallback) */
+const TEAM_COLORS = {
+  ARI:"#A71930", ATL:"#CE1141", BAL:"#DF4601", BOS:"#BD3039", CHC:"#0E3386",
+  CWS:"#27251F", CIN:"#C6011F", CLE:"#0C2340", COL:"#33006F", DET:"#0C2340",
+  HOU:"#EB6E1F", KC:"#004687", LAA:"#BA0021", LAD:"#005A9C", MIA:"#00A3E0",
+  MIL:"#12284B", MIN:"#002B5C", NYM:"#FF5910", NYY:"#0C2340", OAK:"#003831",
+  PHI:"#E81828", PIT:"#FDB827", SD:"#2F241D", SF:"#FD5A1E", SEA:"#0C2C56",
+  STL:"#C41E3A", TB:"#092C5C", TEX:"#003278", TOR:"#134A8E", WSH:"#AB0003",
+  AZ:"#A71930", ATH:"#003831", CHW:"#27251F", KCR:"#004687", SDP:"#2F241D",
+  SFG:"#FD5A1E", TBR:"#092C5C", WSN:"#AB0003",
+};
+const teamColor = (abbr) => TEAM_COLORS[abbr] || "#8893A3";
+
+/* map our abbreviations to ESPN logo slugs */
+const LOGO_SLUG = {
+  AZ:"ari", ARI:"ari", ATH:"oak", OAK:"oak", CHW:"chw", CWS:"chw",
+  WSH:"wsh", WSN:"wsh", SD:"sd", SDP:"sd", SF:"sf", SFG:"sf",
+  TB:"tb", TBR:"tb", KC:"kc", KCR:"kc",
+};
+const logoUrl = (abbr) =>
+  `https://a.espncdn.com/i/teamlogos/mlb/500/${(LOGO_SLUG[abbr] || abbr || "").toLowerCase()}.png`;
+
+/* §03  Type ramp — Archivo display, Plex Mono data, Plex Sans prose */
+const T = {
+  display:{ fontFamily:'"Archivo", sans-serif', fontWeight:800, letterSpacing:"-0.02em", lineHeight:1.02 },
+  hero:   { fontFamily:'"IBM Plex Mono", monospace', fontWeight:700, fontSize:"clamp(30px,5.5vw,42px)", lineHeight:0.9, fontVariantNumeric:"tabular-nums" },
+  stat:   { fontFamily:'"IBM Plex Mono", monospace', fontWeight:700, fontSize:"clamp(26px,3.5vw,34px)", lineHeight:1, fontVariantNumeric:"tabular-nums" },
+  rowVal: { fontFamily:'"IBM Plex Mono", monospace', fontWeight:600, fontSize:"14.5px", fontVariantNumeric:"tabular-nums" },
+  label:  { fontFamily:'"IBM Plex Mono", monospace', fontWeight:600, fontSize:"11px", letterSpacing:"0.04em", fontVariantNumeric:"tabular-nums" },
+  eyebrow:{ fontFamily:'"IBM Plex Mono", monospace', fontWeight:500, fontSize:"10px", letterSpacing:"0.18em", textTransform:"uppercase" },
+  body:   { fontFamily:'"IBM Plex Sans", sans-serif', fontWeight:400, fontSize:"14px", lineHeight:1.55 },
+};
+
+/* ============================================================
+   §07 / §08  Derived values — computed client-side, per spec
+   ============================================================ */
+const isFinal = (r) => r.status === "final";
+const outcome = (r) => (r.winner === r.home ? 1 : 0);
+const hasMarket = (r) => r.market_home_win_pct != null && !isNaN(r.market_home_win_pct);
+const edgeOf = (r) => {
+  if (r.edge != null && !isNaN(r.edge)) return Math.round(Math.abs(r.edge));
+  if (!hasMarket(r) || r.model_home_win_pct == null) return null;
+  return Math.round(Math.abs(r.model_home_win_pct - r.market_home_win_pct));
+};
+const isContrarian = (r, thr) => { const e = edgeOf(r); return e != null && e >= thr; };
+
+function brier(finals, key) {
+  if (!finals.length) return null;
+  const s = finals.reduce((acc, r) => {
+    const p = r[key] / 100, a = outcome(r);
+    return acc + (p - a) * (p - a);
+  }, 0);
+  return s / finals.length;
+}
+function calibrationTrend(finals) {
+  const sorted = [...finals].sort((a, b) =>
+    (a.date + a.logged_at).localeCompare(b.date + b.logged_at));
+  let sm = 0, sk = 0; const model = [], market = [];
+  sorted.forEach((r, i) => {
+    const a = outcome(r);
+    sm += (r.model_home_win_pct / 100 - a) ** 2;
+    sk += (r.market_home_win_pct / 100 - a) ** 2;
+    model.push(sm / (i + 1)); market.push(sk / (i + 1));
+  });
+  return { model, market, n: sorted.length };
+}
+const fmt3 = (x) => (x == null ? "—" : x.toFixed(3));
+const prefersReduced = () =>
+  window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---- status icons ---- */
+function Icon({ kind, color, size = 13 }) {
+  const c = { width:size, height:size, viewBox:"0 0 24 24", fill:"none",
+    stroke:color, strokeWidth:2.4, strokeLinecap:"round", strokeLinejoin:"round",
+    style:{ display:"block", flex:"0 0 auto" } };
+  if (kind === "nailed") return <svg {...c}><path d="M4 12.5l5 5L20 6"/></svg>;
+  if (kind === "missed") return <svg {...c}><path d="M6 6l12 12M18 6L6 18"/></svg>;
+  return <svg {...c}><circle cx="12" cy="12" r="8"/><path d="M12 8v4.5l3 2"/></svg>;
+}
+function Bolt({ color, size = 12 }) {
+  return (<svg width={size} height={size} viewBox="0 0 24 24" fill={color}
+    style={{ display:"block", flex:"0 0 auto" }}><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>);
+}
+
+/* ---- probability bar (7px track, r99, 50% tick, scaleX grow) ---- */
+function ProbBar({ pct, color, track, baseLine, delay = 0, animate }) {
+  const safe = (pct == null || isNaN(+pct)) ? 0 : Math.max(0, Math.min(100, +pct));
+  const [w, setW] = useState(animate ? 0 : safe);
+  useEffect(() => {
+    if (!animate) { setW(safe); return; }
+    const id = requestAnimationFrame(() => setW(safe));
+    return () => cancelAnimationFrame(id);
+  }, [safe, animate]);
+  return (
+    <div style={{ position:"relative", height:7, borderRadius:99, background:track, overflow:"hidden" }}>
+      <div style={{ position:"absolute", left:0, top:0, bottom:0, width:`${w}%`, background:color, borderRadius:99,
+        transformOrigin:"left center",
+        transition: animate ? `width 0.6s cubic-bezier(.2,.8,.2,1) ${delay}s` : "none" }} />
+      <div style={{ position:"absolute", left:"50%", top:-1, bottom:-1, width:1, background:baseLine }} />
+    </div>
+  );
+}
+
+/* ---- team logo with colored-brick fallback ---- */
+function TeamLogo({ abbr, size = 20 }) {
+  const [err, setErr] = useState(false);
+  if (err || !abbr) {
+    return <span style={{ width:size-2, height:size-2, borderRadius:3, background:teamColor(abbr),
+      flex:"0 0 auto", display:"inline-block" }} />;
+  }
+  return <img src={logoUrl(abbr)} alt="" width={size} height={size} loading="lazy"
+    onError={() => setErr(true)}
+    style={{ display:"block", flex:"0 0 auto", objectFit:"contain" }} />;
+}
+function TeamTag({ abbr, color, strong }) {
+  return (
+    <span style={{ display:"inline-flex", alignItems:"center", gap:7 }}>
+      <TeamLogo abbr={abbr} />
+      <span className="mono" style={{ ...T.rowVal, fontWeight: strong ? 700 : 600, color }}>{abbr}</span>
+    </span>
+  );
+}
+
+/* ============================================================
+   Game row
+   ============================================================ */
+function GameRow({ r, t, thr, animate, idx }) {
+  const final = isFinal(r);
+  const contra = isContrarian(r, thr);
+  const model = r.model_home_win_pct;
+  const market = r.market_home_win_pct;
+  const mkt = hasMarket(r);
+  const e = edgeOf(r);
+  const status = !final ? "upcoming" : (r.pick_correct ? "nailed" : "missed");
+  const statusColor = t[status];
+  const statusLabel = status === "nailed" ? "NAILED" : status === "missed" ? "MISSED" : "UPCOMING";
+  const loggedTime = (() => {
+    if (!r.logged_at) return "";
+    const d = new Date(r.logged_at);
+    if (isNaN(d)) return "";
+    return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+  })();
+
+  return (
+    <div style={{
+      display:"flex", flexWrap:"wrap", alignItems:"center", gap:"12px 20px",
+      padding:"14px 20px", borderBottom:`1px solid ${t.lineSoft}`,
+      background: contra ? t.contraRow : "transparent",
+      borderLeft: contra ? `2px solid ${t.market}` : "2px solid transparent" }}>
+
+      {/* matchup */}
+      <div style={{ display:"flex", alignItems:"center", gap:9, minWidth:152, flex:"0 0 auto" }}>
+        <TeamTag abbr={r.away} color={t.body} />
+        <span className="mono" style={{ ...T.label, color:t.faint }}>@</span>
+        <TeamTag abbr={r.home} color={t.ink} strong />
+        {contra && <span style={{ marginLeft:1 }}><Bolt color={t.market} /></span>}
+      </div>
+
+      {/* probability bars */}
+      <div style={{ flex:"1 1 210px", minWidth:170, display:"flex", flexDirection:"column", gap:6 }}>
+        <ProbBar pct={model} color={t.model} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)} />
+        <ProbBar pct={mkt ? market : 0} color={t.market} track={t.track} baseLine={t.baseLine} animate={animate} delay={Math.min(idx*0.02,0.3)+0.05} />
+      </div>
+
+      {/* percentages */}
+      <div style={{ display:"flex", flexDirection:"column", gap:6, textAlign:"right", flex:"0 0 auto", minWidth:52 }}>
+        <span className="mono" style={{ ...T.rowVal, color:t.ink }}>{model == null ? "—" : Math.round(model) + "%"}</span>
+        <span className="mono" style={{ ...T.rowVal, color: mkt ? t.market : t.faint, fontWeight: mkt ? 600 : 400 }}>{mkt ? Math.round(market) + "%" : "no mkt"}</span>
+      </div>
+
+      {/* edge */}
+      <div style={{ display:"flex", flexDirection:"column", gap:2, alignItems:"flex-start", flex:"0 0 auto", minWidth:40 }}>
+        <span className="mono" style={{ ...T.eyebrow, color:t.dim, letterSpacing:"0.1em" }}>EDGE</span>
+        <span className="mono" style={{ ...T.stat, fontSize:"22px", color: contra ? t.market : (e == null ? t.faint : t.ink) }}>{e == null ? "—" : e}</span>
+      </div>
+
+      {/* status */}
+      <div style={{ display:"flex", flexDirection:"column", gap:3, alignItems:"flex-end", marginLeft:"auto", flex:"0 0 auto", minWidth:104 }}>
+        <span style={{ display:"inline-flex", alignItems:"center", gap:6 }}>
+          <Icon kind={status} color={statusColor} />
+          <span className="mono" style={{ ...T.label, color:statusColor }}>{statusLabel}</span>
+        </span>
+        <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>
+          {final ? `${r.away} ${r.away_score} · ${r.home} ${r.home_score}` : `logged ${loggedTime}`}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+/* ---- filter pill / theme toggle / button shell ---- */
+function Pill({ label, count, active, t, onClick }) {
+  return (
+    <button onClick={onClick} className="mono"
+      style={{ ...T.label, cursor:"pointer", display:"inline-flex", alignItems:"center", gap:7,
+        minHeight:34, padding:"0 14px", borderRadius:7,
+        background: active ? t.model : "transparent",
+        border: `1px solid ${active ? t.model : t.line}`,
+        color: active ? t.pillActiveLabel : t.dim,
+        transition:"background .15s, color .15s, border-color .15s" }}>
+      <span>{label}</span>
+      {count != null && <span style={{ opacity:0.6, fontWeight:400 }}>{count}</span>}
+    </button>
+  );
+}
+function GhostBtn({ children, t, onClick, label }) {
+  return (
+    <button onClick={onClick} className="mono" aria-label={label}
+      style={{ ...T.label, cursor:"pointer", display:"inline-flex", alignItems:"center", gap:7,
+        minHeight:34, padding:"0 13px", borderRadius:7, background:"transparent",
+        border:`1px solid ${t.line}`, color:t.dim }}>{children}</button>
+  );
+}
+
+/* ---- scoreboard cells ---- */
+function StatCell({ t, children, span, accent }) {
+  return (
+    <div style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:12,
+      padding:"clamp(18px,2.5vw,24px)", gridColumn: span ? `span ${span}` : "auto",
+      display:"flex", flexDirection:"column",
+      borderTop: accent ? `2px solid ${accent}` : `1px solid ${t.line}` }}>{children}</div>
+  );
+}
+function BrierCell({ t, bModel, bMarket }) {
+  const modelWins = bModel != null && bMarket != null && bModel <= bMarket;
+  const diff = (bModel != null && bMarket != null) ? Math.abs(bModel - bMarket) : null;
+  return (
+    <StatCell t={t} span={2} accent={t.market}>
+      <span className="mono" style={{ ...T.eyebrow, color:t.dim, marginBottom:14 }}>Calibration · Brier · lower wins</span>
+      <div style={{ display:"flex", alignItems:"baseline", gap:18, flexWrap:"wrap" }}>
+        <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+          <span className="mono" style={{ ...T.hero, color:t.model }}>{fmt3(bModel)}</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Model</span>
+        </div>
+        <span className="mono" style={{ ...T.eyebrow, color:t.faint, alignSelf:"center" }}>vs</span>
+        <div style={{ display:"flex", flexDirection:"column", gap:6 }}>
+          <span className="mono" style={{ ...T.hero, color:t.market }}>{fmt3(bMarket)}</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Market</span>
+        </div>
+      </div>
+      <span className="mono" style={{ ...T.label, fontWeight:500, color:t.body, marginTop:16 }}>
+        {diff == null ? "Awaiting finals" :
+          <>{modelWins ? "Model" : "Market"} ahead by {diff.toFixed(3)}</>}
+      </span>
+    </StatCell>
+  );
+}
+function RecordCell({ t, wins, losses }) {
+  return (
+    <StatCell t={t}>
+      <span className="mono" style={{ ...T.eyebrow, color:t.dim, marginBottom:14 }}>Pick record</span>
+      <span className="mono" style={{ ...T.stat, color:t.ink }}>{wins}<span style={{color:t.faint}}>–</span>{losses}</span>
+      <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint, marginTop:10 }}>over {wins+losses} finals</span>
+    </StatCell>
+  );
+}
+function AccuracyCell({ t, acc, animate }) {
+  return (
+    <StatCell t={t}>
+      <span className="mono" style={{ ...T.eyebrow, color:t.dim, marginBottom:14 }}>Accuracy</span>
+      <span className="mono" style={{ ...T.stat, color:t.ink, marginBottom:14 }}>{acc == null ? "—" : acc.toFixed(1)}<span style={{fontSize:"0.55em", color:t.dim}}>%</span></span>
+      <div style={{ marginTop:"auto" }}>
+        <ProbBar pct={acc || 0} color={t.model} track={t.track} baseLine={t.baseLine} animate={animate} />
+      </div>
+    </StatCell>
+  );
+}
+function TrendCell({ t, trend, animate }) {
+  const W = 520, H = 150, padL = 8, padR = 8, padT = 10, padB = 8;
+  const ready = trend.n >= 2;
+  const all = ready ? [...trend.model, ...trend.market] : [0, 0.3];
+  let lo = Math.min(...all), hi = Math.max(...all);
+  if (hi - lo < 0.02) { hi += 0.01; lo -= 0.01; }
+  const pad = (hi - lo) * 0.15; lo -= pad; hi += pad;
+  const x = (i) => padL + (i / (trend.n - 1)) * (W - padL - padR);
+  const y = (v) => padT + (1 - (v - lo) / (hi - lo)) * (H - padT - padB);
+  const line = (arr) => arr.map((v, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(" ");
+  const area = ready
+    ? `${line(trend.model)} L${x(trend.n-1).toFixed(1)},${(H-padB).toFixed(1)} L${padL},${(H-padB).toFixed(1)} Z`
+    : "";
+  const [dash, setDash] = useState(animate ? 1 : 0);
+  useEffect(() => { if (animate) { const id = requestAnimationFrame(()=>setDash(0)); return ()=>cancelAnimationFrame(id);} }, [animate]);
+  return (
+    <StatCell t={t} span={2}>
+      <div style={{ display:"flex", justifyContent:"space-between", alignItems:"baseline", marginBottom:8, flexWrap:"wrap", gap:8 }}>
+        <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Calibration trend · cumulative Brier</span>
+        <span style={{ display:"inline-flex", gap:14 }}>
+          <span className="mono" style={{...T.label, fontWeight:400, color:t.body, display:"inline-flex", alignItems:"center", gap:6}}>
+            <span style={{width:14, height:2, background:t.model, display:"inline-block"}}/>Model</span>
+          <span className="mono" style={{...T.label, fontWeight:400, color:t.body, display:"inline-flex", alignItems:"center", gap:6}}>
+            <span style={{width:14, height:2, background:t.market, display:"inline-block"}}/>Market</span>
+        </span>
+      </div>
+      {ready ? (
+        <svg viewBox={`0 0 ${W} ${H}`} width="100%" preserveAspectRatio="none" style={{ display:"block", height:"clamp(120px,18vw,160px)" }}>
+          <path d={area} fill={t.modelSoft} stroke="none" style={{ opacity: animate ? (dash?0:1):1, transition:"opacity .6s ease .2s" }}/>
+          <path d={line(trend.market)} fill="none" stroke={t.market} strokeWidth="1.6" strokeLinejoin="round"
+            style={{ strokeDasharray:1400, strokeDashoffset: dash*1400, transition:"stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1)" }}/>
+          <path d={line(trend.model)} fill="none" stroke={t.model} strokeWidth="1.8" strokeLinejoin="round"
+            style={{ strokeDasharray:1400, strokeDashoffset: dash*1400, transition:"stroke-dashoffset .9s cubic-bezier(.2,.8,.2,1) .08s" }}/>
+        </svg>
+      ) : (
+        <div style={{ height:"clamp(120px,18vw,160px)", display:"flex", alignItems:"center", justifyContent:"center" }}>
+          <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>Needs ≥2 finals to render</span>
+        </div>
+      )}
+    </StatCell>
+  );
+}
+
+/* ---- awaiting-finals panel ---- */
+function AwaitingPanel({ t, rows }) {
+  const upcoming = rows.filter((r) => !isFinal(r)).length;
+  const withMkt = rows.filter((r) => r.market_home_win_pct != null).length;
+  return (
+    <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderTop:`2px solid ${t.market}`,
+      borderRadius:12, padding:"clamp(22px,3.5vw,34px)", marginBottom:"clamp(22px,3vw,32px)" }}>
+      <span className="mono" style={{ ...T.eyebrow, color:t.market }}>Calibration · Brier</span>
+      <h2 className="disp" style={{ ...T.display, fontWeight:700, fontSize:"clamp(22px,3vw,30px)", color:t.ink, margin:"12px 0 0" }}>Awaiting first finals</h2>
+      <p style={{ ...T.body, color:t.body, maxWidth:600, margin:"12px 0 22px" }}>
+        Model-versus-market Brier, pick record, accuracy and the calibration trend appear here
+        once today&rsquo;s games resolve. Every probability is logged before first pitch.
+      </p>
+      <div style={{ display:"flex", gap:"clamp(28px,6vw,64px)", flexWrap:"wrap" }}>
+        <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+          <span className="mono" style={{ ...T.stat, fontSize:"clamp(28px,4vw,36px)", color:t.ink }}>{upcoming}</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Games logged today</span>
+        </div>
+        <div style={{ display:"flex", flexDirection:"column", gap:5 }}>
+          <span className="mono" style={{ ...T.stat, fontSize:"clamp(28px,4vw,36px)", color: withMkt ? t.ink : t.faint }}>{withMkt}</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>With market price</span>
+        </div>
+      </div>
+      {withMkt === 0 && upcoming > 0 && (
+        <p style={{ ...T.label, fontWeight:400, color:t.faint, margin:"22px 0 0" }}>
+          Market prices not pulled yet — showing model probabilities only.
+        </p>
+      )}
+    </section>
+  );
+}
+
+/* ============================================================
+   APP
+   ============================================================ */
+const FILTERS = [
+  { key:"all", label:"ALL" },
+  { key:"nailed", label:"NAILED" },
+  { key:"upcoming", label:"UPCOMING" },
+];
+
+function App() {
+  const [dark, setDark] = useState(false);
+  const [rows, setRows] = useState(() => readEmbedded());
+  const [filter, setFilter] = useState("all");
+  const [thr, setThr] = useState(10);
+  const [lastSync, setLastSync] = useState(null);
+  const [status, setStatus] = useState("embedded");
+  const firstRender = useRef(true);
+  const animate = !prefersReduced();
+  const t = dark ? THEMES.dark : THEMES.light;
+
+  const load = useCallback(async () => {
+    try {
+      const res = await fetch("./ledger.json", { cache: "no-store" });
+      if (!res.ok) throw new Error("http " + res.status);
+      const data = await res.json();
+      if (Array.isArray(data) && data.length) {
+        setRows(data); setStatus("live"); setLastSync(new Date());
+      }
+    } catch (e) {
+      setStatus((s) => (s === "live" ? "live" : "embedded"));
+    }
+  }, []);
+
+  useEffect(() => { load(); const id = setInterval(load, 30000); return () => clearInterval(id); }, [load]);
+  useEffect(() => { document.body.style.background = t.bg; }, [t]);
+  useEffect(() => { firstRender.current = false; }, []);
+
+  const finals = useMemo(() => rows.filter(isFinal), [rows]);
+  const wins = finals.filter((r) => r.pick_correct).length;
+  const losses = finals.length - wins;
+  const acc = finals.length ? (wins / finals.length) * 100 : null;
+  const bModel = brier(finals, "model_home_win_pct");
+  const bMarket = brier(finals, "market_home_win_pct");
+  const trend = useMemo(() => calibrationTrend(finals), [finals]);
+
+  const counts = {
+    all: rows.length,
+    nailed: finals.filter((r) => r.pick_correct).length,
+    upcoming: rows.filter((r) => !isFinal(r)).length,
+  };
+  const shown = rows.filter((r) => {
+    if (filter === "all") return true;
+    if (filter === "nailed") return isFinal(r) && r.pick_correct;
+    if (filter === "upcoming") return !isFinal(r);
+    return true;
+  });
+  const groups = useMemo(() => {
+    const m = new Map();
+    shown.forEach((r) => { if (!m.has(r.date)) m.set(r.date, []); m.get(r.date).push(r); });
+    return [...m.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+  }, [shown]);
+
+  const gutter = "clamp(16px,4vw,40px)";
+
+  return (
+    <div style={{ background:t.bg, color:t.body, minHeight:"100vh", paddingBottom:48,
+      transition:"background .25s, color .25s" }}>
+
+      {/* crimson identity rule */}
+      <div style={{ height:3, background:t.market }} />
+
+      {/* header (solid — no bleed) */}
+      <header style={{ position:"sticky", top:0, zIndex:30, background:t.header,
+        borderBottom:`1px solid ${t.line}` }}>
+        <div style={{ maxWidth:1080, margin:"0 auto", padding:`13px ${gutter}`,
+          display:"flex", alignItems:"center", justifyContent:"space-between", gap:16, flexWrap:"wrap" }}>
+          <div style={{ display:"flex", alignItems:"center", gap:11 }}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke={t.ink} strokeWidth="2.2" strokeLinejoin="round">
+              <rect x="12" y="2.5" width="13.4" height="13.4" transform="rotate(45 12 2.5)" rx="2"/>
+            </svg>
+            <span className="mono" style={{ ...T.label, letterSpacing:"0.12em", color:t.ink, fontWeight:700 }}>
+              MODEL <span style={{ color:t.market }}>vs</span> MARKET
+            </span>
+          </div>
+          <div style={{ display:"flex", alignItems:"center", gap:12, flexWrap:"wrap" }}>
+            <span className="mono" style={{ ...T.eyebrow, color:t.dim, display:"inline-flex", alignItems:"center", gap:7 }}>
+              <span style={{ width:6, height:6, borderRadius:99,
+                background: status==="live" ? "#2BBF6F" : t.faint }} />
+              {status === "live" ? "LIVE" : "SNAPSHOT"}
+              {lastSync && <span style={{ color:t.faint, marginLeft:2 }}>· {lastSync.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}</span>}
+            </span>
+            <GhostBtn t={t} onClick={load} label="Refresh">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{display:"block"}}>
+                <path d="M20 11A8 8 0 1 0 18 17"/><path d="M20 5v6h-6"/>
+              </svg>Refresh
+            </GhostBtn>
+            <GhostBtn t={t} onClick={() => setDark((d) => !d)} label="Toggle theme">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display:"block"}}>
+                {dark
+                  ? <g><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></g>
+                  : <path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/>}
+              </svg>{dark ? "Light" : "Dark"}
+            </GhostBtn>
+          </div>
+        </div>
+      </header>
+
+      <main style={{ maxWidth:1080, margin:"0 auto", padding:`clamp(26px,4vw,42px) ${gutter} 0` }}>
+
+        {/* masthead */}
+        <div style={{ marginBottom:"clamp(22px,3vw,32px)" }}>
+          <span className="mono" style={{ ...T.eyebrow, color:t.market }}>MLB · out-of-sample calibration</span>
+          <h1 className="disp" style={{ ...T.display, fontSize:"clamp(34px,6vw,60px)", color:t.ink, margin:"10px 0 0" }}>Calibration Ledger</h1>
+          <p style={{ ...T.body, color:t.body, maxWidth:580, margin:"12px 0 0" }}>
+            Every model probability is logged before first pitch, then scored against the market in public.
+            The metric is the accuracy of the probability — not profit, and never a pick.
+          </p>
+        </div>
+
+        {/* scoreboard or awaiting state */}
+        {finals.length === 0 ? (
+          <AwaitingPanel t={t} rows={rows} />
+        ) : (
+          <section style={{ display:"grid", gap:"clamp(14px,2vw,18px)",
+            gridTemplateColumns:"repeat(auto-fit, minmax(232px,1fr))",
+            marginBottom:"clamp(22px,3vw,32px)" }}>
+            <BrierCell t={t} bModel={bModel} bMarket={bMarket} />
+            <RecordCell t={t} wins={wins} losses={losses} />
+            <AccuracyCell t={t} acc={acc} animate={animate} />
+            <TrendCell t={t} trend={trend} animate={animate} />
+          </section>
+        )}
+
+        {/* controls */}
+        <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between", gap:14,
+          flexWrap:"wrap", marginBottom:14 }}>
+          <div style={{ display:"flex", gap:9, flexWrap:"wrap" }}>
+            {FILTERS.map((f) => (
+              <Pill key={f.key} label={f.label} count={counts[f.key]} active={filter===f.key} t={t}
+                onClick={() => setFilter(f.key)} />
+            ))}
+          </div>
+          <label style={{ display:"inline-flex", alignItems:"center", gap:10 }}>
+            <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>Contrarian ≥ {thr}</span>
+            <input type="range" min="5" max="25" value={thr} onChange={(e)=>setThr(+e.target.value)}
+              style={{ accentColor:t.market, width:108 }} />
+          </label>
+        </div>
+
+        {/* game rows, grouped by date */}
+        <section style={{ background:t.panel, border:`1px solid ${t.line}`, borderRadius:12, overflow:"hidden" }}>
+          {groups.length === 0 && (
+            <div style={{ padding:"40px 20px", textAlign:"center" }}>
+              <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>No games match this filter.</span>
+            </div>
+          )}
+          {groups.map(([date, gs]) => (
+            <div key={date}>
+              <div style={{ display:"flex", alignItems:"center", justifyContent:"space-between",
+                padding:"10px 20px", background:t.band, borderBottom:`1px solid ${t.line}`,
+                borderTop:`1px solid ${t.line}` }}>
+                <span className="mono" style={{ ...T.eyebrow, color:t.dim }}>{fmtDate(date)}</span>
+                <span className="mono" style={{ ...T.label, fontWeight:400, color:t.faint }}>{gs.length} {gs.length===1?"game":"games"}</span>
+              </div>
+              {gs.map((r, i) => (
+                <GameRow key={r.away+r.home+r.date+i} r={r} t={t} thr={thr}
+                  animate={animate && firstRender.current} idx={i} />
+              ))}
+            </div>
+          ))}
+        </section>
+
+        {/* footer */}
+        <footer style={{ display:"flex", justifyContent:"space-between", gap:16, flexWrap:"wrap",
+          marginTop:"clamp(24px,4vw,40px)", paddingTop:20, borderTop:`1px solid ${t.line}` }}>
+          <span className="mono" style={{ ...T.eyebrow, color:t.faint }}>MODEL vs MARKET · Calibration Ledger</span>
+          <span className="mono" style={{ ...T.eyebrow, color:t.faint }}>Not betting advice — calibration tracking only</span>
+        </footer>
+      </main>
+    </div>
+  );
+}
+
+/* helpers */
+function readEmbedded() {
+  try { return JSON.parse(document.getElementById("embedded-ledger").textContent); }
+  catch (e) { return []; }
+}
+function fmtDate(iso) {
+  const [y, m, d] = iso.split("-").map(Number);
+  const dt = new Date(y, m - 1, d);
+  const today = new Date(); today.setHours(0,0,0,0);
+  const diff = Math.round((dt - today) / 86400000);
+  const wd = dt.toLocaleDateString([], { weekday:"short" });
+  const md = dt.toLocaleDateString([], { month:"short", day:"numeric" });
+  const tag = diff === 0 ? "TODAY" : diff === -1 ? "YESTERDAY" : "";
+  return `${tag ? tag + " · " : ""}${wd} ${md}`.toUpperCase();
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
