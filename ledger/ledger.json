@@ -439,5 +439,815 @@
         "away": "projected"
       }
     }
+  },
+  {
+    "ts": "2026-06-26T19:25:12.615957+00:00",
+    "game_id": "HOU@DET-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.5765,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "HOU",
+      "date": "2026-06-26",
+      "home_name": "Tigers",
+      "away_name": "Astros",
+      "park": "DET",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:12.634960+00:00",
+    "game_id": "HOU@DET-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.4745,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "HOU",
+      "date": "2026-06-26",
+      "home_name": "Tigers",
+      "away_name": "Astros",
+      "park": "DET",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:12.650979+00:00",
+    "game_id": "HOU@DET-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.5535,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "HOU",
+      "date": "2026-06-26",
+      "home_name": "Tigers",
+      "away_name": "Astros",
+      "park": "DET",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:17.717986+00:00",
+    "game_id": "CIN@PIT-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.5895,
+    "market_p": 0.6306,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "CIN",
+      "date": "2026-06-26",
+      "home_name": "Pirates",
+      "away_name": "Reds",
+      "park": "PIT",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:17.747107+00:00",
+    "game_id": "CIN@PIT-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.322,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "CIN",
+      "date": "2026-06-26",
+      "home_name": "Pirates",
+      "away_name": "Reds",
+      "park": "PIT",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:17.767336+00:00",
+    "game_id": "CIN@PIT-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.6425,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "CIN",
+      "date": "2026-06-26",
+      "home_name": "Pirates",
+      "away_name": "Reds",
+      "park": "PIT",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:24.093158+00:00",
+    "game_id": "WSH@BAL-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.618,
+    "market_p": 0.555,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "WSH",
+      "date": "2026-06-26",
+      "home_name": "Orioles",
+      "away_name": "Nationals",
+      "park": "BAL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:24.117213+00:00",
+    "game_id": "WSH@BAL-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.3335,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "WSH",
+      "date": "2026-06-26",
+      "home_name": "Orioles",
+      "away_name": "Nationals",
+      "park": "BAL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:24.140829+00:00",
+    "game_id": "WSH@BAL-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.63,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "WSH",
+      "date": "2026-06-26",
+      "home_name": "Orioles",
+      "away_name": "Nationals",
+      "park": "BAL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:30.326661+00:00",
+    "game_id": "TEX@TOR-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.49,
+    "market_p": 0.495,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TEX",
+      "date": "2026-06-26",
+      "home_name": "Blue Jays",
+      "away_name": "Rangers",
+      "park": "TOR",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:30.356211+00:00",
+    "game_id": "TEX@TOR-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.4045,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TEX",
+      "date": "2026-06-26",
+      "home_name": "Blue Jays",
+      "away_name": "Rangers",
+      "park": "TOR",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:30.376058+00:00",
+    "game_id": "TEX@TOR-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.581,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TEX",
+      "date": "2026-06-26",
+      "home_name": "Blue Jays",
+      "away_name": "Rangers",
+      "park": "TOR",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:41.488987+00:00",
+    "game_id": "SEA@CLE-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.487,
+    "market_p": 0.5,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "SEA",
+      "date": "2026-06-26",
+      "home_name": "Guardians",
+      "away_name": "Mariners",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:41.516035+00:00",
+    "game_id": "SEA@CLE-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.466,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "SEA",
+      "date": "2026-06-26",
+      "home_name": "Guardians",
+      "away_name": "Mariners",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:41.538888+00:00",
+    "game_id": "SEA@CLE-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.538,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "SEA",
+      "date": "2026-06-26",
+      "home_name": "Guardians",
+      "away_name": "Mariners",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:52.010824+00:00",
+    "game_id": "AZ@TB-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.4835,
+    "market_p": 0.5603,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "AZ",
+      "date": "2026-06-26",
+      "home_name": "Rays",
+      "away_name": "Diamondbacks",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:52.035715+00:00",
+    "game_id": "AZ@TB-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.5015,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "AZ",
+      "date": "2026-06-26",
+      "home_name": "Rays",
+      "away_name": "Diamondbacks",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:25:52.052479+00:00",
+    "game_id": "AZ@TB-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.521,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "AZ",
+      "date": "2026-06-26",
+      "home_name": "Rays",
+      "away_name": "Diamondbacks",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:01.992315+00:00",
+    "game_id": "PHI@NYM-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.4465,
+    "market_p": 0.395,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYM",
+      "away": "PHI",
+      "date": "2026-06-26",
+      "home_name": "Mets",
+      "away_name": "Phillies",
+      "park": "NYM",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:02.011158+00:00",
+    "game_id": "PHI@NYM-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.4255,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYM",
+      "away": "PHI",
+      "date": "2026-06-26",
+      "home_name": "Mets",
+      "away_name": "Phillies",
+      "park": "NYM",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:02.030522+00:00",
+    "game_id": "PHI@NYM-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.5415,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYM",
+      "away": "PHI",
+      "date": "2026-06-26",
+      "home_name": "Mets",
+      "away_name": "Phillies",
+      "park": "NYM",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:08.724136+00:00",
+    "game_id": "NYY@BOS-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.5215,
+    "market_p": 0.485,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-26",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:08.749416+00:00",
+    "game_id": "NYY@BOS-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.5435,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-26",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:08.779662+00:00",
+    "game_id": "NYY@BOS-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.515,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-26",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:16.404245+00:00",
+    "game_id": "KC@CWS-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.5245,
+    "market_p": 0.5502,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "KC",
+      "date": "2026-06-26",
+      "home_name": "White Sox",
+      "away_name": "Royals",
+      "park": "CWS",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:16.433058+00:00",
+    "game_id": "KC@CWS-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.4425,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "KC",
+      "date": "2026-06-26",
+      "home_name": "White Sox",
+      "away_name": "Royals",
+      "park": "CWS",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:16.469174+00:00",
+    "game_id": "KC@CWS-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.577,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "KC",
+      "date": "2026-06-26",
+      "home_name": "White Sox",
+      "away_name": "Royals",
+      "park": "CWS",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:26.248587+00:00",
+    "game_id": "CHC@MIL-2026-06-26",
+    "market": "moneyline_home",
+    "model_p": 0.546,
+    "market_p": 0.6909,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "CHC",
+      "date": "2026-06-26",
+      "home_name": "Brewers",
+      "away_name": "Cubs",
+      "park": "MIL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:26.267446+00:00",
+    "game_id": "CHC@MIL-2026-06-26",
+    "market": "total_over_8.5",
+    "model_p": 0.4985,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "CHC",
+      "date": "2026-06-26",
+      "home_name": "Brewers",
+      "away_name": "Cubs",
+      "park": "MIL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:26.283841+00:00",
+    "game_id": "CHC@MIL-2026-06-26",
+    "market": "nrfi",
+    "model_p": 0.548,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "CHC",
+      "date": "2026-06-26",
+      "home_name": "Brewers",
+      "away_name": "Cubs",
+      "park": "MIL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:30.878797+00:00",
+    "game_id": "COL@MIN-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.5355,
+    "market_p": 0.605,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIN",
+      "away": "COL",
+      "date": "2026-06-27",
+      "home_name": "Twins",
+      "away_name": "Rockies",
+      "park": "MIN",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:30.898156+00:00",
+    "game_id": "COL@MIN-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.516,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIN",
+      "away": "COL",
+      "date": "2026-06-27",
+      "home_name": "Twins",
+      "away_name": "Rockies",
+      "park": "MIN",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:30.913317+00:00",
+    "game_id": "COL@MIN-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.4825,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIN",
+      "away": "COL",
+      "date": "2026-06-27",
+      "home_name": "Twins",
+      "away_name": "Rockies",
+      "park": "MIN",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:40.937953+00:00",
+    "game_id": "MIA@STL-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.531,
+    "market_p": 0.5,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIA",
+      "date": "2026-06-27",
+      "home_name": "Cardinals",
+      "away_name": "Marlins",
+      "park": "STL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:40.969964+00:00",
+    "game_id": "MIA@STL-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.443,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIA",
+      "date": "2026-06-27",
+      "home_name": "Cardinals",
+      "away_name": "Marlins",
+      "park": "STL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:40.997657+00:00",
+    "game_id": "MIA@STL-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.5715,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIA",
+      "date": "2026-06-27",
+      "home_name": "Cardinals",
+      "away_name": "Marlins",
+      "park": "STL",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:48.436468+00:00",
+    "game_id": "ATH@LAA-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.4515,
+    "market_p": 0.465,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "ATH",
+      "date": "2026-06-27",
+      "home_name": "Angels",
+      "away_name": "Athletics",
+      "park": "LAA",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:48.463044+00:00",
+    "game_id": "ATH@LAA-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.4685,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "ATH",
+      "date": "2026-06-27",
+      "home_name": "Angels",
+      "away_name": "Athletics",
+      "park": "LAA",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:48.488151+00:00",
+    "game_id": "ATH@LAA-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.5005,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "ATH",
+      "date": "2026-06-27",
+      "home_name": "Angels",
+      "away_name": "Athletics",
+      "park": "LAA",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:55.614977+00:00",
+    "game_id": "LAD@SD-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.433,
+    "market_p": 0.4297,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "LAD",
+      "date": "2026-06-27",
+      "home_name": "Padres",
+      "away_name": "Dodgers",
+      "park": "SD",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:55.634732+00:00",
+    "game_id": "LAD@SD-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.506,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "LAD",
+      "date": "2026-06-27",
+      "home_name": "Padres",
+      "away_name": "Dodgers",
+      "park": "SD",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:26:55.659865+00:00",
+    "game_id": "LAD@SD-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.525,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "LAD",
+      "date": "2026-06-27",
+      "home_name": "Padres",
+      "away_name": "Dodgers",
+      "park": "SD",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:27:02.455762+00:00",
+    "game_id": "ATL@SF-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.512,
+    "market_p": 0.4699,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "ATL",
+      "date": "2026-06-27",
+      "home_name": "Giants",
+      "away_name": "Braves",
+      "park": "SF",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:27:02.481039+00:00",
+    "game_id": "ATL@SF-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.435,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "ATL",
+      "date": "2026-06-27",
+      "home_name": "Giants",
+      "away_name": "Braves",
+      "park": "SF",
+      "lineup_source": "projected"
+    }
+  },
+  {
+    "ts": "2026-06-26T19:27:02.501480+00:00",
+    "game_id": "ATL@SF-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.551,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "ATL",
+      "date": "2026-06-27",
+      "home_name": "Giants",
+      "away_name": "Braves",
+      "park": "SF",
+      "lineup_source": "projected"
+    }
   }
 ]
