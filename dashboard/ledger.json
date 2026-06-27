@@ -1,6 +1,58 @@
 [
   {
     "date": "2026-06-27",
+    "away": "KC",
+    "home": "CWS",
+    "away_name": "Royals",
+    "home_name": "White Sox",
+    "model_home_win_pct": 51.9,
+    "market_home_win_pct": 54.0,
+    "edge": -2.1,
+    "contrarian": false,
+    "logged_at": "2026-06-27T17:02:53.121484+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
+    "away": "CIN",
+    "home": "PIT",
+    "away_name": "Reds",
+    "home_name": "Pirates",
+    "model_home_win_pct": 57.6,
+    "market_home_win_pct": 48.0,
+    "edge": 9.6,
+    "contrarian": true,
+    "logged_at": "2026-06-27T17:02:49.053062+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
+    "away": "NYY",
+    "home": "BOS",
+    "away_name": "Yankees",
+    "home_name": "Red Sox",
+    "model_home_win_pct": 52.9,
+    "market_home_win_pct": 49.0,
+    "edge": 3.9,
+    "contrarian": false,
+    "logged_at": "2026-06-27T17:02:44.916261+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
+    "away": "HOU",
+    "home": "DET",
+    "away_name": "Astros",
+    "home_name": "Tigers",
+    "model_home_win_pct": 56.6,
+    "market_home_win_pct": 55.0,
+    "edge": 1.6,
+    "contrarian": false,
+    "logged_at": "2026-06-27T17:02:40.892382+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
     "away": "ATL",
     "home": "SF",
     "away_name": "Braves",
@@ -10,7 +62,11 @@
     "edge": 4.2,
     "contrarian": false,
     "logged_at": "2026-06-26T19:27:02.455762+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 1,
+    "away_score": 3,
+    "winner": "ATL",
+    "pick_correct": false
   },
   {
     "date": "2026-06-27",
@@ -23,7 +79,11 @@
     "edge": 0.3,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:55.614977+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 7,
+    "away_score": 1,
+    "winner": "SD",
+    "pick_correct": false
   },
   {
     "date": "2026-06-27",
@@ -36,7 +96,11 @@
     "edge": -1.4,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:48.436468+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 3,
+    "away_score": 9,
+    "winner": "ATH",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
@@ -49,7 +113,11 @@
     "edge": 3.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:40.937953+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 0,
+    "away_score": 4,
+    "winner": "MIA",
+    "pick_correct": false
   },
   {
     "date": "2026-06-27",
@@ -62,7 +130,11 @@
     "edge": -7.0,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:30.878797+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 9,
+    "away_score": 8,
+    "winner": "MIN",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -75,7 +147,11 @@
     "edge": -14.5,
     "contrarian": true,
     "logged_at": "2026-06-26T19:26:26.248587+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 2,
+    "winner": "MIL",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -88,7 +164,11 @@
     "edge": -2.6,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:16.404245+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 22,
+    "away_score": 1,
+    "winner": "CWS",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
