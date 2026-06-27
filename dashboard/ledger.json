@@ -101,7 +101,11 @@
     "edge": 3.6,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:08.724136+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 1,
+    "winner": "BOS",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -114,7 +118,11 @@
     "edge": 5.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:01.992315+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 1,
+    "away_score": 2,
+    "winner": "PHI",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -127,7 +135,11 @@
     "edge": -7.6,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:52.010824+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 1,
+    "winner": "TB",
+    "pick_correct": false
   },
   {
     "date": "2026-06-26",
@@ -140,7 +152,11 @@
     "edge": -1.3,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:41.488987+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 1,
+    "away_score": 3,
+    "winner": "SEA",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -153,7 +169,11 @@
     "edge": -0.5,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:30.326661+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 4,
+    "away_score": 5,
+    "winner": "TEX",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -166,7 +186,11 @@
     "edge": 6.3,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:24.093158+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 3,
+    "away_score": 1,
+    "winner": "BAL",
+    "pick_correct": true
   },
   {
     "date": "2026-06-26",
@@ -179,7 +203,11 @@
     "edge": -4.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:17.717986+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 4,
+    "away_score": 6,
+    "winner": "CIN",
+    "pick_correct": false
   },
   {
     "date": "2026-06-26",
@@ -192,7 +220,11 @@
     "edge": 7.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:12.615957+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 8,
+    "away_score": 0,
+    "winner": "DET",
+    "pick_correct": true
   },
   {
     "date": "2026-06-25",
