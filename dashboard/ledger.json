@@ -1,6 +1,32 @@
 [
   {
     "date": "2026-06-27",
+    "away": "AZ",
+    "home": "TB",
+    "away_name": "Diamondbacks",
+    "home_name": "Rays",
+    "model_home_win_pct": 54.2,
+    "market_home_win_pct": 56.5,
+    "edge": -2.3,
+    "contrarian": false,
+    "logged_at": "2026-06-27T19:09:50.091894+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
+    "away": "PHI",
+    "home": "NYM",
+    "away_name": "Phillies",
+    "home_name": "Mets",
+    "model_home_win_pct": 52.3,
+    "market_home_win_pct": 54.5,
+    "edge": -2.2,
+    "contrarian": false,
+    "logged_at": "2026-06-27T19:09:46.027234+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
     "away": "KC",
     "home": "CWS",
     "away_name": "Royals",

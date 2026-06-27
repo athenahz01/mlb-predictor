@@ -1465,5 +1465,113 @@
       "park": "CWS",
       "lineup_source": "confirmed"
     }
+  },
+  {
+    "ts": "2026-06-27T19:09:46.027234+00:00",
+    "game_id": "PHI@NYM-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.5235,
+    "market_p": 0.545,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYM",
+      "away": "PHI",
+      "date": "2026-06-27",
+      "home_name": "Mets",
+      "away_name": "Phillies",
+      "park": "NYM",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T19:09:46.028622+00:00",
+    "game_id": "PHI@NYM-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.5675,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYM",
+      "away": "PHI",
+      "date": "2026-06-27",
+      "home_name": "Mets",
+      "away_name": "Phillies",
+      "park": "NYM",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T19:09:46.029848+00:00",
+    "game_id": "PHI@NYM-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.493,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYM",
+      "away": "PHI",
+      "date": "2026-06-27",
+      "home_name": "Mets",
+      "away_name": "Phillies",
+      "park": "NYM",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T19:09:50.091894+00:00",
+    "game_id": "AZ@TB-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.5425,
+    "market_p": 0.565,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "AZ",
+      "date": "2026-06-27",
+      "home_name": "Rays",
+      "away_name": "Diamondbacks",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T19:09:50.093370+00:00",
+    "game_id": "AZ@TB-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.494,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "AZ",
+      "date": "2026-06-27",
+      "home_name": "Rays",
+      "away_name": "Diamondbacks",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T19:09:50.094705+00:00",
+    "game_id": "AZ@TB-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.5295,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "AZ",
+      "date": "2026-06-27",
+      "home_name": "Rays",
+      "away_name": "Diamondbacks",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
   }
 ]
