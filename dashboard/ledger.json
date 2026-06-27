@@ -1,6 +1,32 @@
 [
   {
     "date": "2026-06-27",
+    "away": "SEA",
+    "home": "CLE",
+    "away_name": "Mariners",
+    "home_name": "Guardians",
+    "model_home_win_pct": 44.1,
+    "market_home_win_pct": 42.5,
+    "edge": 1.6,
+    "contrarian": false,
+    "logged_at": "2026-06-27T20:54:25.411496+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
+    "away": "WSH",
+    "home": "BAL",
+    "away_name": "Nationals",
+    "home_name": "Orioles",
+    "model_home_win_pct": 43.5,
+    "market_home_win_pct": 50.5,
+    "edge": -7.0,
+    "contrarian": false,
+    "logged_at": "2026-06-27T20:54:22.016607+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
     "away": "AZ",
     "home": "TB",
     "away_name": "Diamondbacks",
@@ -62,7 +88,11 @@
     "edge": 3.9,
     "contrarian": false,
     "logged_at": "2026-06-27T17:02:44.916261+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 4,
+    "away_score": 1,
+    "winner": "BOS",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
@@ -75,7 +105,11 @@
     "edge": 1.6,
     "contrarian": false,
     "logged_at": "2026-06-27T17:02:40.892382+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 8,
+    "winner": "HOU",
+    "pick_correct": false
   },
   {
     "date": "2026-06-27",

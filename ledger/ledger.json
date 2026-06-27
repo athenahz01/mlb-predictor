@@ -1573,5 +1573,113 @@
       "park": "TB",
       "lineup_source": "confirmed"
     }
+  },
+  {
+    "ts": "2026-06-27T20:54:22.016607+00:00",
+    "game_id": "WSH@BAL-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.4345,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "WSH",
+      "date": "2026-06-27",
+      "home_name": "Orioles",
+      "away_name": "Nationals",
+      "park": "BAL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T20:54:22.018027+00:00",
+    "game_id": "WSH@BAL-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.527,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "WSH",
+      "date": "2026-06-27",
+      "home_name": "Orioles",
+      "away_name": "Nationals",
+      "park": "BAL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T20:54:22.019377+00:00",
+    "game_id": "WSH@BAL-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.5,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "WSH",
+      "date": "2026-06-27",
+      "home_name": "Orioles",
+      "away_name": "Nationals",
+      "park": "BAL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T20:54:25.411496+00:00",
+    "game_id": "SEA@CLE-2026-06-27",
+    "market": "moneyline_home",
+    "model_p": 0.441,
+    "market_p": 0.425,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "SEA",
+      "date": "2026-06-27",
+      "home_name": "Guardians",
+      "away_name": "Mariners",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T20:54:25.413038+00:00",
+    "game_id": "SEA@CLE-2026-06-27",
+    "market": "total_over_8.5",
+    "model_p": 0.4735,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "SEA",
+      "date": "2026-06-27",
+      "home_name": "Guardians",
+      "away_name": "Mariners",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-27T20:54:25.414415+00:00",
+    "game_id": "SEA@CLE-2026-06-27",
+    "market": "nrfi",
+    "model_p": 0.569,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "SEA",
+      "date": "2026-06-27",
+      "home_name": "Guardians",
+      "away_name": "Mariners",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
   }
 ]
