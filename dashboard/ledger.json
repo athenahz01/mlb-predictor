@@ -1,5 +1,57 @@
 [
   {
+    "date": "2026-06-28",
+    "away": "ATH",
+    "home": "LAA",
+    "away_name": "Athletics",
+    "home_name": "Angels",
+    "model_home_win_pct": 46.4,
+    "market_home_win_pct": 50.5,
+    "edge": -4.1,
+    "contrarian": false,
+    "logged_at": "2026-06-27T22:58:10.782469+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-28",
+    "away": "ATL",
+    "home": "SF",
+    "away_name": "Braves",
+    "home_name": "Giants",
+    "model_home_win_pct": 55.3,
+    "market_home_win_pct": 54.5,
+    "edge": 0.8,
+    "contrarian": false,
+    "logged_at": "2026-06-27T22:58:06.854331+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-28",
+    "away": "LAD",
+    "home": "SD",
+    "away_name": "Dodgers",
+    "home_name": "Padres",
+    "model_home_win_pct": 37.7,
+    "market_home_win_pct": 34.5,
+    "edge": 3.2,
+    "contrarian": false,
+    "logged_at": "2026-06-27T22:58:02.890566+00:00",
+    "status": "upcoming"
+  },
+  {
+    "date": "2026-06-27",
+    "away": "CHC",
+    "home": "MIL",
+    "away_name": "Cubs",
+    "home_name": "Brewers",
+    "model_home_win_pct": 46.4,
+    "market_home_win_pct": 58.5,
+    "edge": -12.1,
+    "contrarian": true,
+    "logged_at": "2026-06-27T22:57:58.982296+00:00",
+    "status": "upcoming"
+  },
+  {
     "date": "2026-06-27",
     "away": "SEA",
     "home": "CLE",
@@ -62,7 +114,11 @@
     "edge": -2.1,
     "contrarian": false,
     "logged_at": "2026-06-27T17:02:53.121484+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 2,
+    "away_score": 1,
+    "winner": "CWS",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
