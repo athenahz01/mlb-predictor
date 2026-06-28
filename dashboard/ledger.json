@@ -10,7 +10,16 @@
     "edge": -7.9,
     "contrarian": false,
     "logged_at": "2026-06-28T17:03:09.943940+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 61.3,
+      "over_8_5_pct": 40.8,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -23,7 +32,16 @@
     "edge": 4.0,
     "contrarian": false,
     "logged_at": "2026-06-28T17:03:05.970576+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 48.8,
+      "over_8_5_pct": 56.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -36,7 +54,16 @@
     "edge": -7.7,
     "contrarian": false,
     "logged_at": "2026-06-28T17:03:02.019883+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 56.5,
+      "over_8_5_pct": 47.1,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -49,7 +76,16 @@
     "edge": -5.2,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:58.091341+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.5,
+      "over_8_5_pct": 47.1,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -62,7 +98,16 @@
     "edge": 1.8,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:54.139223+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 49.5,
+      "over_8_5_pct": 50.9,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -75,7 +120,16 @@
     "edge": -15.0,
     "contrarian": true,
     "logged_at": "2026-06-28T17:02:50.164534+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.1,
+      "over_8_5_pct": 40.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -88,7 +142,16 @@
     "edge": 2.4,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:46.259128+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 56.0,
+      "over_8_5_pct": 46.2,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -101,7 +164,16 @@
     "edge": -2.2,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:42.329333+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 58.9,
+      "over_8_5_pct": 41.7,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -114,7 +186,16 @@
     "edge": 5.3,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:38.403864+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.7,
+      "over_8_5_pct": 50.9,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -127,7 +208,16 @@
     "edge": -3.8,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:34.366856+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.5,
+      "over_8_5_pct": 42.0,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -140,7 +230,16 @@
     "edge": -6.0,
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:30.411823+00:00",
-    "status": "upcoming"
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.4,
+      "over_8_5_pct": 44.7,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-28",
@@ -153,11 +252,21 @@
     "edge": -4.1,
     "contrarian": false,
     "logged_at": "2026-06-27T22:58:10.782469+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 58.4,
+      "over_8_5_pct": 42.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 5,
     "away_score": 2,
     "winner": "LAA",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 7
   },
   {
     "date": "2026-06-28",
@@ -170,11 +279,21 @@
     "edge": 0.8,
     "contrarian": false,
     "logged_at": "2026-06-27T22:58:06.854331+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 56.6,
+      "over_8_5_pct": 43.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 5,
     "away_score": 0,
     "winner": "SF",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 5
   },
   {
     "date": "2026-06-28",
@@ -187,11 +306,21 @@
     "edge": 3.2,
     "contrarian": false,
     "logged_at": "2026-06-27T22:58:02.890566+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 59.0,
+      "over_8_5_pct": 40.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 3,
     "away_score": 15,
     "winner": "LAD",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 18
   },
   {
     "date": "2026-06-27",
@@ -204,11 +333,21 @@
     "edge": -12.1,
     "contrarian": true,
     "logged_at": "2026-06-27T22:57:58.982296+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 53.0,
+      "over_8_5_pct": 53.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 2,
     "away_score": 8,
     "winner": "CHC",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 10
   },
   {
     "date": "2026-06-27",
@@ -221,11 +360,21 @@
     "edge": 1.6,
     "contrarian": false,
     "logged_at": "2026-06-27T20:54:25.411496+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 56.9,
+      "over_8_5_pct": 47.3,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 4,
     "away_score": 3,
     "winner": "CLE",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 7
   },
   {
     "date": "2026-06-27",
@@ -238,11 +387,21 @@
     "edge": -7.0,
     "contrarian": false,
     "logged_at": "2026-06-27T20:54:22.016607+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 50.0,
+      "over_8_5_pct": 52.7,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 3,
     "away_score": 4,
     "winner": "WSH",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 7
   },
   {
     "date": "2026-06-27",
@@ -255,11 +414,21 @@
     "edge": -2.3,
     "contrarian": false,
     "logged_at": "2026-06-27T19:09:50.091894+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 52.9,
+      "over_8_5_pct": 49.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 4,
     "away_score": 2,
     "winner": "TB",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 6
   },
   {
     "date": "2026-06-27",
@@ -272,11 +441,21 @@
     "edge": -2.2,
     "contrarian": false,
     "logged_at": "2026-06-27T19:09:46.027234+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 49.3,
+      "over_8_5_pct": 56.8,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 2,
     "winner": "NYM",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 8
   },
   {
     "date": "2026-06-27",
@@ -289,11 +468,21 @@
     "edge": -2.1,
     "contrarian": false,
     "logged_at": "2026-06-27T17:02:53.121484+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 55.9,
+      "over_8_5_pct": 44.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 2,
     "away_score": 1,
     "winner": "CWS",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 3
   },
   {
     "date": "2026-06-27",
@@ -306,11 +495,21 @@
     "edge": 9.6,
     "contrarian": true,
     "logged_at": "2026-06-27T17:02:49.053062+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 54.9,
+      "over_8_5_pct": 44.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 7,
     "away_score": 9,
     "winner": "CIN",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 16
   },
   {
     "date": "2026-06-27",
@@ -323,11 +522,21 @@
     "edge": 3.9,
     "contrarian": false,
     "logged_at": "2026-06-27T17:02:44.916261+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 52.5,
+      "over_8_5_pct": 51.0,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 4,
     "away_score": 1,
     "winner": "BOS",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 5
   },
   {
     "date": "2026-06-27",
@@ -340,11 +549,21 @@
     "edge": 1.6,
     "contrarian": false,
     "logged_at": "2026-06-27T17:02:40.892382+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 52.0,
+      "over_8_5_pct": 44.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 8,
     "winner": "HOU",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 14
   },
   {
     "date": "2026-06-27",
@@ -357,11 +576,21 @@
     "edge": 4.2,
     "contrarian": false,
     "logged_at": "2026-06-26T19:27:02.455762+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 55.1,
+      "over_8_5_pct": 43.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 1,
     "away_score": 3,
     "winner": "ATL",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 4
   },
   {
     "date": "2026-06-27",
@@ -374,11 +603,21 @@
     "edge": 0.3,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:55.614977+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 52.5,
+      "over_8_5_pct": 50.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 7,
     "away_score": 1,
     "winner": "SD",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 8
   },
   {
     "date": "2026-06-27",
@@ -391,11 +630,21 @@
     "edge": -1.4,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:48.436468+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 50.0,
+      "over_8_5_pct": 46.9,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 3,
     "away_score": 9,
     "winner": "ATH",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 12
   },
   {
     "date": "2026-06-27",
@@ -408,11 +657,21 @@
     "edge": 3.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:40.937953+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 57.1,
+      "over_8_5_pct": 44.3,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 0,
     "away_score": 4,
     "winner": "MIA",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 4
   },
   {
     "date": "2026-06-27",
@@ -425,11 +684,21 @@
     "edge": -7.0,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:30.878797+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 48.2,
+      "over_8_5_pct": 51.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 5,
     "away_score": 8,
     "winner": "COL",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 13
   },
   {
     "date": "2026-06-26",
@@ -442,11 +711,21 @@
     "edge": -14.5,
     "contrarian": true,
     "logged_at": "2026-06-26T19:26:26.248587+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 54.8,
+      "over_8_5_pct": 49.9,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 2,
     "winner": "MIL",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 8
   },
   {
     "date": "2026-06-26",
@@ -459,11 +738,21 @@
     "edge": -2.6,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:16.404245+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 57.7,
+      "over_8_5_pct": 44.2,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 22,
     "away_score": 1,
     "winner": "CWS",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 23
   },
   {
     "date": "2026-06-26",
@@ -476,11 +765,21 @@
     "edge": 3.6,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:08.724136+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 51.5,
+      "over_8_5_pct": 54.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 1,
     "winner": "BOS",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 7
   },
   {
     "date": "2026-06-26",
@@ -493,11 +792,21 @@
     "edge": 5.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:01.992315+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 54.1,
+      "over_8_5_pct": 42.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 1,
     "away_score": 2,
     "winner": "PHI",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 3
   },
   {
     "date": "2026-06-26",
@@ -510,11 +819,21 @@
     "edge": -7.6,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:52.010824+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 52.1,
+      "over_8_5_pct": 50.1,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 1,
     "winner": "TB",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 7
   },
   {
     "date": "2026-06-26",
@@ -527,11 +846,21 @@
     "edge": -1.3,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:41.488987+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 53.8,
+      "over_8_5_pct": 46.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 1,
     "away_score": 3,
     "winner": "SEA",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 4
   },
   {
     "date": "2026-06-26",
@@ -544,11 +873,21 @@
     "edge": -0.5,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:30.326661+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 58.1,
+      "over_8_5_pct": 40.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 4,
     "away_score": 5,
     "winner": "TEX",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 9
   },
   {
     "date": "2026-06-26",
@@ -561,11 +900,21 @@
     "edge": 6.3,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:24.093158+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 63.0,
+      "over_8_5_pct": 33.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 3,
     "away_score": 1,
     "winner": "BAL",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 4
   },
   {
     "date": "2026-06-26",
@@ -578,11 +927,21 @@
     "edge": -4.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:17.717986+00:00",
+    "lineup_source": "confirmed",
     "status": "final",
+    "props": {
+      "nrfi_pct": 64.2,
+      "over_8_5_pct": 32.2,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 4,
     "away_score": 6,
     "winner": "CIN",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 10
   },
   {
     "date": "2026-06-26",
@@ -595,11 +954,21 @@
     "edge": 7.1,
     "contrarian": false,
     "logged_at": "2026-06-26T19:25:12.615957+00:00",
+    "lineup_source": "projected",
     "status": "final",
+    "props": {
+      "nrfi_pct": 55.4,
+      "over_8_5_pct": 47.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 8,
     "away_score": 0,
     "winner": "DET",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 8
   },
   {
     "date": "2026-06-25",
@@ -612,7 +981,19 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:20:09.018835+00:00",
-    "status": "upcoming"
+    "lineup_source": {
+      "home": "projected",
+      "away": "projected"
+    },
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 52.4,
+      "over_8_5_pct": 46.6,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    }
   },
   {
     "date": "2026-06-25",
@@ -625,11 +1006,24 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:20:05.992966+00:00",
+    "lineup_source": {
+      "home": "projected",
+      "away": "projected"
+    },
     "status": "final",
+    "props": {
+      "nrfi_pct": 57.6,
+      "over_8_5_pct": 43.0,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 3,
     "winner": "BOS",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 9
   },
   {
     "date": "2026-06-25",
@@ -642,11 +1036,24 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:20:02.868221+00:00",
+    "lineup_source": {
+      "home": "projected",
+      "away": "projected"
+    },
     "status": "final",
+    "props": {
+      "nrfi_pct": 59.6,
+      "over_8_5_pct": 41.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 3,
     "away_score": 4,
     "winner": "CHC",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 7
   },
   {
     "date": "2026-06-25",
@@ -659,11 +1066,24 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:59.712028+00:00",
+    "lineup_source": {
+      "home": "projected",
+      "away": "projected"
+    },
     "status": "final",
+    "props": {
+      "nrfi_pct": 55.1,
+      "over_8_5_pct": 42.4,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 5,
     "away_score": 6,
     "winner": "TEX",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 11
   },
   {
     "date": "2026-06-25",
@@ -676,11 +1096,24 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:56.331185+00:00",
+    "lineup_source": {
+      "home": "projected",
+      "away": "projected"
+    },
     "status": "final",
+    "props": {
+      "nrfi_pct": 56.4,
+      "over_8_5_pct": 45.0,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 5,
     "away_score": 10,
     "winner": "PHI",
-    "pick_correct": true
+    "pick_correct": true,
+    "total_runs": 15
   },
   {
     "date": "2026-06-25",
@@ -693,11 +1126,24 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:51.223813+00:00",
+    "lineup_source": {
+      "home": "projected",
+      "away": "projected"
+    },
     "status": "final",
+    "props": {
+      "nrfi_pct": 57.0,
+      "over_8_5_pct": 41.8,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 1,
     "away_score": 2,
     "winner": "HOU",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 3
   },
   {
     "date": "2026-06-25",
@@ -710,10 +1156,23 @@
     "edge": null,
     "contrarian": false,
     "logged_at": "2026-06-25T17:19:45.806874+00:00",
+    "lineup_source": {
+      "home": "confirmed",
+      "away": "confirmed"
+    },
     "status": "final",
+    "props": {
+      "nrfi_pct": 52.0,
+      "over_8_5_pct": 46.5,
+      "away_sp_k_over_5_5_pct": null,
+      "home_sp_k_over_5_5_pct": null,
+      "away_sp": null,
+      "home_sp": null
+    },
     "home_score": 6,
     "away_score": 9,
     "winner": "ATH",
-    "pick_correct": false
+    "pick_correct": false,
+    "total_runs": 15
   }
 ]
