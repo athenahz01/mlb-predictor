@@ -172,12 +172,61 @@ def make_pitcher(pid: int, name: str, tables: dict, is_starter=True) -> Pitcher:
 
 
 def make_bullpen(code: str) -> Pitcher:
+    """League-average bullpen profile (fallback when no roster/rates available)."""
     return Pitcher(name=f"{code}_pen", rates=dict(_BULLPEN_RATES), hand="R",
                    is_starter=False)
 
 
+# per-team bullpen: aggregate the team's actual relievers, usage-weighted,
+# shrunk toward the league bullpen profile so thin pens stay stable.
+RELIEVER_MIN_PA = 40        # enough batters faced for the rate to mean something
+RELIEVER_MAX_PA = 450       # above this it's a starter's workload, not a relief arm
+BULLPEN_SHRINK_K = 200      # pseudo-PAs of league prior mixed into the team aggregate
+
+
+def _team_pitcher_ids(team_id: int) -> list[int]:
+    import requests
+    url = f"{config.STATSAPI_BASE}/teams/{team_id}/roster"
+    roster = requests.get(url, params={"rosterType": "active"}, timeout=20).json()
+    return [p["person"]["id"] for p in roster.get("roster", [])
+            if p.get("position", {}).get("abbreviation") == "P"]
+
+
+def make_team_bullpen(code: str, team_id: int, tables: dict,
+                      starter_id: int = -1) -> Pitcher:
+    """Build a bullpen profile from the team's relief arms (everyone but the day's
+    starter, in the relief-workload PA band), usage-weighted by batters faced and
+    regressed to the league bullpen prior. Falls back to league-average if the
+    roster/rates aren't available."""
+    try:
+        pids = _team_pitcher_ids(team_id)
+    except Exception:
+        return make_bullpen(code)
+
+    pit = tables["pit"]
+    relievers = []
+    for pid in pids:
+        if pid == starter_id:
+            continue
+        got = _rates_row(pid, pit)
+        if not got:
+            continue
+        rates, pa = got
+        if RELIEVER_MIN_PA <= pa <= RELIEVER_MAX_PA:
+            relievers.append((rates, pa))
+
+    if not relievers:
+        return make_bullpen(code)
+
+    total_pa = sum(pa for _, pa in relievers)
+    agg = {e: sum(r[e] * pa for r, pa in relievers) / total_pa for e in EVENTS}
+    w = total_pa / (total_pa + BULLPEN_SHRINK_K)          # regress to league prior
+    rates = {e: w * agg[e] + (1 - w) * _BULLPEN_RATES[e] for e in EVENTS}
+    return Pitcher(name=f"{code}_pen", rates=rates, hand="R", is_starter=False)
+
+
 def build_team(code: str, lineup: list[tuple[int, str]], starter_id: int,
-               starter_name: str, tables: dict) -> Team:
+               starter_name: str, tables: dict, team_id: int = None) -> Team:
     """lineup = list of 9 (mlbam_id, name) in batting order."""
     batters = [make_batter(pid, nm, tables, order=i + 1)
                for i, (pid, nm) in enumerate(lineup)]
@@ -185,8 +234,9 @@ def build_team(code: str, lineup: list[tuple[int, str]], starter_id: int,
         batters.append(make_batter(-1, f"{code}_filler{len(batters)+1}",
                                     tables, order=len(batters) + 1))
     starter = make_pitcher(starter_id, starter_name, tables, is_starter=True)
-    return Team(code=code, lineup=batters[:9], starter=starter,
-                bullpen=make_bullpen(code))
+    pen = (make_team_bullpen(code, team_id, tables, starter_id)
+           if team_id else make_bullpen(code))
+    return Team(code=code, lineup=batters[:9], starter=starter, bullpen=pen)
 
 
 # --------------------------------------------------------------------------
@@ -283,10 +333,12 @@ def build_game(spec: str, date: str, season: int, tables=None):
 
     home = build_team(sides["home"][0], sides["home"][1],
                       g.get("home_probable_id") or -1,
-                      g.get("home_probable") or "TBD", tables)
+                      g.get("home_probable") or "TBD", tables,
+                      team_id=g.get("home_team_id"))
     away = build_team(sides["away"][0], sides["away"][1],
                       g.get("away_probable_id") or -1,
-                      g.get("away_probable") or "TBD", tables)
+                      g.get("away_probable") or "TBD", tables,
+                      team_id=g.get("away_team_id"))
 
     ctx = GameContext(park_code=g["home"])        # home team abbr -> park factor key
     return home, away, ctx, info

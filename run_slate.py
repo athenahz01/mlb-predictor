@@ -151,6 +151,12 @@ def main():
                               market_p=mkt_home_p, meta=meta)
         ledger.log_prediction(gid, "total_over_8.5", res["total_over"]["over_8.5"], meta=meta)
         ledger.log_prediction(gid, "nrfi", res["p_nrfi"], meta=meta)
+        ledger.log_prediction(gid, "away_sp_k_over_5.5",
+                              res["away_starter_k"]["over"]["over_5.5"],
+                              meta={**meta, "sp": g.get("away_probable") or "TBD"})
+        ledger.log_prediction(gid, "home_sp_k_over_5.5",
+                              res["home_starter_k"]["over"]["over_5.5"],
+                              meta={**meta, "sp": g.get("home_probable") or "TBD"})
         rows = ledger._load()
         logged += 1
         mk = f"{mkt_home_p:.3f}" if mkt_home_p is not None else "n/a"
