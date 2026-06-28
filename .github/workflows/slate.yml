@@ -31,7 +31,7 @@ jobs:
         run: python -m ingest.pull_results --season 2026 || echo "no results yet"
 
       - name: Run slate (confirmed lineups only)
-        run: python run_slate.py --confirmed-only --season 2025
+        run: python run_slate.py --confirmed-only --season 2025 --blend
 
       - name: Export dashboard
         run: python export_dashboard.py --season 2026
