@@ -49,7 +49,11 @@
     "edge": -12.1,
     "contrarian": true,
     "logged_at": "2026-06-27T22:57:58.982296+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 2,
+    "away_score": 8,
+    "winner": "CHC",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
@@ -62,7 +66,11 @@
     "edge": 1.6,
     "contrarian": false,
     "logged_at": "2026-06-27T20:54:25.411496+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 4,
+    "away_score": 3,
+    "winner": "CLE",
+    "pick_correct": false
   },
   {
     "date": "2026-06-27",
@@ -75,7 +83,11 @@
     "edge": -7.0,
     "contrarian": false,
     "logged_at": "2026-06-27T20:54:22.016607+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 3,
+    "away_score": 4,
+    "winner": "WSH",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
@@ -88,7 +100,11 @@
     "edge": -2.3,
     "contrarian": false,
     "logged_at": "2026-06-27T19:09:50.091894+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 4,
+    "away_score": 2,
+    "winner": "TB",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
@@ -101,7 +117,11 @@
     "edge": -2.2,
     "contrarian": false,
     "logged_at": "2026-06-27T19:09:46.027234+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 6,
+    "away_score": 2,
+    "winner": "NYM",
+    "pick_correct": true
   },
   {
     "date": "2026-06-27",
@@ -131,7 +151,11 @@
     "edge": 9.6,
     "contrarian": true,
     "logged_at": "2026-06-27T17:02:49.053062+00:00",
-    "status": "upcoming"
+    "status": "final",
+    "home_score": 7,
+    "away_score": 9,
+    "winner": "CIN",
+    "pick_correct": false
   },
   {
     "date": "2026-06-27",
@@ -247,10 +271,10 @@
     "contrarian": false,
     "logged_at": "2026-06-26T19:26:30.878797+00:00",
     "status": "final",
-    "home_score": 9,
+    "home_score": 5,
     "away_score": 8,
-    "winner": "MIN",
-    "pick_correct": true
+    "winner": "COL",
+    "pick_correct": false
   },
   {
     "date": "2026-06-26",
