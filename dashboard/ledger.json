@@ -1,6 +1,28 @@
 [
   {
     "date": "2026-06-28",
+    "away": "NYY",
+    "home": "BOS",
+    "away_name": "Yankees",
+    "home_name": "Red Sox",
+    "model_home_win_pct": 50.3,
+    "market_home_win_pct": 50.5,
+    "edge": -0.2,
+    "contrarian": false,
+    "logged_at": "2026-06-28T20:55:15.125618+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 52.5,
+      "over_8_5_pct": 43.8,
+      "away_sp_k_over_5_5_pct": 40.1,
+      "home_sp_k_over_5_5_pct": 41.3,
+      "away_sp": "Carlos Rod\u00f3n",
+      "home_sp": "Sonny Gray"
+    }
+  },
+  {
+    "date": "2026-06-28",
     "away": "MIA",
     "home": "STL",
     "away_name": "Marlins",
@@ -11,7 +33,7 @@
     "contrarian": false,
     "logged_at": "2026-06-28T17:03:09.943940+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 61.3,
       "over_8_5_pct": 40.8,
@@ -19,7 +41,12 @@
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
       "home_sp": null
-    }
+    },
+    "home_score": 2,
+    "away_score": 1,
+    "winner": "STL",
+    "pick_correct": false,
+    "total_runs": 3
   },
   {
     "date": "2026-06-28",
@@ -77,7 +104,7 @@
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:58.091341+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.5,
       "over_8_5_pct": 47.1,
@@ -85,7 +112,12 @@
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
       "home_sp": null
-    }
+    },
+    "home_score": 3,
+    "away_score": 2,
+    "winner": "MIN",
+    "pick_correct": true,
+    "total_runs": 5
   },
   {
     "date": "2026-06-28",
@@ -99,7 +131,7 @@
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:54.139223+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 49.5,
       "over_8_5_pct": 50.9,
@@ -107,7 +139,12 @@
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
       "home_sp": null
-    }
+    },
+    "home_score": 4,
+    "away_score": 5,
+    "winner": "PHI",
+    "pick_correct": true,
+    "total_runs": 9
   },
   {
     "date": "2026-06-28",
@@ -121,7 +158,7 @@
     "contrarian": true,
     "logged_at": "2026-06-28T17:02:50.164534+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 55.1,
       "over_8_5_pct": 40.4,
@@ -129,7 +166,12 @@
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
       "home_sp": null
-    }
+    },
+    "home_score": 5,
+    "away_score": 1,
+    "winner": "TB",
+    "pick_correct": false,
+    "total_runs": 6
   },
   {
     "date": "2026-06-28",
@@ -187,7 +229,7 @@
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:38.403864+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 50.7,
       "over_8_5_pct": 50.9,
@@ -195,7 +237,12 @@
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
       "home_sp": null
-    }
+    },
+    "home_score": 2,
+    "away_score": 3,
+    "winner": "TEX",
+    "pick_correct": false,
+    "total_runs": 5
   },
   {
     "date": "2026-06-28",
@@ -231,7 +278,7 @@
     "contrarian": false,
     "logged_at": "2026-06-28T17:02:30.411823+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 57.4,
       "over_8_5_pct": 44.7,
@@ -239,7 +286,12 @@
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
       "home_sp": null
-    }
+    },
+    "home_score": 4,
+    "away_score": 6,
+    "winner": "WSH",
+    "pick_correct": false,
+    "total_runs": 10
   },
   {
     "date": "2026-06-28",

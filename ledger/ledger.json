@@ -2491,5 +2491,97 @@
       "park": "STL",
       "lineup_source": "confirmed"
     }
+  },
+  {
+    "ts": "2026-06-28T20:55:15.125618+00:00",
+    "game_id": "NYY@BOS-2026-06-28",
+    "market": "moneyline_home",
+    "model_p": 0.503,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-28",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-28T20:55:15.127692+00:00",
+    "game_id": "NYY@BOS-2026-06-28",
+    "market": "total_over_8.5",
+    "model_p": 0.4375,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-28",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-28T20:55:15.129639+00:00",
+    "game_id": "NYY@BOS-2026-06-28",
+    "market": "nrfi",
+    "model_p": 0.525,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-28",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-28T20:55:15.131597+00:00",
+    "game_id": "NYY@BOS-2026-06-28",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4005,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-28",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "sp": "Carlos Rod\u00f3n"
+    }
+  },
+  {
+    "ts": "2026-06-28T20:55:15.133533+00:00",
+    "game_id": "NYY@BOS-2026-06-28",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.413,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "NYY",
+      "date": "2026-06-28",
+      "home_name": "Red Sox",
+      "away_name": "Yankees",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "sp": "Sonny Gray"
+    }
   }
 ]
