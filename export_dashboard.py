@@ -84,6 +84,10 @@ def export(season: int) -> dict:
                 "home_sp_k_over_5_5_pct": prob("home_sp_k_over_5.5"),
                 "away_sp": (markets.get("away_sp_k_over_5.5", {}).get("meta", {}) or {}).get("sp"),
                 "home_sp": (markets.get("home_sp_k_over_5.5", {}).get("meta", {}) or {}).get("sp"),
+                "hr_threats": [
+                    {"name": t["name"], "team": t["team"], "pct": round(t["p_hr"] * 100, 1)}
+                    for t in ((markets.get("batter_hr", {}).get("meta", {}) or {}).get("hr_threats") or [])
+                ] or None,
             },
         }
 

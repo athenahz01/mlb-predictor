@@ -157,6 +157,15 @@ def main():
         ledger.log_prediction(gid, "home_sp_k_over_5.5",
                               res["home_starter_k"]["over"]["over_5.5"],
                               meta={**meta, "sp": g.get("home_probable") or "TBD"})
+        # validated per-batter HR props: log the top threats across both lineups
+        threats = ([{"name": b["name"], "p_hr": round(b["p_hr"], 3), "team": home}
+                    for b in res["home_batters"]]
+                   + [{"name": b["name"], "p_hr": round(b["p_hr"], 3), "team": away}
+                      for b in res["away_batters"]])
+        threats.sort(key=lambda x: -x["p_hr"])
+        top = threats[:3]
+        ledger.log_prediction(gid, "batter_hr", top[0]["p_hr"],
+                              meta={**meta, "hr_threats": top})
         rows = ledger._load()
         logged += 1
         mk = f"{mkt_home_p:.3f}" if mkt_home_p is not None else "n/a"

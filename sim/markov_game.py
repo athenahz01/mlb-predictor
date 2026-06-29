@@ -31,6 +31,14 @@ from features.pa_probabilities import Batter, Pitcher, matchup_rates
 
 EVENTS = config.EVENTS
 
+# Per-batter prop calibration. The simulation bats the same 9 starters all game,
+# but real starters average ~3.87 plate appearances vs the sim's ~4.3 -- the rest
+# of each slot's PAs go to pinch-hitters and late subs the sim doesn't model.
+# Measured ratio 3.87/4.31 = 0.90. This deflates the per-batter COUNTING props
+# (HR, TB, hits) to what a starter actually accrues; the team run/total/win model
+# is left untouched (those are correct, and subs keep the team batting).
+STARTER_PA_SHARE = 0.90
+
 
 # --------------------------------------------------------------------------
 # Containers
@@ -351,20 +359,20 @@ def run_simulation(home: Team, away: Team, ctx: Optional[GameContext] = None,
         },
         "home_batters": [
             {"name": home.lineup[i].name,
-             "exp_hits": float(home_hits[i] / n_sims),
-             "exp_tb": float(home_tb[i] / n_sims),
-             "exp_hr": float(home_hr[i] / n_sims),
-             "p_hr": float(home_hr_any[i] / n_sims),
-             "p_2plus_hits": float(home_2hit[i] / n_sims)}
+             "exp_hits": float(home_hits[i] / n_sims) * STARTER_PA_SHARE,
+             "exp_tb": float(home_tb[i] / n_sims) * STARTER_PA_SHARE,
+             "exp_hr": float(home_hr[i] / n_sims) * STARTER_PA_SHARE,
+             "p_hr": float(home_hr_any[i] / n_sims) * STARTER_PA_SHARE,
+             "p_2plus_hits": float(home_2hit[i] / n_sims) * STARTER_PA_SHARE}
             for i in range(9)
         ],
         "away_batters": [
             {"name": away.lineup[i].name,
-             "exp_hits": float(away_hits[i] / n_sims),
-             "exp_tb": float(away_tb[i] / n_sims),
-             "exp_hr": float(away_hr[i] / n_sims),
-             "p_hr": float(away_hr_any[i] / n_sims),
-             "p_2plus_hits": float(away_2hit[i] / n_sims)}
+             "exp_hits": float(away_hits[i] / n_sims) * STARTER_PA_SHARE,
+             "exp_tb": float(away_tb[i] / n_sims) * STARTER_PA_SHARE,
+             "exp_hr": float(away_hr[i] / n_sims) * STARTER_PA_SHARE,
+             "p_hr": float(away_hr_any[i] / n_sims) * STARTER_PA_SHARE,
+             "p_2plus_hits": float(away_2hit[i] / n_sims) * STARTER_PA_SHARE}
             for i in range(9)
         ],
     }
