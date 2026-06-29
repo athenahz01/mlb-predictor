@@ -214,7 +214,11 @@ function GameRow({ r, t, thr, animate, idx }) {
   if (p.over_8_5_pct != null) propItems.push({ label:"OVER 8.5", value:pct(p.over_8_5_pct), tag:"testing" });
   if (p.away_sp_k_over_5_5_pct != null) propItems.push({ label:(p.away_sp || `${r.away} SP`), value:`O5.5 K · ${pct(p.away_sp_k_over_5_5_pct)}`, tag:"validated" });
   if (p.home_sp_k_over_5_5_pct != null) propItems.push({ label:(p.home_sp || `${r.home} SP`), value:`O5.5 K · ${pct(p.home_sp_k_over_5_5_pct)}`, tag:"validated" });
-  const hasProps = propItems.length > 0;
+  const hrList = Array.isArray(p.hr_threats)
+    ? p.hr_threats.filter((x) => x && x.pct != null && x.name).sort((a, b) => b.pct - a.pct).slice(0, 3)
+    : [];
+  const hrLine = hrList.map((x) => `${x.name} (${x.team}) · ${pct(x.pct)}`).join(",  ");
+  const hasProps = propItems.length > 0 || hrList.length > 0;
   const [open, setOpen] = useState(false);
 
   return (
@@ -273,6 +277,11 @@ function GameRow({ r, t, thr, animate, idx }) {
         <div style={{ padding:"12px 20px 16px", background:t.bg, borderTop:`1px solid ${t.lineSoft}`,
           display:"flex", flexWrap:"wrap", gap:"14px 26px", alignItems:"flex-end" }}>
           {propItems.map((it, i) => <PropItem key={i} t={t} label={it.label} value={it.value} tag={it.tag} />)}
+          {hrList.length > 0 && (
+            <div style={{ flexBasis:"100%" }}>
+              <PropItem t={t} label="HR WATCH" value={hrLine} tag="validated" />
+            </div>
+          )}
         </div>
       )}
     </div>
