@@ -11,7 +11,7 @@
     "contrarian": false,
     "logged_at": "2026-06-28T20:55:15.125618+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 52.5,
       "over_8_5_pct": 43.8,
@@ -19,7 +19,12 @@
       "home_sp_k_over_5_5_pct": 41.3,
       "away_sp": "Carlos Rod\u00f3n",
       "home_sp": "Sonny Gray"
-    }
+    },
+    "home_score": 5,
+    "away_score": 4,
+    "winner": "BOS",
+    "pick_correct": true,
+    "total_runs": 9
   },
   {
     "date": "2026-06-28",
