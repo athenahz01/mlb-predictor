@@ -1,6 +1,94 @@
 [
   {
     "date": "2026-06-30",
+    "away": "SF",
+    "home": "AZ",
+    "away_name": "Giants",
+    "home_name": "Diamondbacks",
+    "model_home_win_pct": 52.2,
+    "market_home_win_pct": 55.5,
+    "edge": -3.3,
+    "contrarian": false,
+    "logged_at": "2026-06-29T22:50:55.787916+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 52.6,
+      "over_8_5_pct": 50.0,
+      "away_sp_k_over_5_5_pct": 21.9,
+      "home_sp_k_over_5_5_pct": 23.7,
+      "away_sp": "Tyler Mahle",
+      "home_sp": "Eduardo Rodriguez"
+    }
+  },
+  {
+    "date": "2026-06-30",
+    "away": "LAA",
+    "home": "SEA",
+    "away_name": "Angels",
+    "home_name": "Mariners",
+    "model_home_win_pct": 68.2,
+    "market_home_win_pct": 64.5,
+    "edge": 3.7,
+    "contrarian": false,
+    "logged_at": "2026-06-29T22:50:51.737048+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.6,
+      "over_8_5_pct": 44.6,
+      "away_sp_k_over_5_5_pct": 31.1,
+      "home_sp_k_over_5_5_pct": 51.3,
+      "away_sp": "Ryan Johnson",
+      "home_sp": "George Kirby"
+    }
+  },
+  {
+    "date": "2026-06-30",
+    "away": "LAD",
+    "home": "ATH",
+    "away_name": "Dodgers",
+    "home_name": "Athletics",
+    "model_home_win_pct": 51.2,
+    "market_home_win_pct": 48.0,
+    "edge": 3.2,
+    "contrarian": false,
+    "logged_at": "2026-06-29T22:50:47.738244+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.4,
+      "over_8_5_pct": 45.5,
+      "away_sp_k_over_5_5_pct": 34.5,
+      "home_sp_k_over_5_5_pct": 35.3,
+      "away_sp": "Eric Lauer",
+      "home_sp": "Gage Jump"
+    }
+  },
+  {
+    "date": "2026-06-30",
+    "away": "MIA",
+    "home": "COL",
+    "away_name": "Marlins",
+    "home_name": "Rockies",
+    "model_home_win_pct": 42.6,
+    "market_home_win_pct": 42.5,
+    "edge": 0.1,
+    "contrarian": false,
+    "logged_at": "2026-06-29T22:50:43.501652+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 44.5,
+      "over_8_5_pct": 66.7,
+      "away_sp_k_over_5_5_pct": 22.8,
+      "home_sp_k_over_5_5_pct": 22.5,
+      "away_sp": "Sandy Alcantara",
+      "home_sp": "Sean Sullivan"
+    }
+  },
+  {
+    "date": "2026-06-30",
     "away": "MIN",
     "home": "HOU",
     "away_name": "Twins",
@@ -41,6 +129,28 @@
       "home_sp_k_over_5_5_pct": 26.9,
       "away_sp": "Griffin Canning",
       "home_sp": "Shota Imanaga"
+    }
+  },
+  {
+    "date": "2026-06-29",
+    "away": "CIN",
+    "home": "MIL",
+    "away_name": "Reds",
+    "home_name": "Brewers",
+    "model_home_win_pct": 53.6,
+    "market_home_win_pct": 55.5,
+    "edge": -1.9,
+    "contrarian": false,
+    "logged_at": "2026-06-29T22:50:39.291945+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 46.8,
+      "over_8_5_pct": 52.1,
+      "away_sp_k_over_5_5_pct": 23.4,
+      "home_sp_k_over_5_5_pct": 44.0,
+      "away_sp": "Nick Lodolo",
+      "home_sp": "Robert Gasser"
     }
   },
   {
