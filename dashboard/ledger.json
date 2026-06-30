@@ -143,7 +143,7 @@
     "contrarian": false,
     "logged_at": "2026-06-29T22:50:39.291945+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 46.8,
       "over_8_5_pct": 52.1,
@@ -151,7 +151,12 @@
       "home_sp_k_over_5_5_pct": 44.0,
       "away_sp": "Nick Lodolo",
       "home_sp": "Robert Gasser"
-    }
+    },
+    "home_score": 5,
+    "away_score": 3,
+    "winner": "MIL",
+    "pick_correct": true,
+    "total_runs": 8
   },
   {
     "date": "2026-06-29",
@@ -165,7 +170,7 @@
     "contrarian": false,
     "logged_at": "2026-06-29T21:20:23.603500+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 57.8,
       "over_8_5_pct": 32.3,
@@ -173,7 +178,12 @@
       "home_sp_k_over_5_5_pct": 40.6,
       "away_sp": "Tyler Alexander",
       "home_sp": "Parker Messick"
-    }
+    },
+    "home_score": 3,
+    "away_score": 6,
+    "winner": "TEX",
+    "pick_correct": false,
+    "total_runs": 9
   },
   {
     "date": "2026-06-29",
@@ -187,7 +197,7 @@
     "contrarian": false,
     "logged_at": "2026-06-29T21:20:19.655712+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 54.7,
       "over_8_5_pct": 41.2,
@@ -195,7 +205,12 @@
       "home_sp_k_over_5_5_pct": 35.6,
       "away_sp": "Miles Mikolas",
       "home_sp": "Ranger Suarez"
-    }
+    },
+    "home_score": 6,
+    "away_score": 3,
+    "winner": "BOS",
+    "pick_correct": true,
+    "total_runs": 9
   },
   {
     "date": "2026-06-29",
@@ -209,7 +224,7 @@
     "contrarian": false,
     "logged_at": "2026-06-29T21:20:15.674822+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 52.6,
       "over_8_5_pct": 42.3,
@@ -217,7 +232,12 @@
       "home_sp_k_over_5_5_pct": 46.3,
       "away_sp": "Sean Manaea",
       "home_sp": "Trey Yesavage"
-    }
+    },
+    "home_score": 2,
+    "away_score": 1,
+    "winner": "TOR",
+    "pick_correct": true,
+    "total_runs": 3
   },
   {
     "date": "2026-06-29",
@@ -231,7 +251,7 @@
     "contrarian": false,
     "logged_at": "2026-06-29T21:20:11.661252+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 50.0,
       "over_8_5_pct": 46.9,
@@ -239,7 +259,12 @@
       "home_sp_k_over_5_5_pct": 46.5,
       "away_sp": "Casey Mize",
       "home_sp": "Ryan Weathers"
-    }
+    },
+    "home_score": 3,
+    "away_score": 7,
+    "winner": "DET",
+    "pick_correct": false,
+    "total_runs": 10
   },
   {
     "date": "2026-06-29",
@@ -253,7 +278,7 @@
     "contrarian": false,
     "logged_at": "2026-06-29T21:20:07.571971+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 51.1,
       "over_8_5_pct": 53.1,
@@ -261,7 +286,12 @@
       "home_sp_k_over_5_5_pct": 33.2,
       "away_sp": "Sean Burke",
       "home_sp": "Shane Baz"
-    }
+    },
+    "home_score": 2,
+    "away_score": 8,
+    "winner": "CWS",
+    "pick_correct": false,
+    "total_runs": 10
   },
   {
     "date": "2026-06-28",
