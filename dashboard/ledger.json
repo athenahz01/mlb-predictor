@@ -1,6 +1,162 @@
 [
   {
     "date": "2026-07-01",
+    "away": "SF",
+    "home": "AZ",
+    "away_name": "Giants",
+    "home_name": "Diamondbacks",
+    "model_home_win_pct": 51.3,
+    "market_home_win_pct": 50.5,
+    "edge": 0.8,
+    "contrarian": false,
+    "logged_at": "2026-06-30T23:05:18.152480+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 49.5,
+      "over_8_5_pct": 53.3,
+      "away_sp_k_over_5_5_pct": 28.2,
+      "home_sp_k_over_5_5_pct": 20.0,
+      "away_sp": "Landen Roupp",
+      "home_sp": "Brandon Pfaadt",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 15.9
+        },
+        {
+          "name": "Casey Schmitt",
+          "team": "SF",
+          "pct": 14.2
+        },
+        {
+          "name": "Bryce Eldridge",
+          "team": "SF",
+          "pct": 13.7
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-01",
+    "away": "LAA",
+    "home": "SEA",
+    "away_name": "Angels",
+    "home_name": "Mariners",
+    "model_home_win_pct": 64.6,
+    "market_home_win_pct": 63.5,
+    "edge": 1.1,
+    "contrarian": false,
+    "logged_at": "2026-06-30T23:05:14.589433+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 61.6,
+      "over_8_5_pct": 30.4,
+      "away_sp_k_over_5_5_pct": 39.3,
+      "home_sp_k_over_5_5_pct": 45.9,
+      "away_sp": "Jos\u00e9 Soriano",
+      "home_sp": "Bryan Woo",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "team": "SEA",
+          "pct": 15.6
+        },
+        {
+          "name": "Julio Rodr\u00edguez",
+          "team": "SEA",
+          "pct": 13.1
+        },
+        {
+          "name": "Colt Emerson",
+          "team": "SEA",
+          "pct": 13.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-01",
+    "away": "LAD",
+    "home": "ATH",
+    "away_name": "Dodgers",
+    "home_name": "Athletics",
+    "model_home_win_pct": 35.4,
+    "market_home_win_pct": 37.5,
+    "edge": -2.1,
+    "contrarian": false,
+    "logged_at": "2026-06-30T23:05:11.134913+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.8,
+      "over_8_5_pct": 44.1,
+      "away_sp_k_over_5_5_pct": 30.9,
+      "home_sp_k_over_5_5_pct": 24.3,
+      "away_sp": "Justin Wrobleski",
+      "home_sp": "Jeffrey Springs",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 21.7
+        },
+        {
+          "name": "Teoscar Hern\u00e1ndez",
+          "team": "LAD",
+          "pct": 18.7
+        },
+        {
+          "name": "Andy Pages",
+          "team": "LAD",
+          "pct": 18.5
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-01",
+    "away": "MIA",
+    "home": "COL",
+    "away_name": "Marlins",
+    "home_name": "Rockies",
+    "model_home_win_pct": 40.6,
+    "market_home_win_pct": 44.5,
+    "edge": -3.9,
+    "contrarian": false,
+    "logged_at": "2026-06-30T23:05:07.625237+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 43.0,
+      "over_8_5_pct": 65.5,
+      "away_sp_k_over_5_5_pct": 47.1,
+      "home_sp_k_over_5_5_pct": 28.5,
+      "away_sp": "Eury P\u00e9rez",
+      "home_sp": "Tanner Gordon",
+      "hr_threats": [
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 23.2
+        },
+        {
+          "name": "Mickey Moniak",
+          "team": "COL",
+          "pct": 21.1
+        },
+        {
+          "name": "Kyle Stowers",
+          "team": "MIA",
+          "pct": 20.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-01",
     "away": "MIN",
     "home": "HOU",
     "away_name": "Twins",
@@ -18,7 +174,8 @@
       "away_sp_k_over_5_5_pct": 49.8,
       "home_sp_k_over_5_5_pct": 24.6,
       "away_sp": "Joe Ryan",
-      "home_sp": "Mike Burrows"
+      "home_sp": "Mike Burrows",
+      "hr_threats": null
     }
   },
   {
@@ -40,7 +197,8 @@
       "away_sp_k_over_5_5_pct": 26.2,
       "home_sp_k_over_5_5_pct": 32.6,
       "away_sp": "JP Sears",
-      "home_sp": "Matthew Boyd"
+      "home_sp": "Matthew Boyd",
+      "hr_threats": null
     }
   },
   {
@@ -62,7 +220,8 @@
       "away_sp_k_over_5_5_pct": 24.6,
       "home_sp_k_over_5_5_pct": 47.5,
       "away_sp": "Rhett Lowder",
-      "home_sp": "Brandon Sproat"
+      "home_sp": "Brandon Sproat",
+      "hr_threats": null
     }
   },
   {
@@ -84,7 +243,8 @@
       "away_sp_k_over_5_5_pct": 53.8,
       "home_sp_k_over_5_5_pct": 19.2,
       "away_sp": "Griffin Jax",
-      "home_sp": "Noah Cameron"
+      "home_sp": "Noah Cameron",
+      "hr_threats": null
     }
   },
   {
@@ -106,7 +266,8 @@
       "away_sp_k_over_5_5_pct": 36.7,
       "home_sp_k_over_5_5_pct": 46.0,
       "away_sp": "Cade Cavalli",
-      "home_sp": "Connelly Early"
+      "home_sp": "Connelly Early",
+      "hr_threats": null
     }
   },
   {
@@ -128,7 +289,8 @@
       "away_sp_k_over_5_5_pct": 38.7,
       "home_sp_k_over_5_5_pct": 30.6,
       "away_sp": "Nolan McLean",
-      "home_sp": "Kevin Gausman"
+      "home_sp": "Kevin Gausman",
+      "hr_threats": null
     }
   },
   {
@@ -150,7 +312,8 @@
       "away_sp_k_over_5_5_pct": 55.7,
       "home_sp_k_over_5_5_pct": 56.2,
       "away_sp": "Tarik Skubal",
-      "home_sp": "Cam Schlittler"
+      "home_sp": "Cam Schlittler",
+      "hr_threats": null
     }
   },
   {
@@ -172,7 +335,8 @@
       "away_sp_k_over_5_5_pct": 32.2,
       "home_sp_k_over_5_5_pct": 52.5,
       "away_sp": "Bubba Chandler",
-      "home_sp": "Cristopher S\u00e1nchez"
+      "home_sp": "Cristopher S\u00e1nchez",
+      "hr_threats": null
     }
   },
   {
@@ -194,7 +358,8 @@
       "away_sp_k_over_5_5_pct": 26.1,
       "home_sp_k_over_5_5_pct": 19.4,
       "away_sp": "Matthew Liberatore",
-      "home_sp": "Mart\u00edn P\u00e9rez"
+      "home_sp": "Mart\u00edn P\u00e9rez",
+      "hr_threats": null
     }
   },
   {
@@ -216,7 +381,8 @@
       "away_sp_k_over_5_5_pct": 52.5,
       "home_sp_k_over_5_5_pct": 29.0,
       "away_sp": "Jacob deGrom",
-      "home_sp": "Tanner Bibee"
+      "home_sp": "Tanner Bibee",
+      "hr_threats": null
     }
   },
   {
@@ -238,7 +404,8 @@
       "away_sp_k_over_5_5_pct": 21.6,
       "home_sp_k_over_5_5_pct": 29.5,
       "away_sp": "Erick Fedde",
-      "home_sp": "Trey Gibson"
+      "home_sp": "Trey Gibson",
+      "hr_threats": null
     }
   },
   {
@@ -260,7 +427,8 @@
       "away_sp_k_over_5_5_pct": 21.9,
       "home_sp_k_over_5_5_pct": 23.7,
       "away_sp": "Tyler Mahle",
-      "home_sp": "Eduardo Rodriguez"
+      "home_sp": "Eduardo Rodriguez",
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 4,
@@ -287,7 +455,8 @@
       "away_sp_k_over_5_5_pct": 31.1,
       "home_sp_k_over_5_5_pct": 51.3,
       "away_sp": "Ryan Johnson",
-      "home_sp": "George Kirby"
+      "home_sp": "George Kirby",
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 2,
@@ -314,7 +483,8 @@
       "away_sp_k_over_5_5_pct": 34.5,
       "home_sp_k_over_5_5_pct": 35.3,
       "away_sp": "Eric Lauer",
-      "home_sp": "Gage Jump"
+      "home_sp": "Gage Jump",
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 9,
@@ -341,7 +511,8 @@
       "away_sp_k_over_5_5_pct": 22.8,
       "home_sp_k_over_5_5_pct": 22.5,
       "away_sp": "Sandy Alcantara",
-      "home_sp": "Sean Sullivan"
+      "home_sp": "Sean Sullivan",
+      "hr_threats": null
     },
     "home_score": 7,
     "away_score": 10,
@@ -368,7 +539,8 @@
       "away_sp_k_over_5_5_pct": 33.0,
       "home_sp_k_over_5_5_pct": 25.4,
       "away_sp": "Zebby Matthews",
-      "home_sp": "Peter Lambert"
+      "home_sp": "Peter Lambert",
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 5,
@@ -395,7 +567,8 @@
       "away_sp_k_over_5_5_pct": 39.2,
       "home_sp_k_over_5_5_pct": 26.9,
       "away_sp": "Griffin Canning",
-      "home_sp": "Shota Imanaga"
+      "home_sp": "Shota Imanaga",
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 2,
@@ -422,7 +595,8 @@
       "away_sp_k_over_5_5_pct": 23.4,
       "home_sp_k_over_5_5_pct": 44.0,
       "away_sp": "Nick Lodolo",
-      "home_sp": "Robert Gasser"
+      "home_sp": "Robert Gasser",
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 3,
@@ -449,7 +623,8 @@
       "away_sp_k_over_5_5_pct": 27.3,
       "home_sp_k_over_5_5_pct": 40.6,
       "away_sp": "Tyler Alexander",
-      "home_sp": "Parker Messick"
+      "home_sp": "Parker Messick",
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 6,
@@ -476,7 +651,8 @@
       "away_sp_k_over_5_5_pct": 9.8,
       "home_sp_k_over_5_5_pct": 35.6,
       "away_sp": "Miles Mikolas",
-      "home_sp": "Ranger Suarez"
+      "home_sp": "Ranger Suarez",
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 3,
@@ -503,7 +679,8 @@
       "away_sp_k_over_5_5_pct": 30.3,
       "home_sp_k_over_5_5_pct": 46.3,
       "away_sp": "Sean Manaea",
-      "home_sp": "Trey Yesavage"
+      "home_sp": "Trey Yesavage",
+      "hr_threats": null
     },
     "home_score": 2,
     "away_score": 1,
@@ -530,7 +707,8 @@
       "away_sp_k_over_5_5_pct": 42.3,
       "home_sp_k_over_5_5_pct": 46.5,
       "away_sp": "Casey Mize",
-      "home_sp": "Ryan Weathers"
+      "home_sp": "Ryan Weathers",
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 7,
@@ -557,7 +735,8 @@
       "away_sp_k_over_5_5_pct": 44.6,
       "home_sp_k_over_5_5_pct": 33.2,
       "away_sp": "Sean Burke",
-      "home_sp": "Shane Baz"
+      "home_sp": "Shane Baz",
+      "hr_threats": null
     },
     "home_score": 2,
     "away_score": 8,
@@ -584,7 +763,8 @@
       "away_sp_k_over_5_5_pct": 40.1,
       "home_sp_k_over_5_5_pct": 41.3,
       "away_sp": "Carlos Rod\u00f3n",
-      "home_sp": "Sonny Gray"
+      "home_sp": "Sonny Gray",
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 4,
@@ -611,7 +791,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 2,
     "away_score": 1,
@@ -638,7 +819,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 4,
@@ -665,7 +847,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 5,
@@ -692,7 +875,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 2,
@@ -719,7 +903,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 5,
@@ -746,7 +931,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 1,
@@ -773,7 +959,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 5,
@@ -800,7 +987,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 7,
@@ -827,7 +1015,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 2,
     "away_score": 3,
@@ -854,7 +1043,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 9,
     "away_score": 4,
@@ -881,7 +1071,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 6,
@@ -908,7 +1099,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 2,
@@ -935,7 +1127,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 0,
@@ -962,7 +1155,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 15,
@@ -989,7 +1183,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 2,
     "away_score": 8,
@@ -1016,7 +1211,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 3,
@@ -1043,7 +1239,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 4,
@@ -1070,7 +1267,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 2,
@@ -1097,7 +1295,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 2,
@@ -1124,7 +1323,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 2,
     "away_score": 1,
@@ -1151,7 +1351,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 7,
     "away_score": 9,
@@ -1178,7 +1379,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 1,
@@ -1205,7 +1407,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 8,
@@ -1232,7 +1435,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 1,
     "away_score": 3,
@@ -1259,7 +1463,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 7,
     "away_score": 1,
@@ -1286,7 +1491,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 9,
@@ -1313,7 +1519,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 0,
     "away_score": 4,
@@ -1340,7 +1547,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 8,
@@ -1367,7 +1575,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 2,
@@ -1394,7 +1603,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 22,
     "away_score": 1,
@@ -1421,7 +1631,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 1,
@@ -1448,7 +1659,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 1,
     "away_score": 2,
@@ -1475,7 +1687,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 1,
@@ -1502,7 +1715,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 1,
     "away_score": 3,
@@ -1529,7 +1743,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 5,
@@ -1556,7 +1771,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 1,
@@ -1583,7 +1799,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 4,
     "away_score": 6,
@@ -1610,7 +1827,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 8,
     "away_score": 0,
@@ -1640,7 +1858,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     }
   },
   {
@@ -1665,7 +1884,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 3,
@@ -1695,7 +1915,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 3,
     "away_score": 4,
@@ -1725,7 +1946,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 6,
@@ -1755,7 +1977,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 5,
     "away_score": 10,
@@ -1785,7 +2008,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 1,
     "away_score": 2,
@@ -1815,7 +2039,8 @@
       "away_sp_k_over_5_5_pct": null,
       "home_sp_k_over_5_5_pct": null,
       "away_sp": null,
-      "home_sp": null
+      "home_sp": null,
+      "hr_threats": null
     },
     "home_score": 6,
     "away_score": 9,
