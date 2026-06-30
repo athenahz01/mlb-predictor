@@ -1,6 +1,72 @@
 [
   {
     "date": "2026-06-30",
+    "away": "STL",
+    "home": "ATL",
+    "away_name": "Cardinals",
+    "home_name": "Braves",
+    "model_home_win_pct": 63.4,
+    "market_home_win_pct": 57.5,
+    "edge": 5.9,
+    "contrarian": false,
+    "logged_at": "2026-06-30T19:46:26.831918+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.7,
+      "over_8_5_pct": 45.0,
+      "away_sp_k_over_5_5_pct": 26.1,
+      "home_sp_k_over_5_5_pct": 19.4,
+      "away_sp": "Matthew Liberatore",
+      "home_sp": "Mart\u00edn P\u00e9rez"
+    }
+  },
+  {
+    "date": "2026-06-30",
+    "away": "TEX",
+    "home": "CLE",
+    "away_name": "Rangers",
+    "home_name": "Guardians",
+    "model_home_win_pct": 50.0,
+    "market_home_win_pct": 46.5,
+    "edge": 3.5,
+    "contrarian": false,
+    "logged_at": "2026-06-30T19:46:22.207109+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.1,
+      "over_8_5_pct": 34.5,
+      "away_sp_k_over_5_5_pct": 52.5,
+      "home_sp_k_over_5_5_pct": 29.0,
+      "away_sp": "Jacob deGrom",
+      "home_sp": "Tanner Bibee"
+    }
+  },
+  {
+    "date": "2026-06-30",
+    "away": "CWS",
+    "home": "BAL",
+    "away_name": "White Sox",
+    "home_name": "Orioles",
+    "model_home_win_pct": 50.9,
+    "market_home_win_pct": 56.5,
+    "edge": -5.6,
+    "contrarian": false,
+    "logged_at": "2026-06-30T19:46:18.648439+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 48.1,
+      "over_8_5_pct": 57.4,
+      "away_sp_k_over_5_5_pct": 21.6,
+      "home_sp_k_over_5_5_pct": 29.5,
+      "away_sp": "Erick Fedde",
+      "home_sp": "Trey Gibson"
+    }
+  },
+  {
+    "date": "2026-06-30",
     "away": "SF",
     "home": "AZ",
     "away_name": "Giants",

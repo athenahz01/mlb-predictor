@@ -3687,5 +3687,281 @@
       "lineup_source": "confirmed",
       "sp": "Eduardo Rodriguez"
     }
+  },
+  {
+    "ts": "2026-06-30T19:46:18.648439+00:00",
+    "game_id": "CWS@BAL-2026-06-30",
+    "market": "moneyline_home",
+    "model_p": 0.509,
+    "market_p": 0.565,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "CWS",
+      "date": "2026-06-30",
+      "home_name": "Orioles",
+      "away_name": "White Sox",
+      "park": "BAL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:18.651342+00:00",
+    "game_id": "CWS@BAL-2026-06-30",
+    "market": "total_over_8.5",
+    "model_p": 0.5735,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "CWS",
+      "date": "2026-06-30",
+      "home_name": "Orioles",
+      "away_name": "White Sox",
+      "park": "BAL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:18.654047+00:00",
+    "game_id": "CWS@BAL-2026-06-30",
+    "market": "nrfi",
+    "model_p": 0.481,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "CWS",
+      "date": "2026-06-30",
+      "home_name": "Orioles",
+      "away_name": "White Sox",
+      "park": "BAL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:18.656880+00:00",
+    "game_id": "CWS@BAL-2026-06-30",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2155,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "CWS",
+      "date": "2026-06-30",
+      "home_name": "Orioles",
+      "away_name": "White Sox",
+      "park": "BAL",
+      "lineup_source": "confirmed",
+      "sp": "Erick Fedde"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:18.659634+00:00",
+    "game_id": "CWS@BAL-2026-06-30",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2955,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BAL",
+      "away": "CWS",
+      "date": "2026-06-30",
+      "home_name": "Orioles",
+      "away_name": "White Sox",
+      "park": "BAL",
+      "lineup_source": "confirmed",
+      "sp": "Trey Gibson"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:22.207109+00:00",
+    "game_id": "TEX@CLE-2026-06-30",
+    "market": "moneyline_home",
+    "model_p": 0.5,
+    "market_p": 0.465,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "TEX",
+      "date": "2026-06-30",
+      "home_name": "Guardians",
+      "away_name": "Rangers",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:22.210160+00:00",
+    "game_id": "TEX@CLE-2026-06-30",
+    "market": "total_over_8.5",
+    "model_p": 0.3455,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "TEX",
+      "date": "2026-06-30",
+      "home_name": "Guardians",
+      "away_name": "Rangers",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:22.212954+00:00",
+    "game_id": "TEX@CLE-2026-06-30",
+    "market": "nrfi",
+    "model_p": 0.541,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "TEX",
+      "date": "2026-06-30",
+      "home_name": "Guardians",
+      "away_name": "Rangers",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:22.215712+00:00",
+    "game_id": "TEX@CLE-2026-06-30",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.525,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "TEX",
+      "date": "2026-06-30",
+      "home_name": "Guardians",
+      "away_name": "Rangers",
+      "park": "CLE",
+      "lineup_source": "confirmed",
+      "sp": "Jacob deGrom"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:22.218555+00:00",
+    "game_id": "TEX@CLE-2026-06-30",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.29,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "TEX",
+      "date": "2026-06-30",
+      "home_name": "Guardians",
+      "away_name": "Rangers",
+      "park": "CLE",
+      "lineup_source": "confirmed",
+      "sp": "Tanner Bibee"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:26.831918+00:00",
+    "game_id": "STL@ATL-2026-06-30",
+    "market": "moneyline_home",
+    "model_p": 0.6345,
+    "market_p": 0.575,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-06-30",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:26.835019+00:00",
+    "game_id": "STL@ATL-2026-06-30",
+    "market": "total_over_8.5",
+    "model_p": 0.4495,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-06-30",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:26.837923+00:00",
+    "game_id": "STL@ATL-2026-06-30",
+    "market": "nrfi",
+    "model_p": 0.537,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-06-30",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:26.840862+00:00",
+    "game_id": "STL@ATL-2026-06-30",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2605,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-06-30",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Matthew Liberatore"
+    }
+  },
+  {
+    "ts": "2026-06-30T19:46:26.843739+00:00",
+    "game_id": "STL@ATL-2026-06-30",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.194,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-06-30",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Mart\u00edn P\u00e9rez"
+    }
   }
 ]
