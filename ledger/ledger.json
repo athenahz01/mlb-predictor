@@ -5969,5 +5969,386 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-01T23:06:59.997990+00:00",
+    "game_id": "MIA@COL-2026-07-02",
+    "market": "moneyline_home",
+    "model_p": 0.4285,
+    "market_p": 0.425,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "MIA",
+      "date": "2026-07-02",
+      "home_name": "Rockies",
+      "away_name": "Marlins",
+      "park": "COL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:00.002801+00:00",
+    "game_id": "MIA@COL-2026-07-02",
+    "market": "total_over_8.5",
+    "model_p": 0.659,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "MIA",
+      "date": "2026-07-02",
+      "home_name": "Rockies",
+      "away_name": "Marlins",
+      "park": "COL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:00.007178+00:00",
+    "game_id": "MIA@COL-2026-07-02",
+    "market": "nrfi",
+    "model_p": 0.4465,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "MIA",
+      "date": "2026-07-02",
+      "home_name": "Rockies",
+      "away_name": "Marlins",
+      "park": "COL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:00.011492+00:00",
+    "game_id": "MIA@COL-2026-07-02",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4405,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "MIA",
+      "date": "2026-07-02",
+      "home_name": "Rockies",
+      "away_name": "Marlins",
+      "park": "COL",
+      "lineup_source": "confirmed",
+      "sp": "Max Meyer"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:00.015832+00:00",
+    "game_id": "MIA@COL-2026-07-02",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.21,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "MIA",
+      "date": "2026-07-02",
+      "home_name": "Rockies",
+      "away_name": "Marlins",
+      "park": "COL",
+      "lineup_source": "confirmed",
+      "sp": "Kyle Freeland"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:00.020174+00:00",
+    "game_id": "MIA@COL-2026-07-02",
+    "market": "batter_hr",
+    "model_p": 0.21,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "MIA",
+      "date": "2026-07-02",
+      "home_name": "Rockies",
+      "away_name": "Marlins",
+      "park": "COL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Hunter Goodman",
+          "p_hr": 0.21,
+          "team": "COL"
+        },
+        {
+          "name": "Mickey Moniak",
+          "p_hr": 0.201,
+          "team": "COL"
+        },
+        {
+          "name": "Heriberto Hern\u00e1ndez",
+          "p_hr": 0.174,
+          "team": "MIA"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:03.663228+00:00",
+    "game_id": "LAD@ATH-2026-07-02",
+    "market": "moneyline_home",
+    "model_p": 0.4595,
+    "market_p": 0.385,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "LAD",
+      "date": "2026-07-02",
+      "home_name": "Athletics",
+      "away_name": "Dodgers",
+      "park": "ATH",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:03.667997+00:00",
+    "game_id": "LAD@ATH-2026-07-02",
+    "market": "total_over_8.5",
+    "model_p": 0.491,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "LAD",
+      "date": "2026-07-02",
+      "home_name": "Athletics",
+      "away_name": "Dodgers",
+      "park": "ATH",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:03.672493+00:00",
+    "game_id": "LAD@ATH-2026-07-02",
+    "market": "nrfi",
+    "model_p": 0.496,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "LAD",
+      "date": "2026-07-02",
+      "home_name": "Athletics",
+      "away_name": "Dodgers",
+      "park": "ATH",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:03.676887+00:00",
+    "game_id": "LAD@ATH-2026-07-02",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4155,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "LAD",
+      "date": "2026-07-02",
+      "home_name": "Athletics",
+      "away_name": "Dodgers",
+      "park": "ATH",
+      "lineup_source": "confirmed",
+      "sp": "TBD"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:03.681453+00:00",
+    "game_id": "LAD@ATH-2026-07-02",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3305,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "LAD",
+      "date": "2026-07-02",
+      "home_name": "Athletics",
+      "away_name": "Dodgers",
+      "park": "ATH",
+      "lineup_source": "confirmed",
+      "sp": "J.T. Ginn"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:03.685892+00:00",
+    "game_id": "LAD@ATH-2026-07-02",
+    "market": "batter_hr",
+    "model_p": 0.205,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "LAD",
+      "date": "2026-07-02",
+      "home_name": "Athletics",
+      "away_name": "Dodgers",
+      "park": "ATH",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "p_hr": 0.205,
+          "team": "LAD"
+        },
+        {
+          "name": "Nick Kurtz",
+          "p_hr": 0.192,
+          "team": "ATH"
+        },
+        {
+          "name": "Max Muncy",
+          "p_hr": 0.183,
+          "team": "LAD"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:07.539263+00:00",
+    "game_id": "SF@AZ-2026-07-02",
+    "market": "moneyline_home",
+    "model_p": 0.4685,
+    "market_p": 0.5402,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "SF",
+      "date": "2026-07-02",
+      "home_name": "Diamondbacks",
+      "away_name": "Giants",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:07.544066+00:00",
+    "game_id": "SF@AZ-2026-07-02",
+    "market": "total_over_8.5",
+    "model_p": 0.5765,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "SF",
+      "date": "2026-07-02",
+      "home_name": "Diamondbacks",
+      "away_name": "Giants",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:07.548504+00:00",
+    "game_id": "SF@AZ-2026-07-02",
+    "market": "nrfi",
+    "model_p": 0.4665,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "SF",
+      "date": "2026-07-02",
+      "home_name": "Diamondbacks",
+      "away_name": "Giants",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:07.553060+00:00",
+    "game_id": "SF@AZ-2026-07-02",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2225,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "SF",
+      "date": "2026-07-02",
+      "home_name": "Diamondbacks",
+      "away_name": "Giants",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Trevor McDonald"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:07.557538+00:00",
+    "game_id": "SF@AZ-2026-07-02",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1255,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "SF",
+      "date": "2026-07-02",
+      "home_name": "Diamondbacks",
+      "away_name": "Giants",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Zac Gallen"
+    }
+  },
+  {
+    "ts": "2026-07-01T23:07:07.562121+00:00",
+    "game_id": "SF@AZ-2026-07-02",
+    "market": "batter_hr",
+    "model_p": 0.172,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "SF",
+      "date": "2026-07-02",
+      "home_name": "Diamondbacks",
+      "away_name": "Giants",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Victor Bericoto",
+          "p_hr": 0.172,
+          "team": "SF"
+        },
+        {
+          "name": "Rafael Devers",
+          "p_hr": 0.162,
+          "team": "SF"
+        },
+        {
+          "name": "Casey Schmitt",
+          "p_hr": 0.16,
+          "team": "SF"
+        }
+      ]
+    }
   }
 ]
