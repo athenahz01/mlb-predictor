@@ -167,7 +167,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:24:18.795589+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.2,
       "over_8_5_pct": 44.5,
@@ -176,7 +176,12 @@
       "away_sp": "Joe Ryan",
       "home_sp": "Mike Burrows",
       "hr_threats": null
-    }
+    },
+    "home_score": 6,
+    "away_score": 4,
+    "winner": "HOU",
+    "pick_correct": false,
+    "total_runs": 10
   },
   {
     "date": "2026-07-01",
@@ -213,7 +218,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:24:10.411798+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 51.9,
       "over_8_5_pct": 47.8,
@@ -222,7 +227,12 @@
       "away_sp": "Rhett Lowder",
       "home_sp": "Brandon Sproat",
       "hr_threats": null
-    }
+    },
+    "home_score": 7,
+    "away_score": 2,
+    "winner": "MIL",
+    "pick_correct": true,
+    "total_runs": 9
   },
   {
     "date": "2026-06-30",
@@ -236,7 +246,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:24:06.227169+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.8,
       "over_8_5_pct": 40.9,
@@ -245,7 +255,12 @@
       "away_sp": "Griffin Jax",
       "home_sp": "Noah Cameron",
       "hr_threats": null
-    }
+    },
+    "home_score": 4,
+    "away_score": 10,
+    "winner": "TB",
+    "pick_correct": true,
+    "total_runs": 14
   },
   {
     "date": "2026-06-30",
@@ -259,7 +274,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:24:02.046359+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.2,
       "over_8_5_pct": 42.4,
@@ -268,7 +283,12 @@
       "away_sp": "Cade Cavalli",
       "home_sp": "Connelly Early",
       "hr_threats": null
-    }
+    },
+    "home_score": 1,
+    "away_score": 8,
+    "winner": "WSH",
+    "pick_correct": false,
+    "total_runs": 9
   },
   {
     "date": "2026-06-30",
@@ -282,7 +302,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:23:57.852243+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 56.6,
       "over_8_5_pct": 38.3,
@@ -291,7 +311,12 @@
       "away_sp": "Nolan McLean",
       "home_sp": "Kevin Gausman",
       "hr_threats": null
-    }
+    },
+    "home_score": 0,
+    "away_score": 3,
+    "winner": "NYM",
+    "pick_correct": true,
+    "total_runs": 3
   },
   {
     "date": "2026-06-30",
@@ -305,7 +330,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:23:53.729820+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 56.6,
       "over_8_5_pct": 35.1,
@@ -314,7 +339,12 @@
       "away_sp": "Tarik Skubal",
       "home_sp": "Cam Schlittler",
       "hr_threats": null
-    }
+    },
+    "home_score": 3,
+    "away_score": 9,
+    "winner": "DET",
+    "pick_correct": false,
+    "total_runs": 12
   },
   {
     "date": "2026-06-30",
@@ -328,7 +358,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:23:49.583071+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.9,
       "over_8_5_pct": 38.2,
@@ -337,7 +367,12 @@
       "away_sp": "Bubba Chandler",
       "home_sp": "Cristopher S\u00e1nchez",
       "hr_threats": null
-    }
+    },
+    "home_score": 8,
+    "away_score": 0,
+    "winner": "PHI",
+    "pick_correct": true,
+    "total_runs": 8
   },
   {
     "date": "2026-06-30",
@@ -351,7 +386,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T19:46:26.831918+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.7,
       "over_8_5_pct": 45.0,
@@ -360,7 +395,12 @@
       "away_sp": "Matthew Liberatore",
       "home_sp": "Mart\u00edn P\u00e9rez",
       "hr_threats": null
-    }
+    },
+    "home_score": 3,
+    "away_score": 5,
+    "winner": "STL",
+    "pick_correct": false,
+    "total_runs": 8
   },
   {
     "date": "2026-06-30",
@@ -374,7 +414,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T19:46:22.207109+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 54.1,
       "over_8_5_pct": 34.5,
@@ -383,7 +423,12 @@
       "away_sp": "Jacob deGrom",
       "home_sp": "Tanner Bibee",
       "hr_threats": null
-    }
+    },
+    "home_score": 2,
+    "away_score": 4,
+    "winner": "TEX",
+    "pick_correct": true,
+    "total_runs": 6
   },
   {
     "date": "2026-06-30",
@@ -397,7 +442,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T19:46:18.648439+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 48.1,
       "over_8_5_pct": 57.4,
@@ -406,7 +451,12 @@
       "away_sp": "Erick Fedde",
       "home_sp": "Trey Gibson",
       "hr_threats": null
-    }
+    },
+    "home_score": 3,
+    "away_score": 9,
+    "winner": "CWS",
+    "pick_correct": false,
+    "total_runs": 12
   },
   {
     "date": "2026-06-30",
