@@ -5207,5 +5207,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-01T17:49:24.729001+00:00",
+    "game_id": "NYM@TOR-2026-07-01",
+    "market": "moneyline_home",
+    "model_p": 0.55,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "NYM",
+      "date": "2026-07-01",
+      "home_name": "Blue Jays",
+      "away_name": "Mets",
+      "park": "TOR",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T17:49:24.733148+00:00",
+    "game_id": "NYM@TOR-2026-07-01",
+    "market": "total_over_8.5",
+    "model_p": 0.4055,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "NYM",
+      "date": "2026-07-01",
+      "home_name": "Blue Jays",
+      "away_name": "Mets",
+      "park": "TOR",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T17:49:24.736924+00:00",
+    "game_id": "NYM@TOR-2026-07-01",
+    "market": "nrfi",
+    "model_p": 0.549,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "NYM",
+      "date": "2026-07-01",
+      "home_name": "Blue Jays",
+      "away_name": "Mets",
+      "park": "TOR",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-01T17:49:24.740871+00:00",
+    "game_id": "NYM@TOR-2026-07-01",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2675,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "NYM",
+      "date": "2026-07-01",
+      "home_name": "Blue Jays",
+      "away_name": "Mets",
+      "park": "TOR",
+      "lineup_source": "confirmed",
+      "sp": "Freddy Peralta"
+    }
+  },
+  {
+    "ts": "2026-07-01T17:49:24.744622+00:00",
+    "game_id": "NYM@TOR-2026-07-01",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.4755,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "NYM",
+      "date": "2026-07-01",
+      "home_name": "Blue Jays",
+      "away_name": "Mets",
+      "park": "TOR",
+      "lineup_source": "confirmed",
+      "sp": "Braydon Fisher"
+    }
+  },
+  {
+    "ts": "2026-07-01T17:49:24.748405+00:00",
+    "game_id": "NYM@TOR-2026-07-01",
+    "market": "batter_hr",
+    "model_p": 0.183,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "NYM",
+      "date": "2026-07-01",
+      "home_name": "Blue Jays",
+      "away_name": "Mets",
+      "park": "TOR",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Juan Soto",
+          "p_hr": 0.183,
+          "team": "NYM"
+        },
+        {
+          "name": "Jared Young",
+          "p_hr": 0.157,
+          "team": "NYM"
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "p_hr": 0.146,
+          "team": "TOR"
+        }
+      ]
+    }
   }
 ]

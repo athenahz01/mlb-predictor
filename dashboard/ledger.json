@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-01",
+    "away": "NYM",
+    "home": "TOR",
+    "away_name": "Mets",
+    "home_name": "Blue Jays",
+    "model_home_win_pct": 55.0,
+    "market_home_win_pct": 50.5,
+    "edge": 4.5,
+    "contrarian": false,
+    "logged_at": "2026-07-01T17:49:24.729001+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.9,
+      "over_8_5_pct": 40.6,
+      "away_sp_k_over_5_5_pct": 26.8,
+      "home_sp_k_over_5_5_pct": 47.5,
+      "away_sp": "Freddy Peralta",
+      "home_sp": "Braydon Fisher",
+      "hr_threats": [
+        {
+          "name": "Juan Soto",
+          "team": "NYM",
+          "pct": 18.3
+        },
+        {
+          "name": "Jared Young",
+          "team": "NYM",
+          "pct": 15.7
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "team": "TOR",
+          "pct": 14.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-01",
     "away": "SF",
     "home": "AZ",
     "away_name": "Giants",
@@ -11,7 +50,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T23:05:18.152480+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 49.5,
       "over_8_5_pct": 53.3,
@@ -36,7 +75,12 @@
           "pct": 13.7
         }
       ]
-    }
+    },
+    "home_score": 8,
+    "away_score": 2,
+    "winner": "AZ",
+    "pick_correct": true,
+    "total_runs": 10
   },
   {
     "date": "2026-07-01",
@@ -50,7 +94,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T23:05:14.589433+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 61.6,
       "over_8_5_pct": 30.4,
@@ -75,7 +119,12 @@
           "pct": 13.1
         }
       ]
-    }
+    },
+    "home_score": 8,
+    "away_score": 3,
+    "winner": "SEA",
+    "pick_correct": true,
+    "total_runs": 11
   },
   {
     "date": "2026-07-01",
@@ -89,7 +138,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T23:05:11.134913+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.8,
       "over_8_5_pct": 44.1,
@@ -114,7 +163,12 @@
           "pct": 18.5
         }
       ]
-    }
+    },
+    "home_score": 3,
+    "away_score": 9,
+    "winner": "LAD",
+    "pick_correct": true,
+    "total_runs": 12
   },
   {
     "date": "2026-07-01",
@@ -128,7 +182,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T23:05:07.625237+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 43.0,
       "over_8_5_pct": 65.5,
@@ -153,7 +207,12 @@
           "pct": 20.0
         }
       ]
-    }
+    },
+    "home_score": 3,
+    "away_score": 14,
+    "winner": "MIA",
+    "pick_correct": true,
+    "total_runs": 17
   },
   {
     "date": "2026-07-01",
@@ -195,7 +254,7 @@
     "contrarian": false,
     "logged_at": "2026-06-30T21:24:14.618052+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 50.0,
       "over_8_5_pct": 49.2,
@@ -204,7 +263,12 @@
       "away_sp": "JP Sears",
       "home_sp": "Matthew Boyd",
       "hr_threats": null
-    }
+    },
+    "home_score": 9,
+    "away_score": 7,
+    "winner": "CHC",
+    "pick_correct": true,
+    "total_runs": 16
   },
   {
     "date": "2026-06-30",
