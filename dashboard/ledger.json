@@ -1,5 +1,122 @@
 [
   {
+    "date": "2026-07-03",
+    "away": "DET",
+    "home": "TEX",
+    "away_name": "Tigers",
+    "home_name": "Rangers",
+    "model_home_win_pct": 51.5,
+    "market_home_win_pct": 50.5,
+    "edge": 1.0,
+    "contrarian": false,
+    "logged_at": "2026-07-02T20:58:25.866817+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.5,
+      "over_8_5_pct": 42.1,
+      "away_sp_k_over_5_5_pct": 25.6,
+      "home_sp_k_over_5_5_pct": 44.9,
+      "away_sp": "Framber Valdez",
+      "home_sp": "Nathan Eovaldi",
+      "hr_threats": [
+        {
+          "name": "Kerry Carpenter",
+          "team": "DET",
+          "pct": 16.5
+        },
+        {
+          "name": "Dillon Dingler",
+          "team": "DET",
+          "pct": 16.2
+        },
+        {
+          "name": "Jake Burger",
+          "team": "TEX",
+          "pct": 14.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-02",
+    "away": "TB",
+    "home": "KC",
+    "away_name": "Rays",
+    "home_name": "Royals",
+    "model_home_win_pct": 46.8,
+    "market_home_win_pct": 46.5,
+    "edge": 0.3,
+    "contrarian": false,
+    "logged_at": "2026-07-02T20:58:21.870611+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.5,
+      "over_8_5_pct": 40.1,
+      "away_sp_k_over_5_5_pct": 44.9,
+      "home_sp_k_over_5_5_pct": 11.3,
+      "away_sp": "Ian Seymour",
+      "home_sp": "Stephen Kolek",
+      "hr_threats": [
+        {
+          "name": "Junior Caminero",
+          "team": "TB",
+          "pct": 16.4
+        },
+        {
+          "name": "Jonathan Aranda",
+          "team": "TB",
+          "pct": 14.0
+        },
+        {
+          "name": "Jac Caglianone",
+          "team": "KC",
+          "pct": 11.7
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-02",
+    "away": "CWS",
+    "home": "CLE",
+    "away_name": "White Sox",
+    "home_name": "Guardians",
+    "model_home_win_pct": 52.7,
+    "market_home_win_pct": 50.5,
+    "edge": 2.2,
+    "contrarian": false,
+    "logged_at": "2026-07-02T20:58:17.656356+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 56.1,
+      "over_8_5_pct": 45.0,
+      "away_sp_k_over_5_5_pct": 28.5,
+      "home_sp_k_over_5_5_pct": 21.6,
+      "away_sp": "Davis Martin",
+      "home_sp": "Slade Cecconi",
+      "hr_threats": [
+        {
+          "name": "Colson Montgomery",
+          "team": "CWS",
+          "pct": 17.5
+        },
+        {
+          "name": "Kyle Manzardo",
+          "team": "CLE",
+          "pct": 14.1
+        },
+        {
+          "name": "Andrew Benintendi",
+          "team": "CWS",
+          "pct": 13.7
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-02",
     "away": "SF",
     "home": "AZ",
