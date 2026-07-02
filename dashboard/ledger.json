@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-03",
+    "away": "LAA",
+    "home": "SEA",
+    "away_name": "Angels",
+    "home_name": "Mariners",
+    "model_home_win_pct": 66.0,
+    "market_home_win_pct": 66.5,
+    "edge": -0.5,
+    "contrarian": false,
+    "logged_at": "2026-07-02T22:59:15.922254+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 59.1,
+      "over_8_5_pct": 34.4,
+      "away_sp_k_over_5_5_pct": 34.6,
+      "home_sp_k_over_5_5_pct": 53.8,
+      "away_sp": "Walbert Ure\u00f1a",
+      "home_sp": "Bryce Miller",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "team": "SEA",
+          "pct": 14.9
+        },
+        {
+          "name": "Dominic Canzone",
+          "team": "SEA",
+          "pct": 13.9
+        },
+        {
+          "name": "Colt Emerson",
+          "team": "SEA",
+          "pct": 13.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
     "away": "DET",
     "home": "TEX",
     "away_name": "Tigers",
@@ -34,6 +73,45 @@
           "name": "Jake Burger",
           "team": "TEX",
           "pct": 14.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-02",
+    "away": "STL",
+    "home": "ATL",
+    "away_name": "Cardinals",
+    "home_name": "Braves",
+    "model_home_win_pct": 60.2,
+    "market_home_win_pct": 52.5,
+    "edge": 7.7,
+    "contrarian": false,
+    "logged_at": "2026-07-02T22:59:12.973349+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.4,
+      "over_8_5_pct": 42.2,
+      "away_sp_k_over_5_5_pct": 22.8,
+      "home_sp_k_over_5_5_pct": 33.4,
+      "away_sp": "Dustin May",
+      "home_sp": "Hurston Waldrep",
+      "hr_threats": [
+        {
+          "name": "Drake Baldwin",
+          "team": "ATL",
+          "pct": 15.8
+        },
+        {
+          "name": "Matt Olson",
+          "team": "ATL",
+          "pct": 15.4
+        },
+        {
+          "name": "Michael Harris II",
+          "team": "ATL",
+          "pct": 12.3
         }
       ]
     }

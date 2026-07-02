@@ -6731,5 +6731,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-02T22:59:12.973349+00:00",
+    "game_id": "STL@ATL-2026-07-02",
+    "market": "moneyline_home",
+    "model_p": 0.602,
+    "market_p": 0.525,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-07-02",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:12.977630+00:00",
+    "game_id": "STL@ATL-2026-07-02",
+    "market": "total_over_8.5",
+    "model_p": 0.422,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-07-02",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:12.981429+00:00",
+    "game_id": "STL@ATL-2026-07-02",
+    "market": "nrfi",
+    "model_p": 0.5445,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-07-02",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:12.985285+00:00",
+    "game_id": "STL@ATL-2026-07-02",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.228,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-07-02",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Dustin May"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:12.989121+00:00",
+    "game_id": "STL@ATL-2026-07-02",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3335,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-07-02",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Hurston Waldrep"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:12.992947+00:00",
+    "game_id": "STL@ATL-2026-07-02",
+    "market": "batter_hr",
+    "model_p": 0.158,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "STL",
+      "date": "2026-07-02",
+      "home_name": "Braves",
+      "away_name": "Cardinals",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Drake Baldwin",
+          "p_hr": 0.158,
+          "team": "ATL"
+        },
+        {
+          "name": "Matt Olson",
+          "p_hr": 0.154,
+          "team": "ATL"
+        },
+        {
+          "name": "Michael Harris II",
+          "p_hr": 0.123,
+          "team": "ATL"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:15.922254+00:00",
+    "game_id": "LAA@SEA-2026-07-03",
+    "market": "moneyline_home",
+    "model_p": 0.6605,
+    "market_p": 0.665,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "LAA",
+      "date": "2026-07-03",
+      "home_name": "Mariners",
+      "away_name": "Angels",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:15.926322+00:00",
+    "game_id": "LAA@SEA-2026-07-03",
+    "market": "total_over_8.5",
+    "model_p": 0.3435,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "LAA",
+      "date": "2026-07-03",
+      "home_name": "Mariners",
+      "away_name": "Angels",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:15.944266+00:00",
+    "game_id": "LAA@SEA-2026-07-03",
+    "market": "nrfi",
+    "model_p": 0.5905,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "LAA",
+      "date": "2026-07-03",
+      "home_name": "Mariners",
+      "away_name": "Angels",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:15.948277+00:00",
+    "game_id": "LAA@SEA-2026-07-03",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.3465,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "LAA",
+      "date": "2026-07-03",
+      "home_name": "Mariners",
+      "away_name": "Angels",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Walbert Ure\u00f1a"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:15.952280+00:00",
+    "game_id": "LAA@SEA-2026-07-03",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.5385,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "LAA",
+      "date": "2026-07-03",
+      "home_name": "Mariners",
+      "away_name": "Angels",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Bryce Miller"
+    }
+  },
+  {
+    "ts": "2026-07-02T22:59:15.956265+00:00",
+    "game_id": "LAA@SEA-2026-07-03",
+    "market": "batter_hr",
+    "model_p": 0.149,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "LAA",
+      "date": "2026-07-03",
+      "home_name": "Mariners",
+      "away_name": "Angels",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.149,
+          "team": "SEA"
+        },
+        {
+          "name": "Dominic Canzone",
+          "p_hr": 0.139,
+          "team": "SEA"
+        },
+        {
+          "name": "Colt Emerson",
+          "p_hr": 0.133,
+          "team": "SEA"
+        }
+      ]
+    }
   }
 ]
