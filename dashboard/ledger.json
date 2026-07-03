@@ -1,5 +1,200 @@
 [
   {
+    "date": "2026-07-04",
+    "away": "SF",
+    "home": "COL",
+    "away_name": "Giants",
+    "home_name": "Rockies",
+    "model_home_win_pct": 40.6,
+    "market_home_win_pct": 42.0,
+    "edge": -1.4,
+    "contrarian": false,
+    "logged_at": "2026-07-03T20:57:34.413687+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.6,
+      "over_8_5_pct": 60.2,
+      "away_sp_k_over_5_5_pct": 32.6,
+      "home_sp_k_over_5_5_pct": 17.9,
+      "away_sp": "Logan Webb",
+      "home_sp": "Ryan Feltner",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 17.7
+        },
+        {
+          "name": "Casey Schmitt",
+          "team": "SF",
+          "pct": 16.6
+        },
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 15.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "away": "NYM",
+    "home": "ATL",
+    "away_name": "Mets",
+    "home_name": "Braves",
+    "model_home_win_pct": 51.8,
+    "market_home_win_pct": 50.5,
+    "edge": 1.3,
+    "contrarian": false,
+    "logged_at": "2026-07-03T20:57:30.173567+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.0,
+      "over_8_5_pct": 47.6,
+      "away_sp_k_over_5_5_pct": 37.8,
+      "home_sp_k_over_5_5_pct": 31.3,
+      "away_sp": "Christian Scott",
+      "home_sp": "Grant Holmes",
+      "hr_threats": [
+        {
+          "name": "Juan Soto",
+          "team": "NYM",
+          "pct": 22.9
+        },
+        {
+          "name": "Matt Olson",
+          "team": "ATL",
+          "pct": 16.8
+        },
+        {
+          "name": "Jared Young",
+          "team": "NYM",
+          "pct": 16.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "away": "CWS",
+    "home": "CLE",
+    "away_name": "White Sox",
+    "home_name": "Guardians",
+    "model_home_win_pct": 55.2,
+    "market_home_win_pct": 55.0,
+    "edge": 0.2,
+    "contrarian": false,
+    "logged_at": "2026-07-03T20:57:26.022099+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 52.8,
+      "over_8_5_pct": 47.0,
+      "away_sp_k_over_5_5_pct": 30.2,
+      "home_sp_k_over_5_5_pct": 49.0,
+      "away_sp": "Anthony Kay",
+      "home_sp": "Gavin Williams",
+      "hr_threats": [
+        {
+          "name": "Colson Montgomery",
+          "team": "CWS",
+          "pct": 18.2
+        },
+        {
+          "name": "David Fry",
+          "team": "CLE",
+          "pct": 15.4
+        },
+        {
+          "name": "Andrew Benintendi",
+          "team": "CWS",
+          "pct": 15.4
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "away": "MIN",
+    "home": "NYY",
+    "away_name": "Twins",
+    "home_name": "Yankees",
+    "model_home_win_pct": 58.5,
+    "market_home_win_pct": 66.1,
+    "edge": -7.6,
+    "contrarian": false,
+    "logged_at": "2026-07-03T20:57:21.874977+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 47.6,
+      "over_8_5_pct": 55.0,
+      "away_sp_k_over_5_5_pct": 20.3,
+      "home_sp_k_over_5_5_pct": 26.3,
+      "away_sp": "Mike Paredes",
+      "home_sp": "Gerrit Cole",
+      "hr_threats": [
+        {
+          "name": "Ben Rice",
+          "team": "NYY",
+          "pct": 22.2
+        },
+        {
+          "name": "Trent Grisham",
+          "team": "NYY",
+          "pct": 18.4
+        },
+        {
+          "name": "Kody Clemens",
+          "team": "MIN",
+          "pct": 17.9
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "away": "PIT",
+    "home": "WSH",
+    "away_name": "Pirates",
+    "home_name": "Nationals",
+    "model_home_win_pct": 54.5,
+    "market_home_win_pct": 58.5,
+    "edge": -4.0,
+    "contrarian": false,
+    "logged_at": "2026-07-03T20:57:17.737752+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.3,
+      "over_8_5_pct": 47.0,
+      "away_sp_k_over_5_5_pct": 20.7,
+      "home_sp_k_over_5_5_pct": 42.5,
+      "away_sp": "Mitch Keller",
+      "home_sp": "Foster Griffin",
+      "hr_threats": [
+        {
+          "name": "Brandon Lowe",
+          "team": "PIT",
+          "pct": 17.4
+        },
+        {
+          "name": "Esmerlyn Valdez",
+          "team": "PIT",
+          "pct": 17.1
+        },
+        {
+          "name": "James Wood",
+          "team": "WSH",
+          "pct": 14.9
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-03",
     "away": "BAL",
     "home": "CIN",
