@@ -6985,5 +6985,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-03T19:08:51.493266+00:00",
+    "game_id": "STL@CHC-2026-07-03",
+    "market": "moneyline_home",
+    "model_p": 0.499,
+    "market_p": 0.545,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "STL",
+      "date": "2026-07-03",
+      "home_name": "Cubs",
+      "away_name": "Cardinals",
+      "park": "CHC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:51.498748+00:00",
+    "game_id": "STL@CHC-2026-07-03",
+    "market": "total_over_8.5",
+    "model_p": 0.512,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "STL",
+      "date": "2026-07-03",
+      "home_name": "Cubs",
+      "away_name": "Cardinals",
+      "park": "CHC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:51.503743+00:00",
+    "game_id": "STL@CHC-2026-07-03",
+    "market": "nrfi",
+    "model_p": 0.5155,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "STL",
+      "date": "2026-07-03",
+      "home_name": "Cubs",
+      "away_name": "Cardinals",
+      "park": "CHC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:51.508724+00:00",
+    "game_id": "STL@CHC-2026-07-03",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.1925,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "STL",
+      "date": "2026-07-03",
+      "home_name": "Cubs",
+      "away_name": "Cardinals",
+      "park": "CHC",
+      "lineup_source": "confirmed",
+      "sp": "Andre Pallante"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:51.513699+00:00",
+    "game_id": "STL@CHC-2026-07-03",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1705,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "STL",
+      "date": "2026-07-03",
+      "home_name": "Cubs",
+      "away_name": "Cardinals",
+      "park": "CHC",
+      "lineup_source": "confirmed",
+      "sp": "David Peterson"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:51.518781+00:00",
+    "game_id": "STL@CHC-2026-07-03",
+    "market": "batter_hr",
+    "model_p": 0.159,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "STL",
+      "date": "2026-07-03",
+      "home_name": "Cubs",
+      "away_name": "Cardinals",
+      "park": "CHC",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Pete Crow-Armstrong",
+          "p_hr": 0.159,
+          "team": "CHC"
+        },
+        {
+          "name": "Ian Happ",
+          "p_hr": 0.141,
+          "team": "CHC"
+        },
+        {
+          "name": "Michael Busch",
+          "p_hr": 0.135,
+          "team": "CHC"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:56.226107+00:00",
+    "game_id": "BAL@CIN-2026-07-03",
+    "market": "moneyline_home",
+    "model_p": 0.4125,
+    "market_p": 0.4699,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CIN",
+      "away": "BAL",
+      "date": "2026-07-03",
+      "home_name": "Reds",
+      "away_name": "Orioles",
+      "park": "CIN",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:56.231421+00:00",
+    "game_id": "BAL@CIN-2026-07-03",
+    "market": "total_over_8.5",
+    "model_p": 0.5935,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CIN",
+      "away": "BAL",
+      "date": "2026-07-03",
+      "home_name": "Reds",
+      "away_name": "Orioles",
+      "park": "CIN",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:56.236517+00:00",
+    "game_id": "BAL@CIN-2026-07-03",
+    "market": "nrfi",
+    "model_p": 0.483,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CIN",
+      "away": "BAL",
+      "date": "2026-07-03",
+      "home_name": "Reds",
+      "away_name": "Orioles",
+      "park": "CIN",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:56.241656+00:00",
+    "game_id": "BAL@CIN-2026-07-03",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.362,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CIN",
+      "away": "BAL",
+      "date": "2026-07-03",
+      "home_name": "Reds",
+      "away_name": "Orioles",
+      "park": "CIN",
+      "lineup_source": "confirmed",
+      "sp": "Trevor Rogers"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:56.246754+00:00",
+    "game_id": "BAL@CIN-2026-07-03",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.33,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CIN",
+      "away": "BAL",
+      "date": "2026-07-03",
+      "home_name": "Reds",
+      "away_name": "Orioles",
+      "park": "CIN",
+      "lineup_source": "confirmed",
+      "sp": "Brady Singer"
+    }
+  },
+  {
+    "ts": "2026-07-03T19:08:56.251956+00:00",
+    "game_id": "BAL@CIN-2026-07-03",
+    "market": "batter_hr",
+    "model_p": 0.225,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CIN",
+      "away": "BAL",
+      "date": "2026-07-03",
+      "home_name": "Reds",
+      "away_name": "Orioles",
+      "park": "CIN",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Gunnar Henderson",
+          "p_hr": 0.225,
+          "team": "BAL"
+        },
+        {
+          "name": "Samuel Basallo",
+          "p_hr": 0.212,
+          "team": "BAL"
+        },
+        {
+          "name": "Colton Cowser",
+          "p_hr": 0.206,
+          "team": "BAL"
+        }
+      ]
+    }
   }
 ]

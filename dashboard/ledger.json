@@ -1,6 +1,84 @@
 [
   {
     "date": "2026-07-03",
+    "away": "BAL",
+    "home": "CIN",
+    "away_name": "Orioles",
+    "home_name": "Reds",
+    "model_home_win_pct": 41.2,
+    "market_home_win_pct": 47.0,
+    "edge": -5.8,
+    "contrarian": false,
+    "logged_at": "2026-07-03T19:08:56.226107+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 48.3,
+      "over_8_5_pct": 59.4,
+      "away_sp_k_over_5_5_pct": 36.2,
+      "home_sp_k_over_5_5_pct": 33.0,
+      "away_sp": "Trevor Rogers",
+      "home_sp": "Brady Singer",
+      "hr_threats": [
+        {
+          "name": "Gunnar Henderson",
+          "team": "BAL",
+          "pct": 22.5
+        },
+        {
+          "name": "Samuel Basallo",
+          "team": "BAL",
+          "pct": 21.2
+        },
+        {
+          "name": "Colton Cowser",
+          "team": "BAL",
+          "pct": 20.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
+    "away": "STL",
+    "home": "CHC",
+    "away_name": "Cardinals",
+    "home_name": "Cubs",
+    "model_home_win_pct": 49.9,
+    "market_home_win_pct": 54.5,
+    "edge": -4.6,
+    "contrarian": false,
+    "logged_at": "2026-07-03T19:08:51.493266+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 51.5,
+      "over_8_5_pct": 51.2,
+      "away_sp_k_over_5_5_pct": 19.2,
+      "home_sp_k_over_5_5_pct": 17.1,
+      "away_sp": "Andre Pallante",
+      "home_sp": "David Peterson",
+      "hr_threats": [
+        {
+          "name": "Pete Crow-Armstrong",
+          "team": "CHC",
+          "pct": 15.9
+        },
+        {
+          "name": "Ian Happ",
+          "team": "CHC",
+          "pct": 14.1
+        },
+        {
+          "name": "Michael Busch",
+          "team": "CHC",
+          "pct": 13.5
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-03",
     "away": "LAA",
     "home": "SEA",
     "away_name": "Angels",
