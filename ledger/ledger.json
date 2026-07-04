@@ -8382,5 +8382,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-04T16:57:49.597691+00:00",
+    "game_id": "MIN@NYY-2026-07-04",
+    "market": "moneyline_home",
+    "model_p": 0.5785,
+    "market_p": 0.585,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYY",
+      "away": "MIN",
+      "date": "2026-07-04",
+      "home_name": "Yankees",
+      "away_name": "Twins",
+      "park": "NYY",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:49.604110+00:00",
+    "game_id": "MIN@NYY-2026-07-04",
+    "market": "total_over_8.5",
+    "model_p": 0.5345,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYY",
+      "away": "MIN",
+      "date": "2026-07-04",
+      "home_name": "Yankees",
+      "away_name": "Twins",
+      "park": "NYY",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:49.610005+00:00",
+    "game_id": "MIN@NYY-2026-07-04",
+    "market": "nrfi",
+    "model_p": 0.476,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYY",
+      "away": "MIN",
+      "date": "2026-07-04",
+      "home_name": "Yankees",
+      "away_name": "Twins",
+      "park": "NYY",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:49.615787+00:00",
+    "game_id": "MIN@NYY-2026-07-04",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.322,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYY",
+      "away": "MIN",
+      "date": "2026-07-04",
+      "home_name": "Yankees",
+      "away_name": "Twins",
+      "park": "NYY",
+      "lineup_source": "confirmed",
+      "sp": "Zebby Matthews"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:49.621562+00:00",
+    "game_id": "MIN@NYY-2026-07-04",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3115,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYY",
+      "away": "MIN",
+      "date": "2026-07-04",
+      "home_name": "Yankees",
+      "away_name": "Twins",
+      "park": "NYY",
+      "lineup_source": "confirmed",
+      "sp": "Brendan Beck"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:49.627437+00:00",
+    "game_id": "MIN@NYY-2026-07-04",
+    "market": "batter_hr",
+    "model_p": 0.241,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NYY",
+      "away": "MIN",
+      "date": "2026-07-04",
+      "home_name": "Yankees",
+      "away_name": "Twins",
+      "park": "NYY",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Ben Rice",
+          "p_hr": 0.241,
+          "team": "NYY"
+        },
+        {
+          "name": "Byron Buxton",
+          "p_hr": 0.236,
+          "team": "MIN"
+        },
+        {
+          "name": "Trent Grisham",
+          "p_hr": 0.183,
+          "team": "NYY"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:53.695836+00:00",
+    "game_id": "DET@TEX-2026-07-04",
+    "market": "moneyline_home",
+    "model_p": 0.5005,
+    "market_p": 0.475,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TEX",
+      "away": "DET",
+      "date": "2026-07-04",
+      "home_name": "Rangers",
+      "away_name": "Tigers",
+      "park": "TEX",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:53.701961+00:00",
+    "game_id": "DET@TEX-2026-07-04",
+    "market": "total_over_8.5",
+    "model_p": 0.4935,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TEX",
+      "away": "DET",
+      "date": "2026-07-04",
+      "home_name": "Rangers",
+      "away_name": "Tigers",
+      "park": "TEX",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:53.707841+00:00",
+    "game_id": "DET@TEX-2026-07-04",
+    "market": "nrfi",
+    "model_p": 0.4915,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TEX",
+      "away": "DET",
+      "date": "2026-07-04",
+      "home_name": "Rangers",
+      "away_name": "Tigers",
+      "park": "TEX",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:53.713720+00:00",
+    "game_id": "DET@TEX-2026-07-04",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4505,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TEX",
+      "away": "DET",
+      "date": "2026-07-04",
+      "home_name": "Rangers",
+      "away_name": "Tigers",
+      "park": "TEX",
+      "lineup_source": "confirmed",
+      "sp": "Jack Flaherty"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:53.719605+00:00",
+    "game_id": "DET@TEX-2026-07-04",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2795,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TEX",
+      "away": "DET",
+      "date": "2026-07-04",
+      "home_name": "Rangers",
+      "away_name": "Tigers",
+      "park": "TEX",
+      "lineup_source": "confirmed",
+      "sp": "Cal Quantrill"
+    }
+  },
+  {
+    "ts": "2026-07-04T16:57:53.725514+00:00",
+    "game_id": "DET@TEX-2026-07-04",
+    "market": "batter_hr",
+    "model_p": 0.186,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TEX",
+      "away": "DET",
+      "date": "2026-07-04",
+      "home_name": "Rangers",
+      "away_name": "Tigers",
+      "park": "TEX",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kerry Carpenter",
+          "p_hr": 0.186,
+          "team": "DET"
+        },
+        {
+          "name": "Dillon Dingler",
+          "p_hr": 0.167,
+          "team": "DET"
+        },
+        {
+          "name": "Joc Pederson",
+          "p_hr": 0.163,
+          "team": "TEX"
+        }
+      ]
+    }
   }
 ]
