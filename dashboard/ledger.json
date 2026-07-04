@@ -1,5 +1,122 @@
 [
   {
+    "date": "2026-07-05",
+    "away": "PHI",
+    "home": "KC",
+    "away_name": "Phillies",
+    "home_name": "Royals",
+    "model_home_win_pct": 50.3,
+    "market_home_win_pct": 41.5,
+    "edge": 8.8,
+    "contrarian": true,
+    "logged_at": "2026-07-04T20:47:56.201537+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.7,
+      "over_8_5_pct": 41.4,
+      "away_sp_k_over_5_5_pct": 53.5,
+      "home_sp_k_over_5_5_pct": 22.8,
+      "away_sp": "Jes\u00fas Luzardo",
+      "home_sp": "Michael Wacha",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "PHI",
+          "pct": 19.8
+        },
+        {
+          "name": "Bryce Harper",
+          "team": "PHI",
+          "pct": 15.8
+        },
+        {
+          "name": "Brandon Marsh",
+          "team": "PHI",
+          "pct": 10.9
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-04",
+    "away": "CWS",
+    "home": "CLE",
+    "away_name": "White Sox",
+    "home_name": "Guardians",
+    "model_home_win_pct": 61.1,
+    "market_home_win_pct": 56.5,
+    "edge": 4.6,
+    "contrarian": false,
+    "logged_at": "2026-07-04T20:47:51.434805+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.3,
+      "over_8_5_pct": 39.9,
+      "away_sp_k_over_5_5_pct": 32.8,
+      "home_sp_k_over_5_5_pct": 41.9,
+      "away_sp": "Sean Burke",
+      "home_sp": "Parker Messick",
+      "hr_threats": [
+        {
+          "name": "Colson Montgomery",
+          "team": "CWS",
+          "pct": 14.7
+        },
+        {
+          "name": "Kyle Manzardo",
+          "team": "CLE",
+          "pct": 14.2
+        },
+        {
+          "name": "Travis Bazzana",
+          "team": "CLE",
+          "pct": 13.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-04",
+    "away": "BAL",
+    "home": "CIN",
+    "away_name": "Orioles",
+    "home_name": "Reds",
+    "model_home_win_pct": 55.2,
+    "market_home_win_pct": 54.5,
+    "edge": 0.7,
+    "contrarian": false,
+    "logged_at": "2026-07-04T20:47:47.375622+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 48.2,
+      "over_8_5_pct": 53.8,
+      "away_sp_k_over_5_5_pct": 28.1,
+      "home_sp_k_over_5_5_pct": 65.2,
+      "away_sp": "Brandon Young",
+      "home_sp": "Hunter Greene",
+      "hr_threats": [
+        {
+          "name": "JJ Bleday",
+          "team": "CIN",
+          "pct": 22.8
+        },
+        {
+          "name": "Samuel Basallo",
+          "team": "BAL",
+          "pct": 21.0
+        },
+        {
+          "name": "Gunnar Henderson",
+          "team": "BAL",
+          "pct": 20.2
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-04",
     "away": "DET",
     "home": "TEX",
