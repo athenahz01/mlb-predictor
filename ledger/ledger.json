@@ -10668,5 +10668,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-05T20:51:15.145660+00:00",
+    "game_id": "SD@LAD-2026-07-05",
+    "market": "moneyline_home",
+    "model_p": 0.6225,
+    "market_p": 0.675,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "SD",
+      "date": "2026-07-05",
+      "home_name": "Dodgers",
+      "away_name": "Padres",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T20:51:15.154173+00:00",
+    "game_id": "SD@LAD-2026-07-05",
+    "market": "total_over_8.5",
+    "model_p": 0.462,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "SD",
+      "date": "2026-07-05",
+      "home_name": "Dodgers",
+      "away_name": "Padres",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T20:51:15.162344+00:00",
+    "game_id": "SD@LAD-2026-07-05",
+    "market": "nrfi",
+    "model_p": 0.5035,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "SD",
+      "date": "2026-07-05",
+      "home_name": "Dodgers",
+      "away_name": "Padres",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T20:51:15.170504+00:00",
+    "game_id": "SD@LAD-2026-07-05",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2465,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "SD",
+      "date": "2026-07-05",
+      "home_name": "Dodgers",
+      "away_name": "Padres",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "sp": "JP Sears"
+    }
+  },
+  {
+    "ts": "2026-07-05T20:51:15.178730+00:00",
+    "game_id": "SD@LAD-2026-07-05",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.4885,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "SD",
+      "date": "2026-07-05",
+      "home_name": "Dodgers",
+      "away_name": "Padres",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "sp": "Emmet Sheehan"
+    }
+  },
+  {
+    "ts": "2026-07-05T20:51:15.187190+00:00",
+    "game_id": "SD@LAD-2026-07-05",
+    "market": "batter_hr",
+    "model_p": 0.212,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "SD",
+      "date": "2026-07-05",
+      "home_name": "Dodgers",
+      "away_name": "Padres",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "p_hr": 0.212,
+          "team": "LAD"
+        },
+        {
+          "name": "Gavin Sheets",
+          "p_hr": 0.174,
+          "team": "SD"
+        },
+        {
+          "name": "Andy Pages",
+          "p_hr": 0.171,
+          "team": "LAD"
+        }
+      ]
+    }
   }
 ]

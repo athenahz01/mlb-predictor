@@ -1,6 +1,50 @@
 [
   {
     "date": "2026-07-05",
+    "away": "SD",
+    "home": "LAD",
+    "away_name": "Padres",
+    "home_name": "Dodgers",
+    "model_home_win_pct": 62.3,
+    "market_home_win_pct": 67.5,
+    "edge": -5.2,
+    "contrarian": false,
+    "logged_at": "2026-07-05T20:51:15.145660+00:00",
+    "lineup_source": "confirmed",
+    "status": "final",
+    "props": {
+      "nrfi_pct": 50.3,
+      "over_8_5_pct": 46.2,
+      "away_sp_k_over_5_5_pct": 24.6,
+      "home_sp_k_over_5_5_pct": 48.9,
+      "away_sp": "JP Sears",
+      "home_sp": "Emmet Sheehan",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 21.2
+        },
+        {
+          "name": "Gavin Sheets",
+          "team": "SD",
+          "pct": 17.4
+        },
+        {
+          "name": "Andy Pages",
+          "team": "LAD",
+          "pct": 17.1
+        }
+      ]
+    },
+    "home_score": 3,
+    "away_score": 0,
+    "winner": "LAD",
+    "pick_correct": true,
+    "total_runs": 3
+  },
+  {
+    "date": "2026-07-05",
     "away": "TOR",
     "home": "SEA",
     "away_name": "Blue Jays",
@@ -211,7 +255,7 @@
     "contrarian": false,
     "logged_at": "2026-07-05T17:01:22.823519+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 52.2,
       "over_8_5_pct": 49.9,
@@ -236,7 +280,12 @@
           "pct": 18.2
         }
       ]
-    }
+    },
+    "home_score": 1,
+    "away_score": 6,
+    "winner": "MIN",
+    "pick_correct": false,
+    "total_runs": 7
   },
   {
     "date": "2026-07-05",
@@ -250,7 +299,7 @@
     "contrarian": false,
     "logged_at": "2026-07-05T17:01:18.646093+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 48.1,
       "over_8_5_pct": 55.3,
@@ -275,7 +324,12 @@
           "pct": 19.9
         }
       ]
-    }
+    },
+    "home_score": 3,
+    "away_score": 2,
+    "winner": "CIN",
+    "pick_correct": false,
+    "total_runs": 5
   },
   {
     "date": "2026-07-05",
@@ -289,7 +343,7 @@
     "contrarian": true,
     "logged_at": "2026-07-05T17:01:14.461201+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.9,
       "over_8_5_pct": 48.7,
@@ -314,7 +368,12 @@
           "pct": 13.3
         }
       ]
-    }
+    },
+    "home_score": 5,
+    "away_score": 11,
+    "winner": "PIT",
+    "pick_correct": true,
+    "total_runs": 16
   },
   {
     "date": "2026-07-05",
