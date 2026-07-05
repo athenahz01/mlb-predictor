@@ -1,6 +1,89 @@
 [
   {
     "date": "2026-07-05",
+    "away": "TOR",
+    "home": "SEA",
+    "away_name": "Blue Jays",
+    "home_name": "Mariners",
+    "model_home_win_pct": 49.8,
+    "market_home_win_pct": 53.5,
+    "edge": -3.7,
+    "contrarian": false,
+    "logged_at": "2026-07-05T19:06:25.257295+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 59.5,
+      "over_8_5_pct": 33.8,
+      "away_sp_k_over_5_5_pct": 50.4,
+      "home_sp_k_over_5_5_pct": 22.4,
+      "away_sp": "Trey Yesavage",
+      "home_sp": "Emerson Hancock",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "team": "SEA",
+          "pct": 16.4
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "team": "TOR",
+          "pct": 15.1
+        },
+        {
+          "name": "Daulton Varsho",
+          "team": "TOR",
+          "pct": 13.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-05",
+    "away": "MIL",
+    "home": "AZ",
+    "away_name": "Brewers",
+    "home_name": "Diamondbacks",
+    "model_home_win_pct": 54.5,
+    "market_home_win_pct": 47.5,
+    "edge": 7.0,
+    "contrarian": false,
+    "logged_at": "2026-07-05T19:06:21.251476+00:00",
+    "lineup_source": "confirmed",
+    "status": "final",
+    "props": {
+      "nrfi_pct": 50.7,
+      "over_8_5_pct": 51.9,
+      "away_sp_k_over_5_5_pct": 27.9,
+      "home_sp_k_over_5_5_pct": 30.0,
+      "away_sp": "Brandon Sproat",
+      "home_sp": "Eduardo Rodriguez",
+      "hr_threats": [
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 16.9
+        },
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 14.7
+        },
+        {
+          "name": "Jackson Chourio",
+          "team": "MIL",
+          "pct": 14.0
+        }
+      ]
+    },
+    "home_score": 4,
+    "away_score": 3,
+    "winner": "AZ",
+    "pick_correct": true,
+    "total_runs": 7
+  },
+  {
+    "date": "2026-07-05",
     "away": "DET",
     "home": "TEX",
     "away_name": "Tigers",

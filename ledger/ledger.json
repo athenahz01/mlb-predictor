@@ -10414,5 +10414,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-05T19:06:21.251476+00:00",
+    "game_id": "MIL@AZ-2026-07-05",
+    "market": "moneyline_home",
+    "model_p": 0.5455,
+    "market_p": 0.475,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "MIL",
+      "date": "2026-07-05",
+      "home_name": "Diamondbacks",
+      "away_name": "Brewers",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:21.259718+00:00",
+    "game_id": "MIL@AZ-2026-07-05",
+    "market": "total_over_8.5",
+    "model_p": 0.5195,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "MIL",
+      "date": "2026-07-05",
+      "home_name": "Diamondbacks",
+      "away_name": "Brewers",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:21.267667+00:00",
+    "game_id": "MIL@AZ-2026-07-05",
+    "market": "nrfi",
+    "model_p": 0.5075,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "MIL",
+      "date": "2026-07-05",
+      "home_name": "Diamondbacks",
+      "away_name": "Brewers",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:21.276036+00:00",
+    "game_id": "MIL@AZ-2026-07-05",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2785,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "MIL",
+      "date": "2026-07-05",
+      "home_name": "Diamondbacks",
+      "away_name": "Brewers",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Brandon Sproat"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:21.283961+00:00",
+    "game_id": "MIL@AZ-2026-07-05",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "MIL",
+      "date": "2026-07-05",
+      "home_name": "Diamondbacks",
+      "away_name": "Brewers",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Eduardo Rodriguez"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:21.292322+00:00",
+    "game_id": "MIL@AZ-2026-07-05",
+    "market": "batter_hr",
+    "model_p": 0.169,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "MIL",
+      "date": "2026-07-05",
+      "home_name": "Diamondbacks",
+      "away_name": "Brewers",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Corbin Carroll",
+          "p_hr": 0.169,
+          "team": "AZ"
+        },
+        {
+          "name": "Ketel Marte",
+          "p_hr": 0.147,
+          "team": "AZ"
+        },
+        {
+          "name": "Jackson Chourio",
+          "p_hr": 0.14,
+          "team": "MIL"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:25.257295+00:00",
+    "game_id": "TOR@SEA-2026-07-05",
+    "market": "moneyline_home",
+    "model_p": 0.4975,
+    "market_p": 0.535,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "TOR",
+      "date": "2026-07-05",
+      "home_name": "Mariners",
+      "away_name": "Blue Jays",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:25.265451+00:00",
+    "game_id": "TOR@SEA-2026-07-05",
+    "market": "total_over_8.5",
+    "model_p": 0.3375,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "TOR",
+      "date": "2026-07-05",
+      "home_name": "Mariners",
+      "away_name": "Blue Jays",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:25.273287+00:00",
+    "game_id": "TOR@SEA-2026-07-05",
+    "market": "nrfi",
+    "model_p": 0.5945,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "TOR",
+      "date": "2026-07-05",
+      "home_name": "Mariners",
+      "away_name": "Blue Jays",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:25.281173+00:00",
+    "game_id": "TOR@SEA-2026-07-05",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.5045,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "TOR",
+      "date": "2026-07-05",
+      "home_name": "Mariners",
+      "away_name": "Blue Jays",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Trey Yesavage"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:25.289060+00:00",
+    "game_id": "TOR@SEA-2026-07-05",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2245,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "TOR",
+      "date": "2026-07-05",
+      "home_name": "Mariners",
+      "away_name": "Blue Jays",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Emerson Hancock"
+    }
+  },
+  {
+    "ts": "2026-07-05T19:06:25.297036+00:00",
+    "game_id": "TOR@SEA-2026-07-05",
+    "market": "batter_hr",
+    "model_p": 0.164,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "TOR",
+      "date": "2026-07-05",
+      "home_name": "Mariners",
+      "away_name": "Blue Jays",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.164,
+          "team": "SEA"
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "p_hr": 0.151,
+          "team": "TOR"
+        },
+        {
+          "name": "Daulton Varsho",
+          "p_hr": 0.131,
+          "team": "TOR"
+        }
+      ]
+    }
   }
 ]
