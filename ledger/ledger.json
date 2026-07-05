@@ -10795,5 +10795,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-05T22:56:27.180127+00:00",
+    "game_id": "BOS@LAA-2026-07-06",
+    "market": "moneyline_home",
+    "model_p": 0.3735,
+    "market_p": 0.405,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "BOS",
+      "date": "2026-07-06",
+      "home_name": "Angels",
+      "away_name": "Red Sox",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T22:56:27.188207+00:00",
+    "game_id": "BOS@LAA-2026-07-06",
+    "market": "total_over_8.5",
+    "model_p": 0.4045,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "BOS",
+      "date": "2026-07-06",
+      "home_name": "Angels",
+      "away_name": "Red Sox",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T22:56:27.195566+00:00",
+    "game_id": "BOS@LAA-2026-07-06",
+    "market": "nrfi",
+    "model_p": 0.541,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "BOS",
+      "date": "2026-07-06",
+      "home_name": "Angels",
+      "away_name": "Red Sox",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-05T22:56:27.203230+00:00",
+    "game_id": "BOS@LAA-2026-07-06",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.519,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "BOS",
+      "date": "2026-07-06",
+      "home_name": "Angels",
+      "away_name": "Red Sox",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "sp": "Ranger Suarez"
+    }
+  },
+  {
+    "ts": "2026-07-05T22:56:27.210771+00:00",
+    "game_id": "BOS@LAA-2026-07-06",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3325,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "BOS",
+      "date": "2026-07-06",
+      "home_name": "Angels",
+      "away_name": "Red Sox",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "sp": "Ryan Johnson"
+    }
+  },
+  {
+    "ts": "2026-07-05T22:56:27.218131+00:00",
+    "game_id": "BOS@LAA-2026-07-06",
+    "market": "batter_hr",
+    "model_p": 0.171,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "BOS",
+      "date": "2026-07-06",
+      "home_name": "Angels",
+      "away_name": "Red Sox",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Wilyer Abreu",
+          "p_hr": 0.171,
+          "team": "BOS"
+        },
+        {
+          "name": "Willson Contreras",
+          "p_hr": 0.161,
+          "team": "BOS"
+        },
+        {
+          "name": "Zach Neto",
+          "p_hr": 0.14,
+          "team": "LAA"
+        }
+      ]
+    }
   }
 ]

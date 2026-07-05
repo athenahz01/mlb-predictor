@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-07-06",
+    "away": "BOS",
+    "home": "LAA",
+    "away_name": "Red Sox",
+    "home_name": "Angels",
+    "model_home_win_pct": 37.4,
+    "market_home_win_pct": 40.5,
+    "edge": -3.1,
+    "contrarian": false,
+    "logged_at": "2026-07-05T22:56:27.180127+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.1,
+      "over_8_5_pct": 40.5,
+      "away_sp_k_over_5_5_pct": 51.9,
+      "home_sp_k_over_5_5_pct": 33.2,
+      "away_sp": "Ranger Suarez",
+      "home_sp": "Ryan Johnson",
+      "hr_threats": [
+        {
+          "name": "Wilyer Abreu",
+          "team": "BOS",
+          "pct": 17.1
+        },
+        {
+          "name": "Willson Contreras",
+          "team": "BOS",
+          "pct": 16.1
+        },
+        {
+          "name": "Zach Neto",
+          "team": "LAA",
+          "pct": 14.0
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-05",
     "away": "SD",
     "home": "LAD",
@@ -138,7 +177,7 @@
     "contrarian": false,
     "logged_at": "2026-07-05T17:01:35.386229+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.8,
       "over_8_5_pct": 45.1,
@@ -163,7 +202,12 @@
           "pct": 15.7
         }
       ]
-    }
+    },
+    "home_score": 3,
+    "away_score": 6,
+    "winner": "DET",
+    "pick_correct": true,
+    "total_runs": 9
   },
   {
     "date": "2026-07-05",
@@ -177,7 +221,7 @@
     "contrarian": false,
     "logged_at": "2026-07-05T17:01:31.190493+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 54.9,
       "over_8_5_pct": 38.9,
@@ -202,7 +246,12 @@
           "pct": 15.3
         }
       ]
-    }
+    },
+    "home_score": 2,
+    "away_score": 0,
+    "winner": "HOU",
+    "pick_correct": true,
+    "total_runs": 2
   },
   {
     "date": "2026-07-05",
@@ -216,7 +265,7 @@
     "contrarian": false,
     "logged_at": "2026-07-05T17:01:27.009069+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 56.8,
       "over_8_5_pct": 42.1,
@@ -241,7 +290,12 @@
           "pct": 13.8
         }
       ]
-    }
+    },
+    "home_score": 6,
+    "away_score": 7,
+    "winner": "CWS",
+    "pick_correct": true,
+    "total_runs": 13
   },
   {
     "date": "2026-07-05",
