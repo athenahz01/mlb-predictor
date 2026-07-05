@@ -245,7 +245,7 @@
     "contrarian": false,
     "logged_at": "2026-07-04T20:47:51.434805+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 55.3,
       "over_8_5_pct": 39.9,
@@ -270,7 +270,12 @@
           "pct": 13.6
         }
       ]
-    }
+    },
+    "home_score": 1,
+    "away_score": 3,
+    "winner": "CWS",
+    "pick_correct": false,
+    "total_runs": 4
   },
   {
     "date": "2026-07-04",
@@ -284,7 +289,7 @@
     "contrarian": false,
     "logged_at": "2026-07-04T20:47:47.375622+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 48.2,
       "over_8_5_pct": 53.8,
@@ -309,7 +314,12 @@
           "pct": 20.2
         }
       ]
-    }
+    },
+    "home_score": 5,
+    "away_score": 8,
+    "winner": "BAL",
+    "pick_correct": false,
+    "total_runs": 13
   },
   {
     "date": "2026-07-04",
