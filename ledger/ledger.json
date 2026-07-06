@@ -10922,5 +10922,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-06T18:06:58.815695+00:00",
+    "game_id": "PHI@KC-2026-07-06",
+    "market": "moneyline_home",
+    "model_p": 0.4285,
+    "market_p": 0.3393,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "KC",
+      "away": "PHI",
+      "date": "2026-07-06",
+      "home_name": "Royals",
+      "away_name": "Phillies",
+      "park": "KC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-06T18:06:58.842089+00:00",
+    "game_id": "PHI@KC-2026-07-06",
+    "market": "total_over_8.5",
+    "model_p": 0.3665,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "KC",
+      "away": "PHI",
+      "date": "2026-07-06",
+      "home_name": "Royals",
+      "away_name": "Phillies",
+      "park": "KC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-06T18:06:58.849761+00:00",
+    "game_id": "PHI@KC-2026-07-06",
+    "market": "nrfi",
+    "model_p": 0.5955,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "KC",
+      "away": "PHI",
+      "date": "2026-07-06",
+      "home_name": "Royals",
+      "away_name": "Phillies",
+      "park": "KC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-06T18:06:58.857337+00:00",
+    "game_id": "PHI@KC-2026-07-06",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4575,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "KC",
+      "away": "PHI",
+      "date": "2026-07-06",
+      "home_name": "Royals",
+      "away_name": "Phillies",
+      "park": "KC",
+      "lineup_source": "confirmed",
+      "sp": "Cristopher S\u00e1nchez"
+    }
+  },
+  {
+    "ts": "2026-07-06T18:06:58.864869+00:00",
+    "game_id": "PHI@KC-2026-07-06",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.333,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "KC",
+      "away": "PHI",
+      "date": "2026-07-06",
+      "home_name": "Royals",
+      "away_name": "Phillies",
+      "park": "KC",
+      "lineup_source": "confirmed",
+      "sp": "Noah Cameron"
+    }
+  },
+  {
+    "ts": "2026-07-06T18:06:58.872418+00:00",
+    "game_id": "PHI@KC-2026-07-06",
+    "market": "batter_hr",
+    "model_p": 0.198,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "KC",
+      "away": "PHI",
+      "date": "2026-07-06",
+      "home_name": "Royals",
+      "away_name": "Phillies",
+      "park": "KC",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "p_hr": 0.198,
+          "team": "PHI"
+        },
+        {
+          "name": "Bryce Harper",
+          "p_hr": 0.143,
+          "team": "PHI"
+        },
+        {
+          "name": "Salvador Perez",
+          "p_hr": 0.111,
+          "team": "KC"
+        }
+      ]
+    }
   }
 ]
