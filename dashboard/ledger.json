@@ -1,5 +1,122 @@
 [
   {
+    "date": "2026-07-07",
+    "away": "COL",
+    "home": "LAD",
+    "away_name": "Rockies",
+    "home_name": "Dodgers",
+    "model_home_win_pct": 68.3,
+    "market_home_win_pct": 68.5,
+    "edge": -0.2,
+    "contrarian": false,
+    "logged_at": "2026-07-06T23:01:06.315531+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 46.0,
+      "over_8_5_pct": 60.4,
+      "away_sp_k_over_5_5_pct": 21.1,
+      "home_sp_k_over_5_5_pct": 22.8,
+      "away_sp": "Kyle Freeland",
+      "home_sp": "Eric Lauer",
+      "hr_threats": [
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 23.2
+        },
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 20.5
+        },
+        {
+          "name": "Teoscar Hern\u00e1ndez",
+          "team": "LAD",
+          "pct": 18.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-07",
+    "away": "TOR",
+    "home": "SF",
+    "away_name": "Blue Jays",
+    "home_name": "Giants",
+    "model_home_win_pct": 48.9,
+    "market_home_win_pct": 49.5,
+    "edge": -0.6,
+    "contrarian": false,
+    "logged_at": "2026-07-06T23:01:02.157867+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.8,
+      "over_8_5_pct": 35.6,
+      "away_sp_k_over_5_5_pct": 33.9,
+      "home_sp_k_over_5_5_pct": 29.0,
+      "away_sp": "Kevin Gausman",
+      "home_sp": "Landen Roupp",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 13.3
+        },
+        {
+          "name": "Casey Schmitt",
+          "team": "SF",
+          "pct": 11.9
+        },
+        {
+          "name": "Victor Bericoto",
+          "team": "SF",
+          "pct": 11.4
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-07",
+    "away": "AZ",
+    "home": "SD",
+    "away_name": "Diamondbacks",
+    "home_name": "Padres",
+    "model_home_win_pct": 46.9,
+    "market_home_win_pct": 53.5,
+    "edge": -6.6,
+    "contrarian": false,
+    "logged_at": "2026-07-06T23:00:58.102804+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.1,
+      "over_8_5_pct": 43.4,
+      "away_sp_k_over_5_5_pct": 25.9,
+      "home_sp_k_over_5_5_pct": 13.5,
+      "away_sp": "Brandon Pfaadt",
+      "home_sp": "Walker Buehler",
+      "hr_threats": [
+        {
+          "name": "Gavin Sheets",
+          "team": "SD",
+          "pct": 15.2
+        },
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 14.7
+        },
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 13.8
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-06",
     "away": "MIL",
     "home": "STL",
