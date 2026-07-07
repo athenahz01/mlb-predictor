@@ -1,6 +1,123 @@
 [
   {
     "date": "2026-07-08",
+    "away": "COL",
+    "home": "LAD",
+    "away_name": "Rockies",
+    "home_name": "Dodgers",
+    "model_home_win_pct": 78.1,
+    "market_home_win_pct": 72.5,
+    "edge": 5.6,
+    "contrarian": false,
+    "logged_at": "2026-07-07T22:55:16.386251+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 46.7,
+      "over_8_5_pct": 55.1,
+      "away_sp_k_over_5_5_pct": 24.9,
+      "home_sp_k_over_5_5_pct": 26.9,
+      "away_sp": "Michael Lorenzen",
+      "home_sp": "Justin Wrobleski",
+      "hr_threats": [
+        {
+          "name": "Max Muncy",
+          "team": "LAD",
+          "pct": 22.7
+        },
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 21.1
+        },
+        {
+          "name": "Freddie Freeman",
+          "team": "LAD",
+          "pct": 16.9
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-08",
+    "away": "TOR",
+    "home": "SF",
+    "away_name": "Blue Jays",
+    "home_name": "Giants",
+    "model_home_win_pct": 47.9,
+    "market_home_win_pct": 48.5,
+    "edge": -0.6,
+    "contrarian": false,
+    "logged_at": "2026-07-07T22:55:12.215441+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 60.6,
+      "over_8_5_pct": 35.4,
+      "away_sp_k_over_5_5_pct": 29.3,
+      "home_sp_k_over_5_5_pct": 23.9,
+      "away_sp": "Spencer Miles",
+      "home_sp": "Trevor McDonald",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 12.9
+        },
+        {
+          "name": "Willy Adames",
+          "team": "SF",
+          "pct": 10.8
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "team": "TOR",
+          "pct": 10.7
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-08",
+    "away": "AZ",
+    "home": "SD",
+    "away_name": "Diamondbacks",
+    "home_name": "Padres",
+    "model_home_win_pct": 49.1,
+    "market_home_win_pct": 52.5,
+    "edge": -3.4,
+    "contrarian": false,
+    "logged_at": "2026-07-07T22:55:07.973609+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 48.6,
+      "over_8_5_pct": 49.2,
+      "away_sp_k_over_5_5_pct": 14.9,
+      "home_sp_k_over_5_5_pct": 17.1,
+      "away_sp": "Zac Gallen",
+      "home_sp": "Germ\u00e1n M\u00e1rquez",
+      "hr_threats": [
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 17.6
+        },
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 16.4
+        },
+        {
+          "name": "Gavin Sheets",
+          "team": "SD",
+          "pct": 16.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-08",
     "away": "LAA",
     "home": "TEX",
     "away_name": "Angels",
