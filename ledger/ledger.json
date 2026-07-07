@@ -11938,5 +11938,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-07T17:54:24.609507+00:00",
+    "game_id": "MIL@STL-2026-07-07",
+    "market": "moneyline_home",
+    "model_p": 0.438,
+    "market_p": 0.435,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIL",
+      "date": "2026-07-07",
+      "home_name": "Cardinals",
+      "away_name": "Brewers",
+      "park": "STL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-07T17:54:24.619538+00:00",
+    "game_id": "MIL@STL-2026-07-07",
+    "market": "total_over_8.5",
+    "model_p": 0.3615,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIL",
+      "date": "2026-07-07",
+      "home_name": "Cardinals",
+      "away_name": "Brewers",
+      "park": "STL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-07T17:54:24.628593+00:00",
+    "game_id": "MIL@STL-2026-07-07",
+    "market": "nrfi",
+    "model_p": 0.6055,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIL",
+      "date": "2026-07-07",
+      "home_name": "Cardinals",
+      "away_name": "Brewers",
+      "park": "STL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-07T17:54:24.637703+00:00",
+    "game_id": "MIL@STL-2026-07-07",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.6365,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIL",
+      "date": "2026-07-07",
+      "home_name": "Cardinals",
+      "away_name": "Brewers",
+      "park": "STL",
+      "lineup_source": "confirmed",
+      "sp": "Jacob Misiorowski"
+    }
+  },
+  {
+    "ts": "2026-07-07T17:54:24.648320+00:00",
+    "game_id": "MIL@STL-2026-07-07",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.435,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIL",
+      "date": "2026-07-07",
+      "home_name": "Cardinals",
+      "away_name": "Brewers",
+      "park": "STL",
+      "lineup_source": "confirmed",
+      "sp": "Matt Svanson"
+    }
+  },
+  {
+    "ts": "2026-07-07T17:54:24.663529+00:00",
+    "game_id": "MIL@STL-2026-07-07",
+    "market": "batter_hr",
+    "model_p": 0.134,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "STL",
+      "away": "MIL",
+      "date": "2026-07-07",
+      "home_name": "Cardinals",
+      "away_name": "Brewers",
+      "park": "STL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Jake Bauers",
+          "p_hr": 0.134,
+          "team": "MIL"
+        },
+        {
+          "name": "Jackson Chourio",
+          "p_hr": 0.12,
+          "team": "MIL"
+        },
+        {
+          "name": "Christian Yelich",
+          "p_hr": 0.109,
+          "team": "MIL"
+        }
+      ]
+    }
   }
 ]
