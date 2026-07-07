@@ -206,7 +206,7 @@
     "contrarian": false,
     "logged_at": "2026-07-06T21:24:13.842313+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 51.1,
       "over_8_5_pct": 45.1,
@@ -231,7 +231,12 @@
           "pct": 17.5
         }
       ]
-    }
+    },
+    "home_score": 12,
+    "away_score": 11,
+    "winner": "WSH",
+    "pick_correct": true,
+    "total_runs": 23
   },
   {
     "date": "2026-07-06",
@@ -245,7 +250,7 @@
     "contrarian": false,
     "logged_at": "2026-07-06T21:24:10.412761+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 56.8,
       "over_8_5_pct": 39.1,
@@ -270,7 +275,12 @@
           "pct": 14.0
         }
       ]
-    }
+    },
+    "home_score": 1,
+    "away_score": 5,
+    "winner": "NYY",
+    "pick_correct": true,
+    "total_runs": 6
   },
   {
     "date": "2026-07-06",
