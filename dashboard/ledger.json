@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-08",
+    "away": "SEA",
+    "home": "MIA",
+    "away_name": "Mariners",
+    "home_name": "Marlins",
+    "model_home_win_pct": 50.7,
+    "market_home_win_pct": 46.0,
+    "edge": 4.7,
+    "contrarian": false,
+    "logged_at": "2026-07-08T19:14:04.272305+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 58.3,
+      "over_8_5_pct": 39.5,
+      "away_sp_k_over_5_5_pct": 27.8,
+      "home_sp_k_over_5_5_pct": 25.4,
+      "away_sp": "George Kirby",
+      "home_sp": "Tyler Phillips",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "team": "SEA",
+          "pct": 14.9
+        },
+        {
+          "name": "Dominic Canzone",
+          "team": "SEA",
+          "pct": 12.7
+        },
+        {
+          "name": "Luke Raley",
+          "team": "SEA",
+          "pct": 12.4
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-08",
     "away": "COL",
     "home": "LAD",
     "away_name": "Rockies",

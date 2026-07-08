@@ -13843,5 +13843,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-08T19:14:04.272305+00:00",
+    "game_id": "SEA@MIA-2026-07-08",
+    "market": "moneyline_home",
+    "model_p": 0.5075,
+    "market_p": 0.4598,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-08",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T19:14:04.283068+00:00",
+    "game_id": "SEA@MIA-2026-07-08",
+    "market": "total_over_8.5",
+    "model_p": 0.395,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-08",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T19:14:04.293214+00:00",
+    "game_id": "SEA@MIA-2026-07-08",
+    "market": "nrfi",
+    "model_p": 0.583,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-08",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T19:14:04.303372+00:00",
+    "game_id": "SEA@MIA-2026-07-08",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2775,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-08",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed",
+      "sp": "George Kirby"
+    }
+  },
+  {
+    "ts": "2026-07-08T19:14:04.313443+00:00",
+    "game_id": "SEA@MIA-2026-07-08",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.254,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-08",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed",
+      "sp": "Tyler Phillips"
+    }
+  },
+  {
+    "ts": "2026-07-08T19:14:04.323637+00:00",
+    "game_id": "SEA@MIA-2026-07-08",
+    "market": "batter_hr",
+    "model_p": 0.149,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-08",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.149,
+          "team": "SEA"
+        },
+        {
+          "name": "Dominic Canzone",
+          "p_hr": 0.127,
+          "team": "SEA"
+        },
+        {
+          "name": "Luke Raley",
+          "p_hr": 0.124,
+          "team": "SEA"
+        }
+      ]
+    }
   }
 ]
