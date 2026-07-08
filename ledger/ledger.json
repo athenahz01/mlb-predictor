@@ -15367,5 +15367,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-08T22:58:14.923491+00:00",
+    "game_id": "COL@LAD-2026-07-09",
+    "market": "moneyline_home",
+    "model_p": 0.6455,
+    "market_p": 0.7009,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "COL",
+      "date": "2026-07-09",
+      "home_name": "Dodgers",
+      "away_name": "Rockies",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:14.935491+00:00",
+    "game_id": "COL@LAD-2026-07-09",
+    "market": "total_over_8.5",
+    "model_p": 0.5715,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "COL",
+      "date": "2026-07-09",
+      "home_name": "Dodgers",
+      "away_name": "Rockies",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:14.946624+00:00",
+    "game_id": "COL@LAD-2026-07-09",
+    "market": "nrfi",
+    "model_p": 0.4945,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "COL",
+      "date": "2026-07-09",
+      "home_name": "Dodgers",
+      "away_name": "Rockies",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:14.957698+00:00",
+    "game_id": "COL@LAD-2026-07-09",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.292,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "COL",
+      "date": "2026-07-09",
+      "home_name": "Dodgers",
+      "away_name": "Rockies",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "sp": "Gabriel Hughes"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:14.968929+00:00",
+    "game_id": "COL@LAD-2026-07-09",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3035,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "COL",
+      "date": "2026-07-09",
+      "home_name": "Dodgers",
+      "away_name": "Rockies",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "sp": "Roki Sasaki"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:14.980062+00:00",
+    "game_id": "COL@LAD-2026-07-09",
+    "market": "batter_hr",
+    "model_p": 0.2,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "COL",
+      "date": "2026-07-09",
+      "home_name": "Dodgers",
+      "away_name": "Rockies",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "p_hr": 0.2,
+          "team": "LAD"
+        },
+        {
+          "name": "Mickey Moniak",
+          "p_hr": 0.188,
+          "team": "COL"
+        },
+        {
+          "name": "Max Muncy",
+          "p_hr": 0.183,
+          "team": "LAD"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:18.961487+00:00",
+    "game_id": "AZ@SD-2026-07-09",
+    "market": "moneyline_home",
+    "model_p": 0.5115,
+    "market_p": 0.565,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-09",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:18.973327+00:00",
+    "game_id": "AZ@SD-2026-07-09",
+    "market": "total_over_8.5",
+    "model_p": 0.389,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-09",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:18.984608+00:00",
+    "game_id": "AZ@SD-2026-07-09",
+    "market": "nrfi",
+    "model_p": 0.5755,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-09",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:18.995940+00:00",
+    "game_id": "AZ@SD-2026-07-09",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.3185,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-09",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "sp": "Jose Cabrera"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:19.007336+00:00",
+    "game_id": "AZ@SD-2026-07-09",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1985,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-09",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "sp": "Michael King"
+    }
+  },
+  {
+    "ts": "2026-07-08T22:58:19.018634+00:00",
+    "game_id": "AZ@SD-2026-07-09",
+    "market": "batter_hr",
+    "model_p": 0.158,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-09",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Gavin Sheets",
+          "p_hr": 0.158,
+          "team": "SD"
+        },
+        {
+          "name": "Ketel Marte",
+          "p_hr": 0.155,
+          "team": "AZ"
+        },
+        {
+          "name": "Corbin Carroll",
+          "p_hr": 0.138,
+          "team": "AZ"
+        }
+      ]
+    }
   }
 ]

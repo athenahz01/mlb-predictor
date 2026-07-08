@@ -1,6 +1,84 @@
 [
   {
     "date": "2026-07-09",
+    "away": "AZ",
+    "home": "SD",
+    "away_name": "Diamondbacks",
+    "home_name": "Padres",
+    "model_home_win_pct": 51.1,
+    "market_home_win_pct": 56.5,
+    "edge": -5.4,
+    "contrarian": false,
+    "logged_at": "2026-07-08T22:58:18.961487+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.6,
+      "over_8_5_pct": 38.9,
+      "away_sp_k_over_5_5_pct": 31.9,
+      "home_sp_k_over_5_5_pct": 19.9,
+      "away_sp": "Jose Cabrera",
+      "home_sp": "Michael King",
+      "hr_threats": [
+        {
+          "name": "Gavin Sheets",
+          "team": "SD",
+          "pct": 15.8
+        },
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 15.5
+        },
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 13.8
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-09",
+    "away": "COL",
+    "home": "LAD",
+    "away_name": "Rockies",
+    "home_name": "Dodgers",
+    "model_home_win_pct": 64.5,
+    "market_home_win_pct": 70.1,
+    "edge": -5.6,
+    "contrarian": false,
+    "logged_at": "2026-07-08T22:58:14.923491+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 49.5,
+      "over_8_5_pct": 57.1,
+      "away_sp_k_over_5_5_pct": 29.2,
+      "home_sp_k_over_5_5_pct": 30.3,
+      "away_sp": "Gabriel Hughes",
+      "home_sp": "Roki Sasaki",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 20.0
+        },
+        {
+          "name": "Mickey Moniak",
+          "team": "COL",
+          "pct": 18.8
+        },
+        {
+          "name": "Max Muncy",
+          "team": "LAD",
+          "pct": 18.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-09",
     "away": "LAA",
     "home": "TEX",
     "away_name": "Angels",
