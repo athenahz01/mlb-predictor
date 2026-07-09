@@ -16383,5 +16383,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-09T23:05:32.579731+00:00",
+    "game_id": "AZ@SD-2026-07-10",
+    "market": "moneyline_home",
+    "model_p": 0.501,
+    "market_p": 0.535,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-10",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:32.591757+00:00",
+    "game_id": "AZ@SD-2026-07-10",
+    "market": "total_over_8.5",
+    "model_p": 0.4305,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-10",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:32.602763+00:00",
+    "game_id": "AZ@SD-2026-07-10",
+    "market": "nrfi",
+    "model_p": 0.53,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-10",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:32.613653+00:00",
+    "game_id": "AZ@SD-2026-07-10",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.146,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-10",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "sp": "Merrill Kelly"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:32.624465+00:00",
+    "game_id": "AZ@SD-2026-07-10",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.26,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-10",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "sp": "Griffin Canning"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:32.635344+00:00",
+    "game_id": "AZ@SD-2026-07-10",
+    "market": "batter_hr",
+    "model_p": 0.154,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "AZ",
+      "date": "2026-07-10",
+      "home_name": "Padres",
+      "away_name": "Diamondbacks",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Gavin Sheets",
+          "p_hr": 0.154,
+          "team": "SD"
+        },
+        {
+          "name": "Corbin Carroll",
+          "p_hr": 0.147,
+          "team": "AZ"
+        },
+        {
+          "name": "Ketel Marte",
+          "p_hr": 0.143,
+          "team": "AZ"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:36.538319+00:00",
+    "game_id": "COL@SF-2026-07-10",
+    "market": "moneyline_home",
+    "model_p": 0.5755,
+    "market_p": 0.5402,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-10",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:36.549569+00:00",
+    "game_id": "COL@SF-2026-07-10",
+    "market": "total_over_8.5",
+    "model_p": 0.4855,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-10",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:36.560550+00:00",
+    "game_id": "COL@SF-2026-07-10",
+    "market": "nrfi",
+    "model_p": 0.564,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-10",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:36.571850+00:00",
+    "game_id": "COL@SF-2026-07-10",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2195,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-10",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed",
+      "sp": "Ryan Feltner"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:36.583236+00:00",
+    "game_id": "COL@SF-2026-07-10",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2295,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-10",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed",
+      "sp": "Carson Whisenhunt"
+    }
+  },
+  {
+    "ts": "2026-07-09T23:05:36.594701+00:00",
+    "game_id": "COL@SF-2026-07-10",
+    "market": "batter_hr",
+    "model_p": 0.179,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-10",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Hunter Goodman",
+          "p_hr": 0.179,
+          "team": "COL"
+        },
+        {
+          "name": "Rafael Devers",
+          "p_hr": 0.133,
+          "team": "SF"
+        },
+        {
+          "name": "Victor Bericoto",
+          "p_hr": 0.132,
+          "team": "SF"
+        }
+      ]
+    }
   }
 ]

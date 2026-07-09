@@ -1,6 +1,84 @@
 [
   {
     "date": "2026-07-10",
+    "away": "COL",
+    "home": "SF",
+    "away_name": "Rockies",
+    "home_name": "Giants",
+    "model_home_win_pct": 57.6,
+    "market_home_win_pct": 54.0,
+    "edge": 3.6,
+    "contrarian": false,
+    "logged_at": "2026-07-09T23:05:36.538319+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 56.4,
+      "over_8_5_pct": 48.5,
+      "away_sp_k_over_5_5_pct": 21.9,
+      "home_sp_k_over_5_5_pct": 22.9,
+      "away_sp": "Ryan Feltner",
+      "home_sp": "Carson Whisenhunt",
+      "hr_threats": [
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 17.9
+        },
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 13.3
+        },
+        {
+          "name": "Victor Bericoto",
+          "team": "SF",
+          "pct": 13.2
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-10",
+    "away": "AZ",
+    "home": "SD",
+    "away_name": "Diamondbacks",
+    "home_name": "Padres",
+    "model_home_win_pct": 50.1,
+    "market_home_win_pct": 53.5,
+    "edge": -3.4,
+    "contrarian": false,
+    "logged_at": "2026-07-09T23:05:32.579731+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.0,
+      "over_8_5_pct": 43.0,
+      "away_sp_k_over_5_5_pct": 14.6,
+      "home_sp_k_over_5_5_pct": 26.0,
+      "away_sp": "Merrill Kelly",
+      "home_sp": "Griffin Canning",
+      "hr_threats": [
+        {
+          "name": "Gavin Sheets",
+          "team": "SD",
+          "pct": 15.4
+        },
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 14.7
+        },
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 14.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-10",
     "away": "LAA",
     "home": "TEX",
     "away_name": "Angels",
