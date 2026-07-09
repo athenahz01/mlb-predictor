@@ -15621,5 +15621,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-09T17:50:33.014595+00:00",
+    "game_id": "BOS@CWS-2026-07-09",
+    "market": "moneyline_home",
+    "model_p": 0.4525,
+    "market_p": 0.515,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "BOS",
+      "date": "2026-07-09",
+      "home_name": "White Sox",
+      "away_name": "Red Sox",
+      "park": "CWS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T17:50:33.027306+00:00",
+    "game_id": "BOS@CWS-2026-07-09",
+    "market": "total_over_8.5",
+    "model_p": 0.472,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "BOS",
+      "date": "2026-07-09",
+      "home_name": "White Sox",
+      "away_name": "Red Sox",
+      "park": "CWS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T17:50:33.039017+00:00",
+    "game_id": "BOS@CWS-2026-07-09",
+    "market": "nrfi",
+    "model_p": 0.5305,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "BOS",
+      "date": "2026-07-09",
+      "home_name": "White Sox",
+      "away_name": "Red Sox",
+      "park": "CWS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T17:50:33.050651+00:00",
+    "game_id": "BOS@CWS-2026-07-09",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.36,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "BOS",
+      "date": "2026-07-09",
+      "home_name": "White Sox",
+      "away_name": "Red Sox",
+      "park": "CWS",
+      "lineup_source": "confirmed",
+      "sp": "Patrick Sandoval"
+    }
+  },
+  {
+    "ts": "2026-07-09T17:50:33.062421+00:00",
+    "game_id": "BOS@CWS-2026-07-09",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.227,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "BOS",
+      "date": "2026-07-09",
+      "home_name": "White Sox",
+      "away_name": "Red Sox",
+      "park": "CWS",
+      "lineup_source": "confirmed",
+      "sp": "Anthony Kay"
+    }
+  },
+  {
+    "ts": "2026-07-09T17:50:33.074227+00:00",
+    "game_id": "BOS@CWS-2026-07-09",
+    "market": "batter_hr",
+    "model_p": 0.196,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "BOS",
+      "date": "2026-07-09",
+      "home_name": "White Sox",
+      "away_name": "Red Sox",
+      "park": "CWS",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Colson Montgomery",
+          "p_hr": 0.196,
+          "team": "CWS"
+        },
+        {
+          "name": "Randal Grichuk",
+          "p_hr": 0.154,
+          "team": "CWS"
+        },
+        {
+          "name": "Miguel Vargas",
+          "p_hr": 0.146,
+          "team": "CWS"
+        }
+      ]
+    }
   }
 ]
