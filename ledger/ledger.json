@@ -15748,5 +15748,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-09T19:27:48.477407+00:00",
+    "game_id": "SEA@MIA-2026-07-09",
+    "market": "moneyline_home",
+    "model_p": 0.4655,
+    "market_p": 0.465,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-09",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T19:27:48.490341+00:00",
+    "game_id": "SEA@MIA-2026-07-09",
+    "market": "total_over_8.5",
+    "model_p": 0.3535,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-09",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T19:27:48.502132+00:00",
+    "game_id": "SEA@MIA-2026-07-09",
+    "market": "nrfi",
+    "model_p": 0.5745,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-09",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-09T19:27:48.514522+00:00",
+    "game_id": "SEA@MIA-2026-07-09",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.384,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-09",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed",
+      "sp": "Bryce Miller"
+    }
+  },
+  {
+    "ts": "2026-07-09T19:27:48.526590+00:00",
+    "game_id": "SEA@MIA-2026-07-09",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1765,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-09",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed",
+      "sp": "Janson Junk"
+    }
+  },
+  {
+    "ts": "2026-07-09T19:27:48.539055+00:00",
+    "game_id": "SEA@MIA-2026-07-09",
+    "market": "batter_hr",
+    "model_p": 0.149,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIA",
+      "away": "SEA",
+      "date": "2026-07-09",
+      "home_name": "Marlins",
+      "away_name": "Mariners",
+      "park": "MIA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.149,
+          "team": "SEA"
+        },
+        {
+          "name": "Dominic Canzone",
+          "p_hr": 0.134,
+          "team": "SEA"
+        },
+        {
+          "name": "Kyle Stowers",
+          "p_hr": 0.132,
+          "team": "MIA"
+        }
+      ]
+    }
   }
 ]

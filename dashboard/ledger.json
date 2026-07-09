@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-09",
+    "away": "SEA",
+    "home": "MIA",
+    "away_name": "Mariners",
+    "home_name": "Marlins",
+    "model_home_win_pct": 46.6,
+    "market_home_win_pct": 46.5,
+    "edge": 0.1,
+    "contrarian": false,
+    "logged_at": "2026-07-09T19:27:48.477407+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.5,
+      "over_8_5_pct": 35.4,
+      "away_sp_k_over_5_5_pct": 38.4,
+      "home_sp_k_over_5_5_pct": 17.6,
+      "away_sp": "Bryce Miller",
+      "home_sp": "Janson Junk",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "team": "SEA",
+          "pct": 14.9
+        },
+        {
+          "name": "Dominic Canzone",
+          "team": "SEA",
+          "pct": 13.4
+        },
+        {
+          "name": "Kyle Stowers",
+          "team": "MIA",
+          "pct": 13.2
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-09",
     "away": "BOS",
     "home": "CWS",
     "away_name": "Red Sox",
