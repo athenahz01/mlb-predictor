@@ -1,5 +1,161 @@
 [
   {
+    "date": "2026-07-10",
+    "away": "LAA",
+    "home": "TEX",
+    "away_name": "Angels",
+    "home_name": "Rangers",
+    "model_home_win_pct": 57.0,
+    "market_home_win_pct": 56.0,
+    "edge": 1.0,
+    "contrarian": false,
+    "logged_at": "2026-07-09T21:18:36.626319+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.2,
+      "over_8_5_pct": 37.8,
+      "away_sp_k_over_5_5_pct": 51.0,
+      "home_sp_k_over_5_5_pct": 50.3,
+      "away_sp": "Reid Detmers",
+      "home_sp": "Nathan Eovaldi",
+      "hr_threats": [
+        {
+          "name": "Mike Trout",
+          "team": "LAA",
+          "pct": 15.6
+        },
+        {
+          "name": "Zach Neto",
+          "team": "LAA",
+          "pct": 14.6
+        },
+        {
+          "name": "Jake Burger",
+          "team": "TEX",
+          "pct": 14.4
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-09",
+    "away": "MIL",
+    "home": "STL",
+    "away_name": "Brewers",
+    "home_name": "Cardinals",
+    "model_home_win_pct": 47.0,
+    "market_home_win_pct": 44.5,
+    "edge": 2.5,
+    "contrarian": false,
+    "logged_at": "2026-07-09T21:18:32.601230+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.0,
+      "over_8_5_pct": 42.4,
+      "away_sp_k_over_5_5_pct": 44.0,
+      "home_sp_k_over_5_5_pct": 19.1,
+      "away_sp": "Logan Henderson",
+      "home_sp": "Andre Pallante",
+      "hr_threats": [
+        {
+          "name": "JJ Wetherholt",
+          "team": "STL",
+          "pct": 13.4
+        },
+        {
+          "name": "Jake Bauers",
+          "team": "MIL",
+          "pct": 13.3
+        },
+        {
+          "name": "Jackson Chourio",
+          "team": "MIL",
+          "pct": 12.8
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-09",
+    "away": "PHI",
+    "home": "CIN",
+    "away_name": "Phillies",
+    "home_name": "Reds",
+    "model_home_win_pct": 44.1,
+    "market_home_win_pct": 39.0,
+    "edge": 5.1,
+    "contrarian": false,
+    "logged_at": "2026-07-09T21:18:28.434525+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 44.2,
+      "over_8_5_pct": 58.1,
+      "away_sp_k_over_5_5_pct": 65.0,
+      "home_sp_k_over_5_5_pct": 27.2,
+      "away_sp": "Jes\u00fas Luzardo",
+      "home_sp": "Brady Singer",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "PHI",
+          "pct": 31.1
+        },
+        {
+          "name": "Bryce Harper",
+          "team": "PHI",
+          "pct": 21.8
+        },
+        {
+          "name": "Eugenio Su\u00e1rez",
+          "team": "CIN",
+          "pct": 17.9
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-09",
+    "away": "ATH",
+    "home": "DET",
+    "away_name": "Athletics",
+    "home_name": "Tigers",
+    "model_home_win_pct": 48.9,
+    "market_home_win_pct": 54.0,
+    "edge": -5.1,
+    "contrarian": false,
+    "logged_at": "2026-07-09T21:18:24.182627+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.4,
+      "over_8_5_pct": 41.6,
+      "away_sp_k_over_5_5_pct": 48.5,
+      "home_sp_k_over_5_5_pct": 30.6,
+      "away_sp": "Jos\u00e9 Suarez",
+      "home_sp": "Framber Valdez",
+      "hr_threats": [
+        {
+          "name": "Nick Kurtz",
+          "team": "ATH",
+          "pct": 17.6
+        },
+        {
+          "name": "Shea Langeliers",
+          "team": "ATH",
+          "pct": 15.6
+        },
+        {
+          "name": "Colby Thomas",
+          "team": "ATH",
+          "pct": 11.4
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-09",
     "away": "SEA",
     "home": "MIA",
@@ -50,7 +206,7 @@
     "contrarian": false,
     "logged_at": "2026-07-09T17:50:33.014595+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.0,
       "over_8_5_pct": 47.2,
@@ -75,7 +231,12 @@
           "pct": 14.6
         }
       ]
-    }
+    },
+    "home_score": 1,
+    "away_score": 2,
+    "winner": "BOS",
+    "pick_correct": true,
+    "total_runs": 3
   },
   {
     "date": "2026-07-09",
