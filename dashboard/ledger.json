@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-10",
+    "away": "SEA",
+    "home": "TB",
+    "away_name": "Mariners",
+    "home_name": "Rays",
+    "model_home_win_pct": 51.3,
+    "market_home_win_pct": 52.5,
+    "edge": -1.2,
+    "contrarian": false,
+    "logged_at": "2026-07-10T19:19:33.083079+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.1,
+      "over_8_5_pct": 44.5,
+      "away_sp_k_over_5_5_pct": 20.6,
+      "home_sp_k_over_5_5_pct": 12.2,
+      "away_sp": "Luis Castillo",
+      "home_sp": "Nick Martinez",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "team": "SEA",
+          "pct": 18.4
+        },
+        {
+          "name": "Dominic Canzone",
+          "team": "SEA",
+          "pct": 16.8
+        },
+        {
+          "name": "Junior Caminero",
+          "team": "TB",
+          "pct": 14.9
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-10",
     "away": "COL",
     "home": "SF",
     "away_name": "Rockies",

@@ -16637,5 +16637,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-10T19:19:33.083079+00:00",
+    "game_id": "SEA@TB-2026-07-10",
+    "market": "moneyline_home",
+    "model_p": 0.5135,
+    "market_p": 0.525,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "SEA",
+      "date": "2026-07-10",
+      "home_name": "Rays",
+      "away_name": "Mariners",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-10T19:19:33.094233+00:00",
+    "game_id": "SEA@TB-2026-07-10",
+    "market": "total_over_8.5",
+    "model_p": 0.445,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "SEA",
+      "date": "2026-07-10",
+      "home_name": "Rays",
+      "away_name": "Mariners",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-10T19:19:33.141899+00:00",
+    "game_id": "SEA@TB-2026-07-10",
+    "market": "nrfi",
+    "model_p": 0.501,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "SEA",
+      "date": "2026-07-10",
+      "home_name": "Rays",
+      "away_name": "Mariners",
+      "park": "TB",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-10T19:19:33.151521+00:00",
+    "game_id": "SEA@TB-2026-07-10",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.206,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "SEA",
+      "date": "2026-07-10",
+      "home_name": "Rays",
+      "away_name": "Mariners",
+      "park": "TB",
+      "lineup_source": "confirmed",
+      "sp": "Luis Castillo"
+    }
+  },
+  {
+    "ts": "2026-07-10T19:19:33.160758+00:00",
+    "game_id": "SEA@TB-2026-07-10",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1225,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "SEA",
+      "date": "2026-07-10",
+      "home_name": "Rays",
+      "away_name": "Mariners",
+      "park": "TB",
+      "lineup_source": "confirmed",
+      "sp": "Nick Martinez"
+    }
+  },
+  {
+    "ts": "2026-07-10T19:19:33.554952+00:00",
+    "game_id": "SEA@TB-2026-07-10",
+    "market": "batter_hr",
+    "model_p": 0.184,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TB",
+      "away": "SEA",
+      "date": "2026-07-10",
+      "home_name": "Rays",
+      "away_name": "Mariners",
+      "park": "TB",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.184,
+          "team": "SEA"
+        },
+        {
+          "name": "Dominic Canzone",
+          "p_hr": 0.168,
+          "team": "SEA"
+        },
+        {
+          "name": "Junior Caminero",
+          "p_hr": 0.149,
+          "team": "TB"
+        }
+      ]
+    }
   }
 ]
