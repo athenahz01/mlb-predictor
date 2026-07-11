@@ -18415,5 +18415,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-11T16:48:10.410090+00:00",
+    "game_id": "MIL@PIT-2026-07-11",
+    "market": "moneyline_home",
+    "model_p": 0.532,
+    "market_p": 0.535,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "MIL",
+      "date": "2026-07-11",
+      "home_name": "Pirates",
+      "away_name": "Brewers",
+      "park": "PIT",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:10.426371+00:00",
+    "game_id": "MIL@PIT-2026-07-11",
+    "market": "total_over_8.5",
+    "model_p": 0.401,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "MIL",
+      "date": "2026-07-11",
+      "home_name": "Pirates",
+      "away_name": "Brewers",
+      "park": "PIT",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:10.440477+00:00",
+    "game_id": "MIL@PIT-2026-07-11",
+    "market": "nrfi",
+    "model_p": 0.5625,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "MIL",
+      "date": "2026-07-11",
+      "home_name": "Pirates",
+      "away_name": "Brewers",
+      "park": "PIT",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:10.454367+00:00",
+    "game_id": "MIL@PIT-2026-07-11",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.456,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "MIL",
+      "date": "2026-07-11",
+      "home_name": "Pirates",
+      "away_name": "Brewers",
+      "park": "PIT",
+      "lineup_source": "confirmed",
+      "sp": "Shane Drohan"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:10.468344+00:00",
+    "game_id": "MIL@PIT-2026-07-11",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.506,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "MIL",
+      "date": "2026-07-11",
+      "home_name": "Pirates",
+      "away_name": "Brewers",
+      "park": "PIT",
+      "lineup_source": "confirmed",
+      "sp": "Bubba Chandler"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:10.482551+00:00",
+    "game_id": "MIL@PIT-2026-07-11",
+    "market": "batter_hr",
+    "model_p": 0.173,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PIT",
+      "away": "MIL",
+      "date": "2026-07-11",
+      "home_name": "Pirates",
+      "away_name": "Brewers",
+      "park": "PIT",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Brandon Lowe",
+          "p_hr": 0.173,
+          "team": "PIT"
+        },
+        {
+          "name": "Esmerlyn Valdez",
+          "p_hr": 0.129,
+          "team": "PIT"
+        },
+        {
+          "name": "Ryan O'Hearn",
+          "p_hr": 0.119,
+          "team": "PIT"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:14.023868+00:00",
+    "game_id": "ATH@CWS-2026-07-11",
+    "market": "moneyline_home",
+    "model_p": 0.474,
+    "market_p": 0.535,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "ATH",
+      "date": "2026-07-11",
+      "home_name": "White Sox",
+      "away_name": "Athletics",
+      "park": "CWS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:14.038979+00:00",
+    "game_id": "ATH@CWS-2026-07-11",
+    "market": "total_over_8.5",
+    "model_p": 0.445,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "ATH",
+      "date": "2026-07-11",
+      "home_name": "White Sox",
+      "away_name": "Athletics",
+      "park": "CWS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:14.053700+00:00",
+    "game_id": "ATH@CWS-2026-07-11",
+    "market": "nrfi",
+    "model_p": 0.57,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "ATH",
+      "date": "2026-07-11",
+      "home_name": "White Sox",
+      "away_name": "Athletics",
+      "park": "CWS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:14.068441+00:00",
+    "game_id": "ATH@CWS-2026-07-11",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4205,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "ATH",
+      "date": "2026-07-11",
+      "home_name": "White Sox",
+      "away_name": "Athletics",
+      "park": "CWS",
+      "lineup_source": "confirmed",
+      "sp": "Gage Jump"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:14.083372+00:00",
+    "game_id": "ATH@CWS-2026-07-11",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2755,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "ATH",
+      "date": "2026-07-11",
+      "home_name": "White Sox",
+      "away_name": "Athletics",
+      "park": "CWS",
+      "lineup_source": "confirmed",
+      "sp": "Bryan Hudson"
+    }
+  },
+  {
+    "ts": "2026-07-11T16:48:14.098306+00:00",
+    "game_id": "ATH@CWS-2026-07-11",
+    "market": "batter_hr",
+    "model_p": 0.171,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CWS",
+      "away": "ATH",
+      "date": "2026-07-11",
+      "home_name": "White Sox",
+      "away_name": "Athletics",
+      "park": "CWS",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Munetaka Murakami",
+          "p_hr": 0.171,
+          "team": "CWS"
+        },
+        {
+          "name": "Colson Montgomery",
+          "p_hr": 0.158,
+          "team": "CWS"
+        },
+        {
+          "name": "Shea Langeliers",
+          "p_hr": 0.15,
+          "team": "ATH"
+        }
+      ]
+    }
   }
 ]
