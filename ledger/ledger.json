@@ -19558,5 +19558,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-11T22:40:43.535051+00:00",
+    "game_id": "TOR@SD-2026-07-12",
+    "market": "moneyline_home",
+    "model_p": 0.4075,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "TOR",
+      "date": "2026-07-12",
+      "home_name": "Padres",
+      "away_name": "Blue Jays",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:43.549785+00:00",
+    "game_id": "TOR@SD-2026-07-12",
+    "market": "total_over_8.5",
+    "model_p": 0.362,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "TOR",
+      "date": "2026-07-12",
+      "home_name": "Padres",
+      "away_name": "Blue Jays",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:43.563583+00:00",
+    "game_id": "TOR@SD-2026-07-12",
+    "market": "nrfi",
+    "model_p": 0.6185,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "TOR",
+      "date": "2026-07-12",
+      "home_name": "Padres",
+      "away_name": "Blue Jays",
+      "park": "SD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:43.577541+00:00",
+    "game_id": "TOR@SD-2026-07-12",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4485,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "TOR",
+      "date": "2026-07-12",
+      "home_name": "Padres",
+      "away_name": "Blue Jays",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "sp": "Trey Yesavage"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:43.591353+00:00",
+    "game_id": "TOR@SD-2026-07-12",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1905,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "TOR",
+      "date": "2026-07-12",
+      "home_name": "Padres",
+      "away_name": "Blue Jays",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "sp": "Walker Buehler"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:43.606309+00:00",
+    "game_id": "TOR@SD-2026-07-12",
+    "market": "batter_hr",
+    "model_p": 0.145,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SD",
+      "away": "TOR",
+      "date": "2026-07-12",
+      "home_name": "Padres",
+      "away_name": "Blue Jays",
+      "park": "SD",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kazuma Okamoto",
+          "p_hr": 0.145,
+          "team": "TOR"
+        },
+        {
+          "name": "Daulton Varsho",
+          "p_hr": 0.136,
+          "team": "TOR"
+        },
+        {
+          "name": "George Springer",
+          "p_hr": 0.13,
+          "team": "TOR"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:47.626273+00:00",
+    "game_id": "AZ@LAD-2026-07-12",
+    "market": "moneyline_home",
+    "model_p": 0.674,
+    "market_p": 0.721,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "AZ",
+      "date": "2026-07-12",
+      "home_name": "Dodgers",
+      "away_name": "Diamondbacks",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:47.640620+00:00",
+    "game_id": "AZ@LAD-2026-07-12",
+    "market": "total_over_8.5",
+    "model_p": 0.4555,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "AZ",
+      "date": "2026-07-12",
+      "home_name": "Dodgers",
+      "away_name": "Diamondbacks",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:47.654614+00:00",
+    "game_id": "AZ@LAD-2026-07-12",
+    "market": "nrfi",
+    "model_p": 0.548,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "AZ",
+      "date": "2026-07-12",
+      "home_name": "Dodgers",
+      "away_name": "Diamondbacks",
+      "park": "LAD",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:47.668773+00:00",
+    "game_id": "AZ@LAD-2026-07-12",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2395,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "AZ",
+      "date": "2026-07-12",
+      "home_name": "Dodgers",
+      "away_name": "Diamondbacks",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "sp": "Brandon Pfaadt"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:47.682700+00:00",
+    "game_id": "AZ@LAD-2026-07-12",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3205,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "AZ",
+      "date": "2026-07-12",
+      "home_name": "Dodgers",
+      "away_name": "Diamondbacks",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "sp": "Yoshinobu Yamamoto"
+    }
+  },
+  {
+    "ts": "2026-07-11T22:40:47.696741+00:00",
+    "game_id": "AZ@LAD-2026-07-12",
+    "market": "batter_hr",
+    "model_p": 0.216,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAD",
+      "away": "AZ",
+      "date": "2026-07-12",
+      "home_name": "Dodgers",
+      "away_name": "Diamondbacks",
+      "park": "LAD",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "p_hr": 0.216,
+          "team": "LAD"
+        },
+        {
+          "name": "Max Muncy",
+          "p_hr": 0.193,
+          "team": "LAD"
+        },
+        {
+          "name": "Freddie Freeman",
+          "p_hr": 0.153,
+          "team": "LAD"
+        }
+      ]
+    }
   }
 ]

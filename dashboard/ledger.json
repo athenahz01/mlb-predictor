@@ -1,5 +1,83 @@
 [
   {
+    "date": "2026-07-12",
+    "away": "AZ",
+    "home": "LAD",
+    "away_name": "Diamondbacks",
+    "home_name": "Dodgers",
+    "model_home_win_pct": 67.4,
+    "market_home_win_pct": 72.1,
+    "edge": -4.7,
+    "contrarian": false,
+    "logged_at": "2026-07-11T22:40:47.626273+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.8,
+      "over_8_5_pct": 45.6,
+      "away_sp_k_over_5_5_pct": 23.9,
+      "home_sp_k_over_5_5_pct": 32.0,
+      "away_sp": "Brandon Pfaadt",
+      "home_sp": "Yoshinobu Yamamoto",
+      "hr_threats": [
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 21.6
+        },
+        {
+          "name": "Max Muncy",
+          "team": "LAD",
+          "pct": 19.3
+        },
+        {
+          "name": "Freddie Freeman",
+          "team": "LAD",
+          "pct": 15.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-12",
+    "away": "TOR",
+    "home": "SD",
+    "away_name": "Blue Jays",
+    "home_name": "Padres",
+    "model_home_win_pct": 40.8,
+    "market_home_win_pct": 50.5,
+    "edge": -9.7,
+    "contrarian": true,
+    "logged_at": "2026-07-11T22:40:43.535051+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 61.9,
+      "over_8_5_pct": 36.2,
+      "away_sp_k_over_5_5_pct": 44.9,
+      "home_sp_k_over_5_5_pct": 19.1,
+      "away_sp": "Trey Yesavage",
+      "home_sp": "Walker Buehler",
+      "hr_threats": [
+        {
+          "name": "Kazuma Okamoto",
+          "team": "TOR",
+          "pct": 14.5
+        },
+        {
+          "name": "Daulton Varsho",
+          "team": "TOR",
+          "pct": 13.6
+        },
+        {
+          "name": "George Springer",
+          "team": "TOR",
+          "pct": 13.0
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-11",
     "away": "CHC",
     "home": "CIN",
