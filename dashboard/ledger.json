@@ -1,6 +1,123 @@
 [
   {
     "date": "2026-07-11",
+    "away": "CHC",
+    "home": "CIN",
+    "away_name": "Cubs",
+    "home_name": "Reds",
+    "model_home_win_pct": 47.6,
+    "market_home_win_pct": 51.5,
+    "edge": -3.9,
+    "contrarian": false,
+    "logged_at": "2026-07-11T20:41:11.674523+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 49.8,
+      "over_8_5_pct": 60.5,
+      "away_sp_k_over_5_5_pct": 19.4,
+      "home_sp_k_over_5_5_pct": 30.0,
+      "away_sp": "Javier Assad",
+      "home_sp": "Nick Lodolo",
+      "hr_threats": [
+        {
+          "name": "Seiya Suzuki",
+          "team": "CHC",
+          "pct": 21.6
+        },
+        {
+          "name": "Pete Crow-Armstrong",
+          "team": "CHC",
+          "pct": 21.4
+        },
+        {
+          "name": "JJ Bleday",
+          "team": "CIN",
+          "pct": 20.9
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-11",
+    "away": "KC",
+    "home": "BAL",
+    "away_name": "Royals",
+    "home_name": "Orioles",
+    "model_home_win_pct": 55.1,
+    "market_home_win_pct": 58.5,
+    "edge": -3.4,
+    "contrarian": false,
+    "logged_at": "2026-07-11T20:41:08.674564+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 56.9,
+      "over_8_5_pct": 40.8,
+      "away_sp_k_over_5_5_pct": 36.7,
+      "home_sp_k_over_5_5_pct": 44.6,
+      "away_sp": "Noah Cameron",
+      "home_sp": "Kyle Bradish",
+      "hr_threats": [
+        {
+          "name": "Pete Alonso",
+          "team": "BAL",
+          "pct": 14.7
+        },
+        {
+          "name": "Carter Jensen",
+          "team": "KC",
+          "pct": 14.2
+        },
+        {
+          "name": "Jac Caglianone",
+          "team": "KC",
+          "pct": 14.2
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-11",
+    "away": "PHI",
+    "home": "DET",
+    "away_name": "Phillies",
+    "home_name": "Tigers",
+    "model_home_win_pct": 43.8,
+    "market_home_win_pct": 43.5,
+    "edge": 0.3,
+    "contrarian": false,
+    "logged_at": "2026-07-11T20:41:05.694680+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.1,
+      "over_8_5_pct": 34.4,
+      "away_sp_k_over_5_5_pct": 50.5,
+      "home_sp_k_over_5_5_pct": 42.7,
+      "away_sp": "Cristopher S\u00e1nchez",
+      "home_sp": "Casey Mize",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "PHI",
+          "pct": 21.1
+        },
+        {
+          "name": "Bryce Harper",
+          "team": "PHI",
+          "pct": 15.5
+        },
+        {
+          "name": "Brandon Marsh",
+          "team": "PHI",
+          "pct": 12.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-11",
     "away": "CLE",
     "home": "MIA",
     "away_name": "Guardians",
@@ -167,7 +284,7 @@
     "contrarian": false,
     "logged_at": "2026-07-11T16:48:14.023868+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 57.0,
       "over_8_5_pct": 44.5,
@@ -192,7 +309,12 @@
           "pct": 15.0
         }
       ]
-    }
+    },
+    "home_score": 1,
+    "away_score": 0,
+    "winner": "CWS",
+    "pick_correct": false,
+    "total_runs": 1
   },
   {
     "date": "2026-07-11",
@@ -206,7 +328,7 @@
     "contrarian": false,
     "logged_at": "2026-07-11T16:48:10.410090+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 56.2,
       "over_8_5_pct": 40.1,
@@ -231,7 +353,12 @@
           "pct": 11.9
         }
       ]
-    }
+    },
+    "home_score": 7,
+    "away_score": 6,
+    "winner": "PIT",
+    "pick_correct": true,
+    "total_runs": 13
   },
   {
     "date": "2026-07-11",
