@@ -21209,5 +21209,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-12T18:56:20.801048+00:00",
+    "game_id": "COL@SF-2026-07-12",
+    "market": "moneyline_home",
+    "model_p": 0.646,
+    "market_p": 0.585,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-12",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-12T18:56:20.817315+00:00",
+    "game_id": "COL@SF-2026-07-12",
+    "market": "total_over_8.5",
+    "model_p": 0.5425,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-12",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-12T18:56:20.833082+00:00",
+    "game_id": "COL@SF-2026-07-12",
+    "market": "nrfi",
+    "model_p": 0.4995,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-12",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-12T18:56:20.848826+00:00",
+    "game_id": "COL@SF-2026-07-12",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.184,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-12",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed",
+      "sp": "Michael Lorenzen"
+    }
+  },
+  {
+    "ts": "2026-07-12T18:56:20.864598+00:00",
+    "game_id": "COL@SF-2026-07-12",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2995,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-12",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed",
+      "sp": "Trevor McDonald"
+    }
+  },
+  {
+    "ts": "2026-07-12T18:56:20.880534+00:00",
+    "game_id": "COL@SF-2026-07-12",
+    "market": "batter_hr",
+    "model_p": 0.154,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SF",
+      "away": "COL",
+      "date": "2026-07-12",
+      "home_name": "Giants",
+      "away_name": "Rockies",
+      "park": "SF",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "p_hr": 0.154,
+          "team": "SF"
+        },
+        {
+          "name": "Mickey Moniak",
+          "p_hr": 0.132,
+          "team": "COL"
+        },
+        {
+          "name": "Hunter Goodman",
+          "p_hr": 0.13,
+          "team": "COL"
+        }
+      ]
+    }
   }
 ]

@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-12",
+    "away": "COL",
+    "home": "SF",
+    "away_name": "Rockies",
+    "home_name": "Giants",
+    "model_home_win_pct": 64.6,
+    "market_home_win_pct": 58.5,
+    "edge": 6.1,
+    "contrarian": false,
+    "logged_at": "2026-07-12T18:56:20.801048+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.0,
+      "over_8_5_pct": 54.2,
+      "away_sp_k_over_5_5_pct": 18.4,
+      "home_sp_k_over_5_5_pct": 29.9,
+      "away_sp": "Michael Lorenzen",
+      "home_sp": "Trevor McDonald",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 15.4
+        },
+        {
+          "name": "Mickey Moniak",
+          "team": "COL",
+          "pct": 13.2
+        },
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 13.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-12",
     "away": "HOU",
     "home": "TEX",
     "away_name": "Astros",
