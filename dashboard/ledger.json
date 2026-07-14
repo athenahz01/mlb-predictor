@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-07-15",
+    "away": "AL",
+    "home": "NL",
+    "away_name": "AL",
+    "home_name": "NL",
+    "model_home_win_pct": 58.4,
+    "market_home_win_pct": 55.0,
+    "edge": 3.4,
+    "contrarian": false,
+    "logged_at": "2026-07-14T01:51:49.456042+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.0,
+      "over_8_5_pct": 56.2,
+      "away_sp_k_over_5_5_pct": 67.2,
+      "home_sp_k_over_5_5_pct": 42.5,
+      "away_sp": "Dylan Cease",
+      "home_sp": "Cristopher S\u00e1nchez",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "NL",
+          "pct": 22.0
+        },
+        {
+          "name": "Juan Soto",
+          "team": "NL",
+          "pct": 18.3
+        },
+        {
+          "name": "Shea Langeliers",
+          "team": "AL",
+          "pct": 16.3
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-12",
     "away": "COL",
     "home": "SF",

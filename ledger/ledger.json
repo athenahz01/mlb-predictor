@@ -21336,5 +21336,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-14T01:51:49.456042+00:00",
+    "game_id": "AL@NL-2026-07-15",
+    "market": "moneyline_home",
+    "model_p": 0.5835,
+    "market_p": 0.5502,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NL",
+      "away": "AL",
+      "date": "2026-07-15",
+      "home_name": "NL",
+      "away_name": "AL",
+      "park": "NL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-14T01:51:49.472313+00:00",
+    "game_id": "AL@NL-2026-07-15",
+    "market": "total_over_8.5",
+    "model_p": 0.5625,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NL",
+      "away": "AL",
+      "date": "2026-07-15",
+      "home_name": "NL",
+      "away_name": "AL",
+      "park": "NL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-14T01:51:49.487983+00:00",
+    "game_id": "AL@NL-2026-07-15",
+    "market": "nrfi",
+    "model_p": 0.5,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NL",
+      "away": "AL",
+      "date": "2026-07-15",
+      "home_name": "NL",
+      "away_name": "AL",
+      "park": "NL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-14T01:51:49.503630+00:00",
+    "game_id": "AL@NL-2026-07-15",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.6725,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NL",
+      "away": "AL",
+      "date": "2026-07-15",
+      "home_name": "NL",
+      "away_name": "AL",
+      "park": "NL",
+      "lineup_source": "confirmed",
+      "sp": "Dylan Cease"
+    }
+  },
+  {
+    "ts": "2026-07-14T01:51:49.519323+00:00",
+    "game_id": "AL@NL-2026-07-15",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.4255,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NL",
+      "away": "AL",
+      "date": "2026-07-15",
+      "home_name": "NL",
+      "away_name": "AL",
+      "park": "NL",
+      "lineup_source": "confirmed",
+      "sp": "Cristopher S\u00e1nchez"
+    }
+  },
+  {
+    "ts": "2026-07-14T01:51:49.535031+00:00",
+    "game_id": "AL@NL-2026-07-15",
+    "market": "batter_hr",
+    "model_p": 0.22,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "NL",
+      "away": "AL",
+      "date": "2026-07-15",
+      "home_name": "NL",
+      "away_name": "AL",
+      "park": "NL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "p_hr": 0.22,
+          "team": "NL"
+        },
+        {
+          "name": "Juan Soto",
+          "p_hr": 0.183,
+          "team": "NL"
+        },
+        {
+          "name": "Shea Langeliers",
+          "p_hr": 0.163,
+          "team": "AL"
+        }
+      ]
+    }
   }
 ]
