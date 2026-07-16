@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-07-16",
+    "away": "NYM",
+    "home": "PHI",
+    "away_name": "Mets",
+    "home_name": "Phillies",
+    "model_home_win_pct": 44.8,
+    "market_home_win_pct": 54.0,
+    "edge": -9.2,
+    "contrarian": true,
+    "logged_at": "2026-07-16T20:51:29.026612+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 43.1,
+      "over_8_5_pct": 59.2,
+      "away_sp_k_over_5_5_pct": 45.0,
+      "home_sp_k_over_5_5_pct": 32.5,
+      "away_sp": "Christian Scott",
+      "home_sp": "Aaron Nola",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "PHI",
+          "pct": 25.2
+        },
+        {
+          "name": "Juan Soto",
+          "team": "NYM",
+          "pct": 24.8
+        },
+        {
+          "name": "Jared Young",
+          "team": "NYM",
+          "pct": 21.0
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-15",
     "away": "AL",
     "home": "NL",

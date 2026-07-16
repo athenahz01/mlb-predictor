@@ -21463,5 +21463,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-16T20:51:29.026612+00:00",
+    "game_id": "NYM@PHI-2026-07-16",
+    "market": "moneyline_home",
+    "model_p": 0.448,
+    "market_p": 0.5402,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PHI",
+      "away": "NYM",
+      "date": "2026-07-16",
+      "home_name": "Phillies",
+      "away_name": "Mets",
+      "park": "PHI",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-16T20:51:29.044245+00:00",
+    "game_id": "NYM@PHI-2026-07-16",
+    "market": "total_over_8.5",
+    "model_p": 0.5915,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PHI",
+      "away": "NYM",
+      "date": "2026-07-16",
+      "home_name": "Phillies",
+      "away_name": "Mets",
+      "park": "PHI",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-16T20:51:29.061001+00:00",
+    "game_id": "NYM@PHI-2026-07-16",
+    "market": "nrfi",
+    "model_p": 0.4315,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PHI",
+      "away": "NYM",
+      "date": "2026-07-16",
+      "home_name": "Phillies",
+      "away_name": "Mets",
+      "park": "PHI",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-16T20:51:29.077583+00:00",
+    "game_id": "NYM@PHI-2026-07-16",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.4495,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PHI",
+      "away": "NYM",
+      "date": "2026-07-16",
+      "home_name": "Phillies",
+      "away_name": "Mets",
+      "park": "PHI",
+      "lineup_source": "confirmed",
+      "sp": "Christian Scott"
+    }
+  },
+  {
+    "ts": "2026-07-16T20:51:29.095159+00:00",
+    "game_id": "NYM@PHI-2026-07-16",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3245,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PHI",
+      "away": "NYM",
+      "date": "2026-07-16",
+      "home_name": "Phillies",
+      "away_name": "Mets",
+      "park": "PHI",
+      "lineup_source": "confirmed",
+      "sp": "Aaron Nola"
+    }
+  },
+  {
+    "ts": "2026-07-16T20:51:29.112658+00:00",
+    "game_id": "NYM@PHI-2026-07-16",
+    "market": "batter_hr",
+    "model_p": 0.252,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "PHI",
+      "away": "NYM",
+      "date": "2026-07-16",
+      "home_name": "Phillies",
+      "away_name": "Mets",
+      "park": "PHI",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "p_hr": 0.252,
+          "team": "PHI"
+        },
+        {
+          "name": "Juan Soto",
+          "p_hr": 0.248,
+          "team": "NYM"
+        },
+        {
+          "name": "Jared Young",
+          "p_hr": 0.21,
+          "team": "NYM"
+        }
+      ]
+    }
   }
 ]
