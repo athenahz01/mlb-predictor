@@ -1,5 +1,161 @@
 [
   {
+    "date": "2026-07-18",
+    "away": "MIN",
+    "home": "CHC",
+    "away_name": "Twins",
+    "home_name": "Cubs",
+    "model_home_win_pct": 58.6,
+    "market_home_win_pct": 57.5,
+    "edge": 1.1,
+    "contrarian": false,
+    "logged_at": "2026-07-17T20:45:34.172574+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 52.6,
+      "over_8_5_pct": 53.1,
+      "away_sp_k_over_5_5_pct": 20.4,
+      "home_sp_k_over_5_5_pct": 15.9,
+      "away_sp": "Bailey Ober",
+      "home_sp": "Colin Rea",
+      "hr_threats": [
+        {
+          "name": "Pete Crow-Armstrong",
+          "team": "CHC",
+          "pct": 20.9
+        },
+        {
+          "name": "Kody Clemens",
+          "team": "MIN",
+          "pct": 17.8
+        },
+        {
+          "name": "Michael Busch",
+          "team": "CHC",
+          "pct": 17.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-17",
+    "away": "CWS",
+    "home": "TOR",
+    "away_name": "White Sox",
+    "home_name": "Blue Jays",
+    "model_home_win_pct": 61.6,
+    "market_home_win_pct": 55.5,
+    "edge": 6.1,
+    "contrarian": false,
+    "logged_at": "2026-07-17T20:45:30.774660+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.8,
+      "over_8_5_pct": 47.1,
+      "away_sp_k_over_5_5_pct": 14.3,
+      "home_sp_k_over_5_5_pct": 37.8,
+      "away_sp": "Anthony Kay",
+      "home_sp": "Spencer Miles",
+      "hr_threats": [
+        {
+          "name": "Munetaka Murakami",
+          "team": "CWS",
+          "pct": 21.1
+        },
+        {
+          "name": "Colson Montgomery",
+          "team": "CWS",
+          "pct": 17.6
+        },
+        {
+          "name": "Kazuma Okamoto",
+          "team": "TOR",
+          "pct": 16.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-17",
+    "away": "TEX",
+    "home": "ATL",
+    "away_name": "Rangers",
+    "home_name": "Braves",
+    "model_home_win_pct": 62.4,
+    "market_home_win_pct": 65.5,
+    "edge": -3.1,
+    "contrarian": false,
+    "logged_at": "2026-07-17T20:45:27.808234+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.5,
+      "over_8_5_pct": 39.6,
+      "away_sp_k_over_5_5_pct": 15.1,
+      "home_sp_k_over_5_5_pct": 54.3,
+      "away_sp": "Cal Quantrill",
+      "home_sp": "Chris Sale",
+      "hr_threats": [
+        {
+          "name": "Matt Olson",
+          "team": "ATL",
+          "pct": 17.8
+        },
+        {
+          "name": "Drake Baldwin",
+          "team": "ATL",
+          "pct": 17.0
+        },
+        {
+          "name": "Justin Foscue",
+          "team": "TEX",
+          "pct": 13.2
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-17",
+    "away": "LAD",
+    "home": "NYY",
+    "away_name": "Dodgers",
+    "home_name": "Yankees",
+    "model_home_win_pct": 48.6,
+    "market_home_win_pct": 48.5,
+    "edge": 0.1,
+    "contrarian": false,
+    "logged_at": "2026-07-17T20:45:24.577825+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 45.8,
+      "over_8_5_pct": 61.0,
+      "away_sp_k_over_5_5_pct": 31.4,
+      "home_sp_k_over_5_5_pct": 29.6,
+      "away_sp": "Roki Sasaki",
+      "home_sp": "Gerrit Cole",
+      "hr_threats": [
+        {
+          "name": "Ben Rice",
+          "team": "NYY",
+          "pct": 24.2
+        },
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 24.1
+        },
+        {
+          "name": "Max Muncy",
+          "team": "LAD",
+          "pct": 19.3
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-17",
     "away": "TB",
     "home": "BOS",
@@ -11,7 +167,7 @@
     "contrarian": false,
     "logged_at": "2026-07-17T17:05:33.907726+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.1,
       "over_8_5_pct": 41.6,
@@ -36,7 +192,12 @@
           "pct": 12.2
         }
       ]
-    }
+    },
+    "home_score": 10,
+    "away_score": 0,
+    "winner": "BOS",
+    "pick_correct": true,
+    "total_runs": 10
   },
   {
     "date": "2026-07-16",
