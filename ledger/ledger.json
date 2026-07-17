@@ -21590,5 +21590,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-17T17:05:33.907726+00:00",
+    "game_id": "TB@BOS-2026-07-17",
+    "market": "moneyline_home",
+    "model_p": 0.529,
+    "market_p": 0.5199,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-17",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-17T17:05:33.924216+00:00",
+    "game_id": "TB@BOS-2026-07-17",
+    "market": "total_over_8.5",
+    "model_p": 0.416,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-17",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-17T17:05:33.940183+00:00",
+    "game_id": "TB@BOS-2026-07-17",
+    "market": "nrfi",
+    "model_p": 0.531,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-17",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-17T17:05:33.956143+00:00",
+    "game_id": "TB@BOS-2026-07-17",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.521,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-17",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "sp": "Griffin Jax"
+    }
+  },
+  {
+    "ts": "2026-07-17T17:05:33.972706+00:00",
+    "game_id": "TB@BOS-2026-07-17",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.16,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-17",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "sp": "Jake Bennett"
+    }
+  },
+  {
+    "ts": "2026-07-17T17:05:33.988704+00:00",
+    "game_id": "TB@BOS-2026-07-17",
+    "market": "batter_hr",
+    "model_p": 0.144,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-17",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Wilyer Abreu",
+          "p_hr": 0.144,
+          "team": "BOS"
+        },
+        {
+          "name": "Junior Caminero",
+          "p_hr": 0.142,
+          "team": "TB"
+        },
+        {
+          "name": "Ryan Vilade",
+          "p_hr": 0.122,
+          "team": "TB"
+        }
+      ]
+    }
   }
 ]

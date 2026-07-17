@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-07-17",
+    "away": "TB",
+    "home": "BOS",
+    "away_name": "Rays",
+    "home_name": "Red Sox",
+    "model_home_win_pct": 52.9,
+    "market_home_win_pct": 52.0,
+    "edge": 0.9,
+    "contrarian": false,
+    "logged_at": "2026-07-17T17:05:33.907726+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.1,
+      "over_8_5_pct": 41.6,
+      "away_sp_k_over_5_5_pct": 52.1,
+      "home_sp_k_over_5_5_pct": 16.0,
+      "away_sp": "Griffin Jax",
+      "home_sp": "Jake Bennett",
+      "hr_threats": [
+        {
+          "name": "Wilyer Abreu",
+          "team": "BOS",
+          "pct": 14.4
+        },
+        {
+          "name": "Junior Caminero",
+          "team": "TB",
+          "pct": 14.2
+        },
+        {
+          "name": "Ryan Vilade",
+          "team": "TB",
+          "pct": 12.2
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-16",
     "away": "NYM",
     "home": "PHI",
