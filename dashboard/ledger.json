@@ -1,6 +1,279 @@
 [
   {
     "date": "2026-07-18",
+    "away": "SF",
+    "home": "SEA",
+    "away_name": "Giants",
+    "home_name": "Mariners",
+    "model_home_win_pct": 55.4,
+    "market_home_win_pct": 62.5,
+    "edge": -7.1,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:42:25.806820+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.8,
+      "over_8_5_pct": 38.8,
+      "away_sp_k_over_5_5_pct": 44.5,
+      "home_sp_k_over_5_5_pct": 31.3,
+      "away_sp": "Landen Roupp",
+      "home_sp": "Bryce Miller",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "team": "SF",
+          "pct": 13.6
+        },
+        {
+          "name": "Bryce Eldridge",
+          "team": "SF",
+          "pct": 13.3
+        },
+        {
+          "name": "Casey Schmitt",
+          "team": "SF",
+          "pct": 13.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "STL",
+    "home": "AZ",
+    "away_name": "Cardinals",
+    "home_name": "Diamondbacks",
+    "model_home_win_pct": 51.8,
+    "market_home_win_pct": 51.5,
+    "edge": 0.3,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:42:21.296003+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 51.4,
+      "over_8_5_pct": 50.8,
+      "away_sp_k_over_5_5_pct": 5.4,
+      "home_sp_k_over_5_5_pct": 12.1,
+      "away_sp": "Michael McGreevy",
+      "home_sp": "Merrill Kelly",
+      "hr_threats": [
+        {
+          "name": "JJ Wetherholt",
+          "team": "STL",
+          "pct": 18.0
+        },
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 17.5
+        },
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 16.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "WSH",
+    "home": "ATH",
+    "away_name": "Nationals",
+    "home_name": "Athletics",
+    "model_home_win_pct": 62.5,
+    "market_home_win_pct": 45.0,
+    "edge": 17.5,
+    "contrarian": true,
+    "logged_at": "2026-07-17T22:42:16.828834+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.3,
+      "over_8_5_pct": 42.4,
+      "away_sp_k_over_5_5_pct": 27.2,
+      "home_sp_k_over_5_5_pct": 40.6,
+      "away_sp": "Cade Cavalli",
+      "home_sp": "Gage Jump",
+      "hr_threats": [
+        {
+          "name": "Shea Langeliers",
+          "team": "ATH",
+          "pct": 15.3
+        },
+        {
+          "name": "Tyler Soderstrom",
+          "team": "ATH",
+          "pct": 13.5
+        },
+        {
+          "name": "James Wood",
+          "team": "WSH",
+          "pct": 13.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "DET",
+    "home": "LAA",
+    "away_name": "Tigers",
+    "home_name": "Angels",
+    "model_home_win_pct": 49.1,
+    "market_home_win_pct": 49.5,
+    "edge": -0.4,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:42:12.386448+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 60.4,
+      "over_8_5_pct": 35.6,
+      "away_sp_k_over_5_5_pct": 35.4,
+      "home_sp_k_over_5_5_pct": 52.5,
+      "away_sp": "Troy Melton",
+      "home_sp": "Reid Detmers",
+      "hr_threats": [
+        {
+          "name": "Zach Neto",
+          "team": "LAA",
+          "pct": 16.8
+        },
+        {
+          "name": "Mike Trout",
+          "team": "LAA",
+          "pct": 15.1
+        },
+        {
+          "name": "Dillon Dingler",
+          "team": "DET",
+          "pct": 13.7
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "CIN",
+    "home": "COL",
+    "away_name": "Reds",
+    "home_name": "Rockies",
+    "model_home_win_pct": 58.8,
+    "market_home_win_pct": 51.5,
+    "edge": 7.3,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:42:08.027970+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 44.9,
+      "over_8_5_pct": 65.5,
+      "away_sp_k_over_5_5_pct": 25.9,
+      "home_sp_k_over_5_5_pct": 43.8,
+      "away_sp": "Brady Singer",
+      "home_sp": "Gabriel Hughes",
+      "hr_threats": [
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 26.3
+        },
+        {
+          "name": "Mickey Moniak",
+          "team": "COL",
+          "pct": 24.4
+        },
+        {
+          "name": "JJ Bleday",
+          "team": "CIN",
+          "pct": 20.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "SD",
+    "home": "KC",
+    "away_name": "Padres",
+    "home_name": "Royals",
+    "model_home_win_pct": 48.8,
+    "market_home_win_pct": 47.0,
+    "edge": 1.8,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:42:03.508815+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 60.2,
+      "over_8_5_pct": 41.0,
+      "away_sp_k_over_5_5_pct": 28.0,
+      "home_sp_k_over_5_5_pct": 22.8,
+      "away_sp": "Michael King",
+      "home_sp": "Seth Lugo",
+      "hr_threats": [
+        {
+          "name": "Gavin Sheets",
+          "team": "SD",
+          "pct": 14.5
+        },
+        {
+          "name": "Carter Jensen",
+          "team": "KC",
+          "pct": 13.9
+        },
+        {
+          "name": "Jac Caglianone",
+          "team": "KC",
+          "pct": 13.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "BAL",
+    "home": "HOU",
+    "away_name": "Orioles",
+    "home_name": "Astros",
+    "model_home_win_pct": 55.5,
+    "market_home_win_pct": 52.5,
+    "edge": 3.0,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:41:59.090544+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.2,
+      "over_8_5_pct": 40.7,
+      "away_sp_k_over_5_5_pct": 37.3,
+      "home_sp_k_over_5_5_pct": 36.8,
+      "away_sp": "Dean Kremer",
+      "home_sp": "Peter Lambert",
+      "hr_threats": [
+        {
+          "name": "Yordan Alvarez",
+          "team": "HOU",
+          "pct": 19.8
+        },
+        {
+          "name": "Christian Walker",
+          "team": "HOU",
+          "pct": 16.2
+        },
+        {
+          "name": "Gunnar Henderson",
+          "team": "BAL",
+          "pct": 14.4
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
     "away": "MIN",
     "home": "CHC",
     "away_name": "Twins",
@@ -34,6 +307,45 @@
           "name": "Michael Busch",
           "team": "CHC",
           "pct": 17.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-17",
+    "away": "MIA",
+    "home": "MIL",
+    "away_name": "Marlins",
+    "home_name": "Brewers",
+    "model_home_win_pct": 52.3,
+    "market_home_win_pct": 57.5,
+    "edge": -5.2,
+    "contrarian": false,
+    "logged_at": "2026-07-17T22:41:54.516040+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.1,
+      "over_8_5_pct": 47.5,
+      "away_sp_k_over_5_5_pct": 23.2,
+      "home_sp_k_over_5_5_pct": 44.1,
+      "away_sp": "Sandy Alcantara",
+      "home_sp": "Logan Henderson",
+      "hr_threats": [
+        {
+          "name": "Jake Bauers",
+          "team": "MIL",
+          "pct": 16.2
+        },
+        {
+          "name": "Kyle Stowers",
+          "team": "MIA",
+          "pct": 14.9
+        },
+        {
+          "name": "Christian Yelich",
+          "team": "MIL",
+          "pct": 14.3
         }
       ]
     }
