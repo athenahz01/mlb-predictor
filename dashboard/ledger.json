@@ -11,7 +11,7 @@
     "contrarian": true,
     "logged_at": "2026-07-16T20:51:29.026612+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 43.1,
       "over_8_5_pct": 59.2,
@@ -36,7 +36,12 @@
           "pct": 21.0
         }
       ]
-    }
+    },
+    "home_score": 1,
+    "away_score": 4,
+    "winner": "NYM",
+    "pick_correct": true,
+    "total_runs": 5
   },
   {
     "date": "2026-07-15",
