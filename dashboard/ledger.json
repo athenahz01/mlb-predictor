@@ -1,6 +1,123 @@
 [
   {
     "date": "2026-07-18",
+    "away": "CWS",
+    "home": "TOR",
+    "away_name": "White Sox",
+    "home_name": "Blue Jays",
+    "model_home_win_pct": 46.7,
+    "market_home_win_pct": 50.5,
+    "edge": -3.8,
+    "contrarian": false,
+    "logged_at": "2026-07-18T16:49:42.423898+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.9,
+      "over_8_5_pct": 50.0,
+      "away_sp_k_over_5_5_pct": 19.7,
+      "home_sp_k_over_5_5_pct": 35.9,
+      "away_sp": "Davis Martin",
+      "home_sp": "Shane Bieber",
+      "hr_threats": [
+        {
+          "name": "Munetaka Murakami",
+          "team": "CWS",
+          "pct": 25.0
+        },
+        {
+          "name": "Colson Montgomery",
+          "team": "CWS",
+          "pct": 22.5
+        },
+        {
+          "name": "Andrew Benintendi",
+          "team": "CWS",
+          "pct": 17.5
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "NYM",
+    "home": "PHI",
+    "away_name": "Mets",
+    "home_name": "Phillies",
+    "model_home_win_pct": 52.6,
+    "market_home_win_pct": 62.1,
+    "edge": -9.5,
+    "contrarian": true,
+    "logged_at": "2026-07-18T16:49:38.050071+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.3,
+      "over_8_5_pct": 47.2,
+      "away_sp_k_over_5_5_pct": 48.4,
+      "home_sp_k_over_5_5_pct": 46.9,
+      "away_sp": "Sean Manaea",
+      "home_sp": "Jes\u00fas Luzardo",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "PHI",
+          "pct": 23.6
+        },
+        {
+          "name": "Juan Soto",
+          "team": "NYM",
+          "pct": 18.3
+        },
+        {
+          "name": "Bryce Harper",
+          "team": "PHI",
+          "pct": 15.2
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "PIT",
+    "home": "CLE",
+    "away_name": "Pirates",
+    "home_name": "Guardians",
+    "model_home_win_pct": 59.8,
+    "market_home_win_pct": 54.0,
+    "edge": 5.8,
+    "contrarian": false,
+    "logged_at": "2026-07-18T16:49:33.771915+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.1,
+      "over_8_5_pct": 43.2,
+      "away_sp_k_over_5_5_pct": 35.5,
+      "home_sp_k_over_5_5_pct": 52.5,
+      "away_sp": "Jared Jones",
+      "home_sp": "Gavin Williams",
+      "hr_threats": [
+        {
+          "name": "Brandon Lowe",
+          "team": "PIT",
+          "pct": 17.5
+        },
+        {
+          "name": "Kyle Manzardo",
+          "team": "CLE",
+          "pct": 15.9
+        },
+        {
+          "name": "Travis Bazzana",
+          "team": "CLE",
+          "pct": 15.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
     "away": "SF",
     "home": "SEA",
     "away_name": "Giants",
@@ -11,7 +128,7 @@
     "contrarian": false,
     "logged_at": "2026-07-17T22:42:25.806820+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 55.8,
       "over_8_5_pct": 38.8,
@@ -36,7 +153,12 @@
           "pct": 13.3
         }
       ]
-    }
+    },
+    "home_score": 0,
+    "away_score": 7,
+    "winner": "SF",
+    "pick_correct": false,
+    "total_runs": 7
   },
   {
     "date": "2026-07-18",
@@ -94,7 +216,7 @@
     "contrarian": true,
     "logged_at": "2026-07-17T22:42:16.828834+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 57.3,
       "over_8_5_pct": 42.4,
@@ -119,7 +241,12 @@
           "pct": 13.1
         }
       ]
-    }
+    },
+    "home_score": 4,
+    "away_score": 23,
+    "winner": "WSH",
+    "pick_correct": false,
+    "total_runs": 27
   },
   {
     "date": "2026-07-18",
