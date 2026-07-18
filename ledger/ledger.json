@@ -23622,5 +23622,386 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-18T18:53:50.445376+00:00",
+    "game_id": "TB@BOS-2026-07-18",
+    "market": "moneyline_home",
+    "model_p": 0.535,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-18",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:50.464704+00:00",
+    "game_id": "TB@BOS-2026-07-18",
+    "market": "total_over_8.5",
+    "model_p": 0.423,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-18",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:50.482685+00:00",
+    "game_id": "TB@BOS-2026-07-18",
+    "market": "nrfi",
+    "model_p": 0.547,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-18",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:50.500065+00:00",
+    "game_id": "TB@BOS-2026-07-18",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.407,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-18",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "sp": "Ian Seymour"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:50.517197+00:00",
+    "game_id": "TB@BOS-2026-07-18",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2115,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-18",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "sp": "Patrick Sandoval"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:50.534548+00:00",
+    "game_id": "TB@BOS-2026-07-18",
+    "market": "batter_hr",
+    "model_p": 0.159,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "BOS",
+      "away": "TB",
+      "date": "2026-07-18",
+      "home_name": "Red Sox",
+      "away_name": "Rays",
+      "park": "BOS",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Junior Caminero",
+          "p_hr": 0.159,
+          "team": "TB"
+        },
+        {
+          "name": "Willson Contreras",
+          "p_hr": 0.158,
+          "team": "BOS"
+        },
+        {
+          "name": "Yandy D\u00edaz",
+          "p_hr": 0.131,
+          "team": "TB"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:54.026297+00:00",
+    "game_id": "TEX@ATL-2026-07-18",
+    "market": "moneyline_home",
+    "model_p": 0.546,
+    "market_p": 0.515,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "TEX",
+      "date": "2026-07-18",
+      "home_name": "Braves",
+      "away_name": "Rangers",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:54.045247+00:00",
+    "game_id": "TEX@ATL-2026-07-18",
+    "market": "total_over_8.5",
+    "model_p": 0.4045,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "TEX",
+      "date": "2026-07-18",
+      "home_name": "Braves",
+      "away_name": "Rangers",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:54.063225+00:00",
+    "game_id": "TEX@ATL-2026-07-18",
+    "market": "nrfi",
+    "model_p": 0.5535,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "TEX",
+      "date": "2026-07-18",
+      "home_name": "Braves",
+      "away_name": "Rangers",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:54.081247+00:00",
+    "game_id": "TEX@ATL-2026-07-18",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.408,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "TEX",
+      "date": "2026-07-18",
+      "home_name": "Braves",
+      "away_name": "Rangers",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "MacKenzie Gore"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:54.099122+00:00",
+    "game_id": "TEX@ATL-2026-07-18",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3785,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "TEX",
+      "date": "2026-07-18",
+      "home_name": "Braves",
+      "away_name": "Rangers",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Owen Murphy"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:54.116883+00:00",
+    "game_id": "TEX@ATL-2026-07-18",
+    "market": "batter_hr",
+    "model_p": 0.156,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "TEX",
+      "date": "2026-07-18",
+      "home_name": "Braves",
+      "away_name": "Rangers",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Joc Pederson",
+          "p_hr": 0.156,
+          "team": "TEX"
+        },
+        {
+          "name": "Drake Baldwin",
+          "p_hr": 0.146,
+          "team": "ATL"
+        },
+        {
+          "name": "Matt Olson",
+          "p_hr": 0.136,
+          "team": "ATL"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:57.646592+00:00",
+    "game_id": "MIA@MIL-2026-07-18",
+    "market": "moneyline_home",
+    "model_p": 0.5045,
+    "market_p": 0.5703,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "MIA",
+      "date": "2026-07-18",
+      "home_name": "Brewers",
+      "away_name": "Marlins",
+      "park": "MIL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:57.665132+00:00",
+    "game_id": "MIA@MIL-2026-07-18",
+    "market": "total_over_8.5",
+    "model_p": 0.4655,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "MIA",
+      "date": "2026-07-18",
+      "home_name": "Brewers",
+      "away_name": "Marlins",
+      "park": "MIL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:57.683334+00:00",
+    "game_id": "MIA@MIL-2026-07-18",
+    "market": "nrfi",
+    "model_p": 0.538,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "MIA",
+      "date": "2026-07-18",
+      "home_name": "Brewers",
+      "away_name": "Marlins",
+      "park": "MIL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:57.701023+00:00",
+    "game_id": "MIA@MIL-2026-07-18",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.471,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "MIA",
+      "date": "2026-07-18",
+      "home_name": "Brewers",
+      "away_name": "Marlins",
+      "park": "MIL",
+      "lineup_source": "confirmed",
+      "sp": "Max Meyer"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:57.718729+00:00",
+    "game_id": "MIA@MIL-2026-07-18",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.303,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "MIA",
+      "date": "2026-07-18",
+      "home_name": "Brewers",
+      "away_name": "Marlins",
+      "park": "MIL",
+      "lineup_source": "confirmed",
+      "sp": "Shane Drohan"
+    }
+  },
+  {
+    "ts": "2026-07-18T18:53:57.736406+00:00",
+    "game_id": "MIA@MIL-2026-07-18",
+    "market": "batter_hr",
+    "model_p": 0.186,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "MIL",
+      "away": "MIA",
+      "date": "2026-07-18",
+      "home_name": "Brewers",
+      "away_name": "Marlins",
+      "park": "MIL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Jake Bauers",
+          "p_hr": 0.186,
+          "team": "MIL"
+        },
+        {
+          "name": "Kyle Stowers",
+          "p_hr": 0.144,
+          "team": "MIA"
+        },
+        {
+          "name": "Christian Yelich",
+          "p_hr": 0.142,
+          "team": "MIL"
+        }
+      ]
+    }
   }
 ]

@@ -1,6 +1,123 @@
 [
   {
     "date": "2026-07-18",
+    "away": "MIA",
+    "home": "MIL",
+    "away_name": "Marlins",
+    "home_name": "Brewers",
+    "model_home_win_pct": 50.4,
+    "market_home_win_pct": 57.0,
+    "edge": -6.6,
+    "contrarian": false,
+    "logged_at": "2026-07-18T18:53:57.646592+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.8,
+      "over_8_5_pct": 46.6,
+      "away_sp_k_over_5_5_pct": 47.1,
+      "home_sp_k_over_5_5_pct": 30.3,
+      "away_sp": "Max Meyer",
+      "home_sp": "Shane Drohan",
+      "hr_threats": [
+        {
+          "name": "Jake Bauers",
+          "team": "MIL",
+          "pct": 18.6
+        },
+        {
+          "name": "Kyle Stowers",
+          "team": "MIA",
+          "pct": 14.4
+        },
+        {
+          "name": "Christian Yelich",
+          "team": "MIL",
+          "pct": 14.2
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "TEX",
+    "home": "ATL",
+    "away_name": "Rangers",
+    "home_name": "Braves",
+    "model_home_win_pct": 54.6,
+    "market_home_win_pct": 51.5,
+    "edge": 3.1,
+    "contrarian": false,
+    "logged_at": "2026-07-18T18:53:54.026297+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.4,
+      "over_8_5_pct": 40.5,
+      "away_sp_k_over_5_5_pct": 40.8,
+      "home_sp_k_over_5_5_pct": 37.9,
+      "away_sp": "MacKenzie Gore",
+      "home_sp": "Owen Murphy",
+      "hr_threats": [
+        {
+          "name": "Joc Pederson",
+          "team": "TEX",
+          "pct": 15.6
+        },
+        {
+          "name": "Drake Baldwin",
+          "team": "ATL",
+          "pct": 14.6
+        },
+        {
+          "name": "Matt Olson",
+          "team": "ATL",
+          "pct": 13.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
+    "away": "TB",
+    "home": "BOS",
+    "away_name": "Rays",
+    "home_name": "Red Sox",
+    "model_home_win_pct": 53.5,
+    "market_home_win_pct": 50.5,
+    "edge": 3.0,
+    "contrarian": false,
+    "logged_at": "2026-07-18T18:53:50.445376+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.7,
+      "over_8_5_pct": 42.3,
+      "away_sp_k_over_5_5_pct": 40.7,
+      "home_sp_k_over_5_5_pct": 21.1,
+      "away_sp": "Ian Seymour",
+      "home_sp": "Patrick Sandoval",
+      "hr_threats": [
+        {
+          "name": "Junior Caminero",
+          "team": "TB",
+          "pct": 15.9
+        },
+        {
+          "name": "Willson Contreras",
+          "team": "BOS",
+          "pct": 15.8
+        },
+        {
+          "name": "Yandy D\u00edaz",
+          "team": "TB",
+          "pct": 13.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-18",
     "away": "CWS",
     "home": "TOR",
     "away_name": "White Sox",
