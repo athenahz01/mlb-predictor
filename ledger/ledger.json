@@ -24130,5 +24130,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-18T22:42:05.108598+00:00",
+    "game_id": "WSH@ATH-2026-07-19",
+    "market": "moneyline_home",
+    "model_p": 0.5255,
+    "market_p": 0.495,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "WSH",
+      "date": "2026-07-19",
+      "home_name": "Athletics",
+      "away_name": "Nationals",
+      "park": "ATH",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T22:42:05.127624+00:00",
+    "game_id": "WSH@ATH-2026-07-19",
+    "market": "total_over_8.5",
+    "model_p": 0.509,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "WSH",
+      "date": "2026-07-19",
+      "home_name": "Athletics",
+      "away_name": "Nationals",
+      "park": "ATH",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T22:42:05.145637+00:00",
+    "game_id": "WSH@ATH-2026-07-19",
+    "market": "nrfi",
+    "model_p": 0.5025,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "WSH",
+      "date": "2026-07-19",
+      "home_name": "Athletics",
+      "away_name": "Nationals",
+      "park": "ATH",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T22:42:05.163176+00:00",
+    "game_id": "WSH@ATH-2026-07-19",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.072,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "WSH",
+      "date": "2026-07-19",
+      "home_name": "Athletics",
+      "away_name": "Nationals",
+      "park": "ATH",
+      "lineup_source": "confirmed",
+      "sp": "Zack Littell"
+    }
+  },
+  {
+    "ts": "2026-07-18T22:42:05.180691+00:00",
+    "game_id": "WSH@ATH-2026-07-19",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.306,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "WSH",
+      "date": "2026-07-19",
+      "home_name": "Athletics",
+      "away_name": "Nationals",
+      "park": "ATH",
+      "lineup_source": "confirmed",
+      "sp": "J.T. Ginn"
+    }
+  },
+  {
+    "ts": "2026-07-18T22:42:05.198343+00:00",
+    "game_id": "WSH@ATH-2026-07-19",
+    "market": "batter_hr",
+    "model_p": 0.196,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATH",
+      "away": "WSH",
+      "date": "2026-07-19",
+      "home_name": "Athletics",
+      "away_name": "Nationals",
+      "park": "ATH",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Shea Langeliers",
+          "p_hr": 0.196,
+          "team": "ATH"
+        },
+        {
+          "name": "Tyler Soderstrom",
+          "p_hr": 0.187,
+          "team": "ATH"
+        },
+        {
+          "name": "James Wood",
+          "p_hr": 0.164,
+          "team": "WSH"
+        }
+      ]
+    }
   }
 ]
