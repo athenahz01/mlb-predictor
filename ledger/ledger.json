@@ -24003,5 +24003,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-18T20:40:00.412683+00:00",
+    "game_id": "SF@SEA-2026-07-19",
+    "market": "moneyline_home",
+    "model_p": 0.5655,
+    "market_p": 0.585,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "SF",
+      "date": "2026-07-19",
+      "home_name": "Mariners",
+      "away_name": "Giants",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T20:40:00.431085+00:00",
+    "game_id": "SF@SEA-2026-07-19",
+    "market": "total_over_8.5",
+    "model_p": 0.2755,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "SF",
+      "date": "2026-07-19",
+      "home_name": "Mariners",
+      "away_name": "Giants",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T20:40:00.448413+00:00",
+    "game_id": "SF@SEA-2026-07-19",
+    "market": "nrfi",
+    "model_p": 0.6035,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "SF",
+      "date": "2026-07-19",
+      "home_name": "Mariners",
+      "away_name": "Giants",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-18T20:40:00.465527+00:00",
+    "game_id": "SF@SEA-2026-07-19",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.3475,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "SF",
+      "date": "2026-07-19",
+      "home_name": "Mariners",
+      "away_name": "Giants",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Logan Webb"
+    }
+  },
+  {
+    "ts": "2026-07-18T20:40:00.482698+00:00",
+    "game_id": "SF@SEA-2026-07-19",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.306,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "SF",
+      "date": "2026-07-19",
+      "home_name": "Mariners",
+      "away_name": "Giants",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Bryan Woo"
+    }
+  },
+  {
+    "ts": "2026-07-18T20:40:00.499905+00:00",
+    "game_id": "SF@SEA-2026-07-19",
+    "market": "batter_hr",
+    "model_p": 0.122,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "SF",
+      "date": "2026-07-19",
+      "home_name": "Mariners",
+      "away_name": "Giants",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Rafael Devers",
+          "p_hr": 0.122,
+          "team": "SF"
+        },
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.117,
+          "team": "SEA"
+        },
+        {
+          "name": "Casey Schmitt",
+          "p_hr": 0.106,
+          "team": "SF"
+        }
+      ]
+    }
   }
 ]
