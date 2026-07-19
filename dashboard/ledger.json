@@ -1,6 +1,396 @@
 [
   {
     "date": "2026-07-19",
+    "away": "CIN",
+    "home": "COL",
+    "away_name": "Reds",
+    "home_name": "Rockies",
+    "model_home_win_pct": 48.2,
+    "market_home_win_pct": 39.5,
+    "edge": 8.7,
+    "contrarian": true,
+    "logged_at": "2026-07-19T16:51:13.282484+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 46.7,
+      "over_8_5_pct": 63.6,
+      "away_sp_k_over_5_5_pct": 57.9,
+      "home_sp_k_over_5_5_pct": 32.0,
+      "away_sp": "Hunter Greene",
+      "home_sp": "Ryan Feltner",
+      "hr_threats": [
+        {
+          "name": "Mickey Moniak",
+          "team": "COL",
+          "pct": 25.1
+        },
+        {
+          "name": "Hunter Goodman",
+          "team": "COL",
+          "pct": 22.5
+        },
+        {
+          "name": "JJ Bleday",
+          "team": "CIN",
+          "pct": 20.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "MIN",
+    "home": "CHC",
+    "away_name": "Twins",
+    "home_name": "Cubs",
+    "model_home_win_pct": 59.0,
+    "market_home_win_pct": 60.5,
+    "edge": -1.5,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:51:09.883366+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 51.7,
+      "over_8_5_pct": 51.5,
+      "away_sp_k_over_5_5_pct": 29.9,
+      "home_sp_k_over_5_5_pct": 21.1,
+      "away_sp": "Zebby Matthews",
+      "home_sp": "Shota Imanaga",
+      "hr_threats": [
+        {
+          "name": "Pete Crow-Armstrong",
+          "team": "CHC",
+          "pct": 19.5
+        },
+        {
+          "name": "Kody Clemens",
+          "team": "MIN",
+          "pct": 18.3
+        },
+        {
+          "name": "Josh Bell",
+          "team": "MIN",
+          "pct": 17.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "MIA",
+    "home": "MIL",
+    "away_name": "Marlins",
+    "home_name": "Brewers",
+    "model_home_win_pct": 48.8,
+    "market_home_win_pct": 54.5,
+    "edge": -5.7,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:51:06.347441+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 51.3,
+      "over_8_5_pct": 51.7,
+      "away_sp_k_over_5_5_pct": 51.2,
+      "home_sp_k_over_5_5_pct": 34.0,
+      "away_sp": "Eury P\u00e9rez",
+      "home_sp": "Robert Gasser",
+      "hr_threats": [
+        {
+          "name": "Jake Bauers",
+          "team": "MIL",
+          "pct": 18.7
+        },
+        {
+          "name": "Jackson Chourio",
+          "team": "MIL",
+          "pct": 16.5
+        },
+        {
+          "name": "Heriberto Hern\u00e1ndez",
+          "team": "MIA",
+          "pct": 16.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "SD",
+    "home": "KC",
+    "away_name": "Padres",
+    "home_name": "Royals",
+    "model_home_win_pct": 52.0,
+    "market_home_win_pct": 51.5,
+    "edge": 0.5,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:51:02.558205+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.0,
+      "over_8_5_pct": 42.8,
+      "away_sp_k_over_5_5_pct": 26.1,
+      "home_sp_k_over_5_5_pct": 24.0,
+      "away_sp": "Germ\u00e1n M\u00e1rquez",
+      "home_sp": "Noah Cameron",
+      "hr_threats": [
+        {
+          "name": "Carter Jensen",
+          "team": "KC",
+          "pct": 15.1
+        },
+        {
+          "name": "Jac Caglianone",
+          "team": "KC",
+          "pct": 14.3
+        },
+        {
+          "name": "Salvador Perez",
+          "team": "KC",
+          "pct": 12.8
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "BAL",
+    "home": "HOU",
+    "away_name": "Orioles",
+    "home_name": "Astros",
+    "model_home_win_pct": 59.9,
+    "market_home_win_pct": 52.5,
+    "edge": 7.4,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:50:59.123329+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 55.6,
+      "over_8_5_pct": 41.1,
+      "away_sp_k_over_5_5_pct": 17.8,
+      "home_sp_k_over_5_5_pct": 66.8,
+      "away_sp": "Brandon Young",
+      "home_sp": "Hunter Brown",
+      "hr_threats": [
+        {
+          "name": "Yordan Alvarez",
+          "team": "HOU",
+          "pct": 18.8
+        },
+        {
+          "name": "Samuel Basallo",
+          "team": "BAL",
+          "pct": 13.9
+        },
+        {
+          "name": "Colton Cowser",
+          "team": "BAL",
+          "pct": 13.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "PIT",
+    "home": "CLE",
+    "away_name": "Pirates",
+    "home_name": "Guardians",
+    "model_home_win_pct": 53.4,
+    "market_home_win_pct": 51.5,
+    "edge": 1.9,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:50:55.781462+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 59.5,
+      "over_8_5_pct": 33.6,
+      "away_sp_k_over_5_5_pct": 51.2,
+      "home_sp_k_over_5_5_pct": 44.4,
+      "away_sp": "Paul Skenes",
+      "home_sp": "Joey Cantillo",
+      "hr_threats": [
+        {
+          "name": "Esmerlyn Valdez",
+          "team": "PIT",
+          "pct": 14.5
+        },
+        {
+          "name": "Travis Bazzana",
+          "team": "CLE",
+          "pct": 12.8
+        },
+        {
+          "name": "Kyle Manzardo",
+          "team": "CLE",
+          "pct": 12.6
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "TEX",
+    "home": "ATL",
+    "away_name": "Rangers",
+    "home_name": "Braves",
+    "model_home_win_pct": 53.1,
+    "market_home_win_pct": 47.5,
+    "edge": 5.6,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:50:52.435878+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.5,
+      "over_8_5_pct": 40.4,
+      "away_sp_k_over_5_5_pct": 28.8,
+      "home_sp_k_over_5_5_pct": 37.0,
+      "away_sp": "Nathan Eovaldi",
+      "home_sp": "Grant Holmes",
+      "hr_threats": [
+        {
+          "name": "Drake Baldwin",
+          "team": "ATL",
+          "pct": 18.3
+        },
+        {
+          "name": "Joc Pederson",
+          "team": "TEX",
+          "pct": 17.1
+        },
+        {
+          "name": "Matt Olson",
+          "team": "ATL",
+          "pct": 16.5
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "NYM",
+    "home": "PHI",
+    "away_name": "Mets",
+    "home_name": "Phillies",
+    "model_home_win_pct": 48.5,
+    "market_home_win_pct": 46.5,
+    "edge": 2.0,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:50:49.114353+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 51.6,
+      "over_8_5_pct": 45.5,
+      "away_sp_k_over_5_5_pct": 52.4,
+      "home_sp_k_over_5_5_pct": 30.6,
+      "away_sp": "Nolan McLean",
+      "home_sp": "Alan Rangel",
+      "hr_threats": [
+        {
+          "name": "Kyle Schwarber",
+          "team": "PHI",
+          "pct": 23.9
+        },
+        {
+          "name": "Juan Soto",
+          "team": "NYM",
+          "pct": 19.8
+        },
+        {
+          "name": "Jared Young",
+          "team": "NYM",
+          "pct": 17.0
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "TB",
+    "home": "BOS",
+    "away_name": "Rays",
+    "home_name": "Red Sox",
+    "model_home_win_pct": 49.2,
+    "market_home_win_pct": 53.5,
+    "edge": -4.3,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:50:45.774894+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 52.4,
+      "over_8_5_pct": 43.6,
+      "away_sp_k_over_5_5_pct": 37.0,
+      "home_sp_k_over_5_5_pct": 28.2,
+      "away_sp": "Shane McClanahan",
+      "home_sp": "Sonny Gray",
+      "hr_threats": [
+        {
+          "name": "Junior Caminero",
+          "team": "TB",
+          "pct": 16.8
+        },
+        {
+          "name": "Jonathan Aranda",
+          "team": "TB",
+          "pct": 13.8
+        },
+        {
+          "name": "Willson Contreras",
+          "team": "BOS",
+          "pct": 12.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
+    "away": "LAD",
+    "home": "NYY",
+    "away_name": "Dodgers",
+    "home_name": "Yankees",
+    "model_home_win_pct": 47.3,
+    "market_home_win_pct": 45.5,
+    "edge": 1.8,
+    "contrarian": false,
+    "logged_at": "2026-07-19T16:50:42.421116+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 59.0,
+      "over_8_5_pct": 38.5,
+      "away_sp_k_over_5_5_pct": 41.8,
+      "home_sp_k_over_5_5_pct": 48.6,
+      "away_sp": "TBD",
+      "home_sp": "TBD",
+      "hr_threats": [
+        {
+          "name": "Ben Rice",
+          "team": "NYY",
+          "pct": 19.8
+        },
+        {
+          "name": "Shohei Ohtani",
+          "team": "LAD",
+          "pct": 15.6
+        },
+        {
+          "name": "Jazz Chisholm Jr.",
+          "team": "NYY",
+          "pct": 15.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-19",
     "away": "WSH",
     "home": "ATH",
     "away_name": "Nationals",
@@ -11,7 +401,7 @@
     "contrarian": false,
     "logged_at": "2026-07-18T22:42:05.108598+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 50.2,
       "over_8_5_pct": 50.9,
@@ -36,7 +426,12 @@
           "pct": 16.4
         }
       ]
-    }
+    },
+    "home_score": 15,
+    "away_score": 1,
+    "winner": "ATH",
+    "pick_correct": true,
+    "total_runs": 16
   },
   {
     "date": "2026-07-19",
@@ -50,7 +445,7 @@
     "contrarian": false,
     "logged_at": "2026-07-18T20:40:00.412683+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 60.4,
       "over_8_5_pct": 27.6,
@@ -75,7 +470,12 @@
           "pct": 10.6
         }
       ]
-    }
+    },
+    "home_score": 4,
+    "away_score": 3,
+    "winner": "SEA",
+    "pick_correct": true,
+    "total_runs": 7
   },
   {
     "date": "2026-07-18",
