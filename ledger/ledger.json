@@ -25527,5 +25527,259 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-19T18:57:44.990449+00:00",
+    "game_id": "DET@LAA-2026-07-19",
+    "market": "moneyline_home",
+    "model_p": 0.3775,
+    "market_p": 0.425,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "DET",
+      "date": "2026-07-19",
+      "home_name": "Angels",
+      "away_name": "Tigers",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:45.010673+00:00",
+    "game_id": "DET@LAA-2026-07-19",
+    "market": "total_over_8.5",
+    "model_p": 0.456,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "DET",
+      "date": "2026-07-19",
+      "home_name": "Angels",
+      "away_name": "Tigers",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:45.029641+00:00",
+    "game_id": "DET@LAA-2026-07-19",
+    "market": "nrfi",
+    "model_p": 0.5385,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "DET",
+      "date": "2026-07-19",
+      "home_name": "Angels",
+      "away_name": "Tigers",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:45.048490+00:00",
+    "game_id": "DET@LAA-2026-07-19",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.508,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "DET",
+      "date": "2026-07-19",
+      "home_name": "Angels",
+      "away_name": "Tigers",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "sp": "Casey Mize"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:45.066948+00:00",
+    "game_id": "DET@LAA-2026-07-19",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.4585,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "DET",
+      "date": "2026-07-19",
+      "home_name": "Angels",
+      "away_name": "Tigers",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "sp": "Ryan Johnson"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:45.085777+00:00",
+    "game_id": "DET@LAA-2026-07-19",
+    "market": "batter_hr",
+    "model_p": 0.22,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "DET",
+      "date": "2026-07-19",
+      "home_name": "Angels",
+      "away_name": "Tigers",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kerry Carpenter",
+          "p_hr": 0.22,
+          "team": "DET"
+        },
+        {
+          "name": "Dillon Dingler",
+          "p_hr": 0.198,
+          "team": "DET"
+        },
+        {
+          "name": "Riley Greene",
+          "p_hr": 0.159,
+          "team": "DET"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:49.159133+00:00",
+    "game_id": "STL@AZ-2026-07-19",
+    "market": "moneyline_home",
+    "model_p": 0.5405,
+    "market_p": 0.535,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "STL",
+      "date": "2026-07-19",
+      "home_name": "Diamondbacks",
+      "away_name": "Cardinals",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:49.179054+00:00",
+    "game_id": "STL@AZ-2026-07-19",
+    "market": "total_over_8.5",
+    "model_p": 0.5185,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "STL",
+      "date": "2026-07-19",
+      "home_name": "Diamondbacks",
+      "away_name": "Cardinals",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:49.198490+00:00",
+    "game_id": "STL@AZ-2026-07-19",
+    "market": "nrfi",
+    "model_p": 0.506,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "STL",
+      "date": "2026-07-19",
+      "home_name": "Diamondbacks",
+      "away_name": "Cardinals",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:49.217654+00:00",
+    "game_id": "STL@AZ-2026-07-19",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.166,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "STL",
+      "date": "2026-07-19",
+      "home_name": "Diamondbacks",
+      "away_name": "Cardinals",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Andre Pallante"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:49.236381+00:00",
+    "game_id": "STL@AZ-2026-07-19",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.1545,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "STL",
+      "date": "2026-07-19",
+      "home_name": "Diamondbacks",
+      "away_name": "Cardinals",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Eduardo Rodriguez"
+    }
+  },
+  {
+    "ts": "2026-07-19T18:57:49.256580+00:00",
+    "game_id": "STL@AZ-2026-07-19",
+    "market": "batter_hr",
+    "model_p": 0.157,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "STL",
+      "date": "2026-07-19",
+      "home_name": "Diamondbacks",
+      "away_name": "Cardinals",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Ketel Marte",
+          "p_hr": 0.157,
+          "team": "AZ"
+        },
+        {
+          "name": "Jordan Walker",
+          "p_hr": 0.153,
+          "team": "STL"
+        },
+        {
+          "name": "Corbin Carroll",
+          "p_hr": 0.143,
+          "team": "AZ"
+        }
+      ]
+    }
   }
 ]
