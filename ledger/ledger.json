@@ -27051,5 +27051,640 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-20T22:52:41.541964+00:00",
+    "game_id": "DET@CHC-2026-07-21",
+    "market": "moneyline_home",
+    "model_p": 0.521,
+    "market_p": 0.51,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "DET",
+      "date": "2026-07-21",
+      "home_name": "Cubs",
+      "away_name": "Tigers",
+      "park": "CHC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:41.562485+00:00",
+    "game_id": "DET@CHC-2026-07-21",
+    "market": "total_over_8.5",
+    "model_p": 0.5535,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "DET",
+      "date": "2026-07-21",
+      "home_name": "Cubs",
+      "away_name": "Tigers",
+      "park": "CHC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:41.581975+00:00",
+    "game_id": "DET@CHC-2026-07-21",
+    "market": "nrfi",
+    "model_p": 0.485,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "DET",
+      "date": "2026-07-21",
+      "home_name": "Cubs",
+      "away_name": "Tigers",
+      "park": "CHC",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:41.601432+00:00",
+    "game_id": "DET@CHC-2026-07-21",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.48,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "DET",
+      "date": "2026-07-21",
+      "home_name": "Cubs",
+      "away_name": "Tigers",
+      "park": "CHC",
+      "lineup_source": "confirmed",
+      "sp": "Jack Flaherty"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:41.620922+00:00",
+    "game_id": "DET@CHC-2026-07-21",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.3125,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "DET",
+      "date": "2026-07-21",
+      "home_name": "Cubs",
+      "away_name": "Tigers",
+      "park": "CHC",
+      "lineup_source": "confirmed",
+      "sp": "Jameson Taillon"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:41.640324+00:00",
+    "game_id": "DET@CHC-2026-07-21",
+    "market": "batter_hr",
+    "model_p": 0.224,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CHC",
+      "away": "DET",
+      "date": "2026-07-21",
+      "home_name": "Cubs",
+      "away_name": "Tigers",
+      "park": "CHC",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Kerry Carpenter",
+          "p_hr": 0.224,
+          "team": "DET"
+        },
+        {
+          "name": "Dillon Dingler",
+          "p_hr": 0.211,
+          "team": "DET"
+        },
+        {
+          "name": "Riley Greene",
+          "p_hr": 0.184,
+          "team": "DET"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:46.006849+00:00",
+    "game_id": "WSH@COL-2026-07-21",
+    "market": "moneyline_home",
+    "model_p": 0.448,
+    "market_p": 0.455,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "WSH",
+      "date": "2026-07-21",
+      "home_name": "Rockies",
+      "away_name": "Nationals",
+      "park": "COL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:46.027050+00:00",
+    "game_id": "WSH@COL-2026-07-21",
+    "market": "total_over_8.5",
+    "model_p": 0.6495,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "WSH",
+      "date": "2026-07-21",
+      "home_name": "Rockies",
+      "away_name": "Nationals",
+      "park": "COL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:46.046641+00:00",
+    "game_id": "WSH@COL-2026-07-21",
+    "market": "nrfi",
+    "model_p": 0.466,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "WSH",
+      "date": "2026-07-21",
+      "home_name": "Rockies",
+      "away_name": "Nationals",
+      "park": "COL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:46.066428+00:00",
+    "game_id": "WSH@COL-2026-07-21",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.3955,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "WSH",
+      "date": "2026-07-21",
+      "home_name": "Rockies",
+      "away_name": "Nationals",
+      "park": "COL",
+      "lineup_source": "confirmed",
+      "sp": "Andrew Alvarez"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:46.086087+00:00",
+    "game_id": "WSH@COL-2026-07-21",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2455,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "WSH",
+      "date": "2026-07-21",
+      "home_name": "Rockies",
+      "away_name": "Nationals",
+      "park": "COL",
+      "lineup_source": "confirmed",
+      "sp": "Kyle Freeland"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:46.105818+00:00",
+    "game_id": "WSH@COL-2026-07-21",
+    "market": "batter_hr",
+    "model_p": 0.209,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "COL",
+      "away": "WSH",
+      "date": "2026-07-21",
+      "home_name": "Rockies",
+      "away_name": "Nationals",
+      "park": "COL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "James Wood",
+          "p_hr": 0.209,
+          "team": "WSH"
+        },
+        {
+          "name": "Hunter Goodman",
+          "p_hr": 0.2,
+          "team": "COL"
+        },
+        {
+          "name": "Curtis Mead",
+          "p_hr": 0.173,
+          "team": "WSH"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:50.336265+00:00",
+    "game_id": "ATH@AZ-2026-07-21",
+    "market": "moneyline_home",
+    "model_p": 0.562,
+    "market_p": 0.575,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "ATH",
+      "date": "2026-07-21",
+      "home_name": "Diamondbacks",
+      "away_name": "Athletics",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:50.356769+00:00",
+    "game_id": "ATH@AZ-2026-07-21",
+    "market": "total_over_8.5",
+    "model_p": 0.526,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "ATH",
+      "date": "2026-07-21",
+      "home_name": "Diamondbacks",
+      "away_name": "Athletics",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:50.376548+00:00",
+    "game_id": "ATH@AZ-2026-07-21",
+    "market": "nrfi",
+    "model_p": 0.501,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "ATH",
+      "date": "2026-07-21",
+      "home_name": "Diamondbacks",
+      "away_name": "Athletics",
+      "park": "AZ",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:50.396150+00:00",
+    "game_id": "ATH@AZ-2026-07-21",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.187,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "ATH",
+      "date": "2026-07-21",
+      "home_name": "Diamondbacks",
+      "away_name": "Athletics",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Jeffrey Springs"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:50.415707+00:00",
+    "game_id": "ATH@AZ-2026-07-21",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2965,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "ATH",
+      "date": "2026-07-21",
+      "home_name": "Diamondbacks",
+      "away_name": "Athletics",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "sp": "Mitch Bratt"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:50.435357+00:00",
+    "game_id": "ATH@AZ-2026-07-21",
+    "market": "batter_hr",
+    "model_p": 0.198,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "AZ",
+      "away": "ATH",
+      "date": "2026-07-21",
+      "home_name": "Diamondbacks",
+      "away_name": "Athletics",
+      "park": "AZ",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Ketel Marte",
+          "p_hr": 0.198,
+          "team": "AZ"
+        },
+        {
+          "name": "Shea Langeliers",
+          "p_hr": 0.184,
+          "team": "ATH"
+        },
+        {
+          "name": "Gabriel Moreno",
+          "p_hr": 0.142,
+          "team": "AZ"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:54.615347+00:00",
+    "game_id": "CIN@SEA-2026-07-21",
+    "market": "moneyline_home",
+    "model_p": 0.5715,
+    "market_p": 0.575,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "CIN",
+      "date": "2026-07-21",
+      "home_name": "Mariners",
+      "away_name": "Reds",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:54.635995+00:00",
+    "game_id": "CIN@SEA-2026-07-21",
+    "market": "total_over_8.5",
+    "model_p": 0.381,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "CIN",
+      "date": "2026-07-21",
+      "home_name": "Mariners",
+      "away_name": "Reds",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:54.655680+00:00",
+    "game_id": "CIN@SEA-2026-07-21",
+    "market": "nrfi",
+    "model_p": 0.568,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "CIN",
+      "date": "2026-07-21",
+      "home_name": "Mariners",
+      "away_name": "Reds",
+      "park": "SEA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:54.675423+00:00",
+    "game_id": "CIN@SEA-2026-07-21",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2225,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "CIN",
+      "date": "2026-07-21",
+      "home_name": "Mariners",
+      "away_name": "Reds",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "Andrew Abbott"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:54.695172+00:00",
+    "game_id": "CIN@SEA-2026-07-21",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.472,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "CIN",
+      "date": "2026-07-21",
+      "home_name": "Mariners",
+      "away_name": "Reds",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "sp": "George Kirby"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:54.714881+00:00",
+    "game_id": "CIN@SEA-2026-07-21",
+    "market": "batter_hr",
+    "model_p": 0.173,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "SEA",
+      "away": "CIN",
+      "date": "2026-07-21",
+      "home_name": "Mariners",
+      "away_name": "Reds",
+      "park": "SEA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Cal Raleigh",
+          "p_hr": 0.173,
+          "team": "SEA"
+        },
+        {
+          "name": "Julio Rodr\u00edguez",
+          "p_hr": 0.154,
+          "team": "SEA"
+        },
+        {
+          "name": "Dominic Canzone",
+          "p_hr": 0.153,
+          "team": "SEA"
+        }
+      ]
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:58.966157+00:00",
+    "game_id": "STL@LAA-2026-07-21",
+    "market": "moneyline_home",
+    "model_p": 0.503,
+    "market_p": 0.505,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "STL",
+      "date": "2026-07-21",
+      "home_name": "Angels",
+      "away_name": "Cardinals",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:58.986873+00:00",
+    "game_id": "STL@LAA-2026-07-21",
+    "market": "total_over_8.5",
+    "model_p": 0.434,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "STL",
+      "date": "2026-07-21",
+      "home_name": "Angels",
+      "away_name": "Cardinals",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:59.007108+00:00",
+    "game_id": "STL@LAA-2026-07-21",
+    "market": "nrfi",
+    "model_p": 0.5475,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "STL",
+      "date": "2026-07-21",
+      "home_name": "Angels",
+      "away_name": "Cardinals",
+      "park": "LAA",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:59.026968+00:00",
+    "game_id": "STL@LAA-2026-07-21",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.417,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "STL",
+      "date": "2026-07-21",
+      "home_name": "Angels",
+      "away_name": "Cardinals",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "sp": "Kyle Leahy"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:59.046906+00:00",
+    "game_id": "STL@LAA-2026-07-21",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.35,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "STL",
+      "date": "2026-07-21",
+      "home_name": "Angels",
+      "away_name": "Cardinals",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "sp": "Jos\u00e9 Soriano"
+    }
+  },
+  {
+    "ts": "2026-07-20T22:52:59.066715+00:00",
+    "game_id": "STL@LAA-2026-07-21",
+    "market": "batter_hr",
+    "model_p": 0.14,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "LAA",
+      "away": "STL",
+      "date": "2026-07-21",
+      "home_name": "Angels",
+      "away_name": "Cardinals",
+      "park": "LAA",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Alec Burleson",
+          "p_hr": 0.14,
+          "team": "STL"
+        },
+        {
+          "name": "Mike Trout",
+          "p_hr": 0.135,
+          "team": "LAA"
+        },
+        {
+          "name": "JJ Wetherholt",
+          "p_hr": 0.126,
+          "team": "STL"
+        }
+      ]
+    }
   }
 ]
