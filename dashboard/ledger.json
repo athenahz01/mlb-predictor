@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-07-20",
+    "away": "MIN",
+    "home": "CLE",
+    "away_name": "Twins",
+    "home_name": "Guardians",
+    "model_home_win_pct": 50.5,
+    "market_home_win_pct": 46.0,
+    "edge": 4.5,
+    "contrarian": false,
+    "logged_at": "2026-07-20T19:29:57.675602+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 57.9,
+      "over_8_5_pct": 36.4,
+      "away_sp_k_over_5_5_pct": 45.1,
+      "home_sp_k_over_5_5_pct": 24.5,
+      "away_sp": "Joe Ryan",
+      "home_sp": "Tanner Bibee",
+      "hr_threats": [
+        {
+          "name": "Byron Buxton",
+          "team": "MIN",
+          "pct": 20.0
+        },
+        {
+          "name": "Kody Clemens",
+          "team": "MIN",
+          "pct": 16.1
+        },
+        {
+          "name": "Brooks Lee",
+          "team": "MIN",
+          "pct": 13.9
+        }
+      ]
+    }
+  },
+  {
     "date": "2026-07-19",
     "away": "STL",
     "home": "AZ",
