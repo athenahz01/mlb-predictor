@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-22",
+    "away": "MIN",
+    "home": "CLE",
+    "away_name": "Twins",
+    "home_name": "Guardians",
+    "model_home_win_pct": 60.2,
+    "market_home_win_pct": 54.5,
+    "edge": 5.7,
+    "contrarian": false,
+    "logged_at": "2026-07-22T19:02:32.400043+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 53.6,
+      "over_8_5_pct": 43.4,
+      "away_sp_k_over_5_5_pct": 10.8,
+      "home_sp_k_over_5_5_pct": 17.3,
+      "away_sp": "Bailey Ober",
+      "home_sp": "Slade Cecconi",
+      "hr_threats": [
+        {
+          "name": "Jos\u00e9 Ram\u00edrez",
+          "team": "CLE",
+          "pct": 18.1
+        },
+        {
+          "name": "Kyle Manzardo",
+          "team": "CLE",
+          "pct": 16.9
+        },
+        {
+          "name": "Kody Clemens",
+          "team": "MIN",
+          "pct": 14.1
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-22",
     "away": "NYM",
     "home": "MIL",
     "away_name": "Mets",

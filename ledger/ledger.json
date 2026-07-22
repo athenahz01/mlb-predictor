@@ -29972,5 +29972,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-22T19:02:32.400043+00:00",
+    "game_id": "MIN@CLE-2026-07-22",
+    "market": "moneyline_home",
+    "model_p": 0.6025,
+    "market_p": 0.545,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "MIN",
+      "date": "2026-07-22",
+      "home_name": "Guardians",
+      "away_name": "Twins",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-22T19:02:32.423912+00:00",
+    "game_id": "MIN@CLE-2026-07-22",
+    "market": "total_over_8.5",
+    "model_p": 0.434,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "MIN",
+      "date": "2026-07-22",
+      "home_name": "Guardians",
+      "away_name": "Twins",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-22T19:02:32.447055+00:00",
+    "game_id": "MIN@CLE-2026-07-22",
+    "market": "nrfi",
+    "model_p": 0.5365,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "MIN",
+      "date": "2026-07-22",
+      "home_name": "Guardians",
+      "away_name": "Twins",
+      "park": "CLE",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-22T19:02:32.470284+00:00",
+    "game_id": "MIN@CLE-2026-07-22",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.108,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "MIN",
+      "date": "2026-07-22",
+      "home_name": "Guardians",
+      "away_name": "Twins",
+      "park": "CLE",
+      "lineup_source": "confirmed",
+      "sp": "Bailey Ober"
+    }
+  },
+  {
+    "ts": "2026-07-22T19:02:32.493516+00:00",
+    "game_id": "MIN@CLE-2026-07-22",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.173,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "MIN",
+      "date": "2026-07-22",
+      "home_name": "Guardians",
+      "away_name": "Twins",
+      "park": "CLE",
+      "lineup_source": "confirmed",
+      "sp": "Slade Cecconi"
+    }
+  },
+  {
+    "ts": "2026-07-22T19:02:32.516872+00:00",
+    "game_id": "MIN@CLE-2026-07-22",
+    "market": "batter_hr",
+    "model_p": 0.181,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "CLE",
+      "away": "MIN",
+      "date": "2026-07-22",
+      "home_name": "Guardians",
+      "away_name": "Twins",
+      "park": "CLE",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Jos\u00e9 Ram\u00edrez",
+          "p_hr": 0.181,
+          "team": "CLE"
+        },
+        {
+          "name": "Kyle Manzardo",
+          "p_hr": 0.169,
+          "team": "CLE"
+        },
+        {
+          "name": "Kody Clemens",
+          "p_hr": 0.141,
+          "team": "MIN"
+        }
+      ]
+    }
   }
 ]
