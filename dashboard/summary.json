@@ -1,9 +1,9 @@
 {
-  "n_finals": 260,
-  "n_compared": 254,
-  "model_brier": 0.242,
-  "market_brier": 0.24,
-  "picks_correct": 154,
-  "picks_total": 260,
-  "accuracy": 0.592
+  "n_finals": 263,
+  "n_compared": 257,
+  "model_brier": 0.243,
+  "market_brier": 0.241,
+  "picks_correct": 155,
+  "picks_total": 263,
+  "accuracy": 0.589
 }
