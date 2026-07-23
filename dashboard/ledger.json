@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-23",
+    "away": "TB",
+    "home": "TOR",
+    "away_name": "Rays",
+    "home_name": "Blue Jays",
+    "model_home_win_pct": 51.0,
+    "market_home_win_pct": 48.5,
+    "edge": 2.5,
+    "contrarian": false,
+    "logged_at": "2026-07-23T17:12:20.857682+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 50.1,
+      "over_8_5_pct": 44.6,
+      "away_sp_k_over_5_5_pct": 22.6,
+      "home_sp_k_over_5_5_pct": 23.2,
+      "away_sp": "Casey Legumina",
+      "home_sp": "Shane Bieber",
+      "hr_threats": [
+        {
+          "name": "Jonathan Aranda",
+          "team": "TB",
+          "pct": 16.9
+        },
+        {
+          "name": "Junior Caminero",
+          "team": "TB",
+          "pct": 15.9
+        },
+        {
+          "name": "Yandy D\u00edaz",
+          "team": "TB",
+          "pct": 14.4
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-23",
     "away": "SD",
     "home": "ATL",
     "away_name": "Padres",

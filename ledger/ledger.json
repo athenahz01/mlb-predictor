@@ -30988,5 +30988,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-23T17:12:20.857682+00:00",
+    "game_id": "TB@TOR-2026-07-23",
+    "market": "moneyline_home",
+    "model_p": 0.51,
+    "market_p": 0.485,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TB",
+      "date": "2026-07-23",
+      "home_name": "Blue Jays",
+      "away_name": "Rays",
+      "park": "TOR",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T17:12:20.881224+00:00",
+    "game_id": "TB@TOR-2026-07-23",
+    "market": "total_over_8.5",
+    "model_p": 0.4465,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TB",
+      "date": "2026-07-23",
+      "home_name": "Blue Jays",
+      "away_name": "Rays",
+      "park": "TOR",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T17:12:20.903844+00:00",
+    "game_id": "TB@TOR-2026-07-23",
+    "market": "nrfi",
+    "model_p": 0.5015,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TB",
+      "date": "2026-07-23",
+      "home_name": "Blue Jays",
+      "away_name": "Rays",
+      "park": "TOR",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T17:12:20.926599+00:00",
+    "game_id": "TB@TOR-2026-07-23",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2255,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TB",
+      "date": "2026-07-23",
+      "home_name": "Blue Jays",
+      "away_name": "Rays",
+      "park": "TOR",
+      "lineup_source": "confirmed",
+      "sp": "Casey Legumina"
+    }
+  },
+  {
+    "ts": "2026-07-23T17:12:20.949118+00:00",
+    "game_id": "TB@TOR-2026-07-23",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2315,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TB",
+      "date": "2026-07-23",
+      "home_name": "Blue Jays",
+      "away_name": "Rays",
+      "park": "TOR",
+      "lineup_source": "confirmed",
+      "sp": "Shane Bieber"
+    }
+  },
+  {
+    "ts": "2026-07-23T17:12:20.972568+00:00",
+    "game_id": "TB@TOR-2026-07-23",
+    "market": "batter_hr",
+    "model_p": 0.169,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "TOR",
+      "away": "TB",
+      "date": "2026-07-23",
+      "home_name": "Blue Jays",
+      "away_name": "Rays",
+      "park": "TOR",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Jonathan Aranda",
+          "p_hr": 0.169,
+          "team": "TB"
+        },
+        {
+          "name": "Junior Caminero",
+          "p_hr": 0.159,
+          "team": "TB"
+        },
+        {
+          "name": "Yandy D\u00edaz",
+          "p_hr": 0.144,
+          "team": "TB"
+        }
+      ]
+    }
   }
 ]
