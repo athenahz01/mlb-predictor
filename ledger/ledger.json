@@ -30861,5 +30861,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-23T14:47:42.369856+00:00",
+    "game_id": "SD@ATL-2026-07-23",
+    "market": "moneyline_home",
+    "model_p": 0.5745,
+    "market_p": 0.695,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "SD",
+      "date": "2026-07-23",
+      "home_name": "Braves",
+      "away_name": "Padres",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T14:47:42.411171+00:00",
+    "game_id": "SD@ATL-2026-07-23",
+    "market": "total_over_8.5",
+    "model_p": 0.3555,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "SD",
+      "date": "2026-07-23",
+      "home_name": "Braves",
+      "away_name": "Padres",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T14:47:42.449913+00:00",
+    "game_id": "SD@ATL-2026-07-23",
+    "market": "nrfi",
+    "model_p": 0.5755,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "SD",
+      "date": "2026-07-23",
+      "home_name": "Braves",
+      "away_name": "Padres",
+      "park": "ATL",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T14:47:42.484236+00:00",
+    "game_id": "SD@ATL-2026-07-23",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.2225,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "SD",
+      "date": "2026-07-23",
+      "home_name": "Braves",
+      "away_name": "Padres",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Kyle Hart"
+    }
+  },
+  {
+    "ts": "2026-07-23T14:47:42.516086+00:00",
+    "game_id": "SD@ATL-2026-07-23",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.473,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "SD",
+      "date": "2026-07-23",
+      "home_name": "Braves",
+      "away_name": "Padres",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "sp": "Chris Sale"
+    }
+  },
+  {
+    "ts": "2026-07-23T14:47:42.548421+00:00",
+    "game_id": "SD@ATL-2026-07-23",
+    "market": "batter_hr",
+    "model_p": 0.149,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "ATL",
+      "away": "SD",
+      "date": "2026-07-23",
+      "home_name": "Braves",
+      "away_name": "Padres",
+      "park": "ATL",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Matt Olson",
+          "p_hr": 0.149,
+          "team": "ATL"
+        },
+        {
+          "name": "Drake Baldwin",
+          "p_hr": 0.143,
+          "team": "ATL"
+        },
+        {
+          "name": "Austin Riley",
+          "p_hr": 0.135,
+          "team": "ATL"
+        }
+      ]
+    }
   }
 ]
