@@ -24,6 +24,7 @@ data/athena_dev.db
 web/.next*/
 web/node_modules/
 web/.env.local
+web/*.tsbuildinfo
 
 # OS / editor
 .DS_Store
