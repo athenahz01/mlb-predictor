@@ -76,6 +76,16 @@ def main():
     ap.add_argument("--no-market", action="store_true", help="skip the Kalshi pull")
     ap.add_argument("--sims", type=int, default=2000)
     ap.add_argument("--all", action="store_true", help="log even started/final games")
+    # v2 rate/context flags. The code body reads all four; argparse must define
+    # them or `python run_slate.py ... --xrates` dies with "unrecognized arguments".
+    ap.add_argument("--xrates", action="store_true",
+                    help="delucked contact-quality (x-)rates; gate-passed, live in CI")
+    ap.add_argument("--env", action="store_true",
+                    help="game-time weather + plate-umpire K mult (ungated; keep OFF in CI)")
+    ap.add_argument("--workload", action="store_true",
+                    help="per-starter pitch limits from recent starts (ungated; keep OFF in CI)")
+    ap.add_argument("--availability", action="store_true",
+                    help="downweight relievers used the previous two days (ungated; keep OFF in CI)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
