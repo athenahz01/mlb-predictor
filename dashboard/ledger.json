@@ -128,7 +128,7 @@
     "contrarian": false,
     "logged_at": "2026-07-22T22:56:06.951998+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 54.8,
       "over_8_5_pct": 44.5,
@@ -153,7 +153,12 @@
           "pct": 14.7
         }
       ]
-    }
+    },
+    "home_score": 2,
+    "away_score": 4,
+    "winner": "TB",
+    "pick_correct": false,
+    "total_runs": 6
   },
   {
     "date": "2026-07-22",
@@ -167,7 +172,7 @@
     "contrarian": true,
     "logged_at": "2026-07-22T20:58:38.253026+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 56.8,
       "over_8_5_pct": 37.0,
@@ -192,7 +197,12 @@
           "pct": 14.3
         }
       ]
-    }
+    },
+    "home_score": 7,
+    "away_score": 6,
+    "winner": "ATL",
+    "pick_correct": true,
+    "total_runs": 13
   },
   {
     "date": "2026-07-22",
@@ -206,7 +216,7 @@
     "contrarian": true,
     "logged_at": "2026-07-22T20:58:35.350097+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 43.9,
       "over_8_5_pct": 56.6,
@@ -231,7 +241,12 @@
           "pct": 23.0
         }
       ]
-    }
+    },
+    "home_score": 5,
+    "away_score": 9,
+    "winner": "LAD",
+    "pick_correct": true,
+    "total_runs": 14
   },
   {
     "date": "2026-07-22",
@@ -245,7 +260,7 @@
     "contrarian": false,
     "logged_at": "2026-07-22T19:02:32.400043+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 53.6,
       "over_8_5_pct": 43.4,
@@ -270,7 +285,12 @@
           "pct": 14.1
         }
       ]
-    }
+    },
+    "home_score": 6,
+    "away_score": 10,
+    "winner": "MIN",
+    "pick_correct": false,
+    "total_runs": 16
   },
   {
     "date": "2026-07-22",
@@ -442,11 +462,11 @@
         }
       ]
     },
-    "home_score": 3,
-    "away_score": 5,
-    "winner": "PIT",
-    "pick_correct": false,
-    "total_runs": 8
+    "home_score": 2,
+    "away_score": 0,
+    "winner": "NYY",
+    "pick_correct": true,
+    "total_runs": 2
   },
   {
     "date": "2026-07-22",
