@@ -18,6 +18,7 @@ Columns out:
   elo_p          Elo's pre-game P(home win)  -> baseline column, not a feature
   home_win       target (1/0)
 """
+
 from __future__ import annotations
 
 import datetime as dt
@@ -26,8 +27,8 @@ import json
 import pandas as pd
 
 import config
-from models.elo import EloModel
 from models import pythag
+from models.elo import EloModel
 
 FEATURE_COLS = ["elo_diff", "pythag_diff", "home_rest", "away_rest"]
 
@@ -44,13 +45,14 @@ def build_training_table(season: int, burn_in: int = 100) -> pd.DataFrame:
     rpath = config.SNAPSHOTS / f"results_{season}.json"
     if not rpath.exists():
         raise FileNotFoundError(
-            f"No results snapshot. Run: python -m ingest.pull_results --season {season}")
+            f"No results snapshot. Run: python -m ingest.pull_results --season {season}"
+        )
     games = json.loads(rpath.read_text())
     games.sort(key=lambda g: (g["date"], g["gamePk"]))
 
     elo = EloModel()
-    runs = {}                       # team -> {R, RA, G}
-    last_game = {}                  # team -> date
+    runs = {}  # team -> {R, RA, G}
+    last_game = {}  # team -> date
     rows = []
 
     for i, g in enumerate(games):
@@ -59,7 +61,8 @@ def build_training_table(season: int, burn_in: int = 100) -> pd.DataFrame:
 
         # --- features from state BEFORE this game ---
         elo_diff = elo.rating(h) - elo.rating(a)
-        hp = runs.get(h); ap = runs.get(a)
+        hp = runs.get(h)
+        ap = runs.get(a)
         if hp and ap and hp["G"] > 0 and ap["G"] > 0:
             pyth_h = pythag.win_pct(hp["R"], hp["RA"], hp["G"])
             pyth_a = pythag.win_pct(ap["R"], ap["RA"], ap["G"])
@@ -70,22 +73,33 @@ def build_training_table(season: int, burn_in: int = 100) -> pd.DataFrame:
         away_rest = min((d - last_game[a]).days, 7) if a in last_game else 3
         elo_p = elo.predict(h, a)
 
-        rows.append({
-            "date": g["date"], "home": h, "away": a,
-            "elo_diff": elo_diff, "pythag_diff": pythag_diff,
-            "home_rest": home_rest, "away_rest": away_rest,
-            "elo_p": elo_p,
-            "home_win": int(g["home_score"] > g["away_score"]),
-            "idx": i,
-        })
+        rows.append(
+            {
+                "date": g["date"],
+                "home": h,
+                "away": a,
+                "elo_diff": elo_diff,
+                "pythag_diff": pythag_diff,
+                "home_rest": home_rest,
+                "away_rest": away_rest,
+                "elo_p": elo_p,
+                "home_win": int(g["home_score"] > g["away_score"]),
+                "idx": i,
+            }
+        )
 
         # --- now update state with the outcome ---
         elo.update(h, a, g["home_score"], g["away_score"])
-        for team, rf, ra in ((h, g["home_score"], g["away_score"]),
-                             (a, g["away_score"], g["home_score"])):
+        for team, rf, ra in (
+            (h, g["home_score"], g["away_score"]),
+            (a, g["away_score"], g["home_score"]),
+        ):
             r = runs.setdefault(team, {"R": 0, "RA": 0, "G": 0})
-            r["R"] += rf; r["RA"] += ra; r["G"] += 1
-        last_game[h] = d; last_game[a] = d
+            r["R"] += rf
+            r["RA"] += ra
+            r["G"] += 1
+        last_game[h] = d
+        last_game[a] = d
 
     df = pd.DataFrame(rows)
     if burn_in:
@@ -95,6 +109,7 @@ def build_training_table(season: int, burn_in: int = 100) -> pd.DataFrame:
 
 if __name__ == "__main__":
     import argparse
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--season", type=int, default=dt.date.today().year)
     args = ap.parse_args()

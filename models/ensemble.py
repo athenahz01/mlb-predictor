@@ -9,23 +9,25 @@ isotonic-calibrated, and significance-tested against the Elo baseline so it only
 This is the rig that answers the video's question: is the new model actually
 smarter, or just lucky?
 """
+
 from __future__ import annotations
 
 import numpy as np
 import pandas as pd
-
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.calibration import CalibratedClassifierCV
-from sklearn.metrics import log_loss, brier_score_loss
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import brier_score_loss
 
-from models.features import FEATURE_COLS
 from backtest.walk_forward import paired_bootstrap_pvalue
+from models.features import FEATURE_COLS
 
 try:
     from xgboost import XGBClassifier
+
     _HAVE_XGB = True
 except Exception:
     from sklearn.ensemble import GradientBoostingClassifier
+
     _HAVE_XGB = False
 
 
@@ -35,15 +37,22 @@ class EnsembleModel:
         self.gb = None
 
     def fit(self, X, y):
-        rf = RandomForestClassifier(n_estimators=300, max_depth=5,
-                                    min_samples_leaf=20, random_state=0)
+        rf = RandomForestClassifier(
+            n_estimators=300, max_depth=5, min_samples_leaf=20, random_state=0
+        )
         if _HAVE_XGB:
-            gb = XGBClassifier(n_estimators=200, max_depth=3, learning_rate=0.05,
-                               subsample=0.8, eval_metric="logloss",
-                               random_state=0)
+            gb = XGBClassifier(
+                n_estimators=200,
+                max_depth=3,
+                learning_rate=0.05,
+                subsample=0.8,
+                eval_metric="logloss",
+                random_state=0,
+            )
         else:
-            gb = GradientBoostingClassifier(n_estimators=200, max_depth=3,
-                                            learning_rate=0.05, random_state=0)
+            gb = GradientBoostingClassifier(
+                n_estimators=200, max_depth=3, learning_rate=0.05, random_state=0
+            )
         # isotonic calibration via internal CV on the training split
         self.rf = CalibratedClassifierCV(rf, method="isotonic", cv=3).fit(X, y)
         self.gb = CalibratedClassifierCV(gb, method="isotonic", cv=3).fit(X, y)
@@ -67,8 +76,7 @@ def _per_game_logloss(p, y, eps=1e-9):
     return -(y * np.log(p) + (1 - y) * np.log(1 - p))
 
 
-def train_and_gate(df: pd.DataFrame, test_frac: float = 0.30,
-                   alpha: float = 0.05) -> dict:
+def train_and_gate(df: pd.DataFrame, test_frac: float = 0.30, alpha: float = 0.05) -> dict:
     """
     Train the ensemble on the early games, test on the most recent games, and
     decide ship/hold vs the Elo baseline via paired bootstrap on log-loss.
@@ -79,18 +87,19 @@ def train_and_gate(df: pd.DataFrame, test_frac: float = 0.30,
 
     model = EnsembleModel().fit(Xtr, ytr)
     p_model = model.predict_proba(Xte)
-    p_elo = test["elo_p"].values            # incumbent baseline on same games
+    p_elo = test["elo_p"].values  # incumbent baseline on same games
 
     loss_model = _per_game_logloss(p_model, yte)
     loss_elo = _per_game_logloss(p_elo, yte)
     p_value = paired_bootstrap_pvalue(loss_model, loss_elo)
 
     return {
-        "n_train": len(train), "n_test": len(test),
+        "n_train": len(train),
+        "n_test": len(test),
         "model_logloss": float(loss_model.mean()),
         "elo_logloss": float(loss_elo.mean()),
         "model_brier": float(brier_score_loss(yte, p_model)),
-        "elo_brier": float(brier_score_loss(yte, np.clip(p_elo, 1e-6, 1-1e-6))),
+        "elo_brier": float(brier_score_loss(yte, np.clip(p_elo, 1e-6, 1 - 1e-6))),
         "model_acc": float(np.mean((p_model > 0.5) == (yte == 1))),
         "p_value_vs_elo": p_value,
         "ship": bool(p_value < alpha),
@@ -101,6 +110,7 @@ def train_and_gate(df: pd.DataFrame, test_frac: float = 0.30,
 
 def save_model(model: EnsembleModel, season: int):
     import joblib
+
     out_dir = __import__("config").ARTIFACTS
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / f"ensemble_{season}.joblib"
@@ -109,26 +119,36 @@ def save_model(model: EnsembleModel, season: int):
 
 
 def load_model(season: int):
-    import joblib, config
+    import joblib
+
+    import config
+
     path = config.ARTIFACTS / f"ensemble_{season}.joblib"
     return joblib.load(path) if path.exists() else None
 
 
 if __name__ == "__main__":
-    import argparse, datetime as dt
+    import argparse
+    import datetime as dt
+
     from models.features import build_training_table
+
     ap = argparse.ArgumentParser()
     ap.add_argument("--season", type=int, default=dt.date.today().year)
     args = ap.parse_args()
     df = build_training_table(args.season)
     r = train_and_gate(df)
     print(f"train {r['n_train']}  test {r['n_test']}  (xgboost={r['xgboost']})")
-    print(f"ensemble  log-loss {r['model_logloss']:.4f}  brier {r['model_brier']:.4f}  acc {r['model_acc']:.3f}")
+    print(
+        f"ensemble  log-loss {r['model_logloss']:.4f}  brier {r['model_brier']:.4f}  acc {r['model_acc']:.3f}"
+    )
     print(f"elo base  log-loss {r['elo_logloss']:.4f}  brier {r['elo_brier']:.4f}")
     print(f"paired-bootstrap p vs Elo: {r['p_value_vs_elo']:.4f}")
     if r["ship"]:
         path = save_model(r["_model"], args.season)
         print(f"SHIP - ensemble beats Elo at p<0.05. Saved -> {path.name}")
     else:
-        print("HOLD - ensemble does NOT beat Elo at p<0.05. Not shipping "
-              "(this is the gate working, not a failure).")
+        print(
+            "HOLD - ensemble does NOT beat Elo at p<0.05. Not shipping "
+            "(this is the gate working, not a failure)."
+        )

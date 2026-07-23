@@ -17,17 +17,18 @@ Lineups, in order of preference:
 A missing player (rookie / tiny sample) falls back to a league-average profile
 rather than crashing. Everything degrades; nothing hard-fails.
 """
+
 from __future__ import annotations
 
 import json
-from pathlib import Path
-from typing import Optional
 
 import numpy as np
 import pandas as pd
 
 import config
 from features.pa_probabilities import Batter, Pitcher
+from models.batter_playing_time import fit_playing_time
+from models.player_projection import SeasonLine, project_player
 from sim.markov_game import Team
 
 EVENTS = config.EVENTS
@@ -37,8 +38,8 @@ _L = config.LEAGUE_PA_RATES
 # A player is blended: weight = own_sample / (own_sample + K). Low-PA players
 # get pulled hard toward league average, which kills flukey extremes (a 6-PA
 # hitter with 2 HR is NOT a 33%-HR hitter).
-K_BAT = 150     # in plate appearances
-K_PIT = 200     # in batters faced
+K_BAT = 150  # in plate appearances
+K_PIT = 200  # in batters faced
 
 
 def _shrink(rates: dict, sample: int, K: int) -> dict:
@@ -46,6 +47,7 @@ def _shrink(rates: dict, sample: int, K: int) -> dict:
     Both inputs sum to 1, so the blend stays a valid distribution."""
     w = sample / (sample + K) if sample and sample > 0 else 0.0
     return {e: w * rates.get(e, _L[e]) + (1 - w) * _L[e] for e in EVENTS}
+
 
 # a slightly-better-than-league bullpen profile (relievers miss more bats)
 _BULLPEN_RATES = dict(_L)
@@ -62,11 +64,17 @@ def _hand_cache(season: int) -> tuple[dict, dict]:
     bcache = config.SNAPSHOTS / f"hand_batter_{season}.parquet"
     pcache = config.SNAPSHOTS / f"hand_pitcher_{season}.parquet"
     if bcache.exists() and pcache.exists():
-        b = pd.read_parquet(bcache); p = pd.read_parquet(pcache)
-        return (dict(zip(b["id"], b["hand"])), dict(zip(p["id"], p["hand"])))
+        b = pd.read_parquet(bcache)
+        p = pd.read_parquet(pcache)
+        return (
+            dict(zip(b["id"], b["hand"], strict=True)),
+            dict(zip(p["id"], p["hand"], strict=True)),
+        )
 
-    sc = pd.read_parquet(config.SNAPSHOTS / f"statcast_{season}.parquet",
-                         columns=["batter", "pitcher", "stand", "p_throws"])
+    sc = pd.read_parquet(
+        config.SNAPSHOTS / f"statcast_{season}.parquet",
+        columns=["batter", "pitcher", "stand", "p_throws"],
+    )
     # batter: switch if both L and R appear meaningfully, else the mode
     bh = {}
     for bid, grp in sc.groupby("batter")["stand"]:
@@ -75,25 +83,98 @@ def _hand_cache(season: int) -> tuple[dict, dict]:
             bh[int(bid)] = "S"
         else:
             bh[int(bid)] = str(share.idxmax())
-    ph = {int(pid): str(g.value_counts().idxmax())
-          for pid, g in sc.groupby("pitcher")["p_throws"]}
+    ph = {int(pid): str(g.value_counts().idxmax()) for pid, g in sc.groupby("pitcher")["p_throws"]}
 
     pd.DataFrame({"id": list(bh), "hand": list(bh.values())}).to_parquet(bcache)
     pd.DataFrame({"id": list(ph), "hand": list(ph.values())}).to_parquet(pcache)
     return bh, ph
 
 
-def load_rate_tables(season: int, xrates: bool = False):
+def load_rate_tables(season: int, xrates: bool = False, *, player_platoon: bool = False):
     """xrates=True loads the DELUCKED contact-quality tables (ingest/xrates.py)."""
     stem = "pa_xrates" if xrates else "pa_rates"
     bat = pd.read_parquet(config.SNAPSHOTS / f"{stem}_batter_{season}.parquet")
     pit = pd.read_parquet(config.SNAPSHOTS / f"{stem}_pitcher_{season}.parquet")
     bhand, phand = _hand_cache(season)
-    return {"bat": bat, "pit": pit, "bhand": bhand, "phand": phand}
+    tables = {"bat": bat, "pit": pit, "bhand": bhand, "phand": phand}
+    split_path = config.SNAPSHOTS / f"player_platoon_{season}.json"
+    if player_platoon and split_path.exists():
+        split_payload = json.loads(split_path.read_text())
+        tables["bat_splits"] = {
+            int(pid): rates for pid, rates in split_payload.get("batters", {}).items()
+        }
+        tables["pit_splits"] = {
+            int(pid): rates for pid, rates in split_payload.get("pitchers", {}).items()
+        }
+    return tables
 
 
-def _blend_tables(cur: pd.DataFrame, prior: pd.DataFrame,
-                  prior_weight: int) -> pd.DataFrame:
+def load_hierarchical_rate_tables(
+    target_season: int,
+    seasons: tuple[int, ...] | None = None,
+    *,
+    ages: dict[int, float] | None = None,
+) -> dict:
+    """Build the Phase 2 projection challenger from pre-existing frozen tables.
+
+    This does not become a champion merely by being available. Historical
+    evaluation must pass only tables and contact-quality snapshots that existed
+    before each game.
+    """
+    seasons = seasons or (target_season - 1, target_season)
+    observed = {season: load_rate_tables(season) for season in seasons}
+    expected = {
+        season: load_rate_tables(season, xrates=True)
+        for season in seasons
+        if (config.SNAPSHOTS / f"pa_xrates_batter_{season}.parquet").exists()
+    }
+    out: dict[str, object] = {}
+    for kind in ("bat", "pit"):
+        ids = set().union(*(set(tables[kind].index) for tables in observed.values()))
+        rows: dict[int, dict[str, float | int]] = {}
+        quality: dict[int, list[str]] = {}
+        for raw_pid in ids:
+            pid = int(raw_pid)
+            lines = []
+            for season in seasons:
+                table = observed[season][kind]
+                if raw_pid not in table.index:
+                    continue
+                row = table.loc[raw_pid]
+                expected_rates = None
+                expected_table = expected.get(season, {}).get(kind)
+                if expected_table is not None and raw_pid in expected_table.index:
+                    expected_row = expected_table.loc[raw_pid]
+                    expected_rates = {event: float(expected_row[event]) for event in EVENTS}
+                lines.append(
+                    SeasonLine(
+                        season=season,
+                        pa=int(row.get("PA", 0)),
+                        rates={event: float(row[event]) for event in EVENTS},
+                        expected_rates=expected_rates,
+                    )
+                )
+            projection = project_player(
+                lines,
+                target_season=target_season,
+                age=(ages or {}).get(pid),
+            )
+            rows[pid] = {**projection.rates, "PA": int(projection.effective_pa)}
+            quality[pid] = list(projection.data_quality_flags)
+        out[kind] = pd.DataFrame.from_dict(rows, orient="index")
+        out[f"{kind}_projection_flags"] = quality
+
+    last = observed[max(seasons)]
+    out["bhand"] = last["bhand"]
+    out["phand"] = last["phand"]
+    for key in ("bat_splits", "pit_splits"):
+        if key in last:
+            out[key] = last[key]
+    out["projection_version"] = "hierarchical-marcel-v1"
+    return out
+
+
+def _blend_tables(cur: pd.DataFrame, prior: pd.DataFrame, prior_weight: int) -> pd.DataFrame:
     """
     Blend current-season rates with prior-season rates per player, weighting the
     prior as `prior_weight` pseudo-PAs. Early in the season (little current data)
@@ -108,17 +189,20 @@ def _blend_tables(cur: pd.DataFrame, prior: pd.DataFrame,
         in_cur = pid in cur.index
         in_prior = pid in prior.index
         if in_cur and in_prior:
-            rc = cur.loc[pid]; pc = int(rc.get("PA", 0))
+            rc = cur.loc[pid]
+            pc = int(rc.get("PA", 0))
             rp = prior.loc[pid]
             w = min(int(rp.get("PA", 0)), prior_weight)
             denom = pc + w if (pc + w) > 0 else 1
             row = {e: (pc * float(rc[e]) + w * float(rp[e])) / denom for e in cols}
             row["PA"] = pc + w
         elif in_cur:
-            r = cur.loc[pid]; row = {e: float(r[e]) for e in cols}
+            r = cur.loc[pid]
+            row = {e: float(r[e]) for e in cols}
             row["PA"] = int(r.get("PA", 0))
         else:
-            r = prior.loc[pid]; row = {e: float(r[e]) for e in cols}
+            r = prior.loc[pid]
+            row = {e: float(r[e]) for e in cols}
             row["PA"] = int(r.get("PA", 0))
         out[pid] = row
     df = pd.DataFrame.from_dict(out, orient="index")
@@ -126,8 +210,9 @@ def _blend_tables(cur: pd.DataFrame, prior: pd.DataFrame,
     return df
 
 
-def load_blended_rate_tables(cur_season: int, prior_season: int,
-                             prior_weight: int = 200, xrates: bool = False):
+def load_blended_rate_tables(
+    cur_season: int, prior_season: int, prior_weight: int = 200, xrates: bool = False
+):
     """
     LIVE prediction tables: current-season rates blended onto last season.
     Use this for predicting TODAY's games (current-season-to-date is real past
@@ -138,7 +223,7 @@ def load_blended_rate_tables(cur_season: int, prior_season: int,
     prior = load_rate_tables(prior_season, xrates=xrates)
     bat = _blend_tables(cur["bat"], prior["bat"], prior_weight)
     pit = _blend_tables(cur["pit"], prior["pit"], prior_weight)
-    bhand = {**prior["bhand"], **cur["bhand"]}   # prefer current-season handedness
+    bhand = {**prior["bhand"], **cur["bhand"]}  # prefer current-season handedness
     phand = {**prior["phand"], **cur["phand"]}
     return {"bat": bat, "pit": pit, "bhand": bhand, "phand": phand}
 
@@ -146,7 +231,7 @@ def load_blended_rate_tables(cur_season: int, prior_season: int,
 # --------------------------------------------------------------------------
 # Build player objects from ids
 # --------------------------------------------------------------------------
-def _rates_row(pid: int, table: pd.DataFrame) -> Optional[dict]:
+def _rates_row(pid: int, table: pd.DataFrame) -> tuple[dict[str, float], int] | None:
     if pid in table.index:
         row = table.loc[pid]
         return {e: float(row[e]) for e in EVENTS}, int(row.get("PA", 0))
@@ -165,6 +250,14 @@ def make_batter(pid: int, name: str, tables: dict, order: int) -> Batter:
     if hand is None:
         hand = "R"
         flags.append("missing_batter_handedness_assumed_right")
+    projection_flags = tables.get("bat_projection_flags", {}).get(int(pid), [])
+    flags.extend(projection_flags)
+    playing_time = None
+    if "playing_time" in tables or tables.get("use_playing_time_prior", False):
+        playing_time = tables.get("playing_time", {}).get(int(pid))
+        if playing_time is None:
+            playing_time = fit_playing_time([])
+            flags.append("missing_playing_time_history_empirical_prior")
     return Batter(
         name=name,
         rates=rates,
@@ -172,6 +265,8 @@ def make_batter(pid: int, name: str, tables: dict, order: int) -> Batter:
         order=order,
         mlb_id=pid if pid > 0 else None,
         data_quality_flags=tuple(flags),
+        platoon_rates=tables.get("bat_splits", {}).get(int(pid), {}),
+        playing_time=playing_time,
     )
 
 
@@ -187,6 +282,7 @@ def make_pitcher(pid: int, name: str, tables: dict, is_starter=True) -> Pitcher:
     if hand is None:
         hand = "R"
         flags.append("missing_pitcher_handedness_assumed_right")
+    flags.extend(tables.get("pit_projection_flags", {}).get(int(pid), []))
     return Pitcher(
         name=name,
         rates=rates,
@@ -194,6 +290,7 @@ def make_pitcher(pid: int, name: str, tables: dict, is_starter=True) -> Pitcher:
         is_starter=is_starter,
         mlb_id=pid if pid > 0 else None,
         data_quality_flags=tuple(flags),
+        platoon_rates=tables.get("pit_splits", {}).get(int(pid), {}),
     )
 
 
@@ -210,22 +307,26 @@ def make_bullpen(code: str) -> Pitcher:
 
 # per-team bullpen: aggregate the team's actual relievers, usage-weighted,
 # shrunk toward the league bullpen profile so thin pens stay stable.
-RELIEVER_MIN_PA = 40        # enough batters faced for the rate to mean something
-RELIEVER_MAX_PA = 450       # above this it's a starter's workload, not a relief arm
-BULLPEN_SHRINK_K = 200      # pseudo-PAs of league prior mixed into the team aggregate
+RELIEVER_MIN_PA = 40  # enough batters faced for the rate to mean something
+RELIEVER_MAX_PA = 450  # above this it's a starter's workload, not a relief arm
+BULLPEN_SHRINK_K = 200  # pseudo-PAs of league prior mixed into the team aggregate
 
 
 def _team_pitcher_ids(team_id: int) -> list[int]:
     import requests
+
     url = f"{config.STATSAPI_BASE}/teams/{team_id}/roster"
     roster = requests.get(url, params={"rosterType": "active"}, timeout=20).json()
-    return [p["person"]["id"] for p in roster.get("roster", [])
-            if p.get("position", {}).get("abbreviation") == "P"]
+    return [
+        p["person"]["id"]
+        for p in roster.get("roster", [])
+        if p.get("position", {}).get("abbreviation") == "P"
+    ]
 
 
-def make_team_bullpen(code: str, team_id: int, tables: dict,
-                      starter_id: int = -1,
-                      unavailable: dict | None = None) -> Pitcher:
+def make_team_bullpen(
+    code: str, team_id: int, tables: dict, starter_id: int = -1, unavailable: dict | None = None
+) -> Pitcher:
     """Build a bullpen profile from the team's relief arms (everyone but the day's
     starter, in the relief-workload PA band), usage-weighted by batters faced and
     regressed to the league bullpen prior. Falls back to league-average if the
@@ -245,7 +346,7 @@ def make_team_bullpen(code: str, team_id: int, tables: dict,
             continue
         rates, pa = got
         if RELIEVER_MIN_PA <= pa <= RELIEVER_MAX_PA:
-            w = (unavailable or {}).get(pid, 1.0)   # recent-usage downweight
+            w = (unavailable or {}).get(pid, 1.0)  # recent-usage downweight
             if w > 0:
                 relievers.append((rates, pa * w))
 
@@ -254,7 +355,7 @@ def make_team_bullpen(code: str, team_id: int, tables: dict,
 
     total_pa = sum(pa for _, pa in relievers)
     agg = {e: sum(r[e] * pa for r, pa in relievers) / total_pa for e in EVENTS}
-    w = total_pa / (total_pa + BULLPEN_SHRINK_K)          # regress to league prior
+    w = total_pa / (total_pa + BULLPEN_SHRINK_K)  # regress to league prior
     rates = {e: w * agg[e] + (1 - w) * _BULLPEN_RATES[e] for e in EVENTS}
     return Pitcher(
         name=f"{code}_pen",
@@ -265,20 +366,120 @@ def make_team_bullpen(code: str, team_id: int, tables: dict,
     )
 
 
-def build_team(code: str, lineup: list[tuple[int, str]], starter_id: int,
-               starter_name: str, tables: dict, team_id: int = None,
-               unavailable: dict | None = None) -> Team:
+def make_team_bullpen_tiers(
+    code: str,
+    team_id: int,
+    tables: dict,
+    starter_id: int = -1,
+    unavailable: dict | None = None,
+) -> tuple[Pitcher, ...]:
+    """Build low/medium/high-leverage relief tiers from active relievers.
+
+    Quality orders deployment; recent-usage weights affect both membership and
+    aggregation. Explicit roster roles are not available from the current
+    source, so every tier carries that limitation as a visible flag.
+    """
+    try:
+        pids = _team_pitcher_ids(team_id)
+    except Exception:
+        return ()
+    return make_bullpen_tiers_from_pitcher_ids(
+        code,
+        pids,
+        tables,
+        starter_id=starter_id,
+        unavailable=unavailable,
+    )
+
+
+def make_bullpen_tiers_from_pitcher_ids(
+    code: str,
+    pids: list[int],
+    tables: dict,
+    starter_id: int = -1,
+    unavailable: dict | None = None,
+) -> tuple[Pitcher, ...]:
+    """Pure, replay-safe tier builder when the roster is supplied by the caller."""
+    candidates = []
+    for pid in pids:
+        if pid == starter_id:
+            continue
+        got = _rates_row(pid, tables["pit"])
+        if not got:
+            continue
+        rates, pa = got
+        availability = float((unavailable or {}).get(pid, 1.0))
+        if RELIEVER_MIN_PA <= pa <= RELIEVER_MAX_PA and availability > 0:
+            quality = rates["K"] - rates["BB"] - 1.5 * rates["HR"]
+            candidates.append((quality, pid, rates, pa * availability))
+    if len(candidates) < 3:
+        return ()
+
+    candidates.sort(key=lambda row: row[0])
+    chunks = np.array_split(np.array(candidates, dtype=object), 3)
+    tiers = []
+    for role, chunk in zip(("low", "medium", "high"), chunks, strict=True):
+        rows = list(chunk)
+        total = sum(float(row[3]) for row in rows)
+        aggregate = {
+            event: sum(float(row[2][event]) * float(row[3]) for row in rows) / total
+            for event in EVENTS
+        }
+        weight = total / (total + BULLPEN_SHRINK_K / 3.0)
+        rates = {
+            event: weight * aggregate[event] + (1.0 - weight) * _BULLPEN_RATES[event]
+            for event in EVENTS
+        }
+        dominant = max(rows, key=lambda row: float(row[3]))
+        dominant_pid = int(dominant[1])
+        tiers.append(
+            Pitcher(
+                name=f"{code}_{role}_leverage",
+                rates=rates,
+                hand=tables["phand"].get(dominant_pid, "R"),
+                is_starter=False,
+                mlb_id=dominant_pid,
+                data_quality_flags=("bullpen_role_inferred_from_quality",),
+                platoon_rates=tables.get("pit_splits", {}).get(dominant_pid, {}),
+                role=role,
+            )
+        )
+    return tuple(tiers)
+
+
+def build_team(
+    code: str,
+    lineup: list[tuple[int, str]],
+    starter_id: int,
+    starter_name: str,
+    tables: dict,
+    team_id: int | None = None,
+    unavailable: dict | None = None,
+) -> Team:
     """lineup = list of 9 (mlbam_id, name) in batting order."""
-    batters = [make_batter(pid, nm, tables, order=i + 1)
-               for i, (pid, nm) in enumerate(lineup)]
-    while len(batters) < 9:                      # pad if a short lineup slipped through
-        batters.append(make_batter(-1, f"{code}_filler{len(batters)+1}",
-                                    tables, order=len(batters) + 1))
+    batters = [make_batter(pid, nm, tables, order=i + 1) for i, (pid, nm) in enumerate(lineup)]
+    while len(batters) < 9:  # pad if a short lineup slipped through
+        batters.append(
+            make_batter(-1, f"{code}_filler{len(batters) + 1}", tables, order=len(batters) + 1)
+        )
     starter = make_pitcher(starter_id, starter_name, tables, is_starter=True)
-    pen = (make_team_bullpen(code, team_id, tables, starter_id,
-                             unavailable=unavailable)
-           if team_id else make_bullpen(code))
-    return Team(code=code, lineup=batters[:9], starter=starter, bullpen=pen)
+    pen = (
+        make_team_bullpen(code, team_id, tables, starter_id, unavailable=unavailable)
+        if team_id
+        else make_bullpen(code)
+    )
+    pen_tiers = (
+        make_team_bullpen_tiers(code, team_id, tables, starter_id, unavailable=unavailable)
+        if team_id and tables.get("use_bullpen_tiers", False)
+        else ()
+    )
+    return Team(
+        code=code,
+        lineup=batters[:9],
+        starter=starter,
+        bullpen=pen,
+        bullpen_tiers=pen_tiers,
+    )
 
 
 # --------------------------------------------------------------------------
@@ -289,7 +490,8 @@ def load_schedule(date: str) -> list[dict]:
     if not path.exists():
         raise FileNotFoundError(
             f"No schedule snapshot for {date}. Run:\n"
-            f"  python -m ingest.pull_mlb_statsapi --date {date}")
+            f"  python -m ingest.pull_mlb_statsapi --date {date}"
+        )
     return json.loads(path.read_text())["games"]
 
 
@@ -299,7 +501,7 @@ def find_game(games: list[dict], spec: str) -> dict:
     for g in games:
         if g["away"].upper() == away and g["home"].upper() == home:
             return g
-    have = ", ".join(f'{g["away"]}@{g["home"]}' for g in games)
+    have = ", ".join(f"{g['away']}@{g['home']}" for g in games)
     raise ValueError(f"{spec} not in schedule. Today: {have}")
 
 
@@ -310,6 +512,7 @@ def resolve_lineup(gamePk: int, side: str) -> tuple[list[tuple[int, str]], str]:
     """
     try:
         from ingest.pull_mlb_statsapi import boxscore_lineups
+
         box = boxscore_lineups(gamePk)
         order = box.get(side, [])
         lineup = [(p["id"], p["name"]) for p in order if p.get("id")]
@@ -320,25 +523,25 @@ def resolve_lineup(gamePk: int, side: str) -> tuple[list[tuple[int, str]], str]:
     return [], "none"
 
 
-def projected_lineup_from_roster(team_id: int, tables: dict,
-                                 n: int = 9) -> list[tuple[int, str]]:
+def projected_lineup_from_roster(team_id: int, tables: dict, n: int = 9) -> list[tuple[int, str]]:
     """
     Fallback projected lineup: active hitters on the 40-man, top-N by PA in the
     rate table, ordered by PA (a crude proxy, NOT a real batting order).
     """
     try:
         import requests
+
         url = f"{config.STATSAPI_BASE}/teams/{team_id}/roster"
         roster = requests.get(url, params={"rosterType": "active"}, timeout=20).json()
         ids = {}
         for p in roster.get("roster", []):
-            pid = p["person"]["id"]; nm = p["person"]["fullName"]
+            pid = p["person"]["id"]
+            nm = p["person"]["fullName"]
             pos = p.get("position", {}).get("abbreviation", "")
-            if pos not in ("P",):                 # hitters only
+            if pos not in ("P",):  # hitters only
                 ids[pid] = nm
         bat = tables["bat"]
-        cand = [(pid, nm, int(bat.loc[pid, "PA"]))
-                for pid, nm in ids.items() if pid in bat.index]
+        cand = [(pid, nm, int(bat.loc[pid, "PA"])) for pid, nm in ids.items() if pid in bat.index]
         cand.sort(key=lambda x: -x[2])
         return [(pid, nm) for pid, nm, _ in cand[:n]]
     except Exception as e:
@@ -346,9 +549,15 @@ def projected_lineup_from_roster(team_id: int, tables: dict,
         return []
 
 
-def build_game(spec: str, date: str, season: int, tables=None,
-               env: bool = False, workload: bool = False,
-               availability: bool = False):
+def build_game(
+    spec: str,
+    date: str,
+    season: int,
+    tables=None,
+    env: bool = False,
+    workload: bool = False,
+    availability: bool = False,
+):
     """
     Full path: snapshot schedule -> find game -> resolve both lineups ->
     build Team objects + GameContext. Returns (home, away, ctx, info).
@@ -358,18 +567,25 @@ def build_game(spec: str, date: str, season: int, tables=None,
     availability: downweight relievers used the previous two days (live only).
     """
     from sim.markov_game import GameContext
+
     games = load_schedule(date)
     g = find_game(games, spec)
     if tables is None:
         tables = load_rate_tables(season)
 
-    info = {"game": f'{g["away"]}@{g["home"]}', "venue": g.get("venue"),
-            "home_sp": g.get("home_probable"), "away_sp": g.get("away_probable")}
+    info = {
+        "game": f"{g['away']}@{g['home']}",
+        "venue": g.get("venue"),
+        "home_sp": g.get("home_probable"),
+        "away_sp": g.get("away_probable"),
+    }
 
     sources = {}
     sides = {}
-    for side, code, tid in (("home", g["home"], g["home_team_id"]),
-                            ("away", g["away"], g["away_team_id"])):
+    for side, code, tid in (
+        ("home", g["home"], g["home_team_id"]),
+        ("away", g["away"], g["away_team_id"]),
+    ):
         lineup, src = resolve_lineup(g["gamePk"], side)
         if not lineup:
             lineup = projected_lineup_from_roster(tid, tables)
@@ -381,30 +597,41 @@ def build_game(spec: str, date: str, season: int, tables=None,
     unavail_h = unavail_a = None
     if availability:
         from features.environment import unavailable_relievers
+
         if g.get("home_team_id"):
             unavail_h = unavailable_relievers(g["home_team_id"], date)
         if g.get("away_team_id"):
             unavail_a = unavailable_relievers(g["away_team_id"], date)
-    home = build_team(sides["home"][0], sides["home"][1],
-                      g.get("home_probable_id") or -1,
-                      g.get("home_probable") or "TBD", tables,
-                      team_id=g.get("home_team_id"), unavailable=unavail_h)
-    away = build_team(sides["away"][0], sides["away"][1],
-                      g.get("away_probable_id") or -1,
-                      g.get("away_probable") or "TBD", tables,
-                      team_id=g.get("away_team_id"), unavailable=unavail_a)
+    home = build_team(
+        sides["home"][0],
+        sides["home"][1],
+        g.get("home_probable_id") or -1,
+        g.get("home_probable") or "TBD",
+        tables,
+        team_id=g.get("home_team_id"),
+        unavailable=unavail_h,
+    )
+    away = build_team(
+        sides["away"][0],
+        sides["away"][1],
+        g.get("away_probable_id") or -1,
+        g.get("away_probable") or "TBD",
+        tables,
+        team_id=g.get("away_team_id"),
+        unavailable=unavail_a,
+    )
     if workload:
-        from features.environment import starter_pitch_limit
+        from features.environment import starter_workload
+
         for team, pid_key in ((home, "home_probable_id"), (away, "away_probable_id")):
             pid = g.get(pid_key)
             if pid:
-                lim = starter_pitch_limit(pid)
-                if lim:
-                    team.pitch_limit = lim
+                team.starter_workload = starter_workload(pid, as_of_date=date)
 
-    ctx = GameContext(park_code=g["home"])        # home team abbr -> park factor key
+    ctx = GameContext(park_code=g["home"])  # home team abbr -> park factor key
     if env:
-        from features.environment import weather_mults, ump_k_mult
+        from features.environment import ump_k_mult, weather_mults
+
         wx = weather_mults(g["home"], date)
         ctx.env_hr, ctx.env_hit = wx["hr"], wx["hit"]
         if g.get("gamePk"):

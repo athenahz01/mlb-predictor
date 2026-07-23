@@ -4,14 +4,50 @@ Last updated: 2026-07-23
 
 ## Current phase
 
-Phase 1 integrity infrastructure is implemented and verified locally. Phase 4/5 product
-surfaces are implemented against the canonical API and pass local build/tests. The Phase 1
-production gate is **not yet passed** because a Supabase project is not connected, legacy
-prop outcomes remain partially unrecoverable, and the full incremental Statcast promotion
-job has not yet been run on a frozen production snapshot.
+**Phase 2 (model improvement) is complete as a research pass.** All seven Tier 1 challengers
+were implemented behind compatibility-safe interfaces, evaluated on frozen data through the
+Phase 2 gate, and **rejected** — champions are unchanged. Phase 1 integrity infrastructure and
+Phase 4/5 product surfaces remain implemented and verified locally.
 
-The existing static dashboard remains the production surface. No production cutover,
+The Phase 1 production gate is still **not passed** (no Supabase project, legacy prop outcomes
+partially unrecoverable, incremental Statcast promotion not yet run on a frozen production
+snapshot). The existing static dashboard remains the production surface. No production cutover,
 infrastructure provisioning, DNS change, paid service, or live trading action has occurred.
+
+## Phase 2 results (model improvement)
+
+Seven Tier 1 challengers were built and evaluated one model-family-at-a-time against the
+simulation champion, using 2025 Statcast as a frozen prior and the first 150 chronological
+2026 games as the test window (250 sims/arm, 10,000 date-clustered bootstrap resamples,
+practical-effect threshold, time-half stability, collateral-output checks, Holm adjustment).
+
+**Outcome: all seven rejected; no champion changed.** `projection` (hierarchical Marcel) was
+the only arm with a positive primary point estimate (+0.00335 winner log-loss) but its CI
+crosses zero (Holm p = 1.0). Full table and rationale are in `docs/GRAVEYARD.md`; machine
+artifacts (per-game/per-player losses, seeds, snapshot hashes, versions) are in
+`reports/phase2/`.
+
+Tier 2: umpire and defense models rejected for data availability (0% umpire-ID coverage; no
+OAA/framing fields); pitch-type matchup was feasible, evaluated, and rejected on its metrics.
+
+Known limitation: the Phase 2 test is likely underpowered (150 games, single prior season,
+250 sims/arm). Re-run with more games, multi-season priors, and more simulations before
+treating the negatives as settled.
+
+## Champion models (unchanged after Phase 2)
+
+| Category | Champion | Status | Rationale |
+| --- | --- | --- | --- |
+| Game winner | Legacy Elo baseline | Provisional | Simulation and all Phase 2 challengers failed the date-clustered ship gate. |
+| Totals | None | Experimental | Bullpen/transition challengers did not clear the totals CRPS gate. |
+| NRFI/YRFI | None | Experimental | Descriptive calibration did not clear readiness threshold. |
+| Starter strikeouts | Simulation v2 | Provisional | Workload challenger did not improve starter-K CRPS. |
+| Batter hits | None | Unavailable | No complete reproducible evaluation artifact. |
+| Batter total bases | None | Experimental | Existing x-rate result lacks full new gate metadata. |
+| Batter home runs | None | Experimental | Playing-time challenger did not improve HR Brier. |
+
+No market-outperformance claim is permitted. Across 265 legacy dashboard games with a
+market value, model Brier is 0.242 versus market Brier 0.240.
 
 ## Completed milestones
 
@@ -55,74 +91,39 @@ infrastructure provisioning, DNS change, paid service, or live trading action ha
   motion states.
 - Added a product-specific Open Graph card and verified exact generated text.
 - Added 30 grounded-agent evaluation cases, including 14 refusal cases.
-
-## Current champion models
-
-| Category | Champion | Status | Rationale |
-| --- | --- | --- | --- |
-| Game winner | Legacy Elo baseline | Provisional | Simulation did not clear the new date-clustered ship gate against Elo. |
-| Totals | None | Experimental | 100-game replay ECE 0.121; needs work after bullpen changes. |
-| NRFI/YRFI | None | Experimental | Descriptive calibration did not clear readiness threshold. |
-| Starter strikeouts | Simulation v2 | Provisional | Old descriptive gate passed; full frozen report still required. |
-| Batter hits | None | Unavailable | No complete reproducible evaluation artifact. |
-| Batter total bases | None | Experimental | Existing x-rate result lacks full new gate metadata. |
-| Batter home runs | None | Experimental | Existing x-rate result lacks full new gate metadata. |
-
-No market-outperformance claim is permitted. Across 265 legacy dashboard games with a
-market value, model Brier is 0.242 versus market Brier 0.240.
-
-## Audit findings and important decisions
-
-- The dashboard independently resolves finals while every source JSON ledger row remains
-  unresolved. Decision: database is canonical; frontend/API no longer infer canonical
-  resolution from display data.
-- Source rows have no model versions, player IDs, snapshots, feature versions, seeds, or
-  revision lineage. Decision: preserve them as `legacy-unknown` with explicit quality flags.
-- `run_slate.py` skips a whole game once any row exists, so scratches/lineup changes cannot
-  revise it. Decision: all new writes go through idempotent immutable revision creation.
-- Missing player data previously fell back silently to league average. Decision: keep
-  conservative priors only with user-visible quality flags and reduced confidence.
-- Environment effects were omitted from bullpen matchup probabilities. Decision: apply
-  the same validated context to starter and bullpen matchup calculation.
-- Existing backtests bootstrap by game and treat p-value as the ship rule. Decision: use
-  chronological frozen data, date clusters, effect threshold, confidence interval, and
-  multiple-testing policy.
-- Render is the selected backend preview target because it supports a health-checked web
-  service from a repository blueprint with no required infrastructure code. Vercel remains
-  the frontend target. Neither has been provisioned.
-- Alembic is the single migration system; Supabase migrations are not mixed in.
-- Market comparison remains stored for research but secondary in the product.
+- **Phase 2:** implemented hierarchical player projection, player-level platoon splits,
+  stochastic starter workload, role/leverage bullpen tiers, batter playing-time survival,
+  empirical base-out transitions, and pitch-type matchup models — all opt-in behind the
+  existing simulation contract.
+- **Phase 2:** added the frozen-data challenger evaluation harness (`evaluation/run_phase2.py`,
+  `evaluation/challenger.py`, `evaluation/finalize_phase2.py`) with discrete CRPS, time-half
+  stability, collateral-output checks, and Holm adjustment; wrote all machine-readable
+  artifacts to `reports/phase2/`.
+- **Phase 2:** removed a simulator inefficiency (matchup probabilities were recomputed per
+  Monte Carlo game instead of once per batch).
 
 ## Tests and gates completed
 
 - Existing `self_test.py`: pass.
-- Python tests: 15 pass.
-- Targeted Ruff checks: pass.
-- Mypy type check: pass across 21 new API/evaluation/pipeline/script modules.
-- Frontend strict TypeScript: pass.
-- Frontend ESLint: pass.
-- Frontend production build: pass using an isolated verification output directory.
-- NPM dependency audit: zero known vulnerabilities.
-- API smoke: health, Today with real imported rows, and model-performance endpoints pass.
-- Historical migration: idempotent design; first import report complete.
-- Snapshot promotion/rollback/tamper tests: pass.
-- Seed reproducibility and probability distribution invariants: pass.
-- Agent grounding/refusal catalog: pass.
+- Python tests: **28 pass** (15 Phase 1 + 13 Phase 2 model/challenger tests).
+- Targeted Ruff checks: pass (including Phase 2 modules).
+- Mypy type check: pass across the new API/evaluation/pipeline/model modules.
+- Frontend strict TypeScript, ESLint, production build, npm audit: pass.
+- API smoke, snapshot promotion/rollback/tamper, seed reproducibility, distribution
+  invariants, agent grounding/refusal: pass.
+- Phase 2 challenger gate: all seven challengers evaluated and rejected with saved artifacts.
 
 ## Open issues
 
+- Re-run the Phase 2 gate with more statistical power (more test games, multi-season priors,
+  more simulations per arm) before treating the challenger rejections as final.
 - Build the fully incremental Statcast partition pull and measured daily rebuild; existing
   `pull_statcast.py` still downloads a full date range.
 - Run a production-sized snapshot candidate through promotion/rollback and record runtime.
 - Resolve legacy NRFI, starter-K, and batter-HR rows from MLB box scores where IDs can be
   recovered; 955 outcomes are still unavailable.
 - Add MLB gamePk and stable player IDs to old rows where deterministic matching is possible.
-- Replace fixed prior weights with the full event-specific hierarchical Marcel system.
-- Implement role-sequenced multi-reliever bullpen simulation and stochastic starter hook.
-- Fit play transitions from play-by-play data; current advancement logic remains simplified.
-- Complete Tier 1 challenger evaluations and document each ship/reject decision.
-- Expand real stored outputs for all Phase 3 categories; the simulation can calculate more
-  than the legacy ledger currently stores.
+- Expand real stored outputs for all Phase 3 categories.
 - Add end-to-end browser tests after the local browser connection is available.
 - Run preview auth against an actual Supabase project.
 
@@ -136,11 +137,10 @@ market value, model Brier is 0.242 versus market Brier 0.240.
 
 ## Next steps
 
-1. Complete incremental Statcast partitioning and frozen daily rebuild/promotion.
-2. Add canonical ledger writes to the scheduled slate job and retire display-side
-   resolution after parity verification.
-3. Recover prop outcomes/player IDs and rerun baselines from a complete snapshot.
-4. Execute Tier 1 model challengers one at a time and fill `docs/GRAVEYARD.md`.
+1. Re-run the Phase 2 evaluation with more power; promote any challenger that then clears.
+2. Complete incremental Statcast partitioning and frozen daily rebuild/promotion.
+3. Add canonical ledger writes to the scheduled slate job and retire display-side resolution.
+4. Recover prop outcomes/player IDs and rerun baselines from a complete snapshot.
 5. Connect a user-approved Supabase preview and verify magic-link auth/preferences.
 6. Run responsive browser QA and preview deployment.
 7. Prepare cutover evidence; do not switch production without explicit approval.

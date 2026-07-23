@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-07-23",
+  "frozen_snapshot": "statcast_2025.parquet",
+  "environment": {
+    "status": "reject",
+    "implemented_challenger": [
+      "temperature",
+      "humidity",
+      "wind speed",
+      "wind direction relative to center field",
+      "air density",
+      "static roof capability",
+      "park orientation",
+      "event-level park axes"
+    ],
+    "reason": "The repository has no frozen pregame forecast, actual roof-open state, park-renovation history, or handed park-factor history. A chronological replay would substitute hindsight or invented context, so the expanded environment model is not promoted.",
+    "operational_default": "neutral unless the existing live environment option is explicitly enabled"
+  },
+  "defense": {
+    "status": "reject",
+    "available": [
+      "fielder IDs",
+      "infield alignment",
+      "outfield alignment"
+    ],
+    "missing_required": [
+      "Outs Above Average",
+      "catcher framing outcomes",
+      "catcher blocking outcomes",
+      "outfield arm strength",
+      "defensive lineup projection history"
+    ],
+    "reason": "The frozen repository snapshot cannot reconstruct the requested defensive quality features before each game."
+  },
+  "umpire": {
+    "status": "reject",
+    "coverage": {
+      "called_ball_or_strike_rows": 383129,
+      "called_pitch_location": 0.9791532355942777,
+      "catcher_id": 1.0,
+      "umpire_id": 0.0
+    },
+    "reason": "Pitch location and catcher controls are present, but umpire identity coverage is exactly zero. An umpire effect cannot be trained, joined, or evaluated without identity."
+  },
+  "pitch_type_data_audit": {
+    "rows": 770795,
+    "pitch_type": 0.9765073722585124,
+    "velocity": 0.9765839166055825,
+    "movement": 0.9764061780369618,
+    "extension": 0.9763413099462244,
+    "handedness": 1.0,
+    "decision": "feasible; evaluated as pitch-type-matchup-v1"
+  }
+}

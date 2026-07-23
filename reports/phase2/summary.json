@@ -1,0 +1,687 @@
+{
+  "bullpen": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.09202008266666667,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.6543370434962967,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.24504202666666666,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.6832058046716066,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.2782885866666664,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.9165333333333336,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.7472575999999997,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.24355232000000002,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6805164208926986,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "bullpen",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -0.07687046360461997,
+          0.011072646950000046
+        ],
+        "effect": -0.038937386666666546,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.9423057694230577,
+        "passes_ci": false,
+        "passes_effect": false,
+        "passes_p": false,
+        "practical_effect_threshold": 0.02,
+        "seed": 20260726,
+        "ship": false
+      },
+      "challenger_mean_loss": 2.7472575999999997,
+      "champion_mean_loss": 2.7083202133333337,
+      "effect": -0.038937386666666546,
+      "holm_adjusted_p": 1.0,
+      "passes_holm": false,
+      "period_effects": [
+        -0.06026111999999993,
+        -0.017613653333333167
+      ],
+      "ship": false,
+      "stable_across_time_halves": false
+    },
+    "generated_at": "2026-07-23T21:44:05.022749+00:00",
+    "materially_damaged_outputs": [
+      "totals_crps",
+      "totals_absolute_error"
+    ],
+    "primary_metric": "totals_crps",
+    "status": "reject",
+    "versions": {
+      "challenger": "three-leverage-tier-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  },
+  "pitch_types": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.09221167893333333,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.6700358466962966,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.24333034666666664,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.6797503949985385,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.27963264,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.8889333333333336,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.7041016533333333,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.24903904000000002,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6915965855912708,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "pitch_types",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -0.01229884950388885,
+          0.006643833320378255
+        ],
+        "effect": -0.0014404183363279888,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.6191380861913809,
+        "passes_ci": false,
+        "passes_effect": false,
+        "passes_p": false,
+        "practical_effect_threshold": 0.001,
+        "seed": 20260723,
+        "ship": false
+      },
+      "challenger_mean_loss": 0.6915965855912708,
+      "champion_mean_loss": 0.6901561672549428,
+      "effect": -0.0014404183363279888,
+      "holm_adjusted_p": 1.0,
+      "passes_holm": false,
+      "period_effects": [
+        -0.014151452178300227,
+        0.011270615505644248
+      ],
+      "ship": false,
+      "stable_across_time_halves": false
+    },
+    "generated_at": "2026-07-23T21:50:14.970919+00:00",
+    "materially_damaged_outputs": [
+      "winner_log_loss"
+    ],
+    "primary_metric": "winner_log_loss",
+    "status": "reject",
+    "versions": {
+      "challenger": "pitch-type-matchup-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  },
+  "platoon": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.09218905546666667,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.6517402178962963,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.24580586666666668,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.6848322463163263,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.2884976000000001,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.8652266666666675,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.70310144,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.25081952,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6949257604758878,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "platoon",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -0.015814978592916005,
+          0.005398964350266712
+        ],
+        "effect": -0.004769593220945006,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.8267173282671733,
+        "passes_ci": false,
+        "passes_effect": false,
+        "passes_p": false,
+        "practical_effect_threshold": 0.001,
+        "seed": 20260724,
+        "ship": false
+      },
+      "challenger_mean_loss": 0.6949257604758878,
+      "champion_mean_loss": 0.6901561672549428,
+      "effect": -0.004769593220945006,
+      "holm_adjusted_p": 1.0,
+      "passes_holm": false,
+      "period_effects": [
+        -0.01149463972616206,
+        0.0019554532842720484
+      ],
+      "ship": false,
+      "stable_across_time_halves": false
+    },
+    "generated_at": "2026-07-23T21:44:05.003200+00:00",
+    "materially_damaged_outputs": [
+      "winner_log_loss",
+      "winner_brier"
+    ],
+    "primary_metric": "winner_log_loss",
+    "status": "reject",
+    "versions": {
+      "challenger": "player-platoon-partial-pooling-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  },
+  "playing_time": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.09226226962962962,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.668525137777778,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.24810154666666667,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.6895691856853129,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.27476816,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.8810133333333323,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.7083202133333337,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.24860223999999997,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6901561672549428,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "playing_time",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -6.361461951059052e-05,
+          0.00026875095689401975
+        ],
+        "effect": 0.00010741250370370266,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.11238876112388761,
+        "passes_ci": false,
+        "passes_effect": false,
+        "passes_p": false,
+        "practical_effect_threshold": 0.0005,
+        "seed": 20260727,
+        "ship": false
+      },
+      "challenger_mean_loss": 0.09226226962962962,
+      "champion_mean_loss": 0.09236968213333333,
+      "effect": 0.00010741250370370266,
+      "holm_adjusted_p": 0.7867213278672133,
+      "passes_holm": false,
+      "period_effects": [
+        0.0002186305185185173,
+        -3.8055111111120337e-06
+      ],
+      "ship": false,
+      "stable_across_time_halves": true
+    },
+    "generated_at": "2026-07-23T21:44:05.032518+00:00",
+    "materially_damaged_outputs": [],
+    "primary_metric": "batter_hr_brier",
+    "status": "reject",
+    "versions": {
+      "challenger": "starter-pa-survival-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  },
+  "projection": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.0923360624,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.6736782813629625,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.24728192,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.687898574602141,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.2849143466666668,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.8868533333333333,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.6965712,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.2468274133333333,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6868092674168118,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "projection",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -0.011794115621636363,
+          0.018640760828469518
+        ],
+        "effect": 0.0033468998381310446,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.32766723327667235,
+        "passes_ci": false,
+        "passes_effect": true,
+        "passes_p": false,
+        "practical_effect_threshold": 0.001,
+        "seed": 20260723,
+        "ship": false
+      },
+      "challenger_mean_loss": 0.6868092674168118,
+      "champion_mean_loss": 0.6901561672549428,
+      "effect": 0.0033468998381310446,
+      "holm_adjusted_p": 1.0,
+      "passes_holm": false,
+      "period_effects": [
+        -0.0007120146052569217,
+        0.007405814281519012
+      ],
+      "ship": false,
+      "stable_across_time_halves": true
+    },
+    "generated_at": "2026-07-23T21:44:04.993656+00:00",
+    "materially_damaged_outputs": [],
+    "primary_metric": "winner_log_loss",
+    "status": "reject",
+    "versions": {
+      "challenger": "hierarchical-marcel-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  },
+  "transitions": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.09244284213333333,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.67326736722963,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.2482139733333333,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.689476394401061,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.2800114133333333,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.974293333333335,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.7356622933333337,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.2419265066666667,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6769115010579287,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "transitions",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -0.07809721970761123,
+          0.03354619229775123
+        ],
+        "effect": -0.027342080000000026,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.8343165683431657,
+        "passes_ci": false,
+        "passes_effect": false,
+        "passes_p": false,
+        "practical_effect_threshold": 0.02,
+        "seed": 20260728,
+        "ship": false
+      },
+      "challenger_mean_loss": 2.7356622933333337,
+      "champion_mean_loss": 2.7083202133333337,
+      "effect": -0.027342080000000026,
+      "holm_adjusted_p": 1.0,
+      "passes_holm": false,
+      "period_effects": [
+        0.01621631999999999,
+        -0.07090048000000003
+      ],
+      "ship": false,
+      "stable_across_time_halves": false
+    },
+    "generated_at": "2026-07-23T21:44:05.042546+00:00",
+    "materially_damaged_outputs": [
+      "totals_crps",
+      "totals_absolute_error"
+    ],
+    "primary_metric": "totals_crps",
+    "status": "reject",
+    "versions": {
+      "challenger": "empirical-base-out-transitions-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  },
+  "workload": {
+    "collateral_metrics": {
+      "batter_hr_brier": {
+        "challenger": 0.09237107466666666,
+        "champion": 0.09236968213333333
+      },
+      "batter_tb_mse": {
+        "challenger": 2.652632758162963,
+        "champion": 2.660927472296297
+      },
+      "nrfi_brier": {
+        "challenger": 0.24437813333333339,
+        "champion": 0.24810154666666667
+      },
+      "nrfi_log_loss": {
+        "challenger": 0.6817983210452984,
+        "champion": 0.6895691856853129
+      },
+      "starter_k_crps": {
+        "challenger": 1.2950993066666667,
+        "champion": 1.27476816
+      },
+      "totals_absolute_error": {
+        "challenger": 3.8743733333333346,
+        "champion": 3.8810133333333323
+      },
+      "totals_crps": {
+        "challenger": 2.70492,
+        "champion": 2.7083202133333337
+      },
+      "winner_brier": {
+        "challenger": 0.24610186666666664,
+        "champion": 0.24860223999999997
+      },
+      "winner_log_loss": {
+        "challenger": 0.6853511999533217,
+        "champion": 0.6901561672549428
+      }
+    },
+    "evaluation_design": {
+      "bootstrap_resamples": 10000,
+      "calibration_window": null,
+      "dependency_cluster": "game date",
+      "random_seed": "gamePk % 9999",
+      "simulation_count_per_arm": 250,
+      "test_window": [
+        "2026-03-26",
+        "2026-04-07"
+      ],
+      "training_window": "2025-03-18 through 2025-09-28 frozen Statcast"
+    },
+    "experiment": "workload",
+    "gate": {
+      "bootstrap": {
+        "clusters": 13,
+        "confidence_interval": [
+          -0.08941681173155737,
+          0.05826922926829255
+        ],
+        "effect": -0.0203311466666667,
+        "n_boot": 10000,
+        "p_value_one_sided": 0.71002899710029,
+        "passes_ci": false,
+        "passes_effect": false,
+        "passes_p": false,
+        "practical_effect_threshold": 0.02,
+        "seed": 20260725,
+        "ship": false
+      },
+      "challenger_mean_loss": 1.2950993066666667,
+      "champion_mean_loss": 1.27476816,
+      "effect": -0.0203311466666667,
+      "holm_adjusted_p": 1.0,
+      "passes_holm": false,
+      "period_effects": [
+        -0.09659093333333336,
+        0.05592863999999994
+      ],
+      "ship": false,
+      "stable_across_time_halves": false
+    },
+    "generated_at": "2026-07-23T21:44:05.012723+00:00",
+    "materially_damaged_outputs": [
+      "starter_k_crps"
+    ],
+    "primary_metric": "starter_k_crps",
+    "status": "reject",
+    "versions": {
+      "challenger": "starter-workload-v1",
+      "champion": "simulation-v2-fixed-tier1-inputs",
+      "data_snapshot_ids": {
+        "prior_statcast": "380688d255df56df78e21e62a133eb3ff2038d6853ec2bea304ae1432aaaab99",
+        "results": "369067875b091c4a49eac2f775c350881f4397c6a5e8901bd1930c628e64bda8",
+        "test_statcast": "a6b482334d4e3f4ee2cda3e2d5c58050cdded68db9eb12dbecf6a7f191baecb1"
+      },
+      "feature_version": "phase2-tier1-v1"
+    }
+  }
+}

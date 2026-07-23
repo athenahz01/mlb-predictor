@@ -11,6 +11,7 @@ win%, then combines two teams' win% into a game probability via log5.
 This is a season-strength baseline: it knows nothing about today's starter, so
 it's deliberately weak. Its job is to be a floor the simulation must clear.
 """
+
 from __future__ import annotations
 
 
@@ -23,7 +24,7 @@ def pythagenpat_exponent(runs: float, runs_allowed: float, games: int) -> float:
 
 def win_pct(runs: float, runs_allowed: float, games: int) -> float:
     x = pythagenpat_exponent(runs, runs_allowed, games)
-    rx, rax = runs ** x, runs_allowed ** x
+    rx, rax = runs**x, runs_allowed**x
     if rx + rax == 0:
         return 0.5
     return rx / (rx + rax)

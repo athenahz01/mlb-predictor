@@ -10,14 +10,15 @@ at p<0.05 before any version ships.
 Requires a results snapshot first:
   python -m ingest.pull_results --season 2026
 """
+
 from __future__ import annotations
 
 import argparse
 import json
 
 import config
-from models.elo import EloModel
 from models import pythag
+from models.elo import EloModel
 
 
 def load_results(season: int):
@@ -25,7 +26,8 @@ def load_results(season: int):
     apath = config.SNAPSHOTS / f"team_runs_{season}.json"
     if not rpath.exists():
         raise FileNotFoundError(
-            f"No results snapshot. Run:  python -m ingest.pull_results --season {season}")
+            f"No results snapshot. Run:  python -m ingest.pull_results --season {season}"
+        )
     games = json.loads(rpath.read_text())
     agg = json.loads(apath.read_text()) if apath.exists() else {}
     return games, agg
@@ -43,10 +45,18 @@ def predict(home: str, away: str, season: int) -> dict:
     out = {"elo_home_p": round(elo.predict(home, away), 4)}
     if home in agg and away in agg:
         out["pythag_home_p"] = round(pythag.predict(agg[home], agg[away]), 4)
-        out["home_winpct"] = round(pythag.win_pct(**{
-            "runs": agg[home]["R"], "runs_allowed": agg[home]["RA"], "games": agg[home]["G"]}), 3)
-        out["away_winpct"] = round(pythag.win_pct(**{
-            "runs": agg[away]["R"], "runs_allowed": agg[away]["RA"], "games": agg[away]["G"]}), 3)
+        out["home_winpct"] = round(
+            pythag.win_pct(
+                **{"runs": agg[home]["R"], "runs_allowed": agg[home]["RA"], "games": agg[home]["G"]}
+            ),
+            3,
+        )
+        out["away_winpct"] = round(
+            pythag.win_pct(
+                **{"runs": agg[away]["R"], "runs_allowed": agg[away]["RA"], "games": agg[away]["G"]}
+            ),
+            3,
+        )
     else:
         out["pythag_home_p"] = None
         out["note"] = "team not in run aggregates yet"

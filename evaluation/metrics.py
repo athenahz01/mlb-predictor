@@ -86,9 +86,7 @@ def date_clustered_paired_bootstrap(
         sampled = np.concatenate([by_cluster[cluster] for cluster in sampled_clusters])
         samples[index] = sampled.mean()
     observed = float(difference.mean())
-    quantiles: NDArray[np.float64] = np.quantile(
-        samples, [alpha / 2, 1 - alpha / 2]
-    )
+    quantiles: NDArray[np.float64] = np.quantile(samples, [alpha / 2, 1 - alpha / 2])
     ci_low = float(quantiles[0])
     ci_high = float(quantiles[1])
     p_value = float((np.count_nonzero(samples <= 0) + 1) / (n_boot + 1))

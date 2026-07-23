@@ -14,12 +14,11 @@ Pitcher-adjusted MLB Elo, using FiveThirtyEight's published parameters:
 This is a team-strength baseline with a starter tweak. Like Pythag, its purpose
 is to be a floor the simulation must clear at p<0.05 before any version ships.
 """
+
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Dict, Optional
-
 import math
+from dataclasses import dataclass, field
 
 BASE = 1500.0
 HFA = 24.0
@@ -54,24 +53,43 @@ def pitcher_adj_from_stats(k: float, bb: float, hr: float, ip: float) -> float:
 
 @dataclass
 class EloModel:
-    ratings: Dict[str, float] = field(default_factory=dict)
+    ratings: dict[str, float] = field(default_factory=dict)
 
     def rating(self, team: str) -> float:
         return self.ratings.setdefault(team, BASE)
 
-    def predict(self, home: str, away: str, *,
-                home_pitcher_adj: float = 0.0, away_pitcher_adj: float = 0.0,
-                home_rest: int = 1, away_rest: int = 1,
-                travel_miles: float = 0.0) -> float:
-        home_eff = (self.rating(home) + HFA + home_pitcher_adj
-                    + home_rest * 2.3)
-        away_eff = (self.rating(away) + away_pitcher_adj + away_rest * 2.3
-                    - (travel_miles ** (1 / 3)) * 0.31 if travel_miles > 0
-                    else self.rating(away) + away_pitcher_adj + away_rest * 2.3)
+    def predict(
+        self,
+        home: str,
+        away: str,
+        *,
+        home_pitcher_adj: float = 0.0,
+        away_pitcher_adj: float = 0.0,
+        home_rest: int = 1,
+        away_rest: int = 1,
+        travel_miles: float = 0.0,
+    ) -> float:
+        home_eff = self.rating(home) + HFA + home_pitcher_adj + home_rest * 2.3
+        away_eff = (
+            self.rating(away)
+            + away_pitcher_adj
+            + away_rest * 2.3
+            - (travel_miles ** (1 / 3)) * 0.31
+            if travel_miles > 0
+            else self.rating(away) + away_pitcher_adj + away_rest * 2.3
+        )
         return expected_home(home_eff, away_eff)
 
-    def update(self, home: str, away: str, home_score: int, away_score: int,
-               *, postseason: bool = False, **predict_kwargs):
+    def update(
+        self,
+        home: str,
+        away: str,
+        home_score: int,
+        away_score: int,
+        *,
+        postseason: bool = False,
+        **predict_kwargs,
+    ):
         p_home = self.predict(home, away, **predict_kwargs)
         actual = 1.0 if home_score > away_score else 0.0
         kf = K_POST if postseason else K
@@ -93,12 +111,25 @@ class EloModel:
         """
         preds = []
         for g in games:
-            kw = {k: g[k] for k in
-                  ("home_pitcher_adj", "away_pitcher_adj", "home_rest",
-                   "away_rest", "travel_miles") if k in g}
-            p = self.update(g["home"], g["away"], g["home_score"],
-                            g["away_score"], postseason=g.get("postseason", False),
-                            **kw)
+            kw = {
+                k: g[k]
+                for k in (
+                    "home_pitcher_adj",
+                    "away_pitcher_adj",
+                    "home_rest",
+                    "away_rest",
+                    "travel_miles",
+                )
+                if k in g
+            }
+            p = self.update(
+                g["home"],
+                g["away"],
+                g["home_score"],
+                g["away_score"],
+                postseason=g.get("postseason", False),
+                **kw,
+            )
             preds.append((g, p))
         return preds
 
@@ -106,8 +137,9 @@ class EloModel:
 if __name__ == "__main__":
     # quick self-test: feed a season where team A beats team B repeatedly
     m = EloModel()
-    games = ([{"home": "A", "away": "B", "home_score": 5, "away_score": 3}] * 30 +
-             [{"home": "B", "away": "A", "home_score": 2, "away_score": 6}] * 30)
+    games = [{"home": "A", "away": "B", "home_score": 5, "away_score": 3}] * 30 + [
+        {"home": "B", "away": "A", "home_score": 2, "away_score": 6}
+    ] * 30
     m.run_games(games)
     print("rating A:", round(m.rating("A"), 1))
     print("rating B:", round(m.rating("B"), 1))
