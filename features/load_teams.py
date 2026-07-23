@@ -83,9 +83,11 @@ def _hand_cache(season: int) -> tuple[dict, dict]:
     return bh, ph
 
 
-def load_rate_tables(season: int):
-    bat = pd.read_parquet(config.SNAPSHOTS / f"pa_rates_batter_{season}.parquet")
-    pit = pd.read_parquet(config.SNAPSHOTS / f"pa_rates_pitcher_{season}.parquet")
+def load_rate_tables(season: int, xrates: bool = False):
+    """xrates=True loads the DELUCKED contact-quality tables (ingest/xrates.py)."""
+    stem = "pa_xrates" if xrates else "pa_rates"
+    bat = pd.read_parquet(config.SNAPSHOTS / f"{stem}_batter_{season}.parquet")
+    pit = pd.read_parquet(config.SNAPSHOTS / f"{stem}_pitcher_{season}.parquet")
     bhand, phand = _hand_cache(season)
     return {"bat": bat, "pit": pit, "bhand": bhand, "phand": phand}
 
@@ -125,15 +127,15 @@ def _blend_tables(cur: pd.DataFrame, prior: pd.DataFrame,
 
 
 def load_blended_rate_tables(cur_season: int, prior_season: int,
-                             prior_weight: int = 200):
+                             prior_weight: int = 200, xrates: bool = False):
     """
     LIVE prediction tables: current-season rates blended onto last season.
     Use this for predicting TODAY's games (current-season-to-date is real past
     data, so no leakage). Do NOT use for historical backtests -- that leaks
     future games into past predictions; use load_rate_tables(prior) there.
     """
-    cur = load_rate_tables(cur_season)
-    prior = load_rate_tables(prior_season)
+    cur = load_rate_tables(cur_season, xrates=xrates)
+    prior = load_rate_tables(prior_season, xrates=xrates)
     bat = _blend_tables(cur["bat"], prior["bat"], prior_weight)
     pit = _blend_tables(cur["pit"], prior["pit"], prior_weight)
     bhand = {**prior["bhand"], **cur["bhand"]}   # prefer current-season handedness
@@ -193,7 +195,8 @@ def _team_pitcher_ids(team_id: int) -> list[int]:
 
 
 def make_team_bullpen(code: str, team_id: int, tables: dict,
-                      starter_id: int = -1) -> Pitcher:
+                      starter_id: int = -1,
+                      unavailable: dict | None = None) -> Pitcher:
     """Build a bullpen profile from the team's relief arms (everyone but the day's
     starter, in the relief-workload PA band), usage-weighted by batters faced and
     regressed to the league bullpen prior. Falls back to league-average if the
@@ -213,7 +216,9 @@ def make_team_bullpen(code: str, team_id: int, tables: dict,
             continue
         rates, pa = got
         if RELIEVER_MIN_PA <= pa <= RELIEVER_MAX_PA:
-            relievers.append((rates, pa))
+            w = (unavailable or {}).get(pid, 1.0)   # recent-usage downweight
+            if w > 0:
+                relievers.append((rates, pa * w))
 
     if not relievers:
         return make_bullpen(code)
@@ -226,7 +231,8 @@ def make_team_bullpen(code: str, team_id: int, tables: dict,
 
 
 def build_team(code: str, lineup: list[tuple[int, str]], starter_id: int,
-               starter_name: str, tables: dict, team_id: int = None) -> Team:
+               starter_name: str, tables: dict, team_id: int = None,
+               unavailable: dict | None = None) -> Team:
     """lineup = list of 9 (mlbam_id, name) in batting order."""
     batters = [make_batter(pid, nm, tables, order=i + 1)
                for i, (pid, nm) in enumerate(lineup)]
@@ -234,7 +240,8 @@ def build_team(code: str, lineup: list[tuple[int, str]], starter_id: int,
         batters.append(make_batter(-1, f"{code}_filler{len(batters)+1}",
                                     tables, order=len(batters) + 1))
     starter = make_pitcher(starter_id, starter_name, tables, is_starter=True)
-    pen = (make_team_bullpen(code, team_id, tables, starter_id)
+    pen = (make_team_bullpen(code, team_id, tables, starter_id,
+                             unavailable=unavailable)
            if team_id else make_bullpen(code))
     return Team(code=code, lineup=batters[:9], starter=starter, bullpen=pen)
 
@@ -304,11 +311,16 @@ def projected_lineup_from_roster(team_id: int, tables: dict,
         return []
 
 
-def build_game(spec: str, date: str, season: int, tables=None):
+def build_game(spec: str, date: str, season: int, tables=None,
+               env: bool = False, workload: bool = False,
+               availability: bool = False):
     """
     Full path: snapshot schedule -> find game -> resolve both lineups ->
     build Team objects + GameContext. Returns (home, away, ctx, info).
     Pass `tables` (e.g. from load_blended_rate_tables) to override the rate source.
+    env         : apply game-day weather + umpire multipliers (live only).
+    workload    : per-starter pitch limits from recent pitch counts (live only).
+    availability: downweight relievers used the previous two days (live only).
     """
     from sim.markov_game import GameContext
     games = load_schedule(date)
@@ -331,14 +343,40 @@ def build_game(spec: str, date: str, season: int, tables=None):
         sides[side] = (code, lineup)
     info["lineup_source"] = sources
 
+    unavail_h = unavail_a = None
+    if availability:
+        from features.environment import unavailable_relievers
+        if g.get("home_team_id"):
+            unavail_h = unavailable_relievers(g["home_team_id"], date)
+        if g.get("away_team_id"):
+            unavail_a = unavailable_relievers(g["away_team_id"], date)
     home = build_team(sides["home"][0], sides["home"][1],
                       g.get("home_probable_id") or -1,
                       g.get("home_probable") or "TBD", tables,
-                      team_id=g.get("home_team_id"))
+                      team_id=g.get("home_team_id"), unavailable=unavail_h)
     away = build_team(sides["away"][0], sides["away"][1],
                       g.get("away_probable_id") or -1,
                       g.get("away_probable") or "TBD", tables,
-                      team_id=g.get("away_team_id"))
+                      team_id=g.get("away_team_id"), unavailable=unavail_a)
+    if workload:
+        from features.environment import starter_pitch_limit
+        for team, pid_key in ((home, "home_probable_id"), (away, "away_probable_id")):
+            pid = g.get(pid_key)
+            if pid:
+                lim = starter_pitch_limit(pid)
+                if lim:
+                    team.pitch_limit = lim
 
     ctx = GameContext(park_code=g["home"])        # home team abbr -> park factor key
+    if env:
+        from features.environment import weather_mults, ump_k_mult
+        wx = weather_mults(g["home"], date)
+        ctx.env_hr, ctx.env_hit = wx["hr"], wx["hit"]
+        if g.get("gamePk"):
+            ctx.ump_k_mult = ump_k_mult(g["gamePk"])
+        info_env = wx.get("detail")
+    else:
+        info_env = None
+    if info_env:
+        info["env"] = info_env
     return home, away, ctx, info

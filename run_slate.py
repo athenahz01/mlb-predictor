@@ -90,9 +90,13 @@ def main():
     winner_snap = None
     if not args.dry_run:
         try:
-            tables = (load_blended_rate_tables(cur_year, args.season) if args.blend
-                      else load_rate_tables(args.season))
-            print(f"[slate] rates: {'blended ' + str(cur_year) + '+' if args.blend else ''}{args.season}")
+            tables = (load_blended_rate_tables(cur_year, args.season,
+                                               xrates=args.xrates) if args.blend
+                      else load_rate_tables(args.season, xrates=args.xrates))
+            print(f"[slate] rates: {'blended ' + str(cur_year) + '+' if args.blend else ''}"
+                  f"{args.season}{' (xrates)' if args.xrates else ''}"
+                  f"{' +env' if args.env else ''}{' +workload' if args.workload else ''}"
+                  f"{' +availability' if args.availability else ''}")
         except FileNotFoundError as ex:
             print(f"[slate] rate snapshots missing: {ex}")
             return
@@ -119,7 +123,9 @@ def main():
             continue
 
         try:
-            h_t, a_t, ctx, info = build_game(spec, snap_date, args.season, tables=tables)
+            h_t, a_t, ctx, info = build_game(spec, snap_date, args.season, tables=tables,
+                                             env=args.env, workload=args.workload,
+                                             availability=args.availability)
         except Exception as ex:
             print(f"  [skip] {spec}: {ex}")
             continue

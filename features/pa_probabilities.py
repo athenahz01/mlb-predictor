@@ -57,17 +57,34 @@ class Pitcher:
         return {e: self.rates.get(e, L[e]) for e in EVENTS}
 
 
+_MEASURED_PLATOON = None
+
+def _load_measured_platoon():
+    global _MEASURED_PLATOON
+    if _MEASURED_PLATOON is None:
+        try:
+            import json
+            _MEASURED_PLATOON = json.loads(
+                (config.SNAPSHOTS / "platoon_mults.json").read_text())
+        except Exception:
+            _MEASURED_PLATOON = {}
+    return _MEASURED_PLATOON
+
+
 def _platoon_mult(bat_hand: str, pit_hand: str) -> Dict[str, float]:
     """
-    Crude, directional platoon multipliers. A batter facing the OPPOSITE hand
-    (the platoon advantage) gets a small offense bump; same-hand gets a haircut.
-    Switch hitters always take the advantage. Magnitudes are conservative; refine
-    with real L/R splits per batter when you have them.
+    Platoon multipliers. If data/snapshots/platoon_mults.json exists (built by
+    ingest/build_platoon.py from real league splits), use the measured values;
+    otherwise fall back to conservative directional priors.
     """
     if bat_hand == "S":
         advantage = True
     else:
         advantage = (bat_hand != pit_hand)
+    measured = _load_measured_platoon()
+    key = "advantage" if advantage else "same_hand"
+    if measured.get(key):
+        return measured[key]
     if advantage:
         return {"BB": 1.05, "1B": 1.03, "2B": 1.04, "3B": 1.04, "HR": 1.08,
                 "HBP": 1.0, "K": 0.95, "IP_OUT": 1.0}
@@ -82,6 +99,8 @@ def matchup_rates(
     ump_k_mult: float = 1.0,
     tto_bump: float = 0.0,
     hr_shrink: float = 0.15,
+    env_hr: float = 1.0,
+    env_hit: float = 1.0,
 ) -> Dict[str, float]:
     """
     Return a normalised per-PA probability dict over EVENTS for this matchup.
@@ -90,6 +109,7 @@ def matchup_rates(
     ump_k_mult : multiply K rate by this (umpire strike-zone tendency).
     tto_bump   : additive offense nudge applied each time through the order (3rd+).
     hr_shrink  : 0..1 pull of the combined HR odds toward league (Morey-Cohen fix).
+    env_hr/env_hit : game-day environment multipliers (weather; 1.0 = neutral).
     """
     b = batter.vector()
     p = pitcher.vector()
@@ -109,10 +129,11 @@ def matchup_rates(
         raw[e] *= plat[e]
 
     # 3) park (HR factor on HR; hit factor on balls that fall for hits)
+    #    + game-day environment (weather) multipliers on the same axes
     pf = config.park(park_code)
-    raw["HR"] *= pf["hr"]
+    raw["HR"] *= pf["hr"] * env_hr
     for e in ("1B", "2B", "3B"):
-        raw[e] *= pf["hit"]
+        raw[e] *= pf["hit"] * env_hit
 
     # 4) umpire K tendency
     raw["K"] *= ump_k_mult

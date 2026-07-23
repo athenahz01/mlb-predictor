@@ -49,6 +49,7 @@ class Team:
     lineup: List[Batter]               # 9 batters, in order
     starter: Pitcher
     bullpen: Pitcher                   # single aggregate reliever profile (v1)
+    pitch_limit: int = None            # per-starter expected pitch count (None -> league default)
 
     def __post_init__(self):
         assert len(self.lineup) == 9, "lineup must be 9 batters"
@@ -60,6 +61,8 @@ class GameContext:
     ump_k_mult: float = 1.0
     innings: int = 9
     hfa_mult: float = 1.045            # small home-offense bump -> ~53% home win baseline
+    env_hr: float = 1.0                # game-day weather HR multiplier (1.0 = neutral)
+    env_hit: float = 1.0               # game-day weather hit multiplier
 
 
 # --------------------------------------------------------------------------
@@ -73,9 +76,10 @@ def _precompute(team: Team, opp_starter: Pitcher, opp_pen: Pitcher,
     table = {}
     for i, bat in enumerate(team.lineup):
         vs_sp = matchup_rates(bat, opp_starter, ctx.park_code, ctx.ump_k_mult,
-                              tto_bump=0.0)
+                              tto_bump=0.0, env_hr=ctx.env_hr, env_hit=ctx.env_hit)
         vs_sp_tto = matchup_rates(bat, opp_starter, ctx.park_code, ctx.ump_k_mult,
-                                  tto_bump=config.TTO_PENALTY)
+                                  tto_bump=config.TTO_PENALTY,
+                                  env_hr=ctx.env_hr, env_hit=ctx.env_hit)
         vs_bp = matchup_rates(bat, opp_pen, ctx.park_code, ctx.ump_k_mult,
                               tto_bump=0.0)
         table[i] = {
@@ -211,7 +215,7 @@ def _simulate_half(lineup_probs, lineup_start_idx, pitch_state, tally,
 
         # bullpen hook (checked after each PA)
         if (not pitch_state["bullpen_in"] and pitcher_is_sp and
-                (pitch_state["pitches"] >= config.STARTER_PITCH_LIMIT or
+                (pitch_state["pitches"] >= pitch_state.get("limit", config.STARTER_PITCH_LIMIT) or
                  pitch_state["inning"] >= config.STARTER_IP_SOFT_CAP)):
             pitch_state["bullpen_in"] = True
 
@@ -235,8 +239,10 @@ def simulate_game(home: Team, away: Team, ctx: GameContext, rng) -> dict:
     h_t = _Tally(hits=np.zeros(9, int), tb=np.zeros(9, int), hr=np.zeros(9, int))
     a_t = _Tally(hits=np.zeros(9, int), tb=np.zeros(9, int), hr=np.zeros(9, int))
 
-    h_pitch = {"pitches": 0, "batters_faced": 0, "bullpen_in": False, "inning": 0}
-    a_pitch = {"pitches": 0, "batters_faced": 0, "bullpen_in": False, "inning": 0}
+    h_pitch = {"pitches": 0, "batters_faced": 0, "bullpen_in": False, "inning": 0,
+               "limit": home.pitch_limit or config.STARTER_PITCH_LIMIT}
+    a_pitch = {"pitches": 0, "batters_faced": 0, "bullpen_in": False, "inning": 0,
+               "limit": away.pitch_limit or config.STARTER_PITCH_LIMIT}
 
     h_idx = a_idx = 0
     home_runs = away_runs = 0

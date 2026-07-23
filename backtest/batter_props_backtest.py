@@ -68,15 +68,22 @@ def fetch_batters(game_pk: int):
 
 
 def run(season: int, rate_season: int, n_sims: int = 2000, limit: int = 100,
-        recent: bool = False):
+        recent: bool = False, asof: bool = False):
     results = json.loads((config.SNAPSHOTS / f"results_{season}.json").read_text())
     results = [g for g in results if g.get("home_score") is not None]
     results = results[-limit:] if recent else results[:limit]
-    tables = load_rate_tables(rate_season)
+    tables = None if asof else load_rate_tables(rate_season)
+    if asof:
+        from features.rates_asof import rates_asof
+        print("[asof] point-in-time blended rates (the deployed model)")
 
     p_hr, hr_act, tb_pred, tb_act = [], [], [], []
     done = 0
+    cur_date = None
     for g in results:
+        if asof and g["date"] != cur_date:
+            cur_date = g["date"]
+            tables = rates_asof(cur_date, prior_season=rate_season)
         fb = fetch_batters(g["gamePk"])
         if not fb:
             continue
@@ -122,5 +129,7 @@ if __name__ == "__main__":
     ap.add_argument("--limit", type=int, default=100)
     ap.add_argument("--recent", action="store_true",
                     help="use the most recent games (summer) instead of the earliest")
+    ap.add_argument("--asof", action="store_true",
+                    help="point-in-time blended rates: test the model you deploy")
     a = ap.parse_args()
-    run(a.season, a.rate_season, a.sims, a.limit, a.recent)
+    run(a.season, a.rate_season, a.sims, a.limit, a.recent, a.asof)
