@@ -155,28 +155,57 @@ def _rates_row(pid: int, table: pd.DataFrame) -> Optional[dict]:
 
 def make_batter(pid: int, name: str, tables: dict, order: int) -> Batter:
     got = _rates_row(pid, tables["bat"])
+    flags = []
     if got:
         rates = _shrink(got[0], got[1], K_BAT)
     else:
         rates = dict(_L)
-    hand = tables["bhand"].get(int(pid), "R")
-    return Batter(name=name, rates=rates, hand=hand, order=order)
+        flags.append("missing_batter_rates_league_prior")
+    hand = tables["bhand"].get(int(pid))
+    if hand is None:
+        hand = "R"
+        flags.append("missing_batter_handedness_assumed_right")
+    return Batter(
+        name=name,
+        rates=rates,
+        hand=hand,
+        order=order,
+        mlb_id=pid if pid > 0 else None,
+        data_quality_flags=tuple(flags),
+    )
 
 
 def make_pitcher(pid: int, name: str, tables: dict, is_starter=True) -> Pitcher:
     got = _rates_row(pid, tables["pit"])
+    flags = []
     if got:
         rates = _shrink(got[0], got[1], K_PIT)
     else:
         rates = dict(_L)
-    hand = tables["phand"].get(int(pid), "R")
-    return Pitcher(name=name, rates=rates, hand=hand, is_starter=is_starter)
+        flags.append("missing_pitcher_rates_league_prior")
+    hand = tables["phand"].get(int(pid))
+    if hand is None:
+        hand = "R"
+        flags.append("missing_pitcher_handedness_assumed_right")
+    return Pitcher(
+        name=name,
+        rates=rates,
+        hand=hand,
+        is_starter=is_starter,
+        mlb_id=pid if pid > 0 else None,
+        data_quality_flags=tuple(flags),
+    )
 
 
 def make_bullpen(code: str) -> Pitcher:
     """League-average bullpen profile (fallback when no roster/rates available)."""
-    return Pitcher(name=f"{code}_pen", rates=dict(_BULLPEN_RATES), hand="R",
-                   is_starter=False)
+    return Pitcher(
+        name=f"{code}_pen",
+        rates=dict(_BULLPEN_RATES),
+        hand="R",
+        is_starter=False,
+        data_quality_flags=("bullpen_league_average_fallback",),
+    )
 
 
 # per-team bullpen: aggregate the team's actual relievers, usage-weighted,
@@ -227,7 +256,13 @@ def make_team_bullpen(code: str, team_id: int, tables: dict,
     agg = {e: sum(r[e] * pa for r, pa in relievers) / total_pa for e in EVENTS}
     w = total_pa / (total_pa + BULLPEN_SHRINK_K)          # regress to league prior
     rates = {e: w * agg[e] + (1 - w) * _BULLPEN_RATES[e] for e in EVENTS}
-    return Pitcher(name=f"{code}_pen", rates=rates, hand="R", is_starter=False)
+    return Pitcher(
+        name=f"{code}_pen",
+        rates=rates,
+        hand="R",
+        is_starter=False,
+        data_quality_flags=("bullpen_aggregate_not_role_aware",),
+    )
 
 
 def build_team(code: str, lineup: list[tuple[int, str]], starter_id: int,

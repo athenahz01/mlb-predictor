@@ -1,4 +1,37 @@
-# mlb-predictor
+# Athena Baseball
+
+Athena Baseball is an evidence-grounded MLB prediction product built around a
+base-out Monte Carlo simulation, a versioned canonical forecast ledger, a FastAPI API,
+and a responsive Next.js application.
+
+The new product is being developed on the `athena-baseball` branch. The existing static
+dashboard remains the production surface until an explicit cutover approval.
+
+## Product development quickstart
+
+```powershell
+pip install -r requirements.txt
+python -m alembic upgrade head
+python -m scripts.migrate_legacy_ledger
+python -m uvicorn athena_api.main:app --reload
+```
+
+In a second terminal:
+
+```powershell
+Set-Location web
+npm install
+npm run dev
+```
+
+- Product: `http://localhost:3000`
+- API: `http://localhost:8000`
+- OpenAPI: `http://localhost:8000/docs`
+- Build state: `BUILD_LOG.md`
+- Baseline: `reports/baseline.md`
+- Deployment/cutover: `docs/DEPLOYMENT.md`
+
+## Legacy model pipeline
 
 A baseball prediction pipeline built on the same philosophy as the WC / NHL / NBA
 pipelines: **model vs. market, calibration in public, not betting advice.**

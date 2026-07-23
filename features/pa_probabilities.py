@@ -41,6 +41,8 @@ class Batter:
     rates: Dict[str, float]            # per-PA rates over EVENTS (need not sum to 1)
     hand: str = "R"                    # R / L / S(switch)
     order: int = 0
+    mlb_id: int | None = None
+    data_quality_flags: tuple[str, ...] = field(default_factory=tuple)
 
     def vector(self) -> Dict[str, float]:
         return {e: self.rates.get(e, L[e]) for e in EVENTS}
@@ -52,6 +54,8 @@ class Pitcher:
     rates: Dict[str, float]            # per-PA rates allowed over EVENTS
     hand: str = "R"
     is_starter: bool = True
+    mlb_id: int | None = None
+    data_quality_flags: tuple[str, ...] = field(default_factory=tuple)
 
     def vector(self) -> Dict[str, float]:
         return {e: self.rates.get(e, L[e]) for e in EVENTS}

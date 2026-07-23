@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-07-23T19:04:36.513535+00:00",
+  "existing_ledger_rows": 1497,
+  "dashboard_game_rows": 276,
+  "imported_rows": 0,
+  "idempotent_existing_rows": 1497,
+  "database_rows": 1497,
+  "duplicate_rows": 0,
+  "mismatched_games": 0,
+  "mismatched_game_ids": [],
+  "unresolvable_rows": 955,
+  "resolved_from_dashboard": 542,
+  "missing_outcomes": 955,
+  "missing_player_ids": 669,
+  "missing_model_versions": 1497
+}

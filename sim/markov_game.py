@@ -81,7 +81,7 @@ def _precompute(team: Team, opp_starter: Pitcher, opp_pen: Pitcher,
                                   tto_bump=config.TTO_PENALTY,
                                   env_hr=ctx.env_hr, env_hit=ctx.env_hit)
         vs_bp = matchup_rates(bat, opp_pen, ctx.park_code, ctx.ump_k_mult,
-                              tto_bump=0.0)
+                              tto_bump=0.0, env_hr=ctx.env_hr, env_hit=ctx.env_hit)
         table[i] = {
             "SP": np.array([vs_sp[e] for e in EVENTS]),
             "SP_tto": np.array([vs_sp_tto[e] for e in EVENTS]),
@@ -217,6 +217,8 @@ def _simulate_half(lineup_probs, lineup_start_idx, pitch_state, tally,
         if (not pitch_state["bullpen_in"] and pitcher_is_sp and
                 (pitch_state["pitches"] >= pitch_state.get("limit", config.STARTER_PITCH_LIMIT) or
                  pitch_state["inning"] >= config.STARTER_IP_SOFT_CAP)):
+            pitch_state["starter_pitches"] = pitch_state["pitches"]
+            pitch_state["starter_batters_faced"] = pitch_state["batters_faced"]
             pitch_state["bullpen_in"] = True
 
     return runs, idx
@@ -301,6 +303,15 @@ def simulate_game(home: Team, away: Team, ctx: GameContext, rng) -> dict:
         # a_t.k_sp = K's the away lineup took vs the home starter = home starter's K's
         "home_starter_k": a_t.k_sp,
         "away_starter_k": h_t.k_sp,
+        "home_starter_pitches": h_pitch.get("starter_pitches", h_pitch["pitches"]),
+        "away_starter_pitches": a_pitch.get("starter_pitches", a_pitch["pitches"]),
+        "home_starter_batters_faced": h_pitch.get(
+            "starter_batters_faced", h_pitch["batters_faced"]
+        ),
+        "away_starter_batters_faced": a_pitch.get(
+            "starter_batters_faced", a_pitch["batters_faced"]
+        ),
+        "innings_played": inning,
     }
 
 
@@ -322,11 +333,18 @@ def run_simulation(home: Team, away: Team, ctx: Optional[GameContext] = None,
     home_hits = np.zeros(9); away_hits = np.zeros(9)
     home_tb = np.zeros(9); away_tb = np.zeros(9)
     home_hr_any = np.zeros(9); away_hr_any = np.zeros(9)
+    home_hit_any = np.zeros(9); away_hit_any = np.zeros(9)
     home_2hit = np.zeros(9); away_2hit = np.zeros(9)
+    home_runs = np.empty(n_sims); away_runs = np.empty(n_sims)
+    innings_played = np.empty(n_sims)
+    home_starter_pitches = np.empty(n_sims); away_starter_pitches = np.empty(n_sims)
+    home_starter_bf = np.empty(n_sims); away_starter_bf = np.empty(n_sims)
 
     for s in range(n_sims):
         g = simulate_game(home, away, ctx, rng)
         home_wins += g["home_win"]
+        home_runs[s] = g["home_runs"]
+        away_runs[s] = g["away_runs"]
         totals[s] = g["total"]
         diffs[s] = g["run_diff"]
         nrfi += g["nrfi"]
@@ -338,7 +356,13 @@ def run_simulation(home: Team, away: Team, ctx: Optional[GameContext] = None,
         home_hits += g["home_hits"]; away_hits += g["away_hits"]
         home_tb += g["home_tb"]; away_tb += g["away_tb"]
         home_hr_any += (g["home_hr"] > 0); away_hr_any += (g["away_hr"] > 0)
+        home_hit_any += (g["home_hits"] > 0); away_hit_any += (g["away_hits"] > 0)
         home_2hit += (g["home_hits"] >= 2); away_2hit += (g["away_hits"] >= 2)
+        innings_played[s] = g["innings_played"]
+        home_starter_pitches[s] = g["home_starter_pitches"]
+        away_starter_pitches[s] = g["away_starter_pitches"]
+        home_starter_bf[s] = g["home_starter_batters_faced"]
+        away_starter_bf[s] = g["away_starter_batters_faced"]
 
     def over_grid(arr, lines):
         return {f"over_{ln}": float(np.mean(arr > ln)) for ln in lines}
@@ -348,7 +372,24 @@ def run_simulation(home: Team, away: Team, ctx: Optional[GameContext] = None,
         "p_home_win": home_wins / n_sims,
         "p_away_win": 1 - home_wins / n_sims,
         "exp_total": float(totals.mean()),
+        "exp_home_runs": float(home_runs.mean()),
+        "exp_away_runs": float(away_runs.mean()),
+        "home_run_distribution": {
+            str(int(value)): float(np.mean(home_runs == value))
+            for value in np.unique(home_runs)
+        },
+        "away_run_distribution": {
+            str(int(value)): float(np.mean(away_runs == value))
+            for value in np.unique(away_runs)
+        },
         "total_over": over_grid(totals, [6.5, 7.5, 8.5, 9.5, 10.5]),
+        "home_team_total_over": over_grid(home_runs, [2.5, 3.5, 4.5, 5.5]),
+        "away_team_total_over": over_grid(away_runs, [2.5, 3.5, 4.5, 5.5]),
+        "p_home_shutout": float(np.mean(home_runs == 0)),
+        "p_away_shutout": float(np.mean(away_runs == 0)),
+        "p_home_5plus_runs": float(np.mean(home_runs >= 5)),
+        "p_away_5plus_runs": float(np.mean(away_runs >= 5)),
+        "p_extra_innings": float(np.mean(innings_played > ctx.innings)),
         "p_home_-1.5": float(np.mean(diffs > 1.5)),
         "p_home_+1.5": float(np.mean(diffs > -1.5)),
         "p_nrfi": nrfi / n_sims,
@@ -356,29 +397,55 @@ def run_simulation(home: Team, away: Team, ctx: Optional[GameContext] = None,
         "p_f5_home": f5_home_wins / n_sims,
         "p_first_to_score_home": fts_home / n_sims,
         "home_starter_k": {
+            "player_id": home.starter.mlb_id,
+            "name": home.starter.name,
             "mean": float(home_starter_k.mean()),
             "over": over_grid(home_starter_k, [4.5, 5.5, 6.5, 7.5, 8.5]),
+            "expected_pitches": float(home_starter_pitches.mean()),
+            "expected_batters_faced": float(home_starter_bf.mean()),
+            "data_quality_flags": list(home.starter.data_quality_flags),
         },
         "away_starter_k": {
+            "player_id": away.starter.mlb_id,
+            "name": away.starter.name,
             "mean": float(away_starter_k.mean()),
             "over": over_grid(away_starter_k, [4.5, 5.5, 6.5, 7.5, 8.5]),
+            "expected_pitches": float(away_starter_pitches.mean()),
+            "expected_batters_faced": float(away_starter_bf.mean()),
+            "data_quality_flags": list(away.starter.data_quality_flags),
         },
         "home_batters": [
             {"name": home.lineup[i].name,
+             "player_id": home.lineup[i].mlb_id,
              "exp_hits": float(home_hits[i] / n_sims) * STARTER_PA_SHARE,
              "exp_tb": float(home_tb[i] / n_sims) * STARTER_PA_SHARE,
              "exp_hr": float(home_hr[i] / n_sims) * STARTER_PA_SHARE,
+             "p_hit": float(home_hit_any[i] / n_sims) * STARTER_PA_SHARE,
              "p_hr": float(home_hr_any[i] / n_sims) * STARTER_PA_SHARE,
-             "p_2plus_hits": float(home_2hit[i] / n_sims) * STARTER_PA_SHARE}
+             "p_2plus_hits": float(home_2hit[i] / n_sims) * STARTER_PA_SHARE,
+             "data_quality_flags": list(home.lineup[i].data_quality_flags)}
             for i in range(9)
         ],
         "away_batters": [
             {"name": away.lineup[i].name,
+             "player_id": away.lineup[i].mlb_id,
              "exp_hits": float(away_hits[i] / n_sims) * STARTER_PA_SHARE,
              "exp_tb": float(away_tb[i] / n_sims) * STARTER_PA_SHARE,
              "exp_hr": float(away_hr[i] / n_sims) * STARTER_PA_SHARE,
+             "p_hit": float(away_hit_any[i] / n_sims) * STARTER_PA_SHARE,
              "p_hr": float(away_hr_any[i] / n_sims) * STARTER_PA_SHARE,
-             "p_2plus_hits": float(away_2hit[i] / n_sims) * STARTER_PA_SHARE}
+             "p_2plus_hits": float(away_2hit[i] / n_sims) * STARTER_PA_SHARE,
+             "data_quality_flags": list(away.lineup[i].data_quality_flags)}
             for i in range(9)
         ],
+        "data_quality_flags": sorted(
+            {
+                *home.starter.data_quality_flags,
+                *away.starter.data_quality_flags,
+                *home.bullpen.data_quality_flags,
+                *away.bullpen.data_quality_flags,
+                *(flag for batter in home.lineup for flag in batter.data_quality_flags),
+                *(flag for batter in away.lineup for flag in batter.data_quality_flags),
+            }
+        ),
     }
