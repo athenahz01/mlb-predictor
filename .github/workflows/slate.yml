@@ -30,8 +30,11 @@ jobs:
       - name: Resolve finished games
         run: python -m ingest.pull_results --season 2026 || echo "no results yet"
 
+      # --xrates SHIPPED 2026-07-23: paired bootstrap vs observed rates over 60
+      # recent games -- HR Brier p=0.001, TB sq-err p=0.032, both favour xrates.
+      # --env / --workload / --availability are built but NOT yet gated: do not add.
       - name: Run slate (confirmed lineups only)
-        run: python run_slate.py --confirmed-only --season 2025 --blend
+        run: python run_slate.py --confirmed-only --season 2025 --blend --xrates
 
       - name: Export dashboard
         run: python export_dashboard.py --season 2026
