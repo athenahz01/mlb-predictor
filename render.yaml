@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: athena-baseball-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile.api
+    healthCheckPath: /health/ready
+    autoDeploy: false
+    envVars:
+      - key: ENVIRONMENT
+        value: preview
+      - key: AUTH_REQUIRED
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_JWT_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ANTHROPIC_API_KEY
+        sync: false
