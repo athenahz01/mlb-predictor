@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-23",
+    "away": "KC",
+    "home": "DET",
+    "away_name": "Royals",
+    "home_name": "Tigers",
+    "model_home_win_pct": 62.4,
+    "market_home_win_pct": 68.5,
+    "edge": -6.1,
+    "contrarian": false,
+    "logged_at": "2026-07-23T20:55:05.516360+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 54.4,
+      "over_8_5_pct": 43.8,
+      "away_sp_k_over_5_5_pct": 33.0,
+      "home_sp_k_over_5_5_pct": 21.2,
+      "away_sp": "Randy Dobnak",
+      "home_sp": "Troy Melton",
+      "hr_threats": [
+        {
+          "name": "Riley Greene",
+          "team": "DET",
+          "pct": 15.3
+        },
+        {
+          "name": "Kerry Carpenter",
+          "team": "DET",
+          "pct": 15.3
+        },
+        {
+          "name": "Kevin McGonigle",
+          "team": "DET",
+          "pct": 13.7
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-23",
     "away": "AZ",
     "home": "STL",
     "away_name": "Diamondbacks",

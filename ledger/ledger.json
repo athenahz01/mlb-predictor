@@ -31242,5 +31242,132 @@
         }
       ]
     }
+  },
+  {
+    "ts": "2026-07-23T20:55:05.516360+00:00",
+    "game_id": "KC@DET-2026-07-23",
+    "market": "moneyline_home",
+    "model_p": 0.624,
+    "market_p": 0.685,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "KC",
+      "date": "2026-07-23",
+      "home_name": "Tigers",
+      "away_name": "Royals",
+      "park": "DET",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T20:55:05.536422+00:00",
+    "game_id": "KC@DET-2026-07-23",
+    "market": "total_over_8.5",
+    "model_p": 0.438,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "KC",
+      "date": "2026-07-23",
+      "home_name": "Tigers",
+      "away_name": "Royals",
+      "park": "DET",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T20:55:05.554923+00:00",
+    "game_id": "KC@DET-2026-07-23",
+    "market": "nrfi",
+    "model_p": 0.5445,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "KC",
+      "date": "2026-07-23",
+      "home_name": "Tigers",
+      "away_name": "Royals",
+      "park": "DET",
+      "lineup_source": "confirmed"
+    }
+  },
+  {
+    "ts": "2026-07-23T20:55:05.573238+00:00",
+    "game_id": "KC@DET-2026-07-23",
+    "market": "away_sp_k_over_5.5",
+    "model_p": 0.3295,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "KC",
+      "date": "2026-07-23",
+      "home_name": "Tigers",
+      "away_name": "Royals",
+      "park": "DET",
+      "lineup_source": "confirmed",
+      "sp": "Randy Dobnak"
+    }
+  },
+  {
+    "ts": "2026-07-23T20:55:05.700885+00:00",
+    "game_id": "KC@DET-2026-07-23",
+    "market": "home_sp_k_over_5.5",
+    "model_p": 0.2125,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "KC",
+      "date": "2026-07-23",
+      "home_name": "Tigers",
+      "away_name": "Royals",
+      "park": "DET",
+      "lineup_source": "confirmed",
+      "sp": "Troy Melton"
+    }
+  },
+  {
+    "ts": "2026-07-23T20:55:05.720323+00:00",
+    "game_id": "KC@DET-2026-07-23",
+    "market": "batter_hr",
+    "model_p": 0.153,
+    "market_p": null,
+    "market_close_p": null,
+    "result": null,
+    "meta": {
+      "home": "DET",
+      "away": "KC",
+      "date": "2026-07-23",
+      "home_name": "Tigers",
+      "away_name": "Royals",
+      "park": "DET",
+      "lineup_source": "confirmed",
+      "hr_threats": [
+        {
+          "name": "Riley Greene",
+          "p_hr": 0.153,
+          "team": "DET"
+        },
+        {
+          "name": "Kerry Carpenter",
+          "p_hr": 0.153,
+          "team": "DET"
+        },
+        {
+          "name": "Kevin McGonigle",
+          "p_hr": 0.137,
+          "team": "DET"
+        }
+      ]
+    }
   }
 ]
