@@ -1,6 +1,45 @@
 [
   {
     "date": "2026-07-23",
+    "away": "AZ",
+    "home": "STL",
+    "away_name": "Diamondbacks",
+    "home_name": "Cardinals",
+    "model_home_win_pct": 49.2,
+    "market_home_win_pct": 51.0,
+    "edge": -1.8,
+    "contrarian": false,
+    "logged_at": "2026-07-23T19:04:16.660163+00:00",
+    "lineup_source": "confirmed",
+    "status": "upcoming",
+    "props": {
+      "nrfi_pct": 51.0,
+      "over_8_5_pct": 49.5,
+      "away_sp_k_over_5_5_pct": 20.8,
+      "home_sp_k_over_5_5_pct": 12.0,
+      "away_sp": "Brandon Pfaadt",
+      "home_sp": "Michael McGreevy",
+      "hr_threats": [
+        {
+          "name": "Corbin Carroll",
+          "team": "AZ",
+          "pct": 15.3
+        },
+        {
+          "name": "Ketel Marte",
+          "team": "AZ",
+          "pct": 15.2
+        },
+        {
+          "name": "Alec Burleson",
+          "team": "STL",
+          "pct": 14.3
+        }
+      ]
+    }
+  },
+  {
+    "date": "2026-07-23",
     "away": "TB",
     "home": "TOR",
     "away_name": "Rays",
@@ -50,7 +89,7 @@
     "contrarian": true,
     "logged_at": "2026-07-23T14:47:42.369856+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 57.6,
       "over_8_5_pct": 35.5,
@@ -75,7 +114,12 @@
           "pct": 13.5
         }
       ]
-    }
+    },
+    "home_score": 6,
+    "away_score": 5,
+    "winner": "ATL",
+    "pick_correct": true,
+    "total_runs": 11
   },
   {
     "date": "2026-07-23",
