@@ -27,6 +27,7 @@ npm run dev
 - Product: `http://localhost:3000`
 - API: `http://localhost:8000`
 - OpenAPI: `http://localhost:8000/docs`
+- Output contract: `http://localhost:8000/api/v1/output-catalog`
 - Build state: `BUILD_LOG.md`
 - Baseline: `reports/baseline.md`
 - Deployment/cutover: `docs/DEPLOYMENT.md`
@@ -58,6 +59,16 @@ pip install -r requirements.txt          # numpy/scipy/pandas are enough for the
 python run_predict.py --sims 20000       # demo matchup → full prediction card
 python run_predict.py --log              # also writes to ledger/ledger.json
 ```
+
+Persist the complete parameterized Phase 3 slate contract:
+
+```powershell
+python -m alembic upgrade head
+python -m scripts.run_phase3_slate --date 2026-07-24 --sims 20000
+```
+
+The canonical API labels unvalidated outputs as experimental and unsupported outputs as
+unavailable. It does not present exact-score predictions as reliable.
 
 Pull live data (run as scripts so the Windows multiprocessing guard fires):
 ```bash

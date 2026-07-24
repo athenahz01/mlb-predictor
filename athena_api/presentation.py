@@ -21,6 +21,8 @@ def prediction_payload(row: Prediction) -> dict[str, Any]:
         "statistic": row.statistic,
         "player_id": row.player_id,
         "team_id": row.team_id,
+        "parameters": row.parameters,
+        "units": row.units,
         "probability": row.probability,
         "projected_value": row.projected_value,
         "interval": (
@@ -34,6 +36,8 @@ def prediction_payload(row: Prediction) -> dict[str, Any]:
         "lineup_status": row.lineup_status,
         "confidence": row.confidence,
         "validation_status": row.validation_status,
+        "supported": row.validation_status != "unavailable",
+        "resolution_status": row.resolution_status,
         "data_quality_flags": row.data_quality_flags,
         "evidence": public_evidence(row),
         "revision_number": row.revision_number,
@@ -42,6 +46,7 @@ def prediction_payload(row: Prediction) -> dict[str, Any]:
         "is_headline": row.is_headline,
         "created_at": row.created_at,
         "resolved_at": row.resolved_at,
+        "final_result": row.final_result,
     }
 
 

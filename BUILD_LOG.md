@@ -1,18 +1,40 @@
 # Athena Baseball build log
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
 ## Current phase
 
-**Phase 2 (model improvement) is complete as a research pass.** All seven Tier 1 challengers
-were implemented behind compatibility-safe interfaces, evaluated on frozen data through the
-Phase 2 gate, and **rejected** — champions are unchanged. Phase 1 integrity infrastructure and
-Phase 4/5 product surfaces remain implemented and verified locally.
+**Phase 3 (expanded prediction outputs) is complete locally.** The simulator, canonical
+ledger, resolver, API, and slate runner now share one parameterized contract covering game,
+team, starting-pitcher, and every confirmed batter output. Unsupported stolen-base
+probabilities are stored and displayed as unavailable rather than fabricated. Phase 2
+champions and their validation labels are unchanged.
 
 The Phase 1 production gate is still **not passed** (no Supabase project, legacy prop outcomes
 partially unrecoverable, incremental Statcast promotion not yet run on a frozen production
 snapshot). The existing static dashboard remains the production surface. No production cutover,
 infrastructure provisioning, DNS change, paid service, or live trading action has occurred.
+
+## Phase 3 results (expanded outputs)
+
+- One joint simulation now emits full game/team run distributions; alternate run lines,
+  totals, team totals, F5, NRFI/YRFI, first-to-score, extra-innings, and shutout outcomes.
+- Starter outputs include strikeout lines and distributions, workload, hits/walks/runs/home
+  runs allowed, quality-start probability, and an explicitly flagged pitcher-win proxy.
+- Every confirmed lineup slot is keyed by MLB player ID and receives independent hit,
+  total-base, home-run, run, RBI, walk, strikeout, and plate-appearance outputs with
+  distributions. Stolen bases remain visibly unavailable.
+- Parameter hashes make alternate lines unique without breaking existing unparameterized
+  forecast keys. Every row carries units, validation state, and resolution state.
+- A normalized final box score resolves every supported Phase 3 output in one pass.
+- Stable API families are available at
+  `/api/v1/games/{game_id}/predictions/{game|team|pitcher|batter}`; the machine-readable
+  contract is at `/api/v1/output-catalog`.
+- `python -m scripts.run_phase3_slate` runs and persists a full slate with a configurable
+  runtime budget.
+- Local benchmark: 20,000 simulations plus 381 output rows took 8.1 seconds per game;
+  a 15-game sequential slate is estimated at 121 seconds, below the 900-second default
+  budget. This is local hardware evidence, not a production SLO.
 
 ## Phase 2 results (model improvement)
 
@@ -59,6 +81,8 @@ market value, model Brier is 0.242 versus market Brier 0.240.
   revisions, headline selection, initial/latest-pregame tracks, resolution guards,
   structured evidence, validation status, and data-quality flags.
 - Added reversible Alembic migration `20260723_0001`.
+- Added reversible Alembic migration `20260724_0002` for parameterized outputs, units, and
+  resolution status; upgraded the local database to the new head.
 - Imported all 1,497 legacy ledger rows into the local canonical database.
 - Reconciled all 276 dashboard games with zero game-level mismatches and zero exact source
   duplicates.
@@ -101,11 +125,14 @@ market value, model Brier is 0.242 versus market Brier 0.240.
   artifacts to `reports/phase2/`.
 - **Phase 2:** removed a simulator inefficiency (matchup probabilities were recomputed per
   Monte Carlo game instead of once per batch).
+- **Phase 3:** expanded the joint simulation, canonical materializer, automatic resolver,
+  output catalog, family APIs, and full-slate canonical runner.
 
 ## Tests and gates completed
 
 - Existing `self_test.py`: pass.
-- Python tests: **28 pass** (15 Phase 1 + 13 Phase 2 model/challenger tests).
+- Python tests: **32 pass** (Phase 1/2 plus Phase 3 simulation, ledger, resolution, and API
+  contract tests).
 - Targeted Ruff checks: pass (including Phase 2 modules).
 - Mypy type check: pass across the new API/evaluation/pipeline/model modules.
 - Frontend strict TypeScript, ESLint, production build, npm audit: pass.
@@ -123,7 +150,7 @@ market value, model Brier is 0.242 versus market Brier 0.240.
 - Resolve legacy NRFI, starter-K, and batter-HR rows from MLB box scores where IDs can be
   recovered; 955 outcomes are still unavailable.
 - Add MLB gamePk and stable player IDs to old rows where deterministic matching is possible.
-- Expand real stored outputs for all Phase 3 categories.
+- Backfill real Phase 3 outputs and normalized box scores for historical games.
 - Add end-to-end browser tests after the local browser connection is available.
 - Run preview auth against an actual Supabase project.
 

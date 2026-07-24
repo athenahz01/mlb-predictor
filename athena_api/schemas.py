@@ -13,6 +13,8 @@ class PredictionCreate(BaseModel):
     statistic: str
     player_id: int | None = None
     team_id: int | None = None
+    parameters: dict[str, Any] = Field(default_factory=dict)
+    units: str | None = Field(default=None, max_length=32)
     probability: float | None = Field(default=None, ge=0, le=1)
     projected_value: float | None = None
     interval_low: float | None = None
@@ -38,14 +40,21 @@ class PredictionCreate(BaseModel):
     validation_status: Literal["validated", "provisional", "experimental", "unavailable"] = (
         "provisional"
     )
+    resolution_status: Literal["pending", "resolved", "not_applicable"] = "pending"
     revision_reason: str | None = None
     first_pitch_at: dt.datetime | None = None
     created_at: dt.datetime | None = None
 
     @model_validator(mode="after")
     def validate_value(self) -> PredictionCreate:
-        if self.probability is None and self.projected_value is None:
+        if (
+            self.probability is None
+            and self.projected_value is None
+            and self.validation_status != "unavailable"
+        ):
             raise ValueError("probability or projected_value is required")
+        if self.validation_status == "unavailable":
+            self.resolution_status = "not_applicable"
         if (self.interval_low is None) != (self.interval_high is None):
             raise ValueError("prediction intervals require both bounds")
         return self
@@ -67,6 +76,16 @@ class PredictionRead(PredictionCreate):
 
 class PredictionResolve(BaseModel):
     result: dict[str, Any]
+    resolved_at: dt.datetime | None = None
+
+
+class GameResolution(BaseModel):
+    """Normalized final box score used to resolve every Phase 3 output."""
+
+    home: dict[str, Any]
+    away: dict[str, Any]
+    pitchers: dict[str, dict[str, Any]] = Field(default_factory=dict)
+    batters: dict[str, dict[str, Any]] = Field(default_factory=dict)
     resolved_at: dt.datetime | None = None
 
 

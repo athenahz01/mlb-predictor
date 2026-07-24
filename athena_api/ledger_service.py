@@ -19,6 +19,11 @@ def forecast_key(data: PredictionCreate) -> str:
         str(data.player_id or ""),
         str(data.team_id or ""),
     ]
+    if data.parameters:
+        parameter_hash = hashlib.sha256(
+            json.dumps(data.parameters, sort_keys=True, separators=(",", ":")).encode()
+        ).hexdigest()[:16]
+        parts.append(parameter_hash)
     return "|".join(parts)
 
 
@@ -90,6 +95,7 @@ def resolve_prediction(
             raise ValueError("prediction already resolved with a different result")
         return prediction
     prediction.final_result = result
+    prediction.resolution_status = "resolved"
     prediction.resolved_at = resolved_at or utcnow()
     db.commit()
     db.refresh(prediction)

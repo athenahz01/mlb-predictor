@@ -13,11 +13,13 @@ from athena_api.auth import AuthUser, current_user
 from athena_api.database import Base, engine, get_db
 from athena_api.ledger_service import create_revision, prediction_tracks, resolve_prediction
 from athena_api.models import Follow, Prediction, UserProfile
+from athena_api.output_catalog import catalog_payload, resolve_game_outputs
 from athena_api.presentation import group_games, prediction_payload
 from athena_api.schemas import (
     AgentAnswer,
     AgentQuestion,
     FollowCreate,
+    GameResolution,
     PredictionCreate,
     PredictionRead,
     PredictionResolve,
@@ -37,7 +39,7 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(
     title="Athena Baseball API",
-    version="1.0.0",
+    version="1.1.0",
     description="Versioned, evidence-grounded MLB prediction API.",
     lifespan=lifespan,
 )
@@ -83,6 +85,34 @@ def list_predictions(
     return [prediction_payload(row) for row in rows]
 
 
+@app.get(f"{settings.api_prefix}/output-catalog", tags=["predictions"])
+def output_catalog() -> list[dict[str, str]]:
+    """Stable, machine-readable contract for every Phase 3 output."""
+    return catalog_payload()
+
+
+@app.get(
+    f"{settings.api_prefix}/games/{{game_id}}/predictions/{{family}}",
+    tags=["predictions"],
+)
+def prediction_family(
+    game_id: str,
+    family: str,
+    headline_only: bool = True,
+    db: Session = Depends(get_db),
+) -> list[dict]:
+    if family not in {"game", "team", "pitcher", "batter"}:
+        raise HTTPException(404, "Unknown prediction family")
+    query = select(Prediction).where(
+        Prediction.game_id == game_id,
+        Prediction.category == family,
+    )
+    if headline_only:
+        query = query.where(Prediction.is_headline.is_(True))
+    rows = list(db.scalars(query.order_by(Prediction.statistic, Prediction.player_id)))
+    return [prediction_payload(row) for row in rows]
+
+
 @app.post(
     f"{settings.api_prefix}/predictions",
     response_model=PredictionRead,
@@ -111,6 +141,16 @@ def resolve(
         return resolve_prediction(db, prediction, payload.result, payload.resolved_at)
     except ValueError as exc:
         raise HTTPException(409, str(exc)) from exc
+
+
+@app.post(f"{settings.api_prefix}/games/{{game_id}}/resolve", tags=["predictions"])
+def resolve_game(
+    game_id: str,
+    payload: GameResolution,
+    db: Session = Depends(get_db),
+) -> dict[str, int]:
+    values = payload.model_dump(exclude={"resolved_at"})
+    return resolve_game_outputs(db, game_id, values, payload.resolved_at)
 
 
 @app.get(f"{settings.api_prefix}/games/{{game_id}}", tags=["games"])

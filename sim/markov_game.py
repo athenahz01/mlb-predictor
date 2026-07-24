@@ -128,17 +128,24 @@ def _keyed_uniform(seed: int, *coordinates: int) -> float:
 @dataclass
 class _Tally:
     runs: int = 0
+    team_hits: int = 0
+    team_hr: int = 0
     hits: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
     tb: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
     hr: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
+    pa: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
+    bb: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
+    strikeouts: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
+    runs_scored: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
+    rbi: np.ndarray = field(default_factory=lambda: np.zeros(9, dtype=int))
     k_sp: int = 0  # strikeouts by the starter
     k_bp: int = 0
 
 
-def _advance(bases, event, rng):
+def _advance(bases, event, batter_token, rng):
     """
     Given occupied bases (b1,b2,b3 as 0/1) and a non-out event, return
-    (new_bases, runs_scored). Batter always ends on the correct base; runner
+    (new_bases, scorer_tokens). Batter always ends on the correct base; runner
     extra-advancement is probabilistic and handled here (not by the caller).
 
     Advancement probabilities are league-ballpark and are the first thing to
@@ -146,46 +153,46 @@ def _advance(bases, event, rng):
     """
     b1, b2, b3 = bases
     if event == iHR:
-        return (0, 0, 0), 1 + b1 + b2 + b3
+        return (0, 0, 0), [token for token in (b1, b2, b3, batter_token) if token]
     if event == i3B:
-        return (0, 0, 1), b1 + b2 + b3  # batter to 3rd, all score
+        return (0, 0, batter_token), [token for token in (b1, b2, b3) if token]
     if event == i2B:
         # batter -> 2nd; runners on 2nd/3rd score; 1st scores ~40%, else -> 3rd
-        runs = b2 + b3
+        scorers = [token for token in (b2, b3) if token]
         new_b3 = 0
         if b1:
             if rng.random() < 0.40:
-                runs += 1
+                scorers.append(b1)
             else:
-                new_b3 = 1
-        return (0, 1, new_b3), runs
+                new_b3 = b1
+        return (0, batter_token, new_b3), scorers
     if event == i1B:
         # batter -> 1st; 3rd scores; 2nd scores ~60% else -> 3rd;
         # 1st -> 2nd (or 3rd ~30%)
-        runs = b3
+        scorers = [b3] if b3 else []
         new_b2 = 0
         new_b3 = 0
         if b2:
             if rng.random() < 0.60:
-                runs += 1
+                scorers.append(b2)
             else:
-                new_b3 = 1
+                new_b3 = b2
         if b1:
             if rng.random() < 0.30 and new_b3 == 0:
-                new_b3 = 1
+                new_b3 = b1
             else:
-                new_b2 = 1
-        return (1, new_b2, new_b3), runs
+                new_b2 = b1
+        return (batter_token, new_b2, new_b3), scorers
     if event in (iBB, iHBP):
         # force advance only
         if b1 and b2 and b3:
-            return (1, 1, 1), 1
+            return (batter_token, b1, b2), [b3]
         if b1 and b2:
-            return (1, 1, 1), 0
+            return (batter_token, b1, b2), []
         if b1:
-            return (1, 1, b3), 0
-        return (1, b2, b3), 0
-    return bases, 0
+            return (batter_token, b1, b3), []
+        return (batter_token, b2, b3), []
+    return bases, []
 
 
 def _simulate_half(
@@ -196,7 +203,7 @@ def _simulate_half(
     pitch_state: dict tracking starter pitches/innings to decide bullpen.
     """
     outs = 0
-    b1, b2, b3 = (0, 0, 1) if ghost_on_second else (0, 0, 0)
+    b1, b2, b3 = (0, -1, 0) if ghost_on_second else (0, 0, 0)
     runs = 0
     idx = lineup_start_idx
     times_through = pitch_state["batters_faced"] // 9
@@ -228,6 +235,13 @@ def _simulate_half(
             slot_pa_number,
             pitch_state["inning"],
         ) < playing_time.probability_active(slot_pa_number)
+        batter_token = idx + 1 if starter_batter_active else -1
+        if starter_batter_active:
+            tally.pa[idx] += 1
+            if ev == iBB:
+                tally.bb[idx] += 1
+            if ev == iK:
+                tally.strikeouts[idx] += 1
 
         # pitch-count proxy: ~3.8 pitches per PA
         pitch_state["pitches"] += 3.8
@@ -242,6 +256,10 @@ def _simulate_half(
                 tally.k_sp += 1
 
         # batter box-score
+        if ev in (i1B, i2B, i3B, iHR):
+            tally.team_hits += 1
+        if ev == iHR:
+            tally.team_hr += 1
         if starter_batter_active and ev in (i1B, i2B, i3B, iHR):
             tally.hits[idx] += 1
             tally.tb[idx] += {i1B: 1, i2B: 2, i3B: 3, iHR: 4}[ev]
@@ -249,6 +267,7 @@ def _simulate_half(
                 tally.hr[idx] += 1
 
         outs_before = outs
+        runs_before = runs
         empirical = None
         if pitch_state.get("transition_model") is not None:
             empirical = pitch_state["transition_model"].sample(
@@ -258,13 +277,17 @@ def _simulate_half(
                 rng,
             )
         if empirical is not None:
-            b1, b2, b3 = empirical.bases
+            b1, b2, b3 = tuple(-1 if occupied else 0 for occupied in empirical.bases)
             runs += empirical.runs
             outs = min(3, outs + empirical.outs_added)
         elif ev == iK or ev == iOUT:
             # IP_OUT: small chance of a productive out (sac fly / advance)
             if ev == iOUT and outs < 2 and b3 and rng.random() < 0.25:
                 runs += 1
+                if b3 > 0:
+                    tally.runs_scored[b3 - 1] += 1
+                if starter_batter_active:
+                    tally.rbi[idx] += 1
                 b3 = 0
             # simple double-play: runner on 1st, <2 outs, grounder-ish
             if ev == iOUT and b1 and outs < 2 and rng.random() < 0.12:
@@ -272,10 +295,24 @@ def _simulate_half(
                 b1 = 0
             outs += 1
         else:
-            (b1, b2, b3), scored = _advance((b1, b2, b3), ev, rng)
-            runs += scored
+            (b1, b2, b3), scorers = _advance(
+                (b1, b2, b3), ev, batter_token, rng
+            )
+            runs += len(scorers)
+            for scorer in scorers:
+                if scorer > 0:
+                    tally.runs_scored[scorer - 1] += 1
+            if starter_batter_active:
+                tally.rbi[idx] += len(scorers)
+        runs_on_play = runs - runs_before
         if pitcher_was_starter:
             pitch_state["starter_outs"] += outs - outs_before
+            pitch_state["starter_runs"] += runs_on_play
+            pitch_state["starter_hits"] += int(ev in (i1B, i2B, i3B, iHR))
+            pitch_state["starter_walks"] += int(ev == iBB)
+            pitch_state["starter_hr"] += int(ev == iHR)
+        else:
+            pitch_state["bullpen_runs"] += runs_on_play
 
         idx = (idx + 1) % 9
 
@@ -353,6 +390,11 @@ def simulate_game(
         "inning": 0,
         "limit": h_limit,
         "starter_outs": 0,
+        "starter_runs": 0,
+        "starter_hits": 0,
+        "starter_walks": 0,
+        "starter_hr": 0,
+        "bullpen_runs": 0,
         "bullpen_tier_count": len(home_pens),
         "slot_pa": np.zeros(9, dtype=int),
         "lineup": away.lineup,
@@ -366,6 +408,11 @@ def simulate_game(
         "inning": 0,
         "limit": a_limit,
         "starter_outs": 0,
+        "starter_runs": 0,
+        "starter_hits": 0,
+        "starter_walks": 0,
+        "starter_hr": 0,
+        "bullpen_runs": 0,
         "bullpen_tier_count": len(away_pens),
         "slot_pa": np.zeros(9, dtype=int),
         "lineup": home.lineup,
@@ -439,6 +486,8 @@ def simulate_game(
         "home_win": int(home_runs > away_runs),
         "run_diff": home_runs - away_runs,
         "f5_total": f5_home + f5_away,
+        "f5_home_runs": f5_home,
+        "f5_away_runs": f5_away,
         "f5_home_win": int(f5_home > f5_away),
         "inning1_runs": inning1_runs,
         "nrfi": int(inning1_runs == 0),
@@ -446,9 +495,23 @@ def simulate_game(
         "home_hits": h_t.hits,
         "home_tb": h_t.tb,
         "home_hr": h_t.hr,
+        "home_team_hits": h_t.team_hits,
+        "home_team_hr": h_t.team_hr,
+        "home_pa": h_t.pa,
+        "home_bb": h_t.bb,
+        "home_strikeouts": h_t.strikeouts,
+        "home_batter_runs": h_t.runs_scored,
+        "home_rbi": h_t.rbi,
         "away_hits": a_t.hits,
         "away_tb": a_t.tb,
         "away_hr": a_t.hr,
+        "away_team_hits": a_t.team_hits,
+        "away_team_hr": a_t.team_hr,
+        "away_pa": a_t.pa,
+        "away_bb": a_t.bb,
+        "away_strikeouts": a_t.strikeouts,
+        "away_batter_runs": a_t.runs_scored,
+        "away_rbi": a_t.rbi,
         # a_t.k_sp = K's the away lineup took vs the home starter = home starter's K's
         "home_starter_k": a_t.k_sp,
         "away_starter_k": h_t.k_sp,
@@ -462,6 +525,34 @@ def simulate_game(
         ),
         "home_starter_innings": h_pitch["starter_outs"] / 3.0,
         "away_starter_innings": a_pitch["starter_outs"] / 3.0,
+        "home_starter_hits_allowed": h_pitch["starter_hits"],
+        "away_starter_hits_allowed": a_pitch["starter_hits"],
+        "home_starter_walks_allowed": h_pitch["starter_walks"],
+        "away_starter_walks_allowed": a_pitch["starter_walks"],
+        "home_starter_runs_allowed": h_pitch["starter_runs"],
+        "away_starter_runs_allowed": a_pitch["starter_runs"],
+        "home_starter_hr_allowed": h_pitch["starter_hr"],
+        "away_starter_hr_allowed": a_pitch["starter_hr"],
+        "home_bullpen_runs_allowed": h_pitch["bullpen_runs"],
+        "away_bullpen_runs_allowed": a_pitch["bullpen_runs"],
+        "home_starter_quality_start": int(
+            h_pitch["starter_outs"] >= 18 and h_pitch["starter_runs"] <= 3
+        ),
+        "away_starter_quality_start": int(
+            a_pitch["starter_outs"] >= 18 and a_pitch["starter_runs"] <= 3
+        ),
+        # Official pitcher-win assignment depends on lead-at-removal and scorer
+        # judgment. This transparent proxy is therefore labeled experimental.
+        "home_starter_win": int(
+            home_runs > away_runs
+            and h_pitch["starter_outs"] >= 15
+            and home_runs > h_pitch["starter_runs"]
+        ),
+        "away_starter_win": int(
+            away_runs > home_runs
+            and a_pitch["starter_outs"] >= 15
+            and away_runs > a_pitch["starter_runs"]
+        ),
         "innings_played": inning,
     }
 
@@ -507,6 +598,36 @@ def run_simulation(
     away_starter_bf = np.empty(n_sims)
     home_starter_ip = np.empty(n_sims)
     away_starter_ip = np.empty(n_sims)
+    f5_totals = np.empty(n_sims)
+    f5_home_runs = np.empty(n_sims)
+    f5_away_runs = np.empty(n_sims)
+    home_team_hits = np.empty(n_sims)
+    away_team_hits = np.empty(n_sims)
+    home_team_hr = np.empty(n_sims)
+    away_team_hr = np.empty(n_sims)
+    home_bullpen_runs = np.empty(n_sims)
+    away_bullpen_runs = np.empty(n_sims)
+    home_pitcher_samples = {
+        name: np.empty(n_sims)
+        for name in (
+            "hits_allowed",
+            "walks_allowed",
+            "earned_runs",
+            "home_runs_allowed",
+            "win",
+            "quality_start",
+        )
+    }
+    away_pitcher_samples = {
+        name: np.empty(n_sims) for name in home_pitcher_samples
+    }
+    home_batter_samples: dict[str, np.ndarray] = {
+        name: np.empty((n_sims, 9), dtype=int)
+        for name in ("hits", "total_bases", "home_runs", "runs", "rbi", "walks", "strikeouts", "plate_appearances")
+    }
+    away_batter_samples: dict[str, np.ndarray] = {
+        name: np.empty((n_sims, 9), dtype=int) for name in home_batter_samples
+    }
 
     for s in range(n_sims):
         g = simulate_game(
@@ -546,9 +667,111 @@ def run_simulation(
         away_starter_bf[s] = g["away_starter_batters_faced"]
         home_starter_ip[s] = g["home_starter_innings"]
         away_starter_ip[s] = g["away_starter_innings"]
+        f5_totals[s] = g["f5_total"]
+        f5_home_runs[s] = g["f5_home_runs"]
+        f5_away_runs[s] = g["f5_away_runs"]
+        home_team_hits[s] = g["home_team_hits"]
+        away_team_hits[s] = g["away_team_hits"]
+        home_team_hr[s] = g["home_team_hr"]
+        away_team_hr[s] = g["away_team_hr"]
+        home_bullpen_runs[s] = g["home_bullpen_runs_allowed"]
+        away_bullpen_runs[s] = g["away_bullpen_runs_allowed"]
+        for name, source in (
+            ("hits_allowed", "starter_hits_allowed"),
+            ("walks_allowed", "starter_walks_allowed"),
+            ("earned_runs", "starter_runs_allowed"),
+            ("home_runs_allowed", "starter_hr_allowed"),
+            ("win", "starter_win"),
+            ("quality_start", "starter_quality_start"),
+        ):
+            home_pitcher_samples[name][s] = g[f"home_{source}"]
+            away_pitcher_samples[name][s] = g[f"away_{source}"]
+        for name, source in (
+            ("hits", "hits"),
+            ("total_bases", "tb"),
+            ("home_runs", "hr"),
+            ("runs", "batter_runs"),
+            ("rbi", "rbi"),
+            ("walks", "bb"),
+            ("strikeouts", "strikeouts"),
+            ("plate_appearances", "pa"),
+        ):
+            home_batter_samples[name][s] = g[f"home_{source}"]
+            away_batter_samples[name][s] = g[f"away_{source}"]
 
     def over_grid(arr, lines):
         return {f"over_{ln}": float(np.mean(arr > ln)) for ln in lines}
+
+    def distribution(arr):
+        return {
+            str(int(value)): float(np.mean(arr == value))
+            for value in np.unique(arr)
+        }
+
+    def pitcher_payload(side: str, team: Team, strikeouts, pitches, bf, innings, samples):
+        return {
+            "player_id": team.starter.mlb_id,
+            "name": team.starter.name,
+            "mean": float(strikeouts.mean()),
+            "over": over_grid(strikeouts, [3.5, 4.5, 5.5, 6.5, 7.5, 8.5]),
+            "distribution": distribution(strikeouts),
+            "expected_pitches": float(pitches.mean()),
+            "expected_batters_faced": float(bf.mean()),
+            "expected_innings": float(innings.mean()),
+            "p_pitcher_win": float(samples["win"].mean()),
+            "p_quality_start": float(samples["quality_start"].mean()),
+            "outcomes": {
+                name: {
+                    "mean": float(values.mean()),
+                    "distribution": distribution(values),
+                }
+                for name, values in samples.items()
+                if name not in {"win", "quality_start"}
+            },
+            "workload_distributions": {
+                "pitches": distribution(pitches),
+                "batters_faced": distribution(bf),
+                "innings": {
+                    str(float(outs) / 3): float(
+                        np.mean(np.rint(innings * 3) == outs)
+                    )
+                    for outs in np.unique(np.rint(innings * 3))
+                },
+            },
+            "probability_starting_inning": {
+                str(inning): (
+                    team.starter_workload.probability_starting_inning(inning)
+                    if team.starter_workload
+                    else float(np.mean(innings >= inning - 1))
+                )
+                for inning in range(2, 8)
+            },
+            "data_quality_flags": list(team.starter.data_quality_flags),
+            "side": side,
+        }
+
+    def batter_payload(team: Team, samples, index: int):
+        values = {name: array[:, index] for name, array in samples.items()}
+        return {
+            "name": team.lineup[index].name,
+            "player_id": team.lineup[index].mlb_id,
+            "exp_hits": float(values["hits"].mean()),
+            "exp_tb": float(values["total_bases"].mean()),
+            "exp_hr": float(values["home_runs"].mean()),
+            "exp_pa": float(values["plate_appearances"].mean()),
+            "p_hit": float(np.mean(values["hits"] >= 1)),
+            "p_hr": float(np.mean(values["home_runs"] >= 1)),
+            "p_2plus_hits": float(np.mean(values["hits"] >= 2)),
+            "p_run": float(np.mean(values["runs"] >= 1)),
+            "p_rbi": float(np.mean(values["rbi"] >= 1)),
+            "p_walk": float(np.mean(values["walks"] >= 1)),
+            "p_strikeout": float(np.mean(values["strikeouts"] >= 1)),
+            "total_bases_over": over_grid(values["total_bases"], [0.5, 1.5, 2.5]),
+            "distributions": {
+                name: distribution(array) for name, array in values.items()
+            },
+            "data_quality_flags": list(team.lineup[index].data_quality_flags),
+        }
 
     return {
         "n_sims": n_sims,
@@ -576,81 +799,74 @@ def run_simulation(
         "p_extra_innings": float(np.mean(innings_played > ctx.innings)),
         "p_home_-1.5": float(np.mean(diffs > 1.5)),
         "p_home_+1.5": float(np.mean(diffs > -1.5)),
+        "run_lines": {
+            f"home_{line:+.1f}": float(np.mean(diffs + line > 0))
+            for line in (-2.5, -1.5, 1.5, 2.5)
+        }
+        | {
+            f"away_{line:+.1f}": float(np.mean(-diffs + line > 0))
+            for line in (-2.5, -1.5, 1.5, 2.5)
+        },
         "p_nrfi": nrfi / n_sims,
         "p_yrfi": 1 - nrfi / n_sims,
         "p_f5_home": f5_home_wins / n_sims,
+        "p_f5_away": float(np.mean(f5_away_runs > f5_home_runs)),
+        "p_f5_tie": float(np.mean(f5_home_runs == f5_away_runs)),
+        "exp_f5_total": float(f5_totals.mean()),
+        "f5_total_distribution": distribution(f5_totals),
+        "f5_total_over": over_grid(f5_totals, [3.5, 4.5, 5.5]),
         "p_first_to_score_home": fts_home / n_sims,
-        "home_starter_k": {
-            "player_id": home.starter.mlb_id,
-            "name": home.starter.name,
-            "mean": float(home_starter_k.mean()),
-            "over": over_grid(home_starter_k, [4.5, 5.5, 6.5, 7.5, 8.5]),
-            "distribution": {
-                str(int(value)): float(np.mean(home_starter_k == value))
-                for value in np.unique(home_starter_k)
-            },
-            "expected_pitches": float(home_starter_pitches.mean()),
-            "expected_batters_faced": float(home_starter_bf.mean()),
-            "expected_innings": float(home_starter_ip.mean()),
-            "probability_starting_inning": {
-                str(inning): (
-                    home.starter_workload.probability_starting_inning(inning)
-                    if home.starter_workload
-                    else float(np.mean(home_starter_ip >= inning - 1))
-                )
-                for inning in range(2, 8)
-            },
-            "data_quality_flags": list(home.starter.data_quality_flags),
+        "p_first_to_score_away": float(
+            1 - (fts_home / n_sims) - np.mean((home_runs + away_runs) == 0)
+        ),
+        "p_no_team_scores": float(np.mean((home_runs + away_runs) == 0)),
+        "home_team": {
+            "expected_hits": float(home_team_hits.mean()),
+            "expected_home_runs": float(home_team_hr.mean()),
+            "expected_f5_runs": float(f5_home_runs.mean()),
+            "expected_late_runs": float((home_runs - f5_home_runs).mean()),
+            "expected_bullpen_runs_allowed": float(home_bullpen_runs.mean()),
+            "hits_distribution": distribution(home_team_hits),
+            "home_runs_distribution": distribution(home_team_hr),
+            "f5_run_distribution": distribution(f5_home_runs),
+            "late_run_distribution": distribution(home_runs - f5_home_runs),
+            "bullpen_runs_allowed_distribution": distribution(home_bullpen_runs),
         },
-        "away_starter_k": {
-            "player_id": away.starter.mlb_id,
-            "name": away.starter.name,
-            "mean": float(away_starter_k.mean()),
-            "over": over_grid(away_starter_k, [4.5, 5.5, 6.5, 7.5, 8.5]),
-            "distribution": {
-                str(int(value)): float(np.mean(away_starter_k == value))
-                for value in np.unique(away_starter_k)
-            },
-            "expected_pitches": float(away_starter_pitches.mean()),
-            "expected_batters_faced": float(away_starter_bf.mean()),
-            "expected_innings": float(away_starter_ip.mean()),
-            "probability_starting_inning": {
-                str(inning): (
-                    away.starter_workload.probability_starting_inning(inning)
-                    if away.starter_workload
-                    else float(np.mean(away_starter_ip >= inning - 1))
-                )
-                for inning in range(2, 8)
-            },
-            "data_quality_flags": list(away.starter.data_quality_flags),
+        "away_team": {
+            "expected_hits": float(away_team_hits.mean()),
+            "expected_home_runs": float(away_team_hr.mean()),
+            "expected_f5_runs": float(f5_away_runs.mean()),
+            "expected_late_runs": float((away_runs - f5_away_runs).mean()),
+            "expected_bullpen_runs_allowed": float(away_bullpen_runs.mean()),
+            "hits_distribution": distribution(away_team_hits),
+            "home_runs_distribution": distribution(away_team_hr),
+            "f5_run_distribution": distribution(f5_away_runs),
+            "late_run_distribution": distribution(away_runs - f5_away_runs),
+            "bullpen_runs_allowed_distribution": distribution(away_bullpen_runs),
         },
+        "home_starter_k": pitcher_payload(
+            "home",
+            home,
+            home_starter_k,
+            home_starter_pitches,
+            home_starter_bf,
+            home_starter_ip,
+            home_pitcher_samples,
+        ),
+        "away_starter_k": pitcher_payload(
+            "away",
+            away,
+            away_starter_k,
+            away_starter_pitches,
+            away_starter_bf,
+            away_starter_ip,
+            away_pitcher_samples,
+        ),
         "home_batters": [
-            {
-                "name": home.lineup[i].name,
-                "player_id": home.lineup[i].mlb_id,
-                "exp_hits": float(home_hits[i] / n_sims),
-                "exp_tb": float(home_tb[i] / n_sims),
-                "exp_hr": float(home_hr[i] / n_sims),
-                "p_hit": float(home_hit_any[i] / n_sims),
-                "p_hr": float(home_hr_any[i] / n_sims),
-                "p_2plus_hits": float(home_2hit[i] / n_sims),
-                "data_quality_flags": list(home.lineup[i].data_quality_flags),
-            }
-            for i in range(9)
+            batter_payload(home, home_batter_samples, i) for i in range(9)
         ],
         "away_batters": [
-            {
-                "name": away.lineup[i].name,
-                "player_id": away.lineup[i].mlb_id,
-                "exp_hits": float(away_hits[i] / n_sims),
-                "exp_tb": float(away_tb[i] / n_sims),
-                "exp_hr": float(away_hr[i] / n_sims),
-                "p_hit": float(away_hit_any[i] / n_sims),
-                "p_hr": float(away_hr_any[i] / n_sims),
-                "p_2plus_hits": float(away_2hit[i] / n_sims),
-                "data_quality_flags": list(away.lineup[i].data_quality_flags),
-            }
-            for i in range(9)
+            batter_payload(away, away_batter_samples, i) for i in range(9)
         ],
         "data_quality_flags": sorted(
             {
