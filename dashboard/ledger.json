@@ -11,7 +11,7 @@
     "contrarian": false,
     "logged_at": "2026-07-23T20:55:05.516360+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 54.4,
       "over_8_5_pct": 43.8,
@@ -36,7 +36,12 @@
           "pct": 13.7
         }
       ]
-    }
+    },
+    "home_score": 4,
+    "away_score": 3,
+    "winner": "DET",
+    "pick_correct": true,
+    "total_runs": 7
   },
   {
     "date": "2026-07-23",
@@ -50,7 +55,7 @@
     "contrarian": false,
     "logged_at": "2026-07-23T19:04:16.660163+00:00",
     "lineup_source": "confirmed",
-    "status": "upcoming",
+    "status": "final",
     "props": {
       "nrfi_pct": 51.0,
       "over_8_5_pct": 49.5,
@@ -75,7 +80,12 @@
           "pct": 14.3
         }
       ]
-    }
+    },
+    "home_score": 6,
+    "away_score": 10,
+    "winner": "AZ",
+    "pick_correct": true,
+    "total_runs": 16
   },
   {
     "date": "2026-07-23",
